@@ -1,10 +1,10 @@
 const variables = {
-    'white': '#ffffff',
+    'white': '#FFFFFF',
     'danger': '#E03F3F',
     'purple': '#D100BC',
     'blue': '#08A0D8',
     'gray': '#3d3d3e',
-    'black': '#0c0d0e',
+    'black': '#000000',
     'success': '#1fdd00',
     'warning': '#ebb808',
     'error': '#c40941',

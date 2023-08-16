@@ -9,6 +9,7 @@ export type StyledButtonType = {
     h?: string
     fsize?: string
     radius?: string
+    shadow?: string
     border?: string
 }
 
@@ -25,8 +26,9 @@ export const StyledButton = styled.button<StyledButtonType>`
     ${({ h }) => `min-height: ${h ? h : '2.69rem'};`}
     ${({ p }) => `padding: ${p ?? '0 1rem'};`}
     ${({ color }) => color ? `color: ${color};` : ``}
-    ${({ bg }) => bg ? `background-image: ${bg} !important;` : ``}
+    ${({ bg }) => bg ? `background: ${bg} !important;` : ``}
     ${({ fsize }) => fsize ? `font-size: ${fsize};` : ``}
     ${({ radius }) => radius ? `border-radius: ${radius} !important;` : ``}
+    ${({ shadow }) => shadow ? `box-shadow: ${shadow}` : ``}
     ${({ border, bg }) => `border:  1px solid ${border ?? bg ?? "transparent"};`}
 `

@@ -1,6 +1,10 @@
 import styled from 'styled-components';
+import Background from '../../../../../assets/img/background.png';
 
 export const HeroContainer = styled.div`
+    background: no-repeat url(${Background});
+    background-position: top center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     gap: 38px;
