@@ -11,6 +11,9 @@ const variables = {
     'warning': '#ebb808',
     'error': '#c40941',
     'info': '#3dfff3',
+    'primary-green': '#19B698',
+    'caption-color': '#C1EBED',
+    'caption-color1': '8BF8FF',
     'gradient': 'linear-gradient(216deg, #F75BB1 1.04%, #C392DC 45.73%, #008782 100%)',
 
     'bg': '#0C0D0E',
@@ -31,7 +34,7 @@ const variables = {
     'font-size-5': '1rem',
     'font-size-6': '0.8rem',
 
-    'line-height': '1.27',
+    'line-height': '1.35',
 }
 
 export const desVariables = {

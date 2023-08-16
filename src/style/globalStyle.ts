@@ -8,15 +8,7 @@ const GlobalStyle = createGlobalStyle`
 
 	@font-face {
 		font-family: 'Aeonik';
-		src: url('../assets/fonts/aeonik/AeonikTRIAL-Regular.otf');
-	}
-	@font-face {
-		font-family: 'Termina-test';
-		src: url('../assets/fonts/termina-test/TerminaTest-Regular.otf');
-	}
-	@font-face {
-		font-family: 'Termina-test';
-		src: url('../assets/fonts/termina-test/');
+		src: url('../assets/fonts/aeonik/Aeonik-Regular.otf') format('opentype');
 	}
 	:root {
 		${declearStyleVariables(variables)}
@@ -42,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		margin: 0;
 		background: ${GV('bg')};
-		font-family: 'Chakra Petch', sans-serif;
+		font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
 		line-height: 150%;
 		font-size: ${GV('font-size')};
 		color: ${GV('color')};

@@ -17,7 +17,6 @@ export const StyledButton = styled.button<StyledButtonType>`
     align-items: center;
     justify-content: center;
     gap: 0.3rem;
-    /* text-transform: uppercase; */
     font-size: ${GV("font-size")};
     transition: all ease-in-out .1s;
 
@@ -30,10 +29,4 @@ export const StyledButton = styled.button<StyledButtonType>`
     ${({ fsize }) => fsize ? `font-size: ${fsize};` : ``}
     ${({ radius }) => radius ? `border-radius: ${radius} !important;` : ``}
     ${({ border, bg }) => `border:  1px solid ${border ?? bg ?? "transparent"};`}
-
-    &:hover {
-        background: #111;
-        border-color: #1c1c1c;
-        border-radius: 8px;
-    }
 `
