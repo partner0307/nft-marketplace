@@ -6,4 +6,8 @@ export const ActionContainer = styled.div`
     justify-content: center;
     padding: 0 32px;
     gap: 20px;
+`;
+
+export const Content = styled.div`
+    font-family: 'Aeonik';
 `

@@ -18,6 +18,7 @@ interface InlineHeadingPropsType {
 type QueryType = { [key: string]: Partial<InlineHeadingPropsType> };
 
 export interface HeadingPropsType extends InlineHeadingPropsType {
+	weight?: string
 	level: HeadingLevelType
 	queries?: QueryType
 }
@@ -54,8 +55,8 @@ const setStyle = (
 
 export const HeadingContainer = styled.p<HeadingPropsType>`
     ${({ level }) => level ? `font-size: var(--font-size-${level});` : ``}
-
-    font-weight: 700;
+    ${({ weight }) => weight ? `font-weight: ${weight};` : `font-weight: 700;`}
+	font-family: 'Termina Test';
     line-height: ${GV('line-height')};
 
     ${({ level, queries, ...rest }: HeadingPropsType) => `

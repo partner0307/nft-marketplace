@@ -1,10 +1,12 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import _ROUTERS from "../constants/menu.constant";
 
-import HomePage from "../pages/public/home";
-import PublicPage from "../pages/public";
+import PublicLayout from "../layouts/PublicLayout";
 
-const publicRouters = createBrowserRouter([
+import PublicPage from "../pages/public";
+import HomePage from "../pages/public/home";
+
+const routers = createBrowserRouter([
     {
         path: "/",
         element: <PublicPage />,
@@ -21,16 +23,4 @@ const publicRouters = createBrowserRouter([
     }
 ])
 
-const privateRouters = createBrowserRouter([
-
-])
-
-const authRouters = createBrowserRouter([
-
-])
-
-export default {
-    publicRouters,
-    privateRouters,
-    authRouters
-}
+export default routers;

@@ -5,7 +5,7 @@ import Icon from "../icon";
 import { Flex } from "../../basic";
 
 type DropdownPropsType = {
-	initialLabel?: string;
+	initialLabel?: string | React.ReactNode;
 	label?: string;
 	hideIcon?: boolean;
 	onClose?: any;
@@ -53,7 +53,7 @@ const Dropdown: React.FC<DropdownPropsType> = ({
 				onClick={() => setIsDropdown(!isDropdown)}
 			>
 				<Flex $style={{
-					hAlign: "center"
+					hAlign: "center",
 				}}>
 					{rightSide && (
 						<div className="dropdown-right-side">

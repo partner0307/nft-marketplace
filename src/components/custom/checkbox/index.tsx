@@ -14,7 +14,7 @@ const Checkbox: React.FC<CheckboxPropsType> = ({
     onChange
 }) => {
     return (
-        <CheckboxContainer onClick={onChange}>
+        <CheckboxContainer onClick={onChange} isChecked={isChecked ?? false}>
             <StyledCheckbox isChecked={isChecked ?? false}>
                 {isChecked && <Icon icon="Check" />}
             </StyledCheckbox>

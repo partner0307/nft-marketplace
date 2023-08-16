@@ -9,6 +9,7 @@ export type StyledButtonType = {
     h?: string
     fsize?: string
     radius?: string
+    shadow?: string
     border?: string
 }
 
@@ -17,7 +18,6 @@ export const StyledButton = styled.button<StyledButtonType>`
     align-items: center;
     justify-content: center;
     gap: 0.3rem;
-    /* text-transform: uppercase; */
     font-size: ${GV("font-size")};
     transition: all ease-in-out .1s;
 
@@ -26,14 +26,9 @@ export const StyledButton = styled.button<StyledButtonType>`
     ${({ h }) => `min-height: ${h ? h : '2.69rem'};`}
     ${({ p }) => `padding: ${p ?? '0 1rem'};`}
     ${({ color }) => color ? `color: ${color};` : ``}
-    ${({ bg }) => bg ? `background-image: ${bg} !important;` : ``}
+    ${({ bg }) => bg ? `background: ${bg} !important;` : ``}
     ${({ fsize }) => fsize ? `font-size: ${fsize};` : ``}
     ${({ radius }) => radius ? `border-radius: ${radius} !important;` : ``}
+    ${({ shadow }) => shadow ? `box-shadow: ${shadow}` : ``}
     ${({ border, bg }) => `border:  1px solid ${border ?? bg ?? "transparent"};`}
-
-    &:hover {
-        background: #111;
-        border-color: #1c1c1c;
-        border-radius: 8px;
-    }
 `
