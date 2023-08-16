@@ -4,7 +4,7 @@ import Backgound from '../../../../../assets/img/hire_bg.png';
 import { GV } from '../../../../../utils/style.util';
 
 export const HireContainer = styled.div`
-    display: flex;
+    /* display: flex; */
     background: url(${Backgound});
     background-position: top center;
     background-size: cover;
@@ -46,4 +46,14 @@ export const Avatar = styled.img`
 
 export const ImageWrapper = styled.div`
     margin-left: -20%;
+`;
+
+export const ArrowButton = styled.div<{ isFill: boolean }>`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 0.5px solid ${GV('gradient')};
+    border-radius: 100px;
+    ${({ isFill }) => isFill ? `background: ${GV('gradient')}` : ``}
 `

@@ -1,56 +1,86 @@
 import React from 'react';
-import { CardContainer } from './style';
+import { Avatar, CardContainer, CardMark, Category, ProfileButton, ReviewContainer } from './style';
 import { Flex, P, Span } from '../../basic';
+import Icon from '../icon';
 
-import Mana from '../../../assets/img/mana.png';
-import Ether from '../../../assets//img/ether.png';
-import { GV } from '../../../utils/style.util';
-
-type SmallCardType = {
-    image?: string,
-    title?: string,
-    price?: string,
+type CardType = {
+    rate?: string,
+    avatar?: string,
+    name?: string,
+    job?: string,
+    star?: string,
+    like?: string,
+    count?: string,
+    category?: any[]
 }
 
-type BigCardType = {
-    image?: string,
-    title?: string
-}
-
-export const SmallCard: React.FC<SmallCardType> = ({image, title, price}) => {
+const Card: React.FC<CardType> = ({ rate, avatar, name, job, star, like, count, category }) => {
     return <CardContainer>
-        <img src={image} alt="" />
+        <CardMark>{rate}</CardMark>
         <Flex $style={{
-            vAlign: 'center',
-            hAlign: 'space-between',
-            p: '0 8px'
+            fDirection: 'column',
+            gap: '24px'
         }}>
-            <P>{title}</P>
-            <Span $style={{
-                color: GV('info')
-            }}>{price}</Span>
-        </Flex>
-    </CardContainer>
-}
-
-export const BigCard: React.FC<BigCardType> = ({ image, title }) => {
-    return <CardContainer>
-        <img src={image} alt="" />
-        <Flex $style={{
-            fDirection: 'row',
-            vAlign: 'center',
-            hAlign: 'space-between',
-            p: '0 1rem'
-        }}>
-            <P>{title}</P>
             <Flex $style={{
                 fDirection: 'row',
+                hAlign: 'center',
+            }}>
+                <Avatar src={avatar} />
+            </Flex>
+            <Flex $style={{
+                fDirection: 'column',
                 vAlign: 'center',
                 gap: '8px'
             }}>
-                <img src={Mana} alt="" />
-                <img src={Ether} alt="" />
+                <P $style={{ size: '20px', weight: '600' }}>{name}</P>
+                <P>{job}</P>
+                <Flex $style={{
+                    fDirection: 'row',
+                    hAlign: 'space-between',
+                    gap: '12px'
+                }}>
+                    <ReviewContainer>
+                        <Flex $style={{
+                            fDirection: 'row',
+                            hAlign: 'space-between',
+                            gap: '4px'
+                        }}>
+                            <Icon icon='Star' />
+                            <Span>{star}</Span>
+                        </Flex>
+                        <Flex $style={{
+                            fDirection: 'row',
+                            hAlign: 'space-between',
+                            gap: '4px'
+                        }}>
+                            <Icon icon='Smile' />
+                            <Span>{like}</Span>
+                        </Flex>
+                    </ReviewContainer>
+                    <Flex $style={{
+                        fDirection: 'row',
+                        p: '4px 8px',
+                        gap: '4px'
+                    }}>
+                        <Icon icon='Calendar' />
+                        <Span>{count} Jobs</Span>
+                    </Flex>
+                </Flex>
             </Flex>
+            <Flex $style={{
+                fDirection: 'row',
+                hAlign: 'center',
+                vAlign: 'flex-start',
+                gap: '8px',
+                fWrap: 'wrap'
+            }}>
+                {category?.map(p => <Category>{p}</Category>)}
+            </Flex>
+            <ProfileButton>
+                View Profile
+            </ProfileButton>
         </Flex>
     </CardContainer>
 }
+
+export default Card;

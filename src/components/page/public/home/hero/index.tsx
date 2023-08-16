@@ -2,8 +2,7 @@ import React from 'react';
 import { Flex, Heading, P } from '../../../../basic';
 import { Button, Icon } from '../../../../custom';
 import { GV } from '../../../../../utils/style.util';
-import { Rect } from '../../../../../pages/public/home/style';
-import {SmallCard, BigCard} from '../../../../custom/card';
+import {SmallCard, BigCard} from '../../../../custom/screen';
 
 import Screen from '../../../../../assets/img/screen.png';
 import Screen1 from '../../../../../assets/img/screen1.png';
