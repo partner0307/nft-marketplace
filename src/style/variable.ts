@@ -1,0 +1,58 @@
+const variables = {
+    'white': '#ffffff',
+    'danger': '#E03F3F',
+    'purple': '#D100BC',
+    'blue': '#08A0D8',
+    'gray': '#3d3d3e',
+    'black': '#0c0d0e',
+    'red-shadow': '#8264be',
+    'purple-shadow': '#dc6062',
+    'success': '#1fdd00',
+    'warning': '#ebb808',
+    'error': '#c40941',
+    'info': '#3dfff3',
+    'gradient': 'linear-gradient(216deg, #F75BB1 1.04%, #C392DC 45.73%, #008782 100%)',
+
+    'bg': '#0C0D0E',
+    'bg-sub': '#1A2D474D',
+    'color': '#FFFFFF',
+    'color-secondary': '#B6C4CA',
+
+    'input-bg': '#191919',
+    'input-color': '#9BA2B2',
+
+    'font': "Aeonik",
+
+    'font-size': '14px',
+    'font-size-1': '4.5rem',
+    'font-size-2': '3.75rem',
+    'font-size-3': '3rem',
+    'font-size-4': '2rem',
+    'font-size-5': '1rem',
+    'font-size-6': '0.8rem',
+
+    'line-height': '1.27',
+}
+
+export const desVariables = {
+    'font-size': '14px',
+    'font-size-1': '4rem',
+    'font-size-3': '1.5rem',
+    'font-size-4': '1.3rem',
+}
+
+export const tabVariables = {
+    'font-size': '13px',
+    'font-size-1': '3.7rem',
+    'font-size-3': '1.3rem',
+    'font-size-4': '1.15rem',
+}
+
+export const smVariables = {
+    'font-size': '12px',
+    'font-size-1': '2.28rem',
+    'font-size-3': '0.75rem',
+    'font-size-4': '1rem',
+}
+
+export default variables;
