@@ -3,12 +3,89 @@ import { ArrowButton, Avatar, HireContainer, HireWrapper, ImageWrapper, Item, It
 import { Flex, Heading, P, Span } from '../../../../basic';
 import { GV } from '../../../../../utils/style.util';
 import { Button, Checkbox, Icon } from '../../../../custom';
-import Card from '../../../../custom/card';
 
 import Image1 from '../../../../../assets/img/hire1.png';
 import Avatar1 from '../../../../../assets/img/avatar1.png';
 import Avatar2 from '../../../../../assets/img/avatar2.png';
-import Developer1 from '../../../../../assets/img/avatar/1.png';
+
+import Person1 from '../../../../../assets/img/avatar/pic1.png';
+import Person2 from '../../../../../assets/img/avatar/pic2.png';
+import Person3 from '../../../../../assets/img/avatar/pic3.png';
+import Person4 from '../../../../../assets/img/avatar/pic4.png';
+import TalentCard from '../../../../custom/talent-card';
+
+const talents: TablentObject[] = [
+    {
+        name: "Rafel Benitez",
+        picture: Person1,
+        profession: "UIUX Designer",
+        price: 50,
+        rate: 4.5,
+        favors: 23,
+        endjobs: 41,
+        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
+    },
+    {
+        name: "Rafel Benitez",
+        picture: Person2,
+        profession: "UIUX Designer",
+        price: 50,
+        rate: 4.5,
+        favors: 23,
+        endjobs: 41,
+        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
+    },
+    {
+        name: "Rafel Benitez",
+        picture: Person3,
+        profession: "UIUX Designer",
+        price: 50,
+        rate: 4.5,
+        favors: 23,
+        endjobs: 41,
+        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
+    },
+    {
+        name: "Rafel Benitez",
+        picture: Person4,
+        profession: "UIUX Designer",
+        price: 50,
+        rate: 4.5,
+        favors: 23,
+        endjobs: 41,
+        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
+    },
+    {
+        name: "Rafel Benitez",
+        picture: Person1,
+        profession: "UIUX Designer",
+        price: 50,
+        rate: 4.5,
+        favors: 23,
+        endjobs: 41,
+        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
+    },
+    {
+        name: "Rafel Benitez",
+        picture: Person1,
+        profession: "UIUX Designer",
+        price: 50,
+        rate: 4.5,
+        favors: 23,
+        endjobs: 41,
+        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
+    },
+    {
+        name: "Rafel Benitez",
+        picture: Person1,
+        profession: "UIUX Designer",
+        price: 50,
+        rate: 4.5,
+        favors: 23,
+        endjobs: 41,
+        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
+    }
+]
 
 const HireSection = () => {
     return (
@@ -17,7 +94,8 @@ const HireSection = () => {
                 <Flex $style={{
                     p: "0 10rem 5rem",
                     vAlign: "center",
-                    maxW: '1440px'
+                    maxW: '1440px',
+                    overflow: "hidden"
                 }}>
                     <Flex $style={{
                         fDirection: 'column',
@@ -38,34 +116,34 @@ const HireSection = () => {
                             <Heading level={3} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
                         </Flex>
                         <ItemList>
-                        <Item isChecked>
-                            <Checkbox label='All' isChecked />
-                        </Item>
-                        <Item isChecked={false}>
-                            <Checkbox label='Metaverse' />
-                        </Item>
-                        <Item isChecked={false}>
-                            <Checkbox label='Web3' />
-                        </Item>
-                        <Item isChecked={false}>
-                            <Checkbox label='Designers' />
-                        </Item>
-                        <Item isChecked={false}>
-                            <Checkbox label='Developers' />
-                        </Item>
-                        <Item isChecked={false}>
-                            <Checkbox label='Modelers' />
-                        </Item>
-                        <Item isChecked={false}>
-                            <Checkbox label='AI Experts' />
-                        </Item>
-                        <Item isChecked={false}>
-                            <Checkbox label='Animators' />
-                        </Item>
-                        <Item isChecked={false}>
-                            <Checkbox label='Managers' />
-                        </Item>
-                    </ItemList>
+                            <Item isChecked>
+                                <Checkbox label='All' isChecked />
+                            </Item>
+                            <Item isChecked={false}>
+                                <Checkbox label='Metaverse' />
+                            </Item>
+                            <Item isChecked={false}>
+                                <Checkbox label='Web3' />
+                            </Item>
+                            <Item isChecked={false}>
+                                <Checkbox label='Designers' />
+                            </Item>
+                            <Item isChecked={false}>
+                                <Checkbox label='Developers' />
+                            </Item>
+                            <Item isChecked={false}>
+                                <Checkbox label='Modelers' />
+                            </Item>
+                            <Item isChecked={false}>
+                                <Checkbox label='AI Experts' />
+                            </Item>
+                            <Item isChecked={false}>
+                                <Checkbox label='Animators' />
+                            </Item>
+                            <Item isChecked={false}>
+                                <Checkbox label='Managers' />
+                            </Item>
+                        </ItemList>
                     </Flex>
                     <ImageWrapper>
                         <img src={Image1} alt="" />
@@ -83,12 +161,15 @@ const HireSection = () => {
                 <Flex $style={{
                     fDirection: 'row',
                     gap: '32px',
-                    p: '0 0 3rem'
+                    p: '0 0 3rem',
+                    overflow: "auto",
+                    mb: "3.5rem"
                 }}>
-                    <Card rate='50/hr' avatar={Developer1} name='Rafel Benitez' job='UI/UX Designer' star='4.5' like='12' count='41' category={[ 'Prototyping', 'Prototyping', 'Prototyping', 'Prototyping', 'Prototyping' ]} />
-                    <Card rate='50/hr' avatar={Developer1} name='Rafel Benitez' job='UI/UX Designer' star='4.5' like='12' count='41' category={[ 'Prototyping', 'Prototyping', 'Prototyping', 'Prototyping', 'Prototyping' ]} />
-                    <Card rate='50/hr' avatar={Developer1} name='Rafel Benitez' job='UI/UX Designer' star='4.5' like='12' count='41' category={[ 'Prototyping', 'Prototyping', 'Prototyping', 'Prototyping', 'Prototyping' ]} />
-                    <Card rate='50/hr' avatar={Developer1} name='Rafel Benitez' job='UI/UX Designer' star='4.5' like='12' count='41' category={[ 'Prototyping', 'Prototyping', 'Prototyping', 'Prototyping', 'Prototyping' ]} />
+                    {talents.map(talent => (
+                        <TalentCard
+                            talent={talent}
+                        />
+                    ))}
                 </Flex>
                 <Flex $style={{
                     fDirection: 'row',
@@ -98,7 +179,7 @@ const HireSection = () => {
                     <Button $style={{
                         bg: GV('gradient'),
                         radius: '8px',
-                        p: '0.25rem 3rem'
+                        p: '0.25rem 3rem',
                     }}>View All Talent</Button>
                     <Flex $style={{
                         fDirection: 'row',

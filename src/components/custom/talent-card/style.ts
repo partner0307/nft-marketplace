@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { GV } from '../../../utils/style.util';
 
 export const CardContainer = styled.div`
-    width: 300px;
+    min-width: 300px;
     border-radius: 18px;
     background: #F4EDF8;
     position: relative;
@@ -15,7 +15,7 @@ export const CardMark = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0.25rem 1.5rem;
+    padding: 0.25rem 1.5rem 0.25rem 1rem;
     background: ${GV('primary-green')};
     color: ${GV('white')};
     border-radius: 999px;

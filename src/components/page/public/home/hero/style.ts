@@ -7,7 +7,6 @@ export const HeroContainer = styled.div`
     background-size: cover;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 38px;
     padding: 7rem 2rem;
 `;
