@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Background from '../../../../../../assets/img/metaverse/overview.png'
+import Background from '@/assets/img/metaverse/overview.png'
 
 export const DetailsContainer = styled.div`
     background: #0C0D0E;

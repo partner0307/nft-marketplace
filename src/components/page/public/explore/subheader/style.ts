@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { GV } from '../../../../../utils/style.util';
+import { GV } from '@/utils/style.util';
 
-import Background from '../../../../../assets/img/main-blog.png';
+import Background from '@/assets/img/main-blog.png';
 
 export const SubHeaderContainer = styled.div`
     width: 100%;

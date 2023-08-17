@@ -1,8 +1,7 @@
 import React from 'react';
 import { CustomFont, PageStep, PaginationWrapper, StepButton } from './style';
-import { Flex, P } from '../../basic';
-import Icon from '../icon';
-import Dropdown from '../dropdown';
+import { Flex, P } from '@/components/basic';
+import { Icon, Dropdown } from '@/components/custom';
 
 const Pagination = () => {
     return <>

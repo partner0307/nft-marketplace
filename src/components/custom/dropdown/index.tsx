@@ -1,8 +1,8 @@
 import React from "react";
 
 import "./style.css";
-import Icon from "../icon";
-import { Flex } from "../../basic";
+import { Icon } from "@/components/custom";
+import { Flex } from "@/components/basic";
 
 type DropdownPropsType = {
 	initialLabel?: string | React.ReactNode;
@@ -65,8 +65,8 @@ const Dropdown: React.FC<DropdownPropsType> = ({
 					<span>
 						{label === undefined
 							? initialLabel !== undefined
-							? initialLabel
-							: "Select the item"
+								? initialLabel
+								: "Select the item"
 							: label}
 					</span>
 				</Flex>
@@ -74,11 +74,9 @@ const Dropdown: React.FC<DropdownPropsType> = ({
 			</div>
 			{container !== undefined && (
 				<div
-					className={`dropdown-box ${
-						isDropdown ? "dropdown-box-show" : "dropdown-box-hide"
-					} ${
-						isTop ? "dropdown-slide-top" : ""
-					}`}
+					className={`dropdown-box ${isDropdown ? "dropdown-box-show" : "dropdown-box-hide"
+						} ${isTop ? "dropdown-slide-top" : ""
+						}`}
 				>
 					{container(() => setIsDropdown(false))}
 				</div>

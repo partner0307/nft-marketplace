@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GV } from '../../../../utils/style.util';
+import { GV } from '@/utils/style.util';
 
 export const CollectionContainer = styled.div`
     background: linear-gradient(360deg, rgba(4, 40, 62, 0.70) 0%, rgba(7, 79, 90, 0.70) 100%);

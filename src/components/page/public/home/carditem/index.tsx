@@ -1,11 +1,11 @@
 import React from 'react';
 import { CardAvatar, CardContainer, CardImage, ImageWrapper, MarkWrapper, StatusContainer } from './style';
 
-import { Flex, P, Span } from '../../../../basic';
-import Icon from '../../../../custom/icon';
+import { Flex, P, Span } from '@/components/basic';
+import { Icon } from '@/components/custom';
 
-import Avatar from '../../../../../assets/img/avatar1.png';
-import Ether from '../../../../../assets/img/ether-icon.png';
+import Avatar from '@/assets/img/avatar1.png';
+import Ether from '@/assets/img/ether-icon.png';
 
 const CardItem = () => {
     return <CardContainer>

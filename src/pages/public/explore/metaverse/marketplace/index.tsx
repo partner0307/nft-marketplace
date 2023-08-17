@@ -1,9 +1,9 @@
 import React from 'react';
 import { MarketplaceContainer, MarketplaceWrapper, Rect, Rect1 } from './style';
-import SubHeader from '../../../../../components/page/public/explore/subheader';
+import SubHeader from '@/components/page/public/explore/subheader';
 import { ItemContainer } from '../metaverses/style';
-import { Dropdown } from '../../../../../components/custom';
-import Pagination from '../../../../../components/custom/pagination';
+import { Dropdown } from '@/components/custom';
+import Pagination from '@/components/custom/pagination';
 
 const Marketplace = () => {
     return <MarketplaceContainer>

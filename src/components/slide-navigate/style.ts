@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import { GV } from "../../utils/style.util"
+import { GV } from "@/utils/style.util"
 
 const prevAnime = keyframes`
     0% {

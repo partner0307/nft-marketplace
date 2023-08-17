@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import Backgound from '../../../../assets/img/hire_bg.png';
-import { GV } from '../../../../utils/style.util';
+import Backgound from '@/assets/img/hire_bg.png';
+import { GV } from '@/utils/style.util';
 
 export const HireContainer = styled.div`
     display: flex;
@@ -15,6 +15,7 @@ export const HireContainer = styled.div`
 
 export const HireWrapper = styled.div`
     /* max-width: 1440px; */
+    overflow: hidden;
 `
 
 export const Item = styled.div<{ isChecked: boolean }>`
@@ -58,7 +59,9 @@ export const ArrowButton = styled.div<{ isFill: boolean }>`
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border: 0.5px solid ${GV('gradient')};
-    border-radius: 100px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: linear-gradient(#430F41, #430F41) padding-box, linear-gradient(264.4deg, #F75BB1 -6.74%, #C392DC 43.26%, #008782 103.97%) border-box;
+
     ${({ isFill }) => isFill ? `background: ${GV('gradient')}` : ``}
 `

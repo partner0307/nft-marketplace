@@ -1,8 +1,8 @@
 import React from "react";
-import { Flex, Link, P } from "../../../../basic";
-import { Button, Icon } from "../../../../custom";
-import { GV } from "../../../../../utils/style.util";
 import { ActionContainer, Content } from "./style";
+import { Flex, Link } from "@/components/basic";
+import { Button, Icon } from "@/components/custom";
+import { GV } from "@/utils/style.util";
 
 const Actions = () => {
   return (

@@ -1,17 +1,17 @@
 import React from 'react';
-import { CustomButton, CustomButton1, CustomFont, CustomTab, CustomeButton2, DetailsContainer, DetailsWrapper, HeroContainer, MarkContainer, StatusBar } from './style';
-import SubMenu from '../../../../../../components/page/public/explore/submenu';
-import { Flex, Heading, P } from '../../../../../../components/basic';
+import { CustomButton, CustomButton1, CustomFont, CustomTab, CustomeButton2, DetailsContainer, DetailsWrapper, HeroContainer, Line, MarkContainer, StatusBar } from './style';
+import SubMenu from '@/components/page/public/explore/submenu';
+import { Flex, Heading, P } from '@/components/basic';
 import { Link } from 'react-router-dom';
-import { Icon } from '../../../../../../components/custom';
+import { Icon } from '@/components/custom';
 
-import Mark from '../../../../../../assets/img/metaverse/mana.png';
-import CircleCheck from '../../../../../../assets/img/metaverse/circle_check.png';
-import Twitter from '../../../../../../assets/img/metaverse/twitter.png';
-import Discord from '../../../../../../assets/img/metaverse/discord.png';
-import Instagram from '../../../../../../assets/img/metaverse/instagram.png';
-import Ether from '../../../../../../assets/img/metaverse/ether.png';
-import Polygon from '../../../../../../assets/img/metaverse/polygon.png';
+import Mark from '@/assets/img/metaverse/mana.png';
+import CircleCheck from '@/assets/img/metaverse/circle_check.png';
+import Twitter from '@/assets/img/metaverse/twitter.png';
+import Discord from '@/assets/img/metaverse/discord.png';
+import Instagram from '@/assets/img/metaverse/instagram.png';
+import Ether from '@/assets/img/metaverse/ether.png';
+import Polygon from '@/assets/img/metaverse/polygon.png';
 
 const Details = () => {
     return <DetailsContainer>
@@ -69,6 +69,29 @@ const Details = () => {
                     <Link to='#'><img src={Discord} alt="" /></Link>
                 </Flex>
                 <StatusBar>
+                    <Flex $style={{ vAlign: 'flex-start', hAlign: 'space-between' }}>
+                        <P><CustomFont>Blockchain</CustomFont></P>
+                        <Flex $style={{ fDirection: 'column', gap: '8px' }}>
+                            <Flex $style={{ vAlign: 'center', gap: '12px' }}>
+                                <P>Ethereum</P>
+                                <img src={Ether} alt="" />
+                            </Flex>
+                            <Flex $style={{ vAlign: 'center', gap: '12px' }}>
+                                <P>Polygon</P>
+                                <img src={Polygon} alt="" />
+                            </Flex>
+                        </Flex>
+                    </Flex>
+                    <Line />
+                    <Flex $style={{ vAlign: 'flex-start', hAlign: 'space-between' }}>
+                        <P><CustomFont>Token</CustomFont></P>
+                        <Flex $style={{ fDirection: 'column', gap: '8px' }}>
+                            <P>Mana</P>
+                            <Flex $style={{ vAlign: 'center', gap: '12px' }}>
+                                <P>Polygon</P>
+                            </Flex>
+                        </Flex>
+                    </Flex>
                     <Flex $style={{ vAlign: 'flex-start', hAlign: 'space-between' }}>
                         <P><CustomFont>Blockchain</CustomFont></P>
                         <Flex $style={{ fDirection: 'column', gap: '8px' }}>

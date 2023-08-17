@@ -1,15 +1,15 @@
 import React from 'react';
 import { ItemIcon, ListContainer, SidebarContainer, Title } from './style';
-import { Flex, List, ListItem, P } from '../../basic';
+import { Flex, List, ListItem, P } from '@/components/basic';
 
-import PostIcon from '../../../assets/img/menu/post-project.png';
-import HireIcon from '../../../assets/img/menu/hire-talent.png';
-import WorkIcon from '../../../assets/img/menu/work-as-talent.png';
-import MetaverseIcon from '../../../assets/img/menu/metaverse.png';
-import NFTIcon from '../../../assets/img/menu/nfts.png';
-import AvatarIcon from '../../../assets/img/menu/avatars.png';
-import StakingIcon from '../../../assets/img/menu/staking.png';
-import Ads from '../../../assets/img/menu/ads.png';
+import PostIcon from '@/assets/img/menu/post-project.png';
+import HireIcon from '@/assets/img/menu/hire-talent.png';
+import WorkIcon from '@/assets/img/menu/work-as-talent.png';
+import MetaverseIcon from '@/assets/img/menu/metaverse.png';
+import NFTIcon from '@/assets/img/menu/nfts.png';
+import AvatarIcon from '@/assets/img/menu/avatars.png';
+import StakingIcon from '@/assets/img/menu/staking.png';
+import Ads from '@/assets/img/menu/ads.png';
 
 const Sidebar = () => {
     return <SidebarContainer>

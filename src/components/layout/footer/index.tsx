@@ -1,14 +1,11 @@
 import React from "react";
 import { ContentColor, FooterContainer, FooterWrapper, Line, Logo } from "./style";
-import Flex from "../../basic/flex";
-import List, { ListItem } from "../../basic/list";
-import { GV } from "../../../utils/style.util";
-import { P, Span } from "../../basic/text";
-import Icon from "../../custom/icon";
-import Link from "../../basic/link";
+import { Flex, Link, List, ListItem, P, Span } from "@/components/basic";
+import { Icon } from "@/components/custom";
+import { GV } from "@/utils/style.util";
 
-import LogoImage from '../../../assets/img/logo.png';
-import Map from '../../../assets/img/sitemap.png'
+import LogoImage from '@/assets/img/logo.png';
+import Map from '@/assets/img/sitemap.png'
 
 const Footer = () => {
     return (
@@ -163,7 +160,7 @@ const Footer = () => {
                             }
                         }}
                     >
-                        <Flex $style={{ 
+                        <Flex $style={{
                             fDirection: 'column',
                             gap: '12px',
                             vAlign: 'flex-start'
