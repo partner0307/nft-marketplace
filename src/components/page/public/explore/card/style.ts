@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { GV } from '../../../../../utils/style.util';
 
 export const CardContainer = styled.div`
     display: flex;
@@ -8,6 +9,11 @@ export const CardContainer = styled.div`
     border: 1px solid #191919;
     background: rgba(0, 0, 0, 1);
     padding: 16px 12px;
+
+    &:hover {
+        filter: drop-shadow(0px 0px 24px rgba(61, 255, 243, 0.50));
+        border-color: ${GV('info')};
+    }
 `;
 
 export const ImageLoader = styled.img`

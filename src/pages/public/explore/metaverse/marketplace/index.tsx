@@ -1,8 +1,9 @@
 import React from 'react';
-import { MarketplaceContainer, Rect, Rect1 } from './style';
+import { MarketplaceContainer, MarketplaceWrapper, Rect, Rect1 } from './style';
 import SubHeader from '../../../../../components/page/public/explore/subheader';
 import { ItemContainer } from '../metaverses/style';
 import { Dropdown } from '../../../../../components/custom';
+import Pagination from '../../../../../components/custom/pagination';
 
 const Marketplace = () => {
     return <MarketplaceContainer>
@@ -10,6 +11,9 @@ const Marketplace = () => {
         <ItemContainer>
             <Dropdown initialLabel='All Chains' />
         </ItemContainer>} />
+        <MarketplaceWrapper>
+            <Pagination />
+        </MarketplaceWrapper>
         <Rect />
         <Rect1 />
     </MarketplaceContainer>

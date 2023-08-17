@@ -1,7 +1,9 @@
 const _ROUTERS = {
     home: "/",
     metaverses: "/metaverses",
-    marketplace: "/marketplace"
+    details: '/meta_details',
+    marketplace: "/marketplace",
+    build: "/build"
 }
 
 export default _ROUTERS;
