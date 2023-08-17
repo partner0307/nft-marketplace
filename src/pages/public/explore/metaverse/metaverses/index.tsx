@@ -1,7 +1,10 @@
 import React from 'react';
+import SubHeader from '../../../../../components/page/public/explore/subheader';
 
 const Metaverses = () => {
-    return <></>
+    return <>
+        <SubHeader />
+    </>
 }
 
 export default Metaverses;
