@@ -1,8 +1,9 @@
 import React from 'react';
-import { ArrowButton, CardContainer, CardContainer1, CardWrapper, CollectionContainer, CollectionWrapper, ContentColor, Cursor, Mark1, Mark2, Progress, ProgressContainer, Rect1, Rect2, Rect3, SlideCard } from './style';
+import { ArrowButton, ArrowContainer, CardContainer, CardContainer1, CardWrapper, CollectionContainer, CollectionWrapper, ContentColor, Cursor, Mark1, Mark2, Progress, ProgressContainer, Rect1, Rect2, Rect3, SlideCard } from './style';
 import { Flex, Heading, P } from '../../../../basic';
 import { Button, Icon } from '../../../../custom';
 import { GV } from '../../../../../utils/style.util';
+import Letters from './letters/index';
 
 import Background1 from '../../../../../assets/img/card1.png';
 import Ether from '../../../../../assets/img/ether-icon.png';
@@ -48,6 +49,7 @@ const Collection = () => {
             }}>
                 <Flex $style={{
                     fDirection: 'column',
+                    vAlign: 'center',
                     gap: '64px'
                 }}>
                     <Flex $style={{
@@ -88,7 +90,14 @@ const Collection = () => {
                             <P>Active NFTs</P>
                         </Flex>
                     </Flex>
-                    <ArrowButton><Icon icon='ArrowLowerRight' /></ArrowButton>
+                    <ArrowButton>
+                        <Flex>
+                            <Letters />
+                        </Flex>
+                        <ArrowContainer>
+                            <Icon icon='ArrowLowerRight' />
+                        </ArrowContainer>
+                    </ArrowButton>
                 </Flex>
                 <Flex $style={{
                     fDirection: 'column',
@@ -223,7 +232,7 @@ const Collection = () => {
                 fDirection: 'row',
                 hAlign: 'center',
                 fWrap: 'wrap',
-                gap: '32px',
+                gap: '24px',
                 p: '80px 0 0'
             }}>
                 <CardItem />
@@ -242,7 +251,7 @@ const Collection = () => {
             }}>
                 <Button $style={{
                     bg: GV('gradient'),
-                    p: '4px 32px',
+                    p: '8px 64px',
                     radius: '8px'
                 }}>View All Marketplace</Button>
             </Flex>

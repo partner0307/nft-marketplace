@@ -1,12 +1,21 @@
 import React from 'react';
 import { Content, ContentColor, ExploreContainer, TabButton } from './style';
-import { Flex, Heading, Span } from '../../../../basic';
+import { Flex, Heading, P, Span } from '../../../../basic';
 import { Button, Icon } from '../../../../custom';
 import { GV } from '../../../../../utils/style.util';
 
 const Explore = () => {
     return <ExploreContainer>
-        <Heading level={3}><Content>Explore The Marketplace</Content></Heading>
+        <Flex $style={{
+            fDirection: 'column',
+            vAlign: 'center',
+            gap: '32px'
+        }}>
+            <Heading level={3}><Content>Explore The Marketplace</Content></Heading>
+            <Flex $style={{ maxW: '700px' }}>
+                <P $style={{ size: '20px', align: 'center' }}>Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut vulputate nisi. Integer in felis </P>
+            </Flex>
+        </Flex>
         <Flex $style={{
             fDirection: 'column',
             hAlign: 'flex-start',
@@ -23,6 +32,7 @@ const Explore = () => {
             </Flex>
             <Flex $style={{
                 fDirection: 'column',
+                p: '24px 0 0',
                 gap: '4px'
             }}>
                 <Flex $style={{
@@ -92,7 +102,7 @@ const Explore = () => {
         <Button $style={{
             bg: GV('gradient'),
             radius: '4px',
-            p: '4px 48px'
+            p: '8px 64px'
         }}>View All Marketplace</Button>
     </ExploreContainer>
 }

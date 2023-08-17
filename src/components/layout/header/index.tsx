@@ -7,9 +7,10 @@ import Actions from "./components/actions";
 import LogoContainer from "./components/logo";
 
 const Header = () => {
+    const [, scrollY, dir] = useScroll();
 
     return (
-        <HeaderContainer>
+        <HeaderContainer isTop={!(scrollY > 50)}>
             <HeaderWrapper>
                 <Menu />
                 <LogoContainer />

@@ -10,6 +10,7 @@ export const ExploreContainer = styled.div`
     background-position: top center;
     background-size: cover;
     padding: 120px 32px;
+    gap: 80px;
 `;
 
 export const Content = styled.span`
