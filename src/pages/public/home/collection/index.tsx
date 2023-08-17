@@ -5,9 +5,9 @@ import { Button, Icon } from '../../../../components/custom';
 import { GV } from '../../../../utils/style.util';
 import Letters from './letters/index';
 
-import Background1 from '../../../../../assets/img/card1.png';
-import Ether from '../../../../../assets/img/ether-icon.png';
-import CardImage from '../../../../../assets/img/card-image.svg';
+import Background1 from '../../../../assets/img/card1.png';
+import Ether from '../../../../assets/img/ether-icon.png';
+import CardImage from '../../../../assets/img/card-image.svg';
 import CardItem from '../../../../components/page/public/home/carditem';
 
 const Collection = () => {

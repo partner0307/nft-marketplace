@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Background from '../../../../../assets/img/explore-bg.png';
+import Background from '../../../../assets/img/explore-bg.png';
 import { GV } from '../../../../utils/style.util';
 
 export const ExploreContainer = styled.div`
