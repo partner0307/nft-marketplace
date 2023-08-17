@@ -14,14 +14,11 @@ const Hero = () => {
     return (
         <HeroContainer>
             <Flex $style={{
-                maxW: '1440px',
                 vAlign: 'flex-end',
                 gap: "2rem"
             }}>
                 <Flex $style={{
                     fDirection: 'column',
-                    hAlign: 'center',
-                    vAlign: 'flex-end',
                     gap: "2rem"
                 }}>
                     <SmallCard image={Screen1} title='LalaVerse' price='1.4ETH' />
@@ -33,7 +30,7 @@ const Hero = () => {
                     hAlign: 'flex-end',
                     vAlign: 'center',
                     gap: '3.5rem',
-                    flex: '1 0 0',
+                    flex: '1',
                 }}>
                     <Flex $style={{
                         fDirection: 'column',
@@ -54,16 +51,14 @@ const Hero = () => {
                         bg: GV('gradient'),
                         radius: '8px',
                     }}>
-                            <P $style={{
-                                size: '20px'
-                            }}>See Full Metaverse</P>
+                        <P $style={{
+                            size: '20px'
+                        }}>See Full Metaverse</P>
                     </Button>
                     <BigCard image={Screen} title='Decentraland' />
                 </Flex>
                 <Flex $style={{
                     fDirection: 'column',
-                    hAlign: 'center',
-                    vAlign: 'flex-end',
                     gap: "2rem"
                 }}>
                     <SmallCard image={Screen1} title='Geek Metaverse' price='1.4ETH' />
