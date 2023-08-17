@@ -7,22 +7,30 @@ type InputPropsType = {
     onChange?: any
     placeholder?: string
     helpSide?: any
+    padding?: string,
+    radius?: string,
+    bg?: string,
+    border?: string
 }
 
 export const Input: React.FC<InputPropsType> = ({
     label,
     helpSide,
+    padding,
+    radius,
+    bg,
+    border,
     ...rest
 }) => {
     return (
         <InputContainer>
             {label && (<InputLabel>{label}</InputLabel>)}
             <InputContent>
-                <InputWrapper>
+                <InputWrapper padding={padding ?? ''}>
                     <StyledInput {...rest} />
                     {helpSide}
                 </InputWrapper>
-                <InputBoard />
+                <InputBoard radius={radius ?? ''} bg={bg ?? ''} border={border ?? ''} />
             </InputContent>
         </InputContainer>
     )
@@ -33,17 +41,18 @@ type TextareaPropsType = InputPropsType & {}
 export const Textarea: React.FC<TextareaPropsType> = ({
     label,
     helpSide,
+    radius,
     ...rest
 }) => {
     return (
         <InputContainer>
             {label && (<InputLabel>{label}</InputLabel>)}
             <InputContent>
-                <InputWrapper>
+                <InputWrapper padding="">
                     <StyledTextarea as="textarea" rows={5} {...rest} />
                     {helpSide}
                 </InputWrapper>
-                <InputBoard />
+                <InputBoard radius='' bg='' border="" />
             </InputContent>
         </InputContainer>
     )

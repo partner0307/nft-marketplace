@@ -14,6 +14,7 @@ const Hero = () => {
     return (
         <HeroContainer>
             <Flex $style={{
+                maxW: '1440px',
                 vAlign: 'flex-end',
                 gap: "2rem"
             }}>

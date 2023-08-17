@@ -5,7 +5,13 @@ export const CollectionContainer = styled.div`
     background: linear-gradient(360deg, rgba(4, 40, 62, 0.70) 0%, rgba(7, 79, 90, 0.70) 100%);
     padding: 120px 128px;
     position: relative;
+    display: flex;
+    justify-content: center;
 `;
+
+export const CollectionWrapper = styled.div`
+    max-width: 1440px;
+`
 
 export const ContentColor = styled.div`
     background-image: ${GV('gradient')};
@@ -91,10 +97,9 @@ export const SlideCard = styled.div`
 export const Cursor = styled.div<{isSelected: boolean}>`
     width: 24px;
     height: 24px;
-    border-width: 1px;
-    border-style: solid;
-    border-image: ${GV('gradient')} 1;
     border-radius: 100px;
+    /* border-image: ${GV('gradient')}; */
+    border: 1px solid;
     ${({ isSelected }) => isSelected ? `background: ${GV('gradient')};` : ``}
 `;
 

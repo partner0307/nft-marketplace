@@ -8,9 +8,9 @@ const LogoContainer = () => {
     return <React.Fragment>
         <Link to='/'>
             <Flex $style={{
-                w: '200px',
+                hAlign: 'space-between',
                 p: '4px 24px',
-                hAlign: 'space-between'
+                gap: '16px'
             }}>
                 <img src={Logo} />
                 <Icon icon='Logo' />
