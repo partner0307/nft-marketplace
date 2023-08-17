@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GV } from '../../../../../utils/style.util';
+import { GV } from '../../../../utils/style.util';
 
 export const BlogContainer = styled.div`
     display: flex;

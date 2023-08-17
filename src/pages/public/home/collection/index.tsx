@@ -1,14 +1,14 @@
 import React from 'react';
 import { ArrowButton, ArrowContainer, CardContainer, CardContainer1, CardWrapper, CollectionContainer, CollectionWrapper, ContentColor, Cursor, Mark1, Mark2, Progress, ProgressContainer, Rect1, Rect2, Rect3, SlideCard } from './style';
-import { Flex, Heading, P } from '../../../../basic';
-import { Button, Icon } from '../../../../custom';
-import { GV } from '../../../../../utils/style.util';
+import { Flex, Heading, P } from '../../../../components/basic';
+import { Button, Icon } from '../../../../components/custom';
+import { GV } from '../../../../utils/style.util';
 import Letters from './letters/index';
 
 import Background1 from '../../../../../assets/img/card1.png';
 import Ether from '../../../../../assets/img/ether-icon.png';
 import CardImage from '../../../../../assets/img/card-image.svg';
-import CardItem from '../../../../custom/carditem';
+import CardItem from '../../../../components/page/public/home/carditem';
 
 const Collection = () => {
     return <CollectionContainer>

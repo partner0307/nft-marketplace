@@ -1,14 +1,14 @@
 import React from 'react';
 import { ArrowButton, Avatar, HireContainer, HireWrapper, ImageWrapper, Item, ItemList } from './style';
-import { Flex, Heading, P, Span } from '../../../../basic';
-import { GV } from '../../../../../utils/style.util';
-import { Button, Checkbox, Icon } from '../../../../custom';
-import Card from '../../../../custom/card';
+import { Flex, Heading, P, Span } from '../../../../components/basic';
+import { GV } from '../../../../utils/style.util';
+import { Button, Checkbox, Icon } from '../../../../components/custom';
+import Card from '../../../../components/page/public/home/card';
 
-import Image1 from '../../../../../assets/img/hire1.png';
-import Avatar1 from '../../../../../assets/img/avatar1.png';
-import Avatar2 from '../../../../../assets/img/avatar2.png';
-import Developer1 from '../../../../../assets/img/avatar/1.png';
+import Image1 from '../../../../assets/img/hire1.png';
+import Avatar1 from '../../../../assets/img/avatar1.png';
+import Avatar2 from '../../../../assets/img/avatar2.png';
+import Developer1 from '../../../../assets/img/avatar/1.png';
 
 const HireSection = () => {
     return (

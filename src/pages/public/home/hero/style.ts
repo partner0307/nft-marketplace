@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Background from '../../../../../assets/img/background.png';
+import Background from '../../../../assets/img/background.png';
 
 export const HeroContainer = styled.div`
     background: no-repeat url(${Background});

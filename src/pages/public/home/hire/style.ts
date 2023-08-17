@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import Backgound from '../../../../../assets/img/hire_bg.png';
-import { GV } from '../../../../../utils/style.util';
+import Backgound from '../../../../assets/img/hire_bg.png';
+import { GV } from '../../../../utils/style.util';
 
 export const HireContainer = styled.div`
     display: flex;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Content, ContentColor, ExploreContainer, TabButton } from './style';
-import { Flex, Heading, P, Span } from '../../../../basic';
-import { Button, Icon } from '../../../../custom';
-import { GV } from '../../../../../utils/style.util';
+import { Flex, Heading, P, Span } from '../../../../components/basic';
+import { Button, Icon } from '../../../../components/custom';
+import { GV } from '../../../../utils/style.util';
 
 const Explore = () => {
     return <ExploreContainer>
