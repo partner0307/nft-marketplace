@@ -1,6 +1,6 @@
 import React from 'react';
 import { Content, ItemContainer, MenuContainer } from './style';
-import { Icon, Input, Dropdown } from '../../../../custom';
+import { Icon, Input, Dropdown } from '@/components/custom';
 
 const Menu = () => {
     return <MenuContainer>

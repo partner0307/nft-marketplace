@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { debounce } from "../utils/debounce.util";
+import { debounce } from "@/utils/debounce.util";
 
 type ScrollDirectionType = "up" | "" | "down"
 

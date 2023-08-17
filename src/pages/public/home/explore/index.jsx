@@ -1,8 +1,9 @@
 import React from 'react';
 import { Content, ContentColor, ExploreContainer, TabButton } from './style';
-import { Flex, Heading, P, Span } from '../../../../components/basic';
-import { Button, Icon } from '../../../../components/custom';
-import { GV } from '../../../../utils/style.util';
+import { Flex, Heading, P, Span } from '@/components/basic';
+import { Button, Icon } from '@/components/custom';
+import { GV } from '@/utils/style.util';
+import Table from '@/components/custom/table';
 
 const Explore = () => {
     return <ExploreContainer>
@@ -35,7 +36,9 @@ const Explore = () => {
                 p: '24px 0 0',
                 gap: '4px'
             }}>
-                <Flex $style={{
+
+                <Table />
+                {/* <Flex $style={{
                     fDirection: 'row',
                     p: '0 24px',
                     gap: '16px'
@@ -96,7 +99,7 @@ const Explore = () => {
                         <Icon icon='Sort' />
                         <Icon icon='Info' />
                     </Flex>
-                </Flex>
+                </Flex> */}
             </Flex>
         </Flex>
         <Button $style={{

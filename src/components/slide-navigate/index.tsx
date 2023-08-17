@@ -1,7 +1,7 @@
 import React from "react";
-import { Flex } from "../basic";
+import { Flex } from "@/components/basic";
+import { Icon } from "@/components/custom";
 import { NextButton, PrevButton } from "./style";
-import { Icon } from "../custom";
 
 type SlideNavigatePropsType = {
     sliderRef: any

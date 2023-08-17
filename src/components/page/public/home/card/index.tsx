@@ -1,7 +1,7 @@
 import React from 'react';
 import { Avatar, CardContainer, CardMark, Category, ProfileButton, ReviewContainer } from './style';
-import { Flex, P, Span } from '../../../../basic';
-import Icon from '../../../../custom/icon';
+import { Flex, P, Span } from '@/components/basic';
+import {Icon} from '@/components/custom';
 
 type CardType = {
     rate?: string,

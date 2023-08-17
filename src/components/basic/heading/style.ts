@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import variables from '../../../style/variable';
-import { GV } from '../../../utils/style.util';
+import { GV } from '@/utils/style.util';
 
 interface InlineHeadingPropsType {
 	color?: string

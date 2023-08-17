@@ -1,7 +1,7 @@
 import React from 'react';
 import { SubHeaderContainer, ItemContainer, TabButton, TabGroup } from './style';
-import { Flex, Heading, P } from '../../../../basic';
-import { Dropdown, Icon, Input } from '../../../../custom';
+import { Flex, Heading, P } from '@/components/basic';
+import { Dropdown, Icon, Input } from '@/components/custom';
 
 type SubHeaderType = {
     rightComponent?: React.ReactNode

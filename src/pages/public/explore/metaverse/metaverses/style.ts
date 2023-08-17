@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GV } from '../../../../../utils/style.util';
+import { GV } from '@/utils/style.util';
 
 export const MetaversesContainer = styled.div`
     background: #0C0D0E;

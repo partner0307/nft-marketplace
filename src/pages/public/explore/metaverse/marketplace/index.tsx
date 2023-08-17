@@ -1,8 +1,8 @@
 import React from 'react';
 import { MarketplaceContainer, Rect, Rect1 } from './style';
-import SubHeader from '../../../../../components/page/public/explore/subheader';
+import SubHeader from '@/components/page/public/explore/subheader';
 import { ItemContainer } from '../metaverses/style';
-import { Dropdown } from '../../../../../components/custom';
+import { Dropdown } from '@/components/custom';
 
 const Marketplace = () => {
     return <MarketplaceContainer>

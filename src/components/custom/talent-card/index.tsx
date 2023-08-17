@@ -1,7 +1,7 @@
 import React from 'react';
 import { Avatar, CardContainer, CardMark, Category, ProfileButton, ReviewContainer } from './style';
-import { Flex, P, Span } from '../../basic';
-import Icon from '../icon';
+import { Flex, P, Span } from '@/components/basic';
+import { Icon } from '@/components/custom';
 
 const TalentCard: React.FC<{ talent: TablentObject }> = ({ talent }) => {
     const {

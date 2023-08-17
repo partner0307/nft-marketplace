@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import Background from '../../../../assets/img/explore-bg.png';
-import { GV } from '../../../../utils/style.util';
+import { GV } from '@/utils/style.util';
+
+import Background from '@/assets/img/explore-bg.png';
 
 export const ExploreContainer = styled.div`
     display: flex;
