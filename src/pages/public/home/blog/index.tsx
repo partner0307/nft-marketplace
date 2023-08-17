@@ -13,15 +13,14 @@ import {
   NewsImage2,
   NewsImage3,
   Newsletter,
-  NewsletterWrapper,
   Rect,
   Reveal,
   SmallBlog,
 } from "./style";
 
-import { Flex, Heading, P, Span } from "../../../../basic";
-import { Button, Icon, Input } from "../../../../custom";
-import { GV } from "../../../../../utils/style.util";
+import { Flex, Heading, P, Span } from "../../../../components/basic";
+import { Button, Icon, Input } from "../../../../components/custom";
+import { GV } from "../../../../utils/style.util";
 
 import Image from "../../../../../assets/img/main-blog.png";
 import Image1 from "../../../../../assets/img/blog.png";
