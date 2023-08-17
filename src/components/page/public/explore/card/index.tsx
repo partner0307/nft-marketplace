@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar, CardContainer, IconLoader, ImageLoader } from './style';
-import { Flex, P } from '../../../../basic';
+import { Flex, P } from '@/components/basic';
 
 type CardType = {
     title: string,

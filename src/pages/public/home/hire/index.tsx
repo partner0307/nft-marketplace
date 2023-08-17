@@ -1,18 +1,18 @@
 import React from 'react';
 import { ArrowButton, Avatar, HireContainer, HireWrapper, ImageWrapper, Item, ItemList } from './style';
-import { Flex, Heading, P, Span } from '../../../../components/basic';
-import { GV } from '../../../../utils/style.util';
-import { Button, Checkbox, Icon } from '../../../../components/custom';
-import TalentCard from '../../../../components/custom/talent-card';
+import { Flex, Heading, P, Span } from '@/components/basic';
+import { GV } from '@/utils/style.util';
+import { Button, Checkbox, Icon } from '@/components/custom';
+import TalentCard from '@/components/custom/talent-card';
 
-import Image1 from '../../../../assets/img/hire1.png';
-import Avatar1 from '../../../../assets/img/avatar1.png';
-import Avatar2 from '../../../../assets/img/avatar2.png';
+import Image1 from '@/assets/img/hire1.png';
+import Avatar1 from '@/assets/img/avatar1.png';
+import Avatar2 from '@/assets/img/avatar2.png';
 
-import Person1 from '../../../../assets/img/avatar/pic1.png';
-import Person2 from '../../../../assets/img/avatar/pic2.png';
-import Person3 from '../../../../assets/img/avatar/pic3.png';
-import Person4 from '../../../../assets/img/avatar/pic4.png';
+import Person1 from '@/assets/img/avatar/pic1.png';
+import Person2 from '@/assets/img/avatar/pic2.png';
+import Person3 from '@/assets/img/avatar/pic3.png';
+import Person4 from '@/assets/img/avatar/pic4.png';
 
 const talents: TablentObject[] = [
     {

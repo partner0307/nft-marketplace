@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import variables, { desVariables, smVariables, tabVariables } from "./variable";
-import { GV, declearStyleVariables } from "../utils/style.util";
+import { GV, declearStyleVariables } from "@/utils/style.util";
 
 const GlobalStyle = createGlobalStyle`
 

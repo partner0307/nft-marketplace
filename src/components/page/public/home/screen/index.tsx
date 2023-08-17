@@ -1,10 +1,10 @@
 import React from 'react';
 import { CardContainer } from './style';
-import { Flex, P, Span } from '../../../../basic';
+import { Flex, P, Span } from '@/components/basic';
 
-import Mana from '../../../../../assets/img/mana.png';
-import Ether from '../../../../../assets/img/ether.png';
-import { GV } from '../../../../../utils/style.util';
+import Mana from '@/assets/img/mana.png';
+import Ether from '@/assets/img/ether.png';
+import { GV } from '@/utils/style.util';
 
 type SmallCardType = {
     image?: string,

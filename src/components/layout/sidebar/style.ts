@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Background from '../../../assets/img/screen.png';
+import Background from '@/assets/img/screen.png';
 
 export const SidebarContainer = styled.div`
     max-width: 300px;

@@ -1,6 +1,6 @@
 import React from "react";
 import { CheckboxContainer, StyledCheckbox } from "./style";
-import Icon from "../icon";
+import { Icon } from "@/components/custom";
 
 type CheckboxPropsType = {
     label?: string

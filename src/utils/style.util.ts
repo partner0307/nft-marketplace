@@ -1,4 +1,4 @@
-import variables from "../style/variable";
+import variables from "@/style/variable";
 
 export const declearStyleVariables = (variables: { [key: string]: string }, suffix?: string) => {
 	let css = '';

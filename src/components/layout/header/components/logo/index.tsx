@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Flex } from '../../../../basic';
-import { Icon } from '../../../../custom';
-import Logo from "../../../../../assets/img/logo.png"
+import Logo from "@/assets/img/logo.png"
+import { Flex } from '@/components/basic';
+import { Icon } from '@/components/custom';
 
 const LogoContainer = () => {
     return <React.Fragment>

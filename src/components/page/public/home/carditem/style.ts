@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import Image from '../../../../../assets/img/avatar1.png';
 
-import Mark from '../../../../../assets/img/mark.svg';
-import { GV } from '../../../../../utils/style.util';
+import { GV } from '@//utils/style.util';
+
+import Image from '@//assets/img/avatar1.png';
+import Mark from '@//assets/img/mark.svg';
 
 export const CardContainer = styled.div`
     border-radius: 18px;
