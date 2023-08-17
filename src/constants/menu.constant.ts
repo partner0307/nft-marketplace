@@ -1,6 +1,6 @@
 const _ROUTERS = {
     home: "/",
-    explore: "/explore",
+    metaverses: "/metaverses",
     marketplace: "/marketplace"
 }
 

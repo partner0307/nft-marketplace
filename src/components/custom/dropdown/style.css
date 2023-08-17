@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     font-size: 14px;
+    letter-spacing: 1px;
 }
 
 .dropdown.dropdown-sm .dropdown-picker >div >span {
@@ -22,7 +23,7 @@
 }
 
 .dropdown .dropdown-picker >div >span {
-    padding: 0.5rem 0.8rem;
+    padding: 0rem 0.8rem;
 }
 
 .dropdown .dropdown-picker:hover {

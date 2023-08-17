@@ -1,5 +1,5 @@
 import React from "react";
-import { ContentColor, FooterContainer, FooterWrapper, Line } from "./style";
+import { ContentColor, FooterContainer, FooterWrapper, Line, Logo } from "./style";
 import Flex from "../../basic/flex";
 import List, { ListItem } from "../../basic/list";
 import { GV } from "../../../utils/style.util";
@@ -7,7 +7,7 @@ import { P, Span } from "../../basic/text";
 import Icon from "../../custom/icon";
 import Link from "../../basic/link";
 
-import Logo from '../../../assets/img/logo.png';
+import LogoImage from '../../../assets/img/logo.png';
 import Map from '../../../assets/img/sitemap.png'
 
 const Footer = () => {
@@ -17,7 +17,8 @@ const Footer = () => {
                 <Flex
                     $style={{
                         fDirection: "column",
-                        gap: "2.5rem"
+                        gap: "2.5rem",
+                        p: '0 7rem 4.5rem',
                     }}
                 >
                     <Flex
@@ -34,8 +35,8 @@ const Footer = () => {
                     >
                         <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', maxW: '260px', gap: '30px' }}>
                             <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '24px' }}>
-                                <img src={Logo} alt="" />
-                                <Icon icon="Logo" />
+                                <Logo src={LogoImage} />
+                                <Icon icon="Logo2" />
                             </Flex>
                             <P $style={{ size: '16px' }}>Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget  lacus, ut interdum tellus elit sed risus. Maecenas eget lacus, ut interdum tellus elit sed risus. Maecenas eget </P>
                         </Flex>
@@ -196,8 +197,7 @@ const Footer = () => {
                     <Line />
                     <Flex $style={{
                         fDirection: 'row',
-                        hAlign: 'space-between',
-                        p: '0 0 75px 0'
+                        hAlign: 'space-between'
                     }}>
                         <Span $style={{ size: '12px', weight: '700' }}>© 2023 MetaverseDeployment. All rights reserved.</Span>
                         <Flex $style={{

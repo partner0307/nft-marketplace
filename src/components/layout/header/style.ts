@@ -1,9 +1,8 @@
 import styled from "styled-components"
 
-export const HeaderContainer = styled.header`
-	position: fixed;
+export const HeaderContainer = styled.header<{ isTop: boolean }>`
+	${({ isTop }) => !isTop ? `position: fixed; transform: translate(-50%, 0);` : `position: relative`}
 	left: 50%;
-	transform: translate(-50%, 0);
 	z-index: 8000;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.3);

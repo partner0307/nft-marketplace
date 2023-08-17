@@ -2,13 +2,16 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.div`
     background: #161616;
-    width: 100%;
-    margin: -10rem 0 0;
-    padding: 15rem 0 0;
+    /* margin: -10rem 0 0; */
+    padding: 10rem 0 0;
+    display: flex;
+    justify-content: flex-start;
+    /* margin-left: 300px; */
 `
 
 export const FooterContainer = styled.footer`
     max-width: 1440px;
+    width: 100%;
     margin: auto;
 
     @media (max-width: 992px) {
@@ -22,9 +25,13 @@ export const ContentColor = styled.div`
     text-transform: uppercase;
 `;
 
+export const Logo = styled.img`
+    width: 74px;
+    height: 100%;
+`
+
 export const Line = styled.div`
     height: 1px;
     background: #9F96A7;
     width: 100%;
-    margin: 20px 0;
 `
