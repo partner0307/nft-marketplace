@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.div`
     position: relative;
-    padding: 7rem 0 0;
+    /* margin-left: 300px; */
 `
 
 export const Rect = styled.div`

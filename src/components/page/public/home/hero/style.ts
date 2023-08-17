@@ -7,8 +7,17 @@ export const HeroContainer = styled.div`
     background-size: cover;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 38px;
-    padding: 0 2rem;
+    padding: 7rem 2rem;
+`;
+
+export const HeroWrapper = styled.div`
+    max-width: 1440px;
+    align-self: center;
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
 `
 
 export const DownButton = styled.button`

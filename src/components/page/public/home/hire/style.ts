@@ -4,13 +4,18 @@ import Backgound from '../../../../../assets/img/hire_bg.png';
 import { GV } from '../../../../../utils/style.util';
 
 export const HireContainer = styled.div`
-    /* display: flex; */
+    display: flex;
+    justify-content: center;
     background: url(${Backgound});
     background-position: top center;
     background-size: cover;
     height: 100%;
     padding: 7rem 2rem;
 `;
+
+export const HireWrapper = styled.div`
+    /* max-width: 1440px; */
+`
 
 export const Item = styled.div<{ isChecked: boolean }>`
     display: flex;

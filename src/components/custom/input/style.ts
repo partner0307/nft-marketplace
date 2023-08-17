@@ -19,26 +19,28 @@ export const InputContent = styled.div`
     position: relative;
 `
 
-export const InputWrapper = styled.label`
+export const InputWrapper = styled.label<{ padding: string }>`
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0.5rem;
+    ${({ padding }) => padding ? `padding: ${padding};` : `padding: 0 0.5rem;`}
     line-height: 3.5rem;
     min-height: 2.5rem;
     z-index: 1;
 `
 
-export const InputBoard = styled.div`
+export const InputBoard = styled.div<{ radius: string, bg: string, border: string }>`
     position: absolute;
     left: 0;
     top: 50%;
     transform: translate(0, -50%);
     width: 100%;
     height: 100%;
-    background: ${GV('input-bg')};
-    border-radius: 0.75rem;
+    border: 1px solid transparent;
+    ${({ bg }) => bg ? `background: ${bg};` : `background: ${GV('input-bg')};`}
+    ${({ radius }) => radius ? `border-radius: ${radius};` : `border-radius: 0.75rem;`}
+    ${({ border }) => border ? `border-color: ${border}` : ``}
     box-shadow: 0px 0px 0px 1px rgba(160, 140, 199, 0.16), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 `
 
