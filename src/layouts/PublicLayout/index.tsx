@@ -8,7 +8,7 @@ const PublicLayout = ({ children }: { children: React.ReactNode}) => {
     return (
         <>
             <Header />
-            <Sidebar />
+            {/* <Sidebar /> */}
             <Main>
                 { children }
             </Main>
