@@ -22,9 +22,9 @@ import { Flex, Heading, P, Span } from "../../../../components/basic";
 import { Button, Icon, Input } from "../../../../components/custom";
 import { GV } from "../../../../utils/style.util";
 
-import Image from "../../../../../assets/img/main-blog.png";
-import Image1 from "../../../../../assets/img/blog.png";
-import Image2 from "../../../../../assets/img/avatar2.png";
+import Image from "../../../../assets/img/main-blog.png";
+import Image1 from "../../../../assets/img/blog.png";
+import Image2 from "../../../../assets/img/avatar2.png";
 
 const Blog = () => {
   return (

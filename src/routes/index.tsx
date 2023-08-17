@@ -1,10 +1,9 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import _ROUTERS from "../constants/menu.constant";
 
-import PublicLayout from "../layouts/PublicLayout";
-
 import PublicPage from "../pages/public";
 import HomePage from "../pages/public/home";
+import Metaverses from "../pages/public/explore/metaverse/metaverses";
 
 const routers = createBrowserRouter([
     {
@@ -14,6 +13,10 @@ const routers = createBrowserRouter([
             {
                 path: _ROUTERS.home,
                 element: <HomePage />
+            },
+            {
+                path: _ROUTERS.metaverses,
+                element: <Metaverses />
             }
         ],
     },
