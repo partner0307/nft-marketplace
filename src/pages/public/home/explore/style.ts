@@ -19,13 +19,13 @@ export const Content = styled.span`
     color: transparent;
 `;
 
-export const TabButton = styled.button<{ isSelected: boolean }>`
-    background: #191919;
-    border-radius: 100px;
-    padding: 12px 24px;
-    ${({ isSelected }) => isSelected ? `background: ${GV('gradient')};` : ``};
-    ${({ isSelected }) => !isSelected ? `border: 1px solid #2B2928;` : `` }
-`
+    export const TabButton = styled.button<{ isSelected: boolean }>`
+        background: #191919;
+        border-radius: 100px;
+        padding: 12px 24px;
+        ${({ isSelected }) => isSelected ? `background: ${GV('gradient')};` : ``};
+        ${({ isSelected }) => !isSelected ? `border: 1px solid #2B2928;` : `` }
+    `
 
 export const ContentColor = styled.div`
     color: #3DFFF3;

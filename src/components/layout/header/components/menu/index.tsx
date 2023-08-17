@@ -13,7 +13,7 @@ const Menu = () => {
         <ItemContainer>
             <Content>Academy</Content>
         </ItemContainer>
-        <Input value='' placeholder='Search...' helpSide={<Icon icon='Search' />}></Input>
+        <Input value='' placeholder='Search...' padding='6px 12px' helpSide={<Icon icon='Search' />}></Input>
     </MenuContainer>
 }
 

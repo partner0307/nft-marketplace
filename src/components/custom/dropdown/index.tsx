@@ -10,9 +10,10 @@ type DropdownPropsType = {
 	hideIcon?: boolean;
 	onClose?: any;
 	container?: any;
-	rightSide?: any
-	isTop?: boolean
-	isSm?: boolean
+	customIcon?: any;
+	rightSide?: any;
+	isTop?: boolean;
+	isSm?: boolean;
 };
 
 const Dropdown: React.FC<DropdownPropsType> = ({
@@ -21,6 +22,7 @@ const Dropdown: React.FC<DropdownPropsType> = ({
 	hideIcon,
 	onClose,
 	container,
+	customIcon,
 	rightSide,
 	isTop,
 	isSm,
@@ -68,7 +70,7 @@ const Dropdown: React.FC<DropdownPropsType> = ({
 							: label}
 					</span>
 				</Flex>
-				{!hideIcon ? <Icon icon="ChevronArrowDown" /> : null}
+				{!hideIcon ? <Icon icon="ChevronArrowDown" /> : customIcon ? customIcon : ''}
 			</div>
 			{container !== undefined && (
 				<div

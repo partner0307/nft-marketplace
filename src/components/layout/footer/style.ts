@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.div`
     background: #161616;
-    margin: -10rem 0 0;
-    padding: 15rem 0 0;
+    /* margin: -10rem 0 0; */
+    padding: 10rem 0 0;
     display: flex;
     justify-content: flex-start;
     /* margin-left: 300px; */
