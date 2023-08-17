@@ -14,7 +14,8 @@ const variables = {
     'purple-shadow': '#dc6062',
     'primary-green': '#19B698',
     'caption-color': '#C1EBED',
-    'caption-color1': '8BF8FF',
+    'caption-color1': '#8BF8FF',
+    'pagination-number': '#515251',
     'gradient': 'linear-gradient(216deg, #F75BB1 1.04%, #C392DC 45.73%, #008782 100%)',
 
     'bg': '#0C0D0E',

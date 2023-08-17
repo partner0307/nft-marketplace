@@ -4,7 +4,8 @@ import { GV } from '../../../../utils/style.util';
 export const BlogContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 120px 32px 10px;
+    padding: 120px 32px 0;
+    margin-bottom: -7rem;
     position: relative;
 `
 

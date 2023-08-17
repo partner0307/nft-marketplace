@@ -4,6 +4,7 @@ import _ROUTERS from "../constants/menu.constant";
 import PublicPage from "../pages/public";
 import HomePage from "../pages/public/home";
 import Metaverses from "../pages/public/explore/metaverse/metaverses";
+import Marketplace from "../pages/public/explore/metaverse/marketplace";
 
 const routers = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ const routers = createBrowserRouter([
             {
                 path: _ROUTERS.metaverses,
                 element: <Metaverses />
+            },
+            {
+                path: _ROUTERS.marketplace,
+                element: <Marketplace />
             }
         ],
     },
