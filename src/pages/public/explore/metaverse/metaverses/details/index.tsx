@@ -1,11 +1,17 @@
 import React from 'react';
-import { CustomButton, CustomButton1, CustomFont, DetailsContainer, DetailsWrapper, HeroContainer, MarkContainer } from './style';
+import { CustomButton, CustomButton1, CustomFont, CustomTab, CustomeButton2, DetailsContainer, DetailsWrapper, HeroContainer, MarkContainer, StatusBar } from './style';
 import SubMenu from '../../../../../../components/page/public/explore/submenu';
 import { Flex, Heading, P } from '../../../../../../components/basic';
 import { Link } from 'react-router-dom';
+import { Icon } from '../../../../../../components/custom';
 
 import Mark from '../../../../../../assets/img/metaverse/mana.png';
-import { Icon } from '../../../../../../components/custom';
+import CircleCheck from '../../../../../../assets/img/metaverse/circle_check.png';
+import Twitter from '../../../../../../assets/img/metaverse/twitter.png';
+import Discord from '../../../../../../assets/img/metaverse/discord.png';
+import Instagram from '../../../../../../assets/img/metaverse/instagram.png';
+import Ether from '../../../../../../assets/img/metaverse/ether.png';
+import Polygon from '../../../../../../assets/img/metaverse/polygon.png';
 
 const Details = () => {
     return <DetailsContainer>
@@ -15,10 +21,10 @@ const Details = () => {
                 <Flex $style={{ gap: '4px', vAlign: 'center', }}>
                     <Link to='/metaverses'>
                         <Flex $style={{ hAlign: 'center', vAlign: 'center', gap: '4px', p: '4px' }}>
-                            <P $style={{ size: '14px', weight: '400' }}><CustomFont>Metaverse /</CustomFont></P>
+                            <P $style={{ size: '14px', weight: '400' }}><CustomFont family='Aeonik'>Metaverse /</CustomFont></P>
                         </Flex>
                     </Link>
-                    <P $style={{ size: '14px', weight: '400' }}><CustomFont>Decentraland</CustomFont></P>
+                    <P $style={{ size: '14px', weight: '400' }}><CustomFont family='Aeonik'>Decentraland</CustomFont></P>
                 </Flex>
                 <HeroContainer>
                     <MarkContainer>
@@ -32,16 +38,51 @@ const Details = () => {
                         </Flex>
                     </Flex>
                 </HeroContainer>
+            </Flex>
+            <Flex $style={{ fDirection: 'column', gap: '54px' }}>
                 <Flex $style={{ fDirection: 'column', gap: '20px', p: '40px 0 0' }}>
-                    <Flex $style={{ fDirection: 'row', vAlign: 'center' }}>
+                    <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '8px' }}>
                         <Heading level={2}>Decentraland</Heading>
-                        <Icon icon='CircleCheck' />
+                        <img src={CircleCheck} alt="" />
                     </Flex>
-                    <Flex>
-                        <P $style={{ size: '20px' }}>Decentraland is a decentralized virtual reality platform powered by blockchain technology. Within the Decentraland platform, users can create, experience, and monetize their content and applications.</P>
-                        
+                    <Flex $style={{ vAlign: 'center', hAlign: 'space-between', maxW: '780px' }}>
+                        <Flex $style={{ maxW: '580px' }}>
+                            <P $style={{ size: '20px' }}>Decentraland is a decentralized virtual reality platform powered by blockchain technology. Within the Decentraland platform, users can create, experience, and monetize their content and applications.</P>
+                        </Flex>
+                        <CustomeButton2>Buy Metaverse</CustomeButton2>
                     </Flex>
                 </Flex>
+                <Flex $style={{ gap: '20px' }}>
+                    <CustomTab isActive>Overview</CustomTab>
+                    <CustomTab>Collectible</CustomTab>
+                    <CustomTab>Land</CustomTab>
+                    <CustomTab>Marketplace</CustomTab>
+                    <CustomTab>News</CustomTab>
+                    <CustomTab>About</CustomTab>
+                    <CustomTab>Comments</CustomTab>
+                </Flex>
+            </Flex>
+            <Flex $style={{ fDirection: 'column', hAlign: 'flex-end' }}>
+                <Flex $style={{ fDirection: 'row', gap: '24px', p: '0 32px' }}>
+                    <Link to='#'><img src={Instagram} alt="" /></Link>
+                    <Link to='#'><img src={Twitter} alt="" /></Link>
+                    <Link to='#'><img src={Discord} alt="" /></Link>
+                </Flex>
+                <StatusBar>
+                    <Flex $style={{ vAlign: 'flex-start', hAlign: 'space-between' }}>
+                        <P><CustomFont>Blockchain</CustomFont></P>
+                        <Flex $style={{ fDirection: 'column', gap: '8px' }}>
+                            <Flex $style={{ vAlign: 'center', gap: '12px' }}>
+                                <P>Ethereum</P>
+                                <img src={Ether} alt="" />
+                            </Flex>
+                            <Flex $style={{ vAlign: 'center', gap: '12px' }}>
+                                <P>Polygon</P>
+                                <img src={Polygon} alt="" />
+                            </Flex>
+                        </Flex>
+                    </Flex>
+                </StatusBar>
             </Flex>
         </DetailsWrapper>
     </DetailsContainer>
