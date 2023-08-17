@@ -1,7 +1,7 @@
 import React from 'react';
 import SubHeader from '@/components/page/public/explore/subheader';
 import { Dropdown, Icon } from '@/components/custom';
-import { CustomFont, ItemContainer, MetaverseWrapper, MetaversesContainer, PageStep, PaginationWrapper, Rect, Rect1, StepButton } from './style';
+import { ItemContainer, MetaverseWrapper, MetaversesContainer, Rect, Rect1 } from './style';
 import { Flex, P } from '@/components/basic';
 import Card from '@/components/page/public/explore/card';
 
@@ -23,7 +23,7 @@ const Metaverses = () => {
             <Dropdown initialLabel='All Chains' />
         </ItemContainer>} />
         <MetaverseWrapper>
-            <Flex $style={{ maxW: '1440px', fDirection: 'row', fWrap: 'wrap', gap: '32px', p: '24px 0 48px 35px' }}>
+            <Flex $style={{ maxW: '1440px', fDirection: 'row', fWrap: 'wrap', gap: '32px' }}>
                 <Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana} icon2={Ether} />
                 <Card title='Decentraland' image={Image2} avatar={Avatar1} icon1={Mana1} icon2={Ether} />
                 <Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana} icon2={Ether} />
