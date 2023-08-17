@@ -9,7 +9,7 @@ export const HeroContainer = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 38px;
-    padding: 7rem 2rem;
+    padding: 4rem 2rem;
 `;
 
 export const HeroWrapper = styled.div`

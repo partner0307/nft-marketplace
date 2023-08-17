@@ -22,8 +22,17 @@ export const ContentColor = styled.div`
 export const ArrowButton = styled.div`
     background: ${GV('gradient')};
     border-radius: 999px;
-    padding: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
 `;
+
+export const ArrowContainer = styled.div`
+    position: absolute;
+    top: 35%;
+    left: 35%;
+`
 
 export const CardContainer = styled.div`
     padding: 30px 24px 18px;
