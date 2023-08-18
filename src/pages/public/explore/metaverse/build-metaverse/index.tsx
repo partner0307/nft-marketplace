@@ -7,7 +7,7 @@ import Builder from '@/components/page/public/explore/builder';
 
 import RealEstate from '@/assets/img/build-metaverse/real-estate.png';
 import RealEstateIcon from '@/assets/img/build-metaverse/real-estate-icon.png';
-import Ecommerce from '@/assets/img/build-metaverse/  ecommerce.png';
+import Ecommerce from '@/assets/img/build-metaverse/ecommerce.png';
 import EcommerceIcon from '@/assets/img/build-metaverse/ecommerce-icon.png';
 import Entertainment from '@/assets/img/build-metaverse/entertainment.png';
 import EntertainmentIcon from '@/assets/img/build-metaverse/entertainment-icon.png';
