@@ -6,7 +6,6 @@ import Background from '@/assets/img/explore-bg.png';
 export const ExploreContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items : center;
     background: no-repeat url(${Background});
     background-position: top center;
     background-size: cover;
