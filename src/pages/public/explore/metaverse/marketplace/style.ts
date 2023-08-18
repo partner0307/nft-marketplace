@@ -1,8 +1,20 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MarketplaceContainer = styled.div`
   background: #0c0d0e;
   position: relative;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MarketplaceWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 24px 0 48px 35px;
+  align-self: center;
+  max-width: 1440px;
+  width: 100%;
 `;
 
 export const Rect = styled.div`
