@@ -9,14 +9,13 @@ const COLORS = ['#C40941', '#08A0D8', '#D100BC'];
 
 const PieComponent: React.FC<PicComponent> = ({ data }) => {
     return <>
-        {/* <ResponsiveContainer width="100%" height="100%"> */}
-        <PieChart width={320} height={290}>
+        <PieChart width={400} height={400}>
           <Pie
             data={data}
             cx="50%"
             cy="50%"
             labelLine={false}
-            outerRadius={130}
+            outerRadius={200}
             dataKey="value"
           >
             {data.map((entry, index) => (
@@ -24,7 +23,6 @@ const PieComponent: React.FC<PicComponent> = ({ data }) => {
             ))}
           </Pie>
         </PieChart>
-      {/* </ResponsiveContainer> */}
     </>
 }
 

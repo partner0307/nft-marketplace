@@ -3,11 +3,11 @@ import { Avatar, CardContainer, IconLoader, ImageLoader } from './style';
 import { Flex, P } from '@/components/basic';
 
 type CardType = {
-    title: string,
-    image: string,
-    avatar: string,
-    icon1: string,
-    icon2: string
+    title?: string,
+    image?: string,
+    avatar?: string,
+    icon1?: string,
+    icon2?: string
 }
 
 const Card: React.FC<CardType> = ({ title, image, avatar, icon1, icon2 }) => {
@@ -21,8 +21,8 @@ const Card: React.FC<CardType> = ({ title, image, avatar, icon1, icon2 }) => {
                 <P $style={{ size: '20px', weight: '600' }}>{title}</P>
             </Flex>
             <Flex>
-                <IconLoader src={icon1} />
-                <IconLoader src={icon2} />
+                {icon1 && <IconLoader src={icon1} />}
+                {icon2 && <IconLoader src={icon2} />}
             </Flex>
         </Flex>
     </CardContainer>

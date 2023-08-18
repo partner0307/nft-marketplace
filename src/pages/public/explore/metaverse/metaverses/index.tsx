@@ -3,7 +3,7 @@ import SubHeader from '@/components/page/public/explore/subheader';
 import { Dropdown, Icon } from '@/components/custom';
 import { ItemContainer, MetaverseWrapper, MetaversesContainer, Rect, Rect1 } from './style';
 import { Flex, P } from '@/components/basic';
-import Card from '@/components/page/public/explore/card';
+import Card from '@/components/page/public/explore/metaverse-card';
 
 import Image1 from '@/assets/img/metaverse/1.png';
 import Image2 from '@/assets/img/metaverse/2.png';
