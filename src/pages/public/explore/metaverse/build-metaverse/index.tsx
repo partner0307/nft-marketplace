@@ -5,12 +5,12 @@ import { Icon, Input } from '@/components/custom';
 import { Flex, P } from '@/components/basic';
 import Builder from '@/components/page/public/explore/builder';
 
-import RealEstate from '@/assets/img/build/real-estate.png';
-import RealEstateIcon from '@/assets/img/build/real-estate-icon.png';
-import Ecommerce from '@/assets/img/build/ecommerce.png';
-import EcommerceIcon from '@/assets/img/build/ecommerce-icon.png';
-import Entertainment from '@/assets/img/build/entertainment.png';
-import EntertainmentIcon from '@/assets/img/build/entertainment-icon.png';
+import RealEstate from '@/assets/img/build-metaverse/real-estate.png';
+import RealEstateIcon from '@/assets/img/build-metaverse/real-estate-icon.png';
+import Ecommerce from '@/assets/img/build-metaverse/  ecommerce.png';
+import EcommerceIcon from '@/assets/img/build-metaverse/ecommerce-icon.png';
+import Entertainment from '@/assets/img/build-metaverse/entertainment.png';
+import EntertainmentIcon from '@/assets/img/build-metaverse/entertainment-icon.png';
 
 const Build = () => {
     return <BuildContainer>
