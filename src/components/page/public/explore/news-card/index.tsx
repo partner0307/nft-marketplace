@@ -5,8 +5,12 @@ import Image from '@/assets/img/avatar1.png';
 import { Flex, P, Span } from '@/components/basic';
 import { Icon } from '@/components/custom';
 
-const NewsCard = () => {
-    return <NewsCardContainer>
+type NewsCardType = {
+    width?: string
+}
+
+const NewsCard: React.FC<NewsCardType> = ({ width }) => {
+    return <NewsCardContainer width={width}>
         <NewsImage src={Image} />
         <P $style={{ size: '32px', weight: '900' }}>BBC host Asia verse on Decentraland th...</P>
         <P $style={{ size: '20px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, entum tellus...</P>

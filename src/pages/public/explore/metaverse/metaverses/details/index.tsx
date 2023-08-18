@@ -13,8 +13,11 @@ import Instagram from '@/assets/img/metaverse/instagram.png';
 import Ether from '@/assets/img/metaverse/ether.png';
 import Polygon from '@/assets/img/metaverse/polygon.png';
 import Overview from './overview';
+import News from './news';
 
 const Details = () => {
+    const [tabIndex, setTabIndex] = React.useState(1);
+
     return <DetailsContainer>
         <SubMenu />
         <DetailsWrapper>
@@ -41,7 +44,7 @@ const Details = () => {
                 </HeroContainer>
             </Flex>
             <DetailsContent>
-                <Flex $style={{ hAlign: 'space-between', p: '40px 0 0', w: '100%', maxW: '1440px' }}>
+                <Flex $style={{ hAlign: 'space-between', p: '40px 0 54px', w: '100%', maxW: '1440px' }}>
                     <Flex $style={{ fDirection: 'column', gap: '54px' }}>
                         <Flex $style={{ fDirection: 'column', gap: '20px' }}>
                             <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '8px' }}>
@@ -56,13 +59,13 @@ const Details = () => {
                             </Flex>
                         </Flex>
                         <Flex $style={{ gap: '20px' }}>
-                            <CustomTab isActive>Overview</CustomTab>
-                            <CustomTab>Collectible</CustomTab>
-                            <CustomTab>Land</CustomTab>
-                            <CustomTab>Marketplace</CustomTab>
-                            <CustomTab>News</CustomTab>
-                            <CustomTab>About</CustomTab>
-                            <CustomTab>Comments</CustomTab>
+                            <CustomTab isActive={tabIndex === 1} onClick={() => setTabIndex(1)}>Overview</CustomTab>
+                            <CustomTab isActive={tabIndex === 2} onClick={() => setTabIndex(2)}>Collectible</CustomTab>
+                            <CustomTab isActive={tabIndex === 3} onClick={() => setTabIndex(3)}>Land</CustomTab>
+                            <CustomTab isActive={tabIndex === 4} onClick={() => setTabIndex(4)}>Marketplace</CustomTab>
+                            <CustomTab isActive={tabIndex === 5} onClick={() => setTabIndex(5)}>News</CustomTab>
+                            <CustomTab isActive={tabIndex === 6} onClick={() => setTabIndex(6)}>About</CustomTab>
+                            <CustomTab isActive={tabIndex === 7} onClick={() => setTabIndex(7)}>Comments</CustomTab>
                         </Flex>
                     </Flex>
                     <Flex $style={{ fDirection: 'column', gap: '40px', p: '16px 0 0' }}>
@@ -108,7 +111,8 @@ const Details = () => {
                     </Flex>
                 </Flex>
                 <Flex $style={{ p: '54px 0 0', w: '100%', maxW: '1440px' }}>
-                    <Overview />
+                    {tabIndex === 1 && <Overview />}
+                    {tabIndex === 5 && <News />}
                 </Flex>
             </DetailsContent>
         </DetailsWrapper>

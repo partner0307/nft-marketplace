@@ -70,7 +70,6 @@ export const Similars = styled.div`
 
 export const CustomButton = styled.button`
     color: #BEBCBE;
-    height: 40px;
     padding: 12px 18px;
     border-radius: 32px;
     border: 1px solid #2B2928;

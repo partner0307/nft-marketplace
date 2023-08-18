@@ -14,7 +14,7 @@ export const MetaverseWrapper = styled.div`
   gap: 48px;
   padding: 24px 0 48px 35px;
   align-self: center;
-  max-width: 1440px;
+  max-width: 1200px;
   width: 100%;
 `;
 

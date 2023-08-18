@@ -8,6 +8,7 @@ import Metaverses from "@/pages/public/explore/metaverse/metaverses";
 import Marketplace from "@/pages/public/explore/metaverse/marketplace";
 import BuildMeta from "@/pages/public/explore/metaverse/build-metaverse";
 import Details from "@/pages/public/explore/metaverse/metaverses/details";
+import { Flex, Heading } from "@/components/basic";
 
 const routers = createBrowserRouter([
     {
@@ -33,6 +34,18 @@ const routers = createBrowserRouter([
             {
                 path: _ROUTERS.build,
                 element: <BuildMeta />
+            },
+            {
+                path: "*",
+                element: (
+                    <Flex $style={{
+                        h: "100vh",
+                        hAlign: "center",
+                        p: "300px 0 0"
+                    }}>
+                        <Heading level={1}>404 Not found page</Heading>
+                    </Flex>
+                )
             }
         ],
     },
