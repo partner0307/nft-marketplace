@@ -13,7 +13,12 @@ export const DetailsWrapper = styled.div`
 export const CustomFont = styled.div<{ family?: string }>`
     ${({ family }) => family ? `font-family: 'Aeonik';` : ``}
     color: #8D8E8D;
+`;
+
+export const CustomColor = styled.div`
+    color: #E85051;
 `
+
 export const HeroContainer = styled.div`
     display: flex;
     height: 365px;
@@ -90,6 +95,7 @@ export const StatusBar = styled.div`
     border-radius: 16px;
     border: 1px solid #1A1A1A;
     background: #0C0C0C;
+    margin-bottom: -100px;
 `;
 
 export const Line = styled.div`
