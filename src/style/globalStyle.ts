@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		margin: 0;
 		background: ${GV("bg")};
-		font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+		font-family: ${GV("font2")};
 		line-height: 150%;
 		font-size: ${GV("font-size")};
 		color: ${GV("color")};
