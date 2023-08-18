@@ -13,37 +13,43 @@ const Explore = () => {
 		{
 			key: "name",
 			label: "Name",
-			render: (i, v) => (
+			render: (i, v, n) => (
 				<Flex $style={{
-					vAlign: "center"
+					vAlign: "center",
+					gap: "1rem"
 				}}>
+					<Span>{n + 1}</Span>
 					<Flex $style={{
-						gap: "0.75rem",
 						vAlign: "center"
 					}}>
-						<img src={`public/imgs/${i.avatar}`} width={40} height={40} />
 						<Flex $style={{
-							fDirection: "column"
+							gap: "0.75rem",
+							vAlign: "center"
 						}}>
-							<Flex>
-								<Span $style={{
-									weight: "bold"
-								}}>{v}</Span>
-							</Flex>
-							<Flex>
-								{i.networks.map((network: string, i: number) => (
-									<React.Fragment>
-										<Flex $style={{
-											gap: "0.25rem",
-											vAlign: "center"
-										}}>
-											<img src={`public/imgs/chains/ethereum.png`} width={12} height={12} />
-											<Span $style={{
-												size: "12px"
-											}}>{network}</Span>
-										</Flex>
-									</React.Fragment>
-								))}
+							<img src={`public/imgs/${i.avatar}`} width={40} height={40} />
+							<Flex $style={{
+								fDirection: "column"
+							}}>
+								<Flex>
+									<Span $style={{
+										weight: "bold"
+									}}>{v}</Span>
+								</Flex>
+								<Flex>
+									{i.networks.map((network: string, i: number) => (
+										<React.Fragment>
+											<Flex $style={{
+												gap: "0.25rem",
+												vAlign: "center"
+											}}>
+												<img src={`public/imgs/chains/ethereum.png`} width={12} height={12} />
+												<Span $style={{
+													size: "12px"
+												}}>{network}</Span>
+											</Flex>
+										</React.Fragment>
+									))}
+								</Flex>
 							</Flex>
 						</Flex>
 					</Flex>
@@ -57,41 +63,47 @@ const Explore = () => {
 			label: "Balance",
 			render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
 			sort: (i: any, v: any) => v,
-			description: "This field is ..."
+			description: "This field is ...",
+			width: "180px"
 		},
 		{
 			key: "uaw",
 			label: "UAW",
 			render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
 			sort: (i: any, v: any) => v,
-			description: "This field is ..."
+			description: "This field is ...",
+			width: "180px"
 		},
 		{
 			key: "prouaw",
 			label: "%UAW",
 			render: (i, v) => (<Span $style={{ weight: "bold", color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{v}%</Span>),
 			sort: (i: any, v: any) => v,
-			description: "This field is ..."
+			description: "This field is ...",
+			width: "180px"
 		},
 		{
 			key: "volume",
 			label: "Volume",
 			render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
 			sort: (i: any, v: any) => v,
-			description: "This field is ..."
+			description: "This field is ...",
+			width: "180px"
 		},
 		{
 			key: "provolume",
 			label: "%Volume",
 			render: (i, v) => (<Span $style={{ weight: "bold", color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{v}%</Span>),
-			description: "This field is ..."
+			description: "This field is ...",
+			width: "180px"
 		},
 		{
 			key: "uaw24h",
 			label: "24HUAW",
 			render: (i, v) => (v),
 			sort: (i: any, v: any) => v,
-			description: "This field is ..."
+			description: "This field is ...",
+			width: "180px"
 		},
 	]
 

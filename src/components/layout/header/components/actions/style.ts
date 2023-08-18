@@ -1,13 +1,13 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const ActionContainer = styled.div`
-    display: flex;
-    padding-right: 0px;
-    justify-content: center;
-    padding: 0 32px;
-    gap: 20px;
+  display: flex;
+  padding-right: 0px;
+  justify-content: center;
+  padding: 0 32px;
+  gap: 20px;
 `;
 
 export const Content = styled.div`
-    font-family: 'Aeonik';
-`
+  font-family: "Aeonik";
+`;
