@@ -1,11 +1,10 @@
-declare type LanguageKeyType = "en-US";
+declare type LanguageKeyType = 'en-US';
 
 declare interface StoreObject {
   lang: LanguageKeyType;
-  theme: "dark" | "light";
+  theme: 'dark' | 'light';
   user: UserObject | null;
-  isChat: boolean;
-  isMobileNav: boolean;
+  isSlide: boolean;
   cookie: string | null;
 }
 

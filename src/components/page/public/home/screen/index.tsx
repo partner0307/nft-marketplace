@@ -5,6 +5,7 @@ import { Flex, P, Span } from '@/components/basic';
 import Mana from '@/assets/img/mana.png';
 import Ether from '@/assets/img/ether.png';
 import { GV } from '@/utils/style.util';
+import Card from '@/components/custom/card';
 
 type SmallCardType = {
     image?: string,
@@ -19,33 +20,37 @@ type BigCardType = {
 
 export const SmallCard: React.FC<SmallCardType> = ({ image, title, price }) => {
     return (
-        <CardContainer>
+        <Card>
             <img src={image} alt="" />
             <Flex $style={{
                 vAlign: 'center',
                 hAlign: 'space-between',
                 p: '0 8px'
             }}>
-                <P>{title}</P>
+                <Span $style={{
+                    weight: GV("weight-lg")
+                }}>{title}</Span>
                 <Span $style={{
                     color: GV('info')
                 }}>{price}</Span>
             </Flex>
-        </CardContainer>
+        </Card>
     )
 }
 
 export const BigCard: React.FC<BigCardType> = ({ image, title }) => {
     return (
-        <CardContainer>
-            <img src={image} alt="" />
+        <Card h=''>
+            <img src={image} style={{height: "21.25rem"}} alt="" />
             <Flex $style={{
                 fDirection: 'row',
                 vAlign: 'center',
                 hAlign: 'space-between',
                 p: '0 1rem'
             }}>
-                <P>{title}</P>
+                <Span $style={{
+                    weight: GV("weight-lg")
+                }}>{title}</Span>
                 <Flex $style={{
                     fDirection: 'row',
                     vAlign: 'center',
@@ -55,6 +60,6 @@ export const BigCard: React.FC<BigCardType> = ({ image, title }) => {
                     <img src={Ether} alt="" />
                 </Flex>
             </Flex>
-        </CardContainer>
+        </Card>
     )
 }

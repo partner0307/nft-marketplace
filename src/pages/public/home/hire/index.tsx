@@ -113,7 +113,7 @@ const HireSection = () => {
                                 size: '20px',
                                 color: GV('caption-color1')
                             }}>It's Time To</Span>
-                            <Heading level={3} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
+                            <Heading level={1} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
                         </Flex>
                         <ItemList>
                             <Item isChecked>
