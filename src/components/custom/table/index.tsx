@@ -7,7 +7,7 @@ export interface TableFieldInterface {
 	key: string
 	label: string
 	render: (data: any, value: any, index: number) => string | number | React.ReactNode,
-	width?: number
+	width?: string
 	sort?: (data: any, value: any, index: number) => void,
 	description?: string
 }
@@ -23,7 +23,7 @@ const Table = ({ fields, data }: TablePropsInterface) => {
 			<StyledTable>
 				<StyledTr>
 					{fields.map((field, i) => (
-						<StyledTh>
+						<StyledTh width={field.width}>
 							{field.label}
 							{field.sort !== null && (
 								<FilterSvg />
@@ -34,7 +34,7 @@ const Table = ({ fields, data }: TablePropsInterface) => {
 				{data.map((item: { [key: string]: any }, di: number) => (
 					<StyledTr>
 						{fields.map((field, fi) => (
-							<StyledTd>{field.render(item, item[field.key], di)}</StyledTd>
+							<StyledTd width={field.width}>{field.render(item, item[field.key], di)}</StyledTd>
 						))}
 					</StyledTr>
 				))}

@@ -33,11 +33,11 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		box-sizing: border-box;
 		margin: 0;
-		background: ${GV('bg')};
+		background: ${GV("bg")};
 		font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
 		line-height: 150%;
-		font-size: ${GV('font-size')};
-		color: ${GV('color')};
+		font-size: ${GV("font-size")};
+		color: ${GV("color")};
 		overflow-x: hidden;
 	}
 	*, *::before, *::after {
@@ -331,6 +331,6 @@ const GlobalStyle = createGlobalStyle`
 	  .swiper-pagination-bullet-active {
 		background:#4CAF50 !important;
 	  }
-`
+`;
 
 export default GlobalStyle;

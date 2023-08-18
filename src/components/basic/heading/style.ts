@@ -1,43 +1,43 @@
-import styled from 'styled-components';
-import { GV } from '@/utils/style.util';
+import styled from "styled-components";
+import { GV } from "@/utils/style.util";
 
 interface InlineHeadingPropsType {
-	color?: string
-	mb?: string
-	align?: 'left' | 'center' | 'right'
-	w?: string
-	minW?: string
-	maxW?: string
-	h?: string
-	minH?: string
-	maxH?: string
-	txtTransform?: 'uppercase' | 'lowercase' | 'capitalize'
+  color?: string;
+  mb?: string;
+  align?: "left" | "center" | "right";
+  w?: string;
+  minW?: string;
+  maxW?: string;
+  h?: string;
+  minH?: string;
+  maxH?: string;
+  txtTransform?: "uppercase" | "lowercase" | "capitalize";
 }
 
 type QueryType = { [key: string]: Partial<InlineHeadingPropsType> };
 
 export interface HeadingPropsType extends InlineHeadingPropsType {
-	weight?: string
-	level: HeadingLevelType
-	queries?: QueryType
+  weight?: string;
+  level: HeadingLevelType;
+  queries?: QueryType;
 }
 
 const setStyle = (
-	{
-		color,
-		mb,
-		align,
-		w,
-		minW,
-		maxW,
-		h,
-		minH,
-		maxH,
-		txtTransform
-	}: Partial<InlineHeadingPropsType>,
-	level?: HeadingLevelType,
+  {
+    color,
+    mb,
+    align,
+    w,
+    minW,
+    maxW,
+    h,
+    minH,
+    maxH,
+    txtTransform,
+  }: Partial<InlineHeadingPropsType>,
+  level?: HeadingLevelType,
 ) => {
-	return `
+  return `
     	${color ? `color:			var(--${color});` : ``}
         ${align ? `text-align:      ${align};` : ``}
 		${mb ? `margin-bottom:		${mb};` : ``}
@@ -49,24 +49,28 @@ const setStyle = (
 		${maxH ? `max-height:		${maxH};` : ``}
         ${level ? `font-size:       var(--font-size-${level});` : ``}
         ${txtTransform ? `text-transform: ${txtTransform};` : ``}
-	`
-}
+	`;
+};
 
 export const HeadingContainer = styled.p<HeadingPropsType>`
-    ${({ level }) => level ? `font-size: var(--font-size-${level});` : ``}
-    ${({ weight }) => weight ? `font-weight: ${weight};` : `font-weight: 700;`}
+  ${({ level }) => (level ? `font-size: var(--font-size-${level});` : ``)}
+  ${({ weight }) => (weight ? `font-weight: ${weight};` : `font-weight: 700;`)}
 	font-family: 'Termina Test';
-    line-height: ${GV('line-height')};
+  line-height: ${GV("line-height")};
 
-    ${({ level, queries, ...rest }: HeadingPropsType) => `
+  ${({ level, queries, ...rest }: HeadingPropsType) => `
         ${setStyle(rest, level)}
-		${queries
-			? Object.keys(queries).reverse()?.map((breakpoint: string) => {
-				return `@media (max-width: ${breakpoint}px) {
+		${
+      queries
+        ? Object.keys(queries)
+            .reverse()
+            ?.map((breakpoint: string) => {
+              return `@media (max-width: ${breakpoint}px) {
 							${setStyle(queries[breakpoint], level)}
 						}`;
-			}).join('')
-			: ``
-		}
+            })
+            .join("")
+        : ``
+    }
     `}
-`
+`;
