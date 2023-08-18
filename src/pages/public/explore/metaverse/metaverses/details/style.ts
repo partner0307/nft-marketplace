@@ -13,7 +13,8 @@ export const DetailsWrapper = styled.div`
 `;
 
 export const DetailsContent = styled.div`
-    align-self: center;
+    max-width: 1440px;
+    width: 100%;
 `
 
 export const CustomFont = styled.div<{ family?: string }>`
