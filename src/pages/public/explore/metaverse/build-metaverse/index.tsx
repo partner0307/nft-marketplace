@@ -21,7 +21,7 @@ const Build = () => {
         } />
         <BuildWrapper>
             <P $style={{ size: '20px', weight: '600' }}>Please select a metaverse area to build in</P>
-            <Flex $style={{ fDirection: 'row', fWrap: 'wrap', gap: '32px' }}>
+            <Flex $style={{ hAlign: 'center', fDirection: 'row', fWrap: 'wrap', gap: '32px' }}>
                 <Builder title='Real Estate' image={RealEstate} icon={RealEstateIcon} />
                 <Builder title='Ecommerce' image={Ecommerce} icon={EcommerceIcon} />
                 <Builder title='Entertainment' image={Entertainment} icon={EntertainmentIcon} />
