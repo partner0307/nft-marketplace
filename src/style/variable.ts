@@ -26,6 +26,14 @@ const variables = {
     'input-bg': '#191919',
     'input-color': '#9BA2B2',
 
+    "radius-xxs": "0.25rem",
+    "radius-xs": "0.5rem",
+    "radius-sm": "0.75rem",
+    "radius-md": "1rem",
+    "radius-lg": "1.5rem",
+    "radius-xl": "2rem",
+    "radius-xxl": "2.5rem",
+
     'font': "Aeonik",
 
     'font-size': '14px',
