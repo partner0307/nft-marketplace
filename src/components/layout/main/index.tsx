@@ -1,7 +1,10 @@
-import React from "react";  
+import React from "react";
 import styled from "styled-components";
 
-export const Main = styled.main`
+export const Main = styled.main<{ slideOpened?: boolean }>`
+    position: relative;
     min-height: 100vh;
     overflow-x: hidden;
+    margin-left: ${({ slideOpened }) => !slideOpened ? `0px` : `300px`};
+    transition: all ease-in .3s;
 `

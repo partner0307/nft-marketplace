@@ -114,7 +114,7 @@ const Explore = () => {
 				vAlign: 'center',
 				gap: '32px',
 			}}>
-				<Heading level={3}><Content>Explore The Marketplace</Content></Heading>
+				<Heading level={1}><Content>Explore The Marketplace</Content></Heading>
 				<Flex $style={{ maxW: '700px' }}>
 					<P $style={{ size: '20px', align: 'center' }}>Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut vulputate nisi. Integer in felis </P>
 				</Flex>
@@ -145,11 +145,15 @@ const Explore = () => {
 					/>
 				</Flex>
 			</Flex>
-			<Button $style={{
-				bg: GV('gradient'),
-				radius: '4px',
-				p: '8px 64px'
-			}}>View All Marketplace</Button>
+			<Flex $style={{
+				hAlign: "center"
+			}}>
+				<Button $style={{
+					bg: GV('gradient'),
+					radius: '4px',
+					p: '8px 64px'
+				}}>View All Marketplace</Button>
+			</Flex>
 		</ExploreContainer>
 	)
 }

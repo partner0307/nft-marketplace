@@ -1,17 +1,40 @@
-import styled from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
-import Background from "@/assets/img/screen.png";
+import Background from '@/assets/img/screen.png';
 
-export const SidebarContainer = styled.div`
-  max-width: 300px;
-  display: flex;
+export const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+export const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
+
+export const SidebarContainer = styled.div<{ slideOpened: boolean; opened: boolean }>`
+  position: fixed;
+  top: 64px;
+  left: 0;
+  /* display: flex; */
+  display: ${({ opened }) => (opened ? `flex` : `none`)};
   flex-direction: column;
-  width: 100%;
+  max-width: 300px;
+  height: calc(100vh - 64px);
+  background: rgb(140, 0, 0);
+  animation: ${({ slideOpened }) => (slideOpened ? fadeIn : fadeOut)} .4s;
+  z-index: 999;
 `;
 
-export const ListContainer = styled.div`
-  background: rgb(140, 0, 0);
-`;
+export const ListContainer = styled.div``;
 
 export const Title = styled.div`
   height: 90px;
