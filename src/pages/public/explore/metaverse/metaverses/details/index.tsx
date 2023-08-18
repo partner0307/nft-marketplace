@@ -15,6 +15,8 @@ import Polygon from '@/assets/img/metaverse/polygon.png';
 import Overview from './overview';
 import News from './news';
 import Comment from './comment';
+import Collectible from './collectibles';
+import Land from './land';
 
 const Details = () => {
     const [tabIndex, setTabIndex] = React.useState(1);
@@ -114,6 +116,8 @@ const Details = () => {
                     </Flex>
                     <Flex $style={{ p: '54px 0 0', w: '100%', maxW: '1440px' }}>
                         {tabIndex === 1 && <Overview />}
+                        {tabIndex === 2 && <Collectible />}
+                        {tabIndex === 3 && <Land />}
                         {tabIndex === 5 && <News />}
                         {tabIndex === 7 && <Comment />}
                     </Flex>

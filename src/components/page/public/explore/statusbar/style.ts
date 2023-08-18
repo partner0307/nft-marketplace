@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StatusBarContainer = styled.div`
-    width: 100%;
+    flex: 1;
     display: flex;
     padding: 24px;
     gap: 16px;

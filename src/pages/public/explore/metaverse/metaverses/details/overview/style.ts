@@ -48,6 +48,8 @@ export const Sales = styled.div`
 
 export const NewsContainer = styled.div`
     display: flex;
+    flex: 1;
+    width: 440px;
     padding: 32px 24px;
     flex-direction: column;
     align-items: flex-end;
