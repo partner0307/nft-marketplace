@@ -13,7 +13,8 @@ export const DetailsWrapper = styled.div`
 `;
 
 export const DetailsContent = styled.div`
-    align-self: center;
+    max-width: 1440px;
+    width: 100%;
 `
 
 export const CustomFont = styled.div<{ family?: string }>`
@@ -82,7 +83,6 @@ export const CustomeButton2 = styled.button`
 `;
 
 export const CustomTab = styled.button<{ isActive?: boolean }>`
-    height: 40px;
     padding: 12px 18px;
     gap: 4px;
     border-radius: 32px;

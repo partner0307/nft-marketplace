@@ -13,9 +13,9 @@ export const PageStep = styled.div`
   border: 1px solid #e7e8e7;
 `;
 
-export const PaginationWrapper = styled.div`
-  padding: 0 35px 128px;
-`;
+// export const PaginationWrapper = styled.div`
+//   padding: 0 35px 128px;
+// `;
 
 export const StepButton = styled.button<{
   isActive?: boolean;

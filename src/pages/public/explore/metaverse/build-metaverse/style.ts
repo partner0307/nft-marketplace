@@ -7,6 +7,7 @@ export const BuildContainer = styled.div`
 
 export const BuildWrapper = styled.div`
     display: flex;
+    align-self: center;
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;

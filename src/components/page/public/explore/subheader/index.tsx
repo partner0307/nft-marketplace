@@ -25,11 +25,13 @@ const SubHeader: React.FC<SubHeaderType> = ({ rightComponent, title, description
         ?
         <Flex $style={{ fDirection: 'column', gap: '32px' }}>
             <Flex $style={{ vAlign: 'center', p: '24px 35px', gap: '20px' }}>
-                <ItemContainer max='200px'>
+                <ItemContainer>
                     <Dropdown initialLabel='Filter' hideIcon customIcon={<Icon icon='Filter' />} />
                 </ItemContainer>
-                <Input value='' placeholder='Search Metaverse' padding='6px 12px' helpSide={<Icon icon='Search' />} />
-                <ItemContainer max='200px'>
+                <Flex $style={{ flex: '6' }}>
+                    <Input value='' placeholder='Search Metaverse' padding='6px 12px' helpSide={<Icon icon='Search' />} />
+                </Flex>
+                <ItemContainer>
                     <Dropdown initialLabel='Newly Listed' />
                 </ItemContainer>
             </Flex>
