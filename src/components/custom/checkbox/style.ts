@@ -11,12 +11,13 @@ export const CheckboxContainer = styled.div<{ isChecked: boolean }>`
     font-size: 20px;
 `;
 
-export const StyledCheckbox = styled.div<{ isChecked: boolean }>`
+export const StyledCheckbox = styled.div<{ isChecked: boolean, width?: string, height?: string }>`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 16px;
-  height: 16px;
+  ${({ width }) => width ? `width: ${width};` : `width: 18px;`}
+  ${({ height }) => height ? `width: ${height};` : `width: 18px;`}
+  height: 18px;
   ${({ isChecked }) =>
     isChecked ? `background-color: #780640;` : `background-color: #232323;`}
   ${({ isChecked }) =>

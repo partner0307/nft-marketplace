@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const NFTContainer = styled.div`
-    width: 264px;
     border-radius: 18px;
     border: 1px solid rgba(198, 224, 255, 0.50);
     background: rgba(217, 217, 217, 0.20);

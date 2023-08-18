@@ -30,14 +30,14 @@ export const TabButton = styled.button<{ isSelected: boolean }>`
   ${({ isSelected }) => (!isSelected ? `border: 1px solid #2B2928;` : ``)}
 `;
 
-export const ItemContainer = styled.div<{ max: string }>`
+export const ItemContainer = styled.div`
+  flex: 1;
   height: 2.5rem;
   padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  ${({ max }) => (max ? `max-width: ${max}` : ``)};
   gap: 0.3rem;
   font-size: ${GV("font-size")};
   border: 1px solid #2b2928;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NewsContainer } from './style';
+import { NewsContainer, Rect } from './style';
 import { Flex, P } from '@/components/basic';
 import NewsCard from '@/components/page/public/explore/news-card';
 import Pagination from '@/components/custom/pagination';
@@ -19,6 +19,7 @@ const News = () => {
             <NewsCard width='419px' />
         </Flex>
         <Pagination />
+        <Rect />
     </NewsContainer>
 }
 

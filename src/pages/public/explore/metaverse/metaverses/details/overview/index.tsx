@@ -42,8 +42,8 @@ const percent = [
 
 const Overview = () => {
     return <Flex $style={{ fDirection: 'column', gap: '32px' }}>
-        <Flex $style={{ hAlign: 'space-between', gap: '24px', w: '100%' }}>
-            <Flex $style={{ maxW: '902px', w: '100%', fDirection: 'column', gap: '32px' }}>
+        <Flex $style={{ gap: '26px' }}>
+            <Flex $style={{ fDirection: 'column', gap: '32px' }}>
                 <TitleBar>
                     <Flex $style={{ fDirection: 'column', w: '100%', gap: '20px' }}>
                         <P $style={{ size: '32px', weight: '600' }}>Decentraland Stat</P>

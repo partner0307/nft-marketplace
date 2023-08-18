@@ -2,6 +2,7 @@ import { GV } from '@/utils/style.util';
 import styled from 'styled-components';
 
 export const CommentContainer = styled.div`
+    position: relative;
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -43,4 +44,16 @@ export const Line = styled.div`
     background: #3D3D3E;
     width: 100%;
     height: 1px;
+`;
+
+export const Rect = styled.div`
+    position: absolute;
+    right: -193px;
+    bottom: 261px;
+    width: 700px;
+    height: 749px;
+    flex-shrink: 0;
+    border-radius: 749px;
+    background: rgba(235, 104, 198, 0.15);
+    filter: blur(150px);
 `
