@@ -52,7 +52,7 @@ const Details = () => {
                         <Flex $style={{ fDirection: 'column', gap: '54px' }}>
                             <Flex $style={{ fDirection: 'column', gap: '20px' }}>
                                 <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '8px' }}>
-                                    <Heading level={2}>Decentraland</Heading>
+                                    <Heading level={1}>Decentraland</Heading>
                                     <img src={CircleCheck} alt="" />
                                 </Flex>
                                 <Flex $style={{ vAlign: 'center', hAlign: 'space-between', maxW: '780px' }}>

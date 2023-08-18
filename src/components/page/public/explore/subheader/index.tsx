@@ -14,7 +14,7 @@ const SubHeader: React.FC<SubHeaderType> = ({ rightComponent, title, description
     return <>
         <SubHeaderContainer>
             <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '18px' }}>
-                <Heading level={3} $style={{ weight: '500' }}>{title}</Heading>
+                <Heading level={1} $style={{ weight: '500' }}>{title}</Heading>
                 <Flex $style={{ maxW: '400px' }}>
                     <P>{description ?? ''}</P>
                 </Flex>

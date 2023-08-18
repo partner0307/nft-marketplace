@@ -117,7 +117,9 @@ const Overview = () => {
                 <NewsCard />
                 <NewsCard />
                 <NewsCard />
-                <CustomButton>View more news</CustomButton>
+                <Flex $style={{ w: '100%', hAlign: 'flex-end' }}>
+                    <CustomButton>View more news</CustomButton>
+                </Flex>
             </NewsContainer>
         </Flex>
         <Similars>
