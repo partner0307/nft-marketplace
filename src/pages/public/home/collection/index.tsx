@@ -21,7 +21,7 @@ const Collection = () => {
                 fDirection: 'row',
                 hAlign: 'space-between'
             }}>
-                <Heading level={3} $style={{
+                <Heading level={1} $style={{
                     maxW: '500px'
                 }}>Buy, Collect, Sell NFTs, DApps, Spaces etc.</Heading>
                 <Flex $style={{
@@ -45,16 +45,18 @@ const Collection = () => {
                 fDirection: 'row',
                 hAlign: 'space-between',
                 p: '54px 0 0',
-                w: '100%'
+                w: '100%',
+                gap: "2rem"
             }}>
                 <Flex $style={{
                     fDirection: 'column',
                     vAlign: 'center',
-                    gap: '64px'
+                    gap: '3.875rem'
                 }}>
                     <Flex $style={{
                         fDirection: 'column',
-                        hAlign: 'space-between'
+                        hAlign: 'space-between',
+                        gap: "1rem"
                     }}>
                         <Flex $style={{
                             fDirection: 'column',
@@ -196,7 +198,7 @@ const Collection = () => {
                                     hAlign: 'space-between'
                                 }}>
                                     <P $style={{ weight: '700' }}>62% Sold</P>
-                                    <P $style={{ weight: '700 '}}>2435/4321</P>
+                                    <P $style={{ weight: '700 ' }}>2435/4321</P>
                                 </Flex>
                             </Flex>
                             <Flex $style={{
@@ -208,13 +210,13 @@ const Collection = () => {
                                 </SlideCard>
                                 <SlideCard>
                                     <img src={CardImage} alt="" />
-                                </SlideCard> 
+                                </SlideCard>
                                 <SlideCard>
                                     <img src={CardImage} alt="" />
-                                </SlideCard> 
+                                </SlideCard>
                                 <SlideCard>
                                     <img src={CardImage} alt="" />
-                                </SlideCard> 
+                                </SlideCard>
                             </Flex>
                         </CardContainer1>
                     </Flex>

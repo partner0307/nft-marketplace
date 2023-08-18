@@ -2,7 +2,7 @@ import React from 'react';
 import { Flex, Heading, P } from '@/components/basic';
 import { Button, Icon } from '@/components/custom';
 import { GV } from '@/utils/style.util';
-import {SmallCard, BigCard} from '@/components/page/public/home/screen';
+import { SmallCard, BigCard } from '@/components/page/public/home/screen';
 
 import Screen from '@/assets/img/screen.png';
 import Screen1 from '@/assets/img/screen1.png';
@@ -13,6 +13,18 @@ import { DownButton, HeroContainer } from './style';
 const Hero = () => {
     return (
         <HeroContainer>
+            <Flex $style={{
+                fDirection: 'column',
+                vAlign: 'center',
+                gap: '1rem'
+            }}>
+                <Heading level={1} $style={{
+                    txtTransform: 'uppercase',
+                    align: "center",
+                    maxW: "34.875rem",
+                    mb: "-5rem"
+                }}>All metaverses at one place</Heading>
+            </Flex>
             <Flex $style={{
                 vAlign: 'flex-end',
                 gap: "2rem"
@@ -32,18 +44,6 @@ const Hero = () => {
                     gap: '3.5rem',
                     flex: '1',
                 }}>
-                    <Flex $style={{
-                        fDirection: 'column',
-                        vAlign: 'center',
-                        gap: '1rem'
-                    }}>
-                        <Heading level={3} $style={{
-                            txtTransform: 'uppercase'
-                        }}>All metaverses</Heading>
-                        <Heading level={3} $style={{
-                            txtTransform: 'uppercase'
-                        }}>at one place</Heading>
-                    </Flex>
                     <Button $style={{
                         w: '366px',
                         h: '72px',

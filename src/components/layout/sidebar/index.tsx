@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ItemIcon, ListContainer, SidebarContainer, Title } from './style';
 import { Flex, List, ListItem, P } from '@/components/basic';
 
@@ -10,81 +10,96 @@ import NFTIcon from '@/assets/img/menu/nfts.png';
 import AvatarIcon from '@/assets/img/menu/avatars.png';
 import StakingIcon from '@/assets/img/menu/staking.png';
 import Ads from '@/assets/img/menu/ads.png';
+import { usePublicLayoutContext } from '@/layouts/PublicLayout/context';
 
 const Sidebar = () => {
-    return <SidebarContainer>
-        <Title>
-            <P $style={{ weight: '600' }}>Join Community</P>
-        </Title>
-        <ListContainer>
-            <List dir='column' gap='0'>
-                <ListItem hideDot>
-                    <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
-                        <ItemIcon src={PostIcon} alt="" />
-                        <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                            <P $style={{ size: '20px' }}>Post Project</P>
-                            <P>Post a job with description</P>
+    const { slideOpened, dispatch } = usePublicLayoutContext();
+    const [opened, setOpened] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (slideOpened === false) {
+            setTimeout(() => {
+                setOpened(false)
+            }, 300)
+        } else {
+            setOpened(true);
+        }
+    }, [slideOpened])
+    return (
+        <SidebarContainer slideOpened={slideOpened} opened={opened}>
+            <Title>
+                <P $style={{ weight: '600' }}>Join Community</P>
+            </Title>
+            <ListContainer>
+                <List dir='column' gap='0'>
+                    <ListItem hideDot>
+                        <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
+                            <ItemIcon src={PostIcon} alt="" />
+                            <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
+                                <P $style={{ size: '20px' }}>Post Project</P>
+                                <P>Post a job with description</P>
+                            </Flex>
                         </Flex>
-                    </Flex>
-                </ListItem>
-                <ListItem hideDot>
-                    <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
-                        <ItemIcon src={HireIcon} alt="" />
-                        <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                            <P $style={{ size: '20px' }}>Hire Talents</P>
-                            <P>For your web3 projects</P>
+                    </ListItem>
+                    <ListItem hideDot>
+                        <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
+                            <ItemIcon src={HireIcon} alt="" />
+                            <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
+                                <P $style={{ size: '20px' }}>Hire Talents</P>
+                                <P>For your web3 projects</P>
+                            </Flex>
                         </Flex>
-                    </Flex>
-                </ListItem>
-                <ListItem hideDot>
-                    <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
-                        <ItemIcon src={WorkIcon} alt="" />
-                        <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                            <P $style={{ size: '20px' }}>Work As Talent</P>
-                            <P>Lorem ipsum</P>
+                    </ListItem>
+                    <ListItem hideDot>
+                        <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
+                            <ItemIcon src={WorkIcon} alt="" />
+                            <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
+                                <P $style={{ size: '20px' }}>Work As Talent</P>
+                                <P>Lorem ipsum</P>
+                            </Flex>
                         </Flex>
-                    </Flex>
-                </ListItem>
-                <ListItem hideDot>
-                    <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
-                        <ItemIcon src={MetaverseIcon} alt="" />
-                        <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                            <P $style={{ size: '20px' }}>Metaverse</P>
-                            <P>Buy, sell and build land</P>
+                    </ListItem>
+                    <ListItem hideDot>
+                        <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
+                            <ItemIcon src={MetaverseIcon} alt="" />
+                            <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
+                                <P $style={{ size: '20px' }}>Metaverse</P>
+                                <P>Buy, sell and build land</P>
+                            </Flex>
                         </Flex>
-                    </Flex>
-                </ListItem>
-                <ListItem hideDot>
-                    <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
-                        <ItemIcon src={NFTIcon} alt="" />
-                        <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                            <P $style={{ size: '20px' }}>NFTs</P>
-                            <P>Buy, sell and build land</P>
+                    </ListItem>
+                    <ListItem hideDot>
+                        <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
+                            <ItemIcon src={NFTIcon} alt="" />
+                            <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
+                                <P $style={{ size: '20px' }}>NFTs</P>
+                                <P>Buy, sell and build land</P>
+                            </Flex>
                         </Flex>
-                    </Flex>
-                </ListItem>
-                <ListItem hideDot>
-                    <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
-                        <ItemIcon src={AvatarIcon} alt="" />
-                        <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                            <P $style={{ size: '20px' }}>Avatars</P>
-                            <P>Create, avatar builders for you</P>
+                    </ListItem>
+                    <ListItem hideDot>
+                        <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
+                            <ItemIcon src={AvatarIcon} alt="" />
+                            <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
+                                <P $style={{ size: '20px' }}>Avatars</P>
+                                <P>Create, avatar builders for you</P>
+                            </Flex>
                         </Flex>
-                    </Flex>
-                </ListItem>
-                <ListItem hideDot>
-                    <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
-                        <ItemIcon src={StakingIcon} alt="" />
-                        <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                            <P $style={{ size: '20px' }}>Staking</P>
-                            <P>View blockchain data</P>
+                    </ListItem>
+                    <ListItem hideDot>
+                        <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
+                            <ItemIcon src={StakingIcon} alt="" />
+                            <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
+                                <P $style={{ size: '20px' }}>Staking</P>
+                                <P>View blockchain data</P>
+                            </Flex>
                         </Flex>
-                    </Flex>
-                </ListItem>
-            </List>
-        </ListContainer>
-        <img src={Ads} alt="" />
-    </SidebarContainer>
+                    </ListItem>
+                </List>
+            </ListContainer>
+            <img src={Ads} alt="" />
+        </SidebarContainer>
+    )
 }
 
 export default Sidebar;
