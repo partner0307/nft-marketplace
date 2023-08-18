@@ -1,17 +1,17 @@
-import styled from "styled-components";
-import { GV } from "@/utils/style.util";
+import styled from 'styled-components';
+import { GV } from '@/utils/style.util';
 
 interface InlineHeadingPropsType {
   color?: string;
   mb?: string;
-  align?: "left" | "center" | "right";
+  align?: 'left' | 'center' | 'right';
   w?: string;
   minW?: string;
   maxW?: string;
   h?: string;
   minH?: string;
   maxH?: string;
-  txtTransform?: "uppercase" | "lowercase" | "capitalize";
+  txtTransform?: 'uppercase' | 'lowercase' | 'capitalize';
 }
 
 type QueryType = { [key: string]: Partial<InlineHeadingPropsType> };
@@ -35,28 +35,28 @@ const setStyle = (
     maxH,
     txtTransform,
   }: Partial<InlineHeadingPropsType>,
-  level?: HeadingLevelType,
+  level?: HeadingLevelType
 ) => {
   return `
     	${color ? `color:			var(--${color});` : ``}
-        ${align ? `text-align:      ${align};` : ``}
-		${mb ? `margin-bottom:		${mb};` : ``}
-		${w ? `width:				${w};` : ``}
-		${minW ? `min-width:		${minW};` : ``}
-		${maxW ? `max-width:		${maxW};` : ``}
-		${h ? `height:				${h};` : ``}
-		${minH ? `max-height:		${minH};` : ``}
-		${maxH ? `max-height:		${maxH};` : ``}
-        ${level ? `font-size:       var(--font-size-${level});` : ``}
-        ${txtTransform ? `text-transform: ${txtTransform};` : ``}
+      ${align ? `text-align:      ${align};` : ``}
+      ${mb ? `margin-bottom:		${mb};` : ``}
+      ${w ? `width:				${w};` : ``}
+      ${minW ? `min-width:		${minW};` : ``}
+      ${maxW ? `max-width:		${maxW};` : ``}
+      ${h ? `height:				${h};` : ``}
+      ${minH ? `max-height:		${minH};` : ``}
+      ${maxH ? `max-height:		${maxH};` : ``}
+      ${level ? `font-size:       var(--font-size-${level});` : ``}
+      ${txtTransform ? `text-transform: ${txtTransform};` : ``}
 	`;
 };
 
 export const HeadingContainer = styled.p<HeadingPropsType>`
   ${({ level }) => (level ? `font-size: var(--font-size-${level});` : ``)}
   ${({ weight }) => (weight ? `font-weight: ${weight};` : `font-weight: 700;`)}
-	font-family: 'Termina Test';
-  line-height: ${GV("line-height")};
+	font-family: ${GV('font1')};
+  line-height: ${GV('line-height')};
 
   ${({ level, queries, ...rest }: HeadingPropsType) => `
         ${setStyle(rest, level)}
@@ -69,7 +69,7 @@ export const HeadingContainer = styled.p<HeadingPropsType>`
 							${setStyle(queries[breakpoint], level)}
 						}`;
             })
-            .join("")
+            .join('')
         : ``
     }
     `}

@@ -36,7 +36,6 @@ const variables = {
 
   font1: 'Termina Test',
   font2: 'Neue Haas Grotesk Display Pro',
-  font3: 'Termina Test',
 
   'weight-xl': '700',
   'weight-lg': '600',
