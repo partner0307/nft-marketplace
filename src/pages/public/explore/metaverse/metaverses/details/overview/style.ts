@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const TitleBar = styled.div`
     display: flex;
-    width: 100%;
+    width: 902px;
     padding: 24px;
     flex-direction: column;
     align-items: flex-start;
@@ -14,7 +14,7 @@ export const TitleBar = styled.div`
 export const Activity = styled.div`
     display: flex;
     width: 895px;
-    height: 502px;
+    height: 524px;
     padding: 24px;
     flex-direction: column;
     align-items: flex-start;
@@ -23,6 +23,17 @@ export const Activity = styled.div`
     border-radius: 16px;
     background: #121112;
 `;
+
+export const Transaction = styled.div`
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #121112;
+`
 
 export const Sales = styled.div`
     display: flex;
@@ -34,6 +45,28 @@ export const Sales = styled.div`
     border: 1px solid #1A1A1A;
     background: rgba(12, 12, 12, 0.90);
 `;
+
+export const NewsContainer = styled.div`
+    display: flex;
+    padding: 32px 24px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 32px;
+    border-radius: 16px;
+    border: 1px solid #1E1E20;
+    background: rgba(12, 13, 14, 0.80);
+`
+
+export const Similars = styled.div`
+    display: flex;
+    padding: 32px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border-radius: 16px;
+    border: 1px solid #1A1A1A;
+    background: rgba(12, 12, 12, 0.90);
+`
 
 export const CustomButton = styled.button`
     color: #BEBCBE;

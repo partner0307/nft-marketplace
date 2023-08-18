@@ -8,6 +8,12 @@ export const DetailsContainer = styled.div`
 
 export const DetailsWrapper = styled.div`
     padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+`;
+
+export const DetailsContent = styled.div`
+    align-self: center;
 `
 
 export const CustomFont = styled.div<{ family?: string }>`

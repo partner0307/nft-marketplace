@@ -6,7 +6,7 @@ import PublicPage from "@/pages/public";
 import HomePage from "@/pages/public/home";
 import Metaverses from "@/pages/public/explore/metaverse/metaverses";
 import Marketplace from "@/pages/public/explore/metaverse/marketplace";
-import Build from "@/pages/public/explore/metaverse/build-metaverse";
+import BuildMeta from "@/pages/public/explore/metaverse/build-metaverse";
 import Details from "@/pages/public/explore/metaverse/metaverses/details";
 
 const routers = createBrowserRouter([
@@ -32,7 +32,7 @@ const routers = createBrowserRouter([
             },
             {
                 path: _ROUTERS.build,
-                element: <Build />
+                element: <BuildMeta />
             }
         ],
     },
