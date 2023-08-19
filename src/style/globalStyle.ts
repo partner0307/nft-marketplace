@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
 
 	@font-face {
 		font-family: 'Aeonik';
-		src: url('../assets/fonts/aeonik/Aeonik-Regular.otf') format('opentype');
+		src: url('src/assets/fonts/aeonik/Aeonik-Regular.otf') format('opentype');
 	}
 	:root {
 		${declearStyleVariables(variables)}
@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
 	html {
 		-ms-text-size-adjust: 100%;
 		-webkit-text-size-adjust: 100%;
+		overflow-x: hidden;
 
 		@media (max-width: 1200px) {
 			${declearStyleVariables(desVariables, "!important")}

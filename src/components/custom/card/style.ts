@@ -1,5 +1,6 @@
-import { GV } from '@/utils/style.util';
 import styled from 'styled-components';
+import { ImageContainer } from '@/components/basic/img/style';
+import { GV } from '@/utils/style.util';
 
 export interface CardContainerPropsInterface {
   h?: string;
@@ -20,4 +21,8 @@ export const CardContainer = styled.div<CardContainerPropsInterface>`
   padding: ${({ p }) => p ?? `0.5rem`};
   border: 1px solid ${({ bcolor }) => bcolor ?? `rgba(198, 224, 255, 0.5)`};
   border-radius: ${({ bradius }) => bradius ?? GV('radius-md')};
+  overflow: hidden;
+
+  /* ${ImageContainer} {
+  } */
 `;

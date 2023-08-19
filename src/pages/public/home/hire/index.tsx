@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion'
 import { ArrowButton, Avatar, HireContainer, HireWrapper, ImageWrapper, Item, ItemList } from './style';
 import { Flex, Heading, P, Span } from '@/components/basic';
 import { GV } from '@/utils/style.util';
@@ -91,12 +92,19 @@ const HireSection = () => {
     return (
         <HireContainer>
             <HireWrapper>
-                <Flex $style={{
-                    p: "0 10rem 5rem",
-                    vAlign: "center",
-                    maxW: '1440px',
-                    overflow: "hidden"
-                }}>
+                <Flex
+                    as={motion.div}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    $style={{
+                        p: "0 10rem 5rem",
+                        vAlign: "center",
+                        maxW: '1440px',
+                        overflow: "hidden"
+                    }}
+                >
                     <Flex $style={{
                         fDirection: 'column',
                         hAlign: 'flex-start',
@@ -115,67 +123,104 @@ const HireSection = () => {
                             }}>It's Time To</Span>
                             <Heading level={1} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
                         </Flex>
-                        <ItemList>
-                            <Item isChecked>
-                                <Checkbox label='All' isChecked />
-                            </Item>
-                            <Item isChecked={false}>
-                                <Checkbox label='Metaverse' />
-                            </Item>
-                            <Item isChecked={false}>
-                                <Checkbox label='Web3' />
-                            </Item>
-                            <Item isChecked={false}>
-                                <Checkbox label='Designers' />
-                            </Item>
-                            <Item isChecked={false}>
-                                <Checkbox label='Developers' />
-                            </Item>
-                            <Item isChecked={false}>
-                                <Checkbox label='Modelers' />
-                            </Item>
-                            <Item isChecked={false}>
-                                <Checkbox label='AI Experts' />
-                            </Item>
-                            <Item isChecked={false}>
-                                <Checkbox label='Animators' />
-                            </Item>
-                            <Item isChecked={false}>
-                                <Checkbox label='Managers' />
-                            </Item>
-                        </ItemList>
+                        <motion.div
+                            initial={{ translateX: "-100%" }}
+                            whileInView={{ translateX: 0 }}
+                            transition={{ duration: 1, delay: 0.5 }}
+                            viewport={{ once: true }}
+                        >
+                            <ItemList>
+                                <Item isChecked>
+                                    <Checkbox label='All' isChecked />
+                                </Item>
+                                <Item isChecked={false}>
+                                    <Checkbox label='Metaverse' />
+                                </Item>
+                                <Item isChecked={false}>
+                                    <Checkbox label='Web3' />
+                                </Item>
+                                <Item isChecked={false}>
+                                    <Checkbox label='Designers' />
+                                </Item>
+                                <Item isChecked={false}>
+                                    <Checkbox label='Developers' />
+                                </Item>
+                                <Item isChecked={false}>
+                                    <Checkbox label='Modelers' />
+                                </Item>
+                                <Item isChecked={false}>
+                                    <Checkbox label='AI Experts' />
+                                </Item>
+                                <Item isChecked={false}>
+                                    <Checkbox label='Animators' />
+                                </Item>
+                                <Item isChecked={false}>
+                                    <Checkbox label='Managers' />
+                                </Item>
+                            </ItemList>
+                        </motion.div>
                     </Flex>
                     <ImageWrapper>
-                        <img src={Image1} alt="" />
-                        <Flex $style={{
-                            fDirection: 'row',
-                            vAlign: 'center',
-                            hAlign: 'center'
-                        }}>
+                        <Flex
+                            as={motion.div}
+                            initial={{ translateX: "100%" }}
+                            whileInView={{ translateX: "0%" }}
+                            transition={{ duration: 1.5, delay: 0.5 }}
+                            viewport={{ once: true }}
+                        >
+                            <img src={Image1} alt="" />
+                        </Flex>
+                        <Flex
+                            as={motion.div}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 1.5, delay: 0.5 }}
+                            viewport={{ once: true }}
+                            $style={{
+                                fDirection: 'row',
+                                vAlign: 'center',
+                                hAlign: 'center'
+                            }}
+                        >
                             <Avatar src={Avatar1} />
                             <Avatar src={Avatar2} />
                             <Avatar src={Avatar1} />
                         </Flex>
                     </ImageWrapper>
                 </Flex>
-                <Flex $style={{
-                    fDirection: 'row',
-                    gap: '32px',
-                    p: '0 0 3rem',
-                    overflow: "auto",
-                    mb: "3.5rem"
-                }}>
-                    {talents.map(talent => (
+                <Flex
+                    as={motion.div}
+                    initial={{ translateX: "100%" }}
+                    whileInView={{ translateX: "0%" }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    $style={{
+                        fDirection: 'row',
+                        gap: '32px',
+                        p: '0 0 3rem',
+                        overflow: "auto",
+                        mb: "3.5rem"
+                    }}
+                >
+                    {talents.map((talent, i) => (
                         <TalentCard
+                            key={i}
                             talent={talent}
                         />
                     ))}
                 </Flex>
-                <Flex $style={{
-                    fDirection: 'row',
-                    hAlign: 'space-between',
-                    p: '0 32px 0 0'
-                }}>
+                <Flex
+                    as={motion.div}
+                    initial={{ translateY: "100%" }}
+                    whileInView={{ translateY: "0%" }}
+                    transition={{ duration: 1.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    $style={{
+                        fDirection: 'row',
+                        hAlign: 'space-between',
+                        p: '0 32px 0 0'
+                    }}
+                >
                     <Button $style={{
                         bg: GV('gradient'),
                         radius: '8px',

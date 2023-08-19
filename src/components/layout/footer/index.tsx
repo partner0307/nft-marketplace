@@ -9,13 +9,12 @@ import Map from '@/assets/img/sitemap.png'
 
 const Footer = () => {
     return (
-        <FooterWrapper>
-            <FooterContainer>
+        <FooterContainer>
+            <FooterWrapper>
                 <Flex
                     $style={{
                         fDirection: "column",
                         gap: "2.5rem",
-                        p: '0 7rem 4.5rem',
                     }}
                 >
                     <Flex
@@ -145,69 +144,74 @@ const Footer = () => {
                             </Flex>
                         </Flex>
                     </Flex>
-                    <Flex
-                        $style={{
-                            hAlign: "flex-start",
-                            maxW: '1440px',
-                            w: '100%',
-                            queries: {
-                                768: {
-                                    fDirection: "column",
-                                    hAlign: "center",
-                                    vAlign: "center",
-                                    gap: "1rem"
+                    <Flex $style={{
+                        fDirection: "column",
+                        gap: "1.25rem"
+                    }}>
+                        <Flex
+                            $style={{
+                                hAlign: "flex-start",
+                                maxW: '1440px',
+                                w: '100%',
+                                queries: {
+                                    768: {
+                                        fDirection: "column",
+                                        hAlign: "center",
+                                        vAlign: "center",
+                                        gap: "1rem"
+                                    }
                                 }
-                            }
-                        }}
-                    >
+                            }}
+                        >
+                            <Flex $style={{
+                                fDirection: 'column',
+                                gap: '12px',
+                                vAlign: 'flex-start'
+                            }}>
+                                <P $style={{ size: '20px', weight: '600' }}>Join the Community</P>
+                                <Flex $style={{
+                                    fDirection: 'row',
+                                    gap: '24px'
+                                }}>
+                                    <Link to="#">
+                                        <Icon icon="FaceBook" />
+                                    </Link>
+                                    <Link to="#">
+                                        <Icon icon="Instagram" />
+                                    </Link>
+                                    <Link to="#">
+                                        <Icon icon="Twitter" />
+                                    </Link>
+                                    <Link to="#">
+                                        <Icon icon="Github" />
+                                    </Link>
+                                    <Link to="#">
+                                        <Icon icon="Phone" />
+                                    </Link>
+                                    <Link to="#">
+                                        <Icon icon="Youtube" />
+                                    </Link>
+                                </Flex>
+                            </Flex>
+                        </Flex>
+                        <Line />
                         <Flex $style={{
-                            fDirection: 'column',
-                            gap: '12px',
-                            vAlign: 'flex-start'
+                            fDirection: 'row',
+                            hAlign: 'space-between'
                         }}>
-                            <P $style={{ size: '20px', weight: '600' }}>Join the Community</P>
+                            <Span $style={{ size: '12px', weight: '700' }}>© 2023 MetaverseDeployment. All rights reserved.</Span>
                             <Flex $style={{
                                 fDirection: 'row',
-                                gap: '24px'
+                                gap: '64px'
                             }}>
-                                <Link to="#">
-                                    <Icon icon="FaceBook" />
-                                </Link>
-                                <Link to="#">
-                                    <Icon icon="Instagram" />
-                                </Link>
-                                <Link to="#">
-                                    <Icon icon="Twitter" />
-                                </Link>
-                                <Link to="#">
-                                    <Icon icon="Github" />
-                                </Link>
-                                <Link to="#">
-                                    <Icon icon="Phone" />
-                                </Link>
-                                <Link to="#">
-                                    <Icon icon="Youtube" />
-                                </Link>
+                                <Link to="/"><Span $style={{ size: '12px', weight: '700' }}>Privacy Policy</Span></Link>
+                                <Link to="/"><Span $style={{ size: '12px', weight: '700' }}>Term of Service</Span></Link>
                             </Flex>
                         </Flex>
                     </Flex>
-                    <Line />
-                    <Flex $style={{
-                        fDirection: 'row',
-                        hAlign: 'space-between'
-                    }}>
-                        <Span $style={{ size: '12px', weight: '700' }}>© 2023 MetaverseDeployment. All rights reserved.</Span>
-                        <Flex $style={{
-                            fDirection: 'row',
-                            gap: '64px'
-                        }}>
-                            <Span $style={{ size: '12px', weight: '700' }}>Privacy Policy</Span>
-                            <Span $style={{ size: '12px', weight: '700' }}>Term of Service</Span>
-                        </Flex>
-                    </Flex>
                 </Flex>
-            </FooterContainer>
-        </FooterWrapper>
+            </FooterWrapper>
+        </FooterContainer>
     )
 }
 
