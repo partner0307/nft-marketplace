@@ -7,8 +7,11 @@ import HomePage from "@/pages/public/home";
 import Metaverses from "@/pages/public/explore/metaverse/metaverses";
 import Marketplace from "@/pages/public/explore/metaverse/marketplace";
 import BuildMeta from "@/pages/public/explore/metaverse/build-metaverse";
-import Details from "@/pages/public/explore/metaverse/metaverses/details";
+import MetaverseDetails from "@/pages/public/explore/metaverse/metaverses/details";
 import { Flex, Heading } from "@/components/basic";
+import BuyNFT from "@/pages/public/explore/nft/buy";
+import NFTMarketplace from "@/pages/public/explore/nft/marketplace";
+import NFTDetails from "@/pages/public/explore/nft/marketplace/details";
 
 const routers = createBrowserRouter([
     {
@@ -24,16 +27,28 @@ const routers = createBrowserRouter([
                 element: <Metaverses />
             },
             {
-                path: _ROUTERS.marketplace,
+                path: _ROUTERS.metaverse_marketplace,
                 element: <Marketplace />
             },
             {
-                path: _ROUTERS.details,
-                element: <Details />
+                path: _ROUTERS.metaverse_details,
+                element: <MetaverseDetails />
             },
             {
-                path: _ROUTERS.build,
+                path: _ROUTERS.build_metaverse,
                 element: <BuildMeta />
+            },
+            {
+                path: _ROUTERS.buy_nft,
+                element: <BuyNFT />
+            },
+            {
+                path: _ROUTERS.nft_marketplace,
+                element: <NFTMarketplace />
+            },
+            {
+                path: _ROUTERS.nft_details,
+                element: <NFTDetails />
             },
             {
                 path: "*",

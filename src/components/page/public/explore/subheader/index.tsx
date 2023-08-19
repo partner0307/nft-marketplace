@@ -7,10 +7,12 @@ type SubHeaderType = {
     rightComponent?: React.ReactNode
     title?: string
     description?: string
+    tabList?: object[]
+    isNFT?: boolean
     isSearch?: boolean
 }
 
-const SubHeader: React.FC<SubHeaderType> = ({ rightComponent, title, description, isSearch }) => {
+const SubHeader: React.FC<SubHeaderType> = ({ rightComponent, title, description, tabList, isNFT, isSearch }) => {
     return <>
         <SubHeaderContainer>
             <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '18px' }}>
@@ -29,21 +31,15 @@ const SubHeader: React.FC<SubHeaderType> = ({ rightComponent, title, description
                     <Dropdown initialLabel='Filter' hideIcon customIcon={<Icon icon='Filter' />} />
                 </ItemContainer>
                 <Flex $style={{ flex: '6' }}>
-                    <Input value='' placeholder='Search Metaverse' padding='6px 12px' helpSide={<Icon icon='Search' />} />
+                    <Input value='' placeholder={isNFT ? 'Search NFTs' : 'Search Metaverse'} padding='6px 12px' helpSide={<Icon icon='Search' />} />
                 </Flex>
                 <ItemContainer>
-                    <Dropdown initialLabel='Newly Listed' />
+                    <Dropdown initialLabel={isNFT ? 'Trending' : 'Newly Listed'} />
                 </ItemContainer>
             </Flex>
             <TabGroup>
-                <TabButton isSelected={true}>All Categories</TabButton>
-                <TabButton isSelected={false}>Games</TabButton>
-                <TabButton isSelected={false}>Gambling</TabButton>
-                <TabButton isSelected={false}>Social</TabButton>
-                <TabButton isSelected={false}>Collectibles</TabButton>
-                <TabButton isSelected={false}>Marketplace</TabButton>
-                <TabButton isSelected={false}>Real Estate</TabButton>
-                <TabButton isSelected={false}><Dropdown initialLabel='More' /></TabButton>
+                {tabList?.map((p: any) => <TabButton isSelected={p.active}>{p.name}</TabButton>)}
+                {!isNFT && <TabButton isSelected={false}><Dropdown initialLabel='More' /></TabButton>}
             </TabGroup>
         </Flex>
         : ''}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ItemIcon, ListContainer, SidebarContainer, Title } from './style';
+import { useLocation } from 'react-router-dom';
+import { Dot, ItemIcon, ListContainer, ListItemContainer, NestedItem, NestedItemList, SidebarContainer, Title } from './style';
 import { Flex, List, ListItem, P } from '@/components/basic';
 
 import PostIcon from '@/assets/img/menu/post-project.png';
@@ -11,10 +12,14 @@ import AvatarIcon from '@/assets/img/menu/avatars.png';
 import StakingIcon from '@/assets/img/menu/staking.png';
 import Ads from '@/assets/img/menu/ads.png';
 import { usePublicLayoutContext } from '@/layouts/PublicLayout/context';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
+    const { hash, pathname, search } = useLocation();
     const { slideOpened, dispatch } = usePublicLayoutContext();
     const [opened, setOpened] = useState<boolean>(false);
+    const [isMetaverseOpened, setMetaverseOpened] = useState(false);
+    const [isNFTOpened, setNFTOpened] = useState(false);
 
     useEffect(() => {
         if (slideOpened === false) {
@@ -60,22 +65,70 @@ const Sidebar = () => {
                         </Flex>
                     </ListItem>
                     <ListItem hideDot>
-                        <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
-                            <ItemIcon src={MetaverseIcon} alt="" />
-                            <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                                <P $style={{ size: '20px' }}>Metaverse</P>
-                                <P>Buy, sell and build land</P>
+                        <ListItemContainer isOpened={isMetaverseOpened}>
+                            <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }} onClick={() => setMetaverseOpened(!isMetaverseOpened)}>
+                                <ItemIcon src={MetaverseIcon} alt="" />
+                                <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
+                                    <P $style={{ size: '20px' }}>Metaverse</P>
+                                    <P>Buy, sell and build land</P>
+                                </Flex>
                             </Flex>
-                        </Flex>
+                            {isMetaverseOpened && <Flex $style={{ w: '100%', maxW: '300px', p: '0 0 0 48px' }}>
+                                <NestedItemList>
+                                    <Link to='/metaverses'>
+                                        <NestedItem isSelected={pathname === '/metaverses'}>
+                                            <Dot />
+                                            <P $style={{ size: '20px' }}>Metaverses</P>
+                                        </NestedItem>
+                                    </Link>
+                                    <Link to='/metaverse-marketplaces'>
+                                        <NestedItem isSelected={pathname === '/metaverse-marketplaces'}>
+                                            <Dot />
+                                            <P $style={{ size: '20px' }}>Marketplace</P>
+                                        </NestedItem>
+                                    </Link>
+                                    <Link to='/build-metaverse'>
+                                        <NestedItem isSelected={pathname === '/build-metaverse'}>
+                                            <Dot />
+                                            <P $style={{ size: '20px' }}>Build Metaverse</P>
+                                        </NestedItem>
+                                    </Link>
+                                </NestedItemList>
+                            </Flex>}
+                        </ListItemContainer>
                     </ListItem>
                     <ListItem hideDot>
-                        <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
-                            <ItemIcon src={NFTIcon} alt="" />
-                            <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                                <P $style={{ size: '20px' }}>NFTs</P>
-                                <P>Buy, sell and build land</P>
+                        <ListItemContainer isOpened={isNFTOpened}>
+                            <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }} onClick={() => setNFTOpened(!isNFTOpened)}>
+                                <ItemIcon src={NFTIcon} alt="" />
+                                <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
+                                    <P $style={{ size: '20px' }}>NFTs</P>
+                                    <P>Buy, sell and build land</P>
+                                </Flex>
                             </Flex>
-                        </Flex>
+                            {isNFTOpened && <Flex $style={{ w: '100%', maxW: '300px', p: '0 0 0 48px' }}>
+                                <NestedItemList>
+                                    <Link to='/buy-nft'>
+                                        <NestedItem isSelected={pathname === '/buy-nft'}>
+                                            <Dot />
+                                            <P $style={{ size: '20px' }}>Buy NFT</P>
+                                        </NestedItem>
+                                    </Link>
+                                    <Link to='/sell-nft'>
+                                        <NestedItem isSelected={pathname === '/sell-nft'}>
+                                            <Dot />
+                                            <P $style={{ size: '20px' }}>Sell NFT</P>
+                                        </NestedItem>
+                                    </Link>
+                                    <Link to='/nft-marketplace'>
+                                        <NestedItem isSelected={pathname === '/nft-marketplace'}>
+                                            <Dot />
+                                            <P $style={{ size: '20px' }}>NFT Marketplace</P>
+                                        </NestedItem>
+                                    </Link>
+                                </NestedItemList>
+                            </Flex>}
+                        </ListItemContainer>
                     </ListItem>
                     <ListItem hideDot>
                         <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>

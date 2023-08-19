@@ -1,13 +1,19 @@
 import React from 'react';
-import { MarketplaceContainer, Rect, Rect1 } from './style';
-import SubHeader from '@/components/page/public/explore/subheader';
-import { ItemContainer } from '../metaverses/style';
-import { Dropdown } from '@/components/custom';
-import Pagination from '@/components/custom/pagination';
-import Table, { TableFieldInterface } from '@/components/custom/table';
 import { Flex, Span } from '@/components/basic';
-import { tokillo } from '@/utils/util';
-import { metaverses } from '@/pages/public/home/explore/mockdata';
+import SubHeader from '@/components/page/public/explore/subheader';
+
+const tabList = [
+    { name: 'Popular', active: true },
+    { name: 'Art', active: false },
+    { name: 'Games', active: false},
+    { name: 'Sport', active: false},
+    { name: 'Photography', active: false},
+    { name: 'Nature', active: false},
+    { name: 'Sci-fi', active: false },
+    { name: 'PFPs', active: false },
+    { name: 'Music', active: false },
+    { name: 'Others', active: false }
+]
 
 const fields: TableFieldInterface[] = [
     {
@@ -107,35 +113,37 @@ const fields: TableFieldInterface[] = [
     },
 ]
 
-const tabList = [
-    { name: 'All Categories', active: true },
-    { name: 'Games', active: false },
-    { name: 'Gambling', active: false},
-    { name: 'Social', active: false},
-    { name: 'Collectibles', active: false},
-    { name: 'Marketplace', active: false},
-    { name: 'Real Estate', active: false }
-]
+import Pagination from '@/components/custom/pagination';
+import { ItemContainer } from './style';
+import { Dropdown } from '@/components/custom';
+import Table, { TableFieldInterface } from '@/components/custom/table';
+import { tokillo } from '@/utils/util';
+import TimeBar from '@/components/page/public/explore/timebar';
+import { metaverses } from '@/pages/public/home/explore/mockdata';
 
-
-const Marketplace = () => {
-    return <MarketplaceContainer>
-        <SubHeader title='Top Metaverses' tabList={tabList} isSearch rightComponent={
+const NFTMarketplace = () => {
+    return <Flex $style={{ fDirection: 'column', gap: '24px' }}>
+        <SubHeader
+        title='NFT Collections'
+        description='Discover the top NFT collections across multiple chains including Ethereum, BNB Chain, Polygon etc.'
+        tabList={tabList}
+        isSearch
+        isNFT
+        rightComponent={
         <ItemContainer>
             <Dropdown initialLabel='All Chains' />
         </ItemContainer>} />
-        <Flex $style={{ p: '32px' }}>
+        <Flex $style={{ fDirection: 'column', p: '24px 32px' }}>
+            <TimeBar />
             <Table
                 data={metaverses}
                 fields={fields}
             />
+            <Flex $style={{ p: '32px 48px' }}>
+                <Pagination />
+            </Flex>
         </Flex>
-        <Flex $style={{ p: '0 32px 48px' }}>
-            <Pagination />
-        </Flex>
-        <Rect />
-        <Rect1 />
-    </MarketplaceContainer>
+    </Flex>
 }
 
-export default Marketplace;
+export default NFTMarketplace;
