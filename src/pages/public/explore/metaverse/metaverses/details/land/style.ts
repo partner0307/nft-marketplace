@@ -1,6 +1,10 @@
 import { GV } from '@/utils/style.util';
 import styled from 'styled-components';
 
+export const LandContainer = styled.div`
+    position: relative;
+`
+
 export const TitleBar = styled.div`
     display: flex;
     width: 902px;
@@ -68,4 +72,16 @@ export const Eclipse = styled.div`
     border-radius: 20px;
     background: #1FDD00;
     filter: drop-shadow(0px 0px 4px #1FDD00);
+`;
+
+export const Rect = styled.div`
+    position: absolute;
+    left: 142px;
+    bottom: 522px;
+    width: 700px;
+    height: 749px;
+    flex-shrink: 0;
+    border-radius: 749px;
+    background: rgba(235, 104, 198, 0.15);
+    filter: blur(150px);
 `

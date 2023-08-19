@@ -110,3 +110,95 @@ export const metaverses = [
     uaw24h: 597992.3256,
   },
 ];
+
+
+export const nfts = [
+  {
+    nft: 'metaverses/1.png',
+    name: 'Light Jacket',
+    time: '7 Hours Ago',
+    price: 597992.3256,
+    fee: '196.87 MANA',
+    icon1: 'metaverse/1.png',
+    icon2: 'metaverse/1.png',
+    address1: 'oxafer...bbbde',
+    address2: 'oxafer...bbbde'
+  },
+  {
+    nft: 'metaverses/1.png',
+    name: 'Light Jacket',
+    time: '7 Hours Ago',
+    price: 597992.3256,
+    fee: '196.87 MANA',
+    icon1: 'metaverse/1.png',
+    icon2: 'metaverse/1.png',
+    address1: 'oxafer...bbbde',
+    address2: 'oxafer...bbbde'
+  },
+  {
+    nft: 'metaverses/1.png',
+    name: 'Light Jacket',
+    time: '7 Hours Ago',
+    price: 597992.3256,
+    fee: '196.87 MANA',
+    icon1: 'metaverse/1.png',
+    icon2: 'metaverse/1.png',
+    address1: 'oxafer...bbbde',
+    address2: 'oxafer...bbbde'
+  },
+  {
+    nft: 'metaverses/1.png',
+    name: 'Light Jacket',
+    time: '7 Hours Ago',
+    price: 597992.3256,
+    fee: '196.87 MANA',
+    icon1: 'metaverse/1.png',
+    icon2: 'metaverse/1.png',
+    address1: 'oxafer...bbbde',
+    address2: 'oxafer...bbbde'
+  },
+  {
+    nft: 'metaverses/1.png',
+    name: 'Light Jacket',
+    time: '7 Hours Ago',
+    price: 597992.3256,
+    fee: '196.87 MANA',
+    icon1: 'metaverse/1.png',
+    icon2: 'metaverse/1.png',
+    address1: 'oxafer...bbbde',
+    address2: 'oxafer...bbbde'
+  },
+  {
+    nft: 'metaverses/1.png',
+    name: 'Light Jacket',
+    time: '7 Hours Ago',
+    price: 597992.3256,
+    fee: '196.87 MANA',
+    icon1: 'metaverse/1.png',
+    icon2: 'metaverse/1.png',
+    address1: 'oxafer...bbbde',
+    address2: 'oxafer...bbbde'
+  },
+  {
+    nft: 'metaverses/1.png',
+    name: 'Light Jacket',
+    time: '7 Hours Ago',
+    price: 597992.3256,
+    fee: '196.87 MANA',
+    icon1: 'metaverse/1.png',
+    icon2: 'metaverse/1.png',
+    address1: 'oxafer...bbbde',
+    address2: 'oxafer...bbbde'
+  },
+  {
+    nft: 'metaverses/1.png',
+    name: 'Light Jacket',
+    time: '7 Hours Ago',
+    price: 597992.3256,
+    fee: '196.87 MANA',
+    icon1: 'metaverse/1.png',
+    icon2: 'metaverse/1.png',
+    address1: 'oxafer...bbbde',
+    address2: 'oxafer...bbbde'
+  }
+]

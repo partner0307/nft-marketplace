@@ -1,6 +1,6 @@
 import { Flex, P } from '@/components/basic';
 import React from 'react';
-import { CustomButton, Eclipse, ItemContainer, NFTs, Options, TitleBar } from './style';
+import { CollectiblesContainer, CustomButton, Eclipse, ItemContainer, NFTs, Options, Rect, TitleBar } from './style';
 import TimeBar from '@/components/page/public/explore/timebar';
 import StatusBar from '@/components/page/public/explore/statusbar';
 import { Checkbox, Dropdown, Icon, Input } from '@/components/custom';
@@ -26,7 +26,7 @@ const Collectible = () => {
     const [isGlassesOpen, setGlassesOpen] = React.useState(false);
     const [isEarningOpen, setEarningOpen] = React.useState(false);
 
-    return <>
+    return <CollectiblesContainer>
         <Flex $style={{ w: '100%', gap: '26px', p: '0 0 32px' }}>
             <Flex $style={{ maxW: '900px', w: '100%', fDirection: 'column', gap: '32px' }}>
                 <TitleBar>
@@ -249,7 +249,8 @@ const Collectible = () => {
                 </Flex>
             </Options>
         </Flex>
-</>
+        <Rect />
+    </CollectiblesContainer>
 }
 
 export default Collectible;

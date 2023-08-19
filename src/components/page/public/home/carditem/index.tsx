@@ -4,12 +4,22 @@ import { CardAvatar, CardContainer, CardImage, ImageWrapper, MarkWrapper, Status
 import { Flex, P, Span } from '@/components/basic';
 import { Icon } from '@/components/custom';
 
-import Avatar from '@/assets/img/avatar1.png';
 import Ether from '@/assets/img/ether-icon.png';
 
-const CardItem = () => {
+type CardItemType = {
+    nft?: string
+    avatar?: string
+    name?: string
+    username?: string
+    current_price?: string
+    start_price?: string
+    reduce_price?: string
+    reduce_percent?: string
+}
+
+const CardItem: React.FC<CardItemType> = ({ nft, avatar, name, username, current_price, start_price, reduce_price, reduce_percent }) => {
     return <CardContainer>
-        <CardImage>
+        <CardImage image={nft}>
             <MarkWrapper>
                 <Span>Open Sea</Span>
             </MarkWrapper>
@@ -25,7 +35,7 @@ const CardItem = () => {
                 hAlign: 'flex-start',
                 gap: '8px'
             }}>
-                <CardAvatar src={Avatar} />
+                <CardAvatar src={avatar} />
                 <Flex $style={{
                     fDirection: 'column',
                     hAlign: 'space-between',
@@ -38,12 +48,12 @@ const CardItem = () => {
                     }}>
                         <Span $style={{
                             size: '10px'
-                        }}>Thenftmakers</Span>
+                        }}>{name}</Span>
                         <Icon icon='CircleCheck' />
                     </Flex>
                     <P $style={{
                         color: 'caption-color1'
-                    }}>Wasdoke1#61</P>
+                    }}>{username}</P>
                 </Flex>
             </Flex>
             <ImageWrapper>
@@ -56,7 +66,7 @@ const CardItem = () => {
                 vAlign: 'flex-start',
                 gap: '4px'
             }}>
-                <P $style={{ weight: '600' }}>4.45ETH</P>
+                <P $style={{ weight: '600' }}>{current_price}</P>
                 <Span $style={{ size: '10px' }}>Latest Bid</Span>
             </Flex>
             <Flex $style={{
@@ -64,7 +74,7 @@ const CardItem = () => {
                 vAlign: 'flex-start',
                 gap: '4px'
             }}>
-                <P $style={{ weight: '600' }}>2.45ETH</P>
+                <P $style={{ weight: '600' }}>{start_price}</P>
                 <Span $style={{ size: '10px' }}>From</Span>
             </Flex>
             <Flex $style={{
@@ -72,8 +82,8 @@ const CardItem = () => {
                 vAlign: 'flex-start',
                 gap: '4px'
             }}>
-                <P $style={{ weight: '600' }}>4.45ETH</P>
-                <Span $style={{ size: '10px', color: 'purple' }}>+2.00%</Span>
+                <P $style={{ weight: '600' }}>{reduce_price}</P>
+                <Span $style={{ size: '10px', color: 'purple' }}>{reduce_percent}</Span>
             </Flex>
         </StatusContainer>
     </CardContainer>

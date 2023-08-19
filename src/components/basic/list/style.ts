@@ -67,6 +67,10 @@ export const StyledListItem = styled.li<StyledListItemPropsType>`
   gap: 0.7rem;
   line-height: 1.5;
 
+  &:hover {
+    background-color: #600031;
+  }
+
   ${({ queries, ...rest }: StyledListItemPropsType) => `
 		${setListItemStyle(rest)}
 		${
@@ -82,6 +86,7 @@ export const StyledListItem = styled.li<StyledListItemPropsType>`
         : ``
     }
 	`}
+  
 `;
 
 export const Dot = styled.span`

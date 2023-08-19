@@ -10,6 +10,8 @@ import Background1 from '@/assets/img/card1.png';
 import Ether from '@/assets/img/ether-icon.png';
 import CardImage from '@/assets/img/card-image.svg';
 import CardItem from '@/components/page/public/home/carditem';
+import Avatar from '@/assets/img/avatar1.png';
+import Image from '@/assets/img/avatar1.png';
 
 const Collection = () => {
     return <CollectionContainer>
@@ -281,14 +283,14 @@ const Collection = () => {
                     p: '80px 0 0'
                 }}
             >
-                <CardItem />
-                <CardItem />
-                <CardItem />
-                <CardItem />
-                <CardItem />
-                <CardItem />
-                <CardItem />
-                <CardItem />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
             </Flex>
             <Flex
                 as={motion.div}

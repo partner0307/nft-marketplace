@@ -21,10 +21,10 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const CardImage = styled.div`
+export const CardImage = styled.div<{ image?: string }>`
   width: 242px;
   height: 243px;
-  background: no-repeat url(${Image});
+  ${({ image }) => image ? `background: no-repeat url(${image});` : ``}
   background-position: top center;
   background-size: cover;
   position: relative;
