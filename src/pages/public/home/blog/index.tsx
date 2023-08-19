@@ -81,7 +81,7 @@ const Blog = () => {
             $style={{
               fDirection: "column",
               vAlign: "flex-start",
-              gap: "24px",
+              gap: "64px",
             }}
           >
             <Flex

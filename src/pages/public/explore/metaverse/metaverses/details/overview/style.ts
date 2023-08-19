@@ -52,7 +52,7 @@ export const NewsContainer = styled.div`
     width: 440px;
     padding: 32px 24px;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     gap: 32px;
     border-radius: 16px;
     border: 1px solid #1E1E20;

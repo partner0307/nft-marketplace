@@ -1,6 +1,6 @@
 import { Flex, P } from '@/components/basic';
 import React from 'react';
-import { CustomButton, Eclipse, ItemContainer, NFTs, Options, TitleBar } from './style';
+import { CustomButton, Eclipse, ItemContainer, LandContainer, NFTs, Options, TitleBar } from './style';
 import TimeBar from '@/components/page/public/explore/timebar';
 import StatusBar from '@/components/page/public/explore/statusbar';
 import { Dropdown, Icon, Input } from '@/components/custom';
@@ -19,7 +19,7 @@ const Land = () => {
     const [isPriceOpen, setPriceOpen] = React.useState(false);
     const [isPropertyOpen, setPropertyOpen] = React.useState(false);
 
-    return <>
+    return <LandContainer>
         <Flex $style={{ w: '100%', gap: '26px', p: '0 0 32px' }}>
             <Flex $style={{ maxW: '900px', w: '100%', fDirection: 'column', gap: '32px' }}>
                 <TitleBar>
@@ -112,7 +112,8 @@ const Land = () => {
                 </Flex>
             </Options>
         </Flex>
-    </>
+        
+    </LandContainer>
 }
 
 export default Land;

@@ -17,8 +17,10 @@ import News from './news';
 import Comment from './comment';
 import Collectible from './collectibles';
 import Land from './land';
+import Marketplace from './marketplace';
+import About from './about';
 
-const Details = () => {
+const MetaverseDetails = () => {
     const [tabIndex, setTabIndex] = React.useState(1);
 
     return <DetailsContainer>
@@ -52,7 +54,7 @@ const Details = () => {
                         <Flex $style={{ fDirection: 'column', gap: '54px' }}>
                             <Flex $style={{ fDirection: 'column', gap: '20px' }}>
                                 <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '8px' }}>
-                                    <Heading level={2}>Decentraland</Heading>
+                                    <Heading level={1}>Decentraland</Heading>
                                     <img src={CircleCheck} alt="" />
                                 </Flex>
                                 <Flex $style={{ vAlign: 'center', hAlign: 'space-between', maxW: '780px' }}>
@@ -118,7 +120,9 @@ const Details = () => {
                         {tabIndex === 1 && <Overview />}
                         {tabIndex === 2 && <Collectible />}
                         {tabIndex === 3 && <Land />}
+                        {tabIndex === 4 && <Marketplace />}
                         {tabIndex === 5 && <News />}
+                        {tabIndex === 6 && <About />}
                         {tabIndex === 7 && <Comment />}
                     </Flex>
                 </DetailsContent>
@@ -127,4 +131,4 @@ const Details = () => {
     </DetailsContainer>
 }
 
-export default Details;
+export default MetaverseDetails;
