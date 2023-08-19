@@ -1,9 +1,15 @@
 import { ImageContainer, ImagePropsInterface, StyledImage } from "./style";
 
-const Image = ({ ...props }: ImagePropsInterface) => {
+interface ImageProps extends ImagePropsInterface {
+    src: string,
+    alt: string,
+}
+
+const Image = ({ ...props }: ImageProps) => {
+    const { src, alt, h, ...rest } = props;
     return (
-        <ImageContainer>
-            <StyledImage {...props} />
+        <ImageContainer h={h}>
+            <StyledImage src={src} alt={alt} />
         </ImageContainer>
     )
 }

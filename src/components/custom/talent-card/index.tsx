@@ -87,7 +87,7 @@ const TalentCard: React.FC<{ talent: TablentObject }> = ({ talent }) => {
                     gap: '8px',
                     fWrap: 'wrap'
                 }}>
-                    {skills?.map(p => <Category>{p}</Category>)}
+                    {skills?.map((p, i) => <Category key={i}>{p}</Category>)}
                 </Flex>
                 <ProfileButton>
                     View Profile

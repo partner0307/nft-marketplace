@@ -10,12 +10,12 @@ export const HireContainer = styled.div`
   background-position: top center;
   background-size: cover;
   height: 100%;
-  padding: 7rem 2rem;
 `;
 
 export const HireWrapper = styled.div`
   /* max-width: 1440px; */
   overflow: hidden;
+  padding: 7rem 2rem;
 `;
 
 export const Item = styled.div<{ isChecked: boolean }>`

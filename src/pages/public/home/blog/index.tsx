@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion"
 import {
   Avatar1,
   Avatar2,
@@ -22,9 +23,10 @@ import { Flex, Heading, P, Span } from "@/components/basic";
 import { Button, Icon, Input } from "@/components/custom";
 import { GV } from "@/utils/style.util";
 
-import Image from "@/assets/img/main-blog.png";
-import Image1 from "@/assets/img/blog.png";
-import Image2 from "@/assets/img/avatar2.png";
+import BlogImg1 from "@/assets/img/main-blog.png";
+import BlogImg2 from "@/assets/img/blog.png";
+import Avatar from "@/assets/img/avatar2.png";
+import Image from "@/components/basic/img";
 
 const Blog = () => {
   return (
@@ -35,50 +37,63 @@ const Blog = () => {
         }}
       >
         <BlogWrapper>
-          <MainBlog>
-            <BlogImage src={Image} />
-            <Flex
-              $style={{
-                fDirection: "column",
-                vAlign: "flex-start",
-                gap: "24px",
-              }}
-            >
-              <P $style={{ size: "32px", weight: "900" }}>
-                Morem ipsum dolor sit amet, consectetur adipiscing elit.
-              </P>
-              <P $style={{ size: "20px" }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringilla accumsan, risus sem lit sed risus. amet
-                lacinia. Aliquam in elementum tellus...
-              </P>
+          <Flex
+            as={motion.div}
+            initial={{ translateX: "-100%" }}
+            whileInView={{ translateX: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true }}
+            $style={{
+              w: "548px"
+            }}
+          >
+            <MainBlog>
+              {/* <Image src="" /> */}
+              <Image src={BlogImg1} alt="" />
               <Flex
-                $style={{ fDirection: "row", hAlign: "center", gap: "30px" }}
+                $style={{
+                  fDirection: "column",
+                  vAlign: "flex-start",
+                  gap: "24px",
+                }}
               >
-                <Span $style={{ size: "10px" }}>2mins Read</Span>
+                <P $style={{ size: "32px", weight: "900" }}>
+                  Morem ipsum dolor sit amet, consectetur adipiscing elit.
+                </P>
+                <P $style={{ size: "20px" }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                  metus nec fringilla accumsan, risus sem lit sed risus. amet
+                  lacinia. Aliquam in elementum tellus...
+                </P>
                 <Flex
-                  $style={{ fDirection: "row", hAlign: "center", gap: "8px" }}
+                  $style={{ fDirection: "row", hAlign: "center", gap: "30px" }}
                 >
-                  <Icon icon="HeartBrown" />
-                  <Span $style={{ size: "10px" }}>28</Span>
+                  <Span $style={{ size: "10px" }}>2mins Read</Span>
+                  <Flex
+                    $style={{ fDirection: "row", hAlign: "center", gap: "8px" }}
+                  >
+                    <Icon icon="HeartBrown" />
+                    <Span $style={{ size: "10px" }}>28</Span>
+                  </Flex>
+                  <Flex
+                    $style={{
+                      fDirection: "row",
+                      hAlign: "center",
+                      gap: "8px",
+                    }}
+                  >
+                    <Icon icon="Share" />
+                    <Span $style={{ size: "10px" }}>72</Span>
+                  </Flex>
+                  <Icon icon="Bookmark" />
                 </Flex>
-                <Flex
-                  $style={{
-                    fDirection: "row",
-                    hAlign: "center",
-                    gap: "8px",
-                  }}
-                >
-                  <Icon icon="Share" />
-                  <Span $style={{ size: "10px" }}>72</Span>
-                </Flex>
-                <Icon icon="Bookmark" />
               </Flex>
-            </Flex>
-          </MainBlog>
+            </MainBlog>
+          </Flex>
           <Flex
             $style={{
+              flex: "1",
               fDirection: "column",
               vAlign: "flex-start",
               gap: "24px",
@@ -91,7 +106,7 @@ const Blog = () => {
                 gap: "24px",
               }}
             >
-              <Heading level={3} $style={{ weight: '900' }}>
+              <Heading level={1} $style={{ weight: '900' }}>
                 <ContentColor>News</ContentColor>
               </Heading>
               <P
@@ -114,13 +129,19 @@ const Blog = () => {
               </Button>
             </Flex>
             <Flex
+              as={motion.div}
+              initial={{ translateX: "100%" }}
+              whileInView={{ translateX: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
               $style={{
                 fDirection: "row",
-                gap: "48px",
+                gap: "2.88rem",
               }}
             >
               <SmallBlog>
-                <BlogImage src={Image1} />
+                {/* <BlogImage src={BlogImg2} /> */}
+                <Image src={BlogImg2} alt="" />
                 <Flex
                   $style={{
                     fDirection: "column",
@@ -177,7 +198,8 @@ const Blog = () => {
                 </Flex>
               </SmallBlog>
               <SmallBlog>
-                <BlogImage src={Image1} />
+                {/* <BlogImage src={BlogImg2} /> */}
+                <Image src={BlogImg2} alt="" />
                 <Flex
                   $style={{
                     fDirection: "column",
@@ -239,9 +261,9 @@ const Blog = () => {
       </Flex>
       <Rect />
       <Reveal>
-        <Avatar1 src={Image2} />
-        <Avatar2 src={Image2} />
-        <Avatar3 src={Image2} />
+        <Avatar1 src={Avatar} />
+        <Avatar2 src={Avatar} />
+        <Avatar3 src={Avatar} />
         <Line>
           <Icon icon="Line" />
         </Line>
@@ -258,9 +280,9 @@ const Blog = () => {
               vAlign: "center",
             }}
           >
-            <NewsImage1 src={Image2} />
-            <NewsImage2 src={Image2} />
-            <NewsImage3 src={Image2} />
+            <NewsImage1 src={Avatar} />
+            <NewsImage2 src={Avatar} />
+            <NewsImage3 src={Avatar} />
           </Flex>
           <Flex
             $style={{

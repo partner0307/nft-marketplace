@@ -1,3 +1,4 @@
+import { GV } from "@/utils/style.util";
 import styled from "styled-components";
 
 export const ActionContainer = styled.div`
@@ -8,6 +9,7 @@ export const ActionContainer = styled.div`
   gap: 20px;
 `;
 
-export const Content = styled.div`
-  font-family: "Aeonik";
+export const Content = styled.span`
+  font-family: ${GV("font3")};
+  white-space: nowrap;
 `;

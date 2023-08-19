@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Background from "@/assets/img/background.png";
+import { motion } from "framer-motion";
 
 export const HeroContainer = styled.div`
   background: no-repeat url(${Background});
@@ -19,11 +20,17 @@ export const HeroWrapper = styled.div`
   gap: 2rem;
 `;
 
+export const LeftSide = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`
+
 export const DownButton = styled.button`
   display: flex;
   height: 112px;
   margin: 38px 0 86px 0;
-  padding: 0 16px;
+  padding: 0 1rem;
   justify-content: center;
   align-items: center;
   border-radius: 18px;

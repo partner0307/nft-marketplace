@@ -10,11 +10,8 @@ export const BlogContainer = styled.div`
 `;
 
 export const BlogWrapper = styled.div`
-  max-width: 1440px;
-  width: 100%;
   display: flex;
-  align-items: center;
-  gap: 32px;
+  gap: 2rem;
   padding: 64px 32px;
   border-radius: 24px;
   background: rgba(19, 19, 19, 0.5);
@@ -24,7 +21,6 @@ export const BlogWrapper = styled.div`
 `;
 
 export const MainBlog = styled.div`
-  max-width: 548px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -46,7 +42,6 @@ export const BlogImage = styled.img`
 `;
 
 export const SmallBlog = styled.div`
-  max-width: 340px;
   display: flex;
   flex-direction: column;
   gap: 24px;
