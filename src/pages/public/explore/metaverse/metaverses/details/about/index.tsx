@@ -8,6 +8,7 @@ import Pagination from '@/components/custom/pagination';
 
 const About = () => {
     return <AboutContainer>
+        <Rect />
         <AboutWrapper>
             <Flex $style={{ w: '100%' }}>
                 <P $style={{ size: '32px', weight: '600' }}>Smart Contracts (5432)</P>
@@ -36,7 +37,6 @@ const About = () => {
                 <Icon icon='Info' />
             </StatusBar1>
         </Options>
-        <Rect />
     </AboutContainer>
 }
 

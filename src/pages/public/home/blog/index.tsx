@@ -31,6 +31,7 @@ import Image from "@/components/basic/img";
 const Blog = () => {
   return (
     <BlogContainer>
+      <Rect />
       <Flex
         $style={{
           hAlign: "center",
@@ -259,7 +260,6 @@ const Blog = () => {
           </Flex>
         </BlogWrapper>
       </Flex>
-      <Rect />
       <Reveal>
         <Avatar1
           initial={{ translateY: "-300px" }}

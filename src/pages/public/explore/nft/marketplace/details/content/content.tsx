@@ -25,6 +25,7 @@ const Content = () => {
     const [isEarningOpen, setEarningOpen] = React.useState(false);
 
     return <Container>
+        <Rect />
         <Flex $style={{ w: '100%', gap: '26px', p: '0 0 32px' }}>
             <Flex $style={{ maxW: '900px', w: '100%', fDirection: 'column', gap: '32px' }}>
                 <TitleBar>
@@ -250,7 +251,6 @@ const Content = () => {
                 </Flex>
             </Options>
         </Flex>
-        <Rect />
     </Container>
 }
 

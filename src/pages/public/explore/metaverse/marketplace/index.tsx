@@ -120,6 +120,8 @@ const tabList = [
 
 const Marketplace = () => {
     return <MarketplaceContainer>
+        <Rect />
+        <Rect1 />
         <SubHeader title='Top Metaverses' tabList={tabList} isSearch rightComponent={
         <ItemContainer>
             <Dropdown initialLabel='All Chains' />
@@ -133,8 +135,6 @@ const Marketplace = () => {
         <Flex $style={{ p: '0 32px 48px' }}>
             <Pagination />
         </Flex>
-        <Rect />
-        <Rect1 />
     </MarketplaceContainer>
 }
 

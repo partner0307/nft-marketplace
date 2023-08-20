@@ -7,6 +7,7 @@ type ListPropsType = StyledListPropsType & {
 
 type ListItemPropsType = {
     children: any
+    color?: string
     $style?: StyledListItemPropsType
     hideDot?: boolean
 }
@@ -24,12 +25,13 @@ const List: React.FC<ListPropsType> = ({
 
 export const ListItem: React.FC<ListItemPropsType> = ({
     children,
+    color,
     $style,
     hideDot
 }) => {
     return (
         <StyledListItem {...$style}>
-            {hideDot ? null : <Dot />}
+            {hideDot ? null : <Dot color={color} />}
             {children}
         </StyledListItem>
     )

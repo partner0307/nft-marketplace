@@ -89,10 +89,10 @@ export const StyledListItem = styled.li<StyledListItemPropsType>`
   
 `;
 
-export const Dot = styled.span`
+export const Dot = styled.span<{ color?: string }>`
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: ${GV("danger")};
+  width: 3px;
+  height: 3px;
+  ${({ color }) => color ? `background: ${color};` : `background: ${GV("danger")};s`}
   border-radius: 50%;
 `;

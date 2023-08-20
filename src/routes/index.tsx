@@ -12,6 +12,8 @@ import { Flex, Heading } from "@/components/basic";
 import BuyNFT from "@/pages/public/explore/nft/buy";
 import NFTMarketplace from "@/pages/public/explore/nft/marketplace";
 import NFTDetails from "@/pages/public/explore/nft/marketplace/details";
+import BuildDetails from "@/pages/public/explore/metaverse/build-metaverse/details";
+import RealEstateDetails from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details";
 
 const routers = createBrowserRouter([
     {
@@ -49,6 +51,14 @@ const routers = createBrowserRouter([
             {
                 path: _ROUTERS.nft_details,
                 element: <NFTDetails />
+            },
+            {
+                path: _ROUTERS.real_estate,
+                element: <BuildDetails />
+            },
+            {
+                path: _ROUTERS.real_estate_details,
+                element: <RealEstateDetails />
             },
             {
                 path: "*",
