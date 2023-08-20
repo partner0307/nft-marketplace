@@ -1,5 +1,7 @@
-import styled from "styled-components";
-import { GV } from "@/utils/style.util";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { GV } from '@/utils/style.util';
+import Avatar from "@/assets/img/avatar2.png";
 
 export const BlogContainer = styled.div`
   display: flex;
@@ -31,7 +33,7 @@ export const MainBlog = styled.div`
 `;
 
 export const ContentColor = styled.div`
-  background-image: ${GV("gradient")};
+  background-image: ${GV('gradient')};
   -webkit-background-clip: text;
   color: transparent;
 `;
@@ -69,34 +71,43 @@ export const Reveal = styled.div`
   margin-top: -32px;
 `;
 
-export const Avatar1 = styled.img`
+export const Avatar1 = styled(motion.div)`
   position: absolute;
   top: 0;
   left: 45%;
   width: 138px;
   height: 138px;
+  background: no-repeat url(${Avatar});
+  background-size: cover;
+  background-position: center;
   border-radius: 138px;
   border: 2px solid #6ed8d2;
   z-index: 1;
 `;
 
-export const Avatar2 = styled.img`
+export const Avatar2 = styled((motion.div))`
   position: absolute;
   top: 100px;
   left: 55%;
   width: 173px;
   height: 173px;
+  background: no-repeat url(${Avatar});
+  background-size: cover;
+  background-position: center;
   border-radius: 173px;
   border: 2px solid #6ed8d2;
   z-index: 1;
 `;
 
-export const Avatar3 = styled.img`
+export const Avatar3 = styled((motion.div))`
   position: absolute;
   bottom: 70px;
   left: 50%;
   width: 229px;
   height: 229px;
+  background: no-repeat url(${Avatar});
+  background-size: cover;
+  background-position: center;
   border-radius: 229px;
   border: 2px solid #6ed8d2;
   z-index: 1;

@@ -261,9 +261,24 @@ const Blog = () => {
       </Flex>
       <Rect />
       <Reveal>
-        <Avatar1 src={Avatar} />
-        <Avatar2 src={Avatar} />
-        <Avatar3 src={Avatar} />
+        <Avatar1
+          initial={{ translateY: "-300px" }}
+          whileInView={{ translateY: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true, margin: "-150px" }}
+        />
+        <Avatar2
+          initial={{ translateX: "150px" }}
+          whileInView={{ translateX: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true, margin: "-150px" }}
+        />
+        <Avatar3
+          initial={{ translateX: "-150px" }}
+          whileInView={{ translateX: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true, margin: "-150px" }}
+        />
         <Line>
           <Icon icon="Line" />
         </Line>

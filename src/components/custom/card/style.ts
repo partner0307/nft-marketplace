@@ -3,6 +3,7 @@ import { ImageContainer } from '@/components/basic/img/style';
 import { GV } from '@/utils/style.util';
 
 export interface CardContainerPropsInterface {
+  w?: string;
   h?: string;
   bg?: string;
   transform?: string;
@@ -17,6 +18,7 @@ export const CardContainer = styled.div<CardContainerPropsInterface>`
   flex-direction: column;
   gap: ${({ gap }) => gap ?? `0.25rem`};
   ${({ transform }) => (transform ? `transform: ${transform};` : ``)}
+  ${({ w }) => (w ? `width: ${w};` : ``)}
   ${({ h }) => (h ? `height: ${h};` : ``)}
   padding: ${({ p }) => p ?? `0.5rem`};
   border: 1px solid ${({ bcolor }) => bcolor ?? `rgba(198, 224, 255, 0.5)`};

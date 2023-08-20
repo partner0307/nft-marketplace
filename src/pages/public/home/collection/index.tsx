@@ -22,7 +22,8 @@ const Collection = () => {
             <Flex $style={{
                 w: '100%',
                 fDirection: 'row',
-                hAlign: 'space-between'
+                hAlign: 'space-between',
+                mb: "2.75rem"
             }}>
                 <Heading level={1} $style={{
                     maxW: '500px'
@@ -67,9 +68,9 @@ const Collection = () => {
             <Flex $style={{
                 fDirection: 'row',
                 hAlign: 'space-between',
-                p: '54px 0 0',
                 w: '100%',
-                gap: "5rem"
+                gap: "5rem",
+                mb: "5rem"
             }}>
                 <Flex
                     as={motion.div}
@@ -269,7 +270,42 @@ const Collection = () => {
                     </Flex>
                 </Flex>
             </Flex>
-            <Flex
+            <Flex $style={{
+                fDirection: "column",
+                gap: "2rem"
+            }}>
+                <Flex
+                    as={motion.div}
+                    initial={{ translateX: "-100%", opacity: 0 }}
+                    whileInView={{ translateX: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    $style={{
+                        gap: "2rem"
+                    }}
+                >
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                </Flex>
+                <Flex
+                    as={motion.div}
+                    initial={{ translateX: "100%", opacity: 0 }}
+                    whileInView={{ translateX: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    $style={{
+                        gap: "2rem"
+                    }}
+                >
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                </Flex>
+            </Flex>
+            {/* <Flex
                 as={motion.div}
                 initial={{ translateX: "-100%", opacity: 0 }}
                 whileInView={{ translateX: 0, opacity: 1 }}
@@ -291,7 +327,7 @@ const Collection = () => {
                 <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                 <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                 <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
-            </Flex>
+            </Flex> */}
             <Flex
                 as={motion.div}
                 initial={{ opacity: 0 }}
