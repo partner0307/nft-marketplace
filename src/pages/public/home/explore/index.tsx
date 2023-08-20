@@ -6,6 +6,7 @@ import { GV } from '@/utils/style.util';
 import Table, { TableFieldInterface } from '@/components/custom/table';
 import { metaverses } from './mockdata';
 import { tokillo } from '@/utils/util';
+import { motion } from "framer-motion"
 
 const Explore = () => {
 
@@ -37,7 +38,7 @@ const Explore = () => {
 								</Flex>
 								<Flex>
 									{i.networks.map((network: string, i: number) => (
-										<React.Fragment>
+										<React.Fragment key={i}>
 											<Flex $style={{
 												gap: "0.25rem",
 												vAlign: "center"
@@ -64,7 +65,7 @@ const Explore = () => {
 			render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
 			sort: (i: any, v: any) => v,
 			description: "This field is ...",
-			width: "180px"
+			width: "150px"
 		},
 		{
 			key: "uaw",
@@ -72,7 +73,7 @@ const Explore = () => {
 			render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
 			sort: (i: any, v: any) => v,
 			description: "This field is ...",
-			width: "180px"
+			width: "150px"
 		},
 		{
 			key: "prouaw",
@@ -80,7 +81,7 @@ const Explore = () => {
 			render: (i, v) => (<Span $style={{ weight: "bold", color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{v}%</Span>),
 			sort: (i: any, v: any) => v,
 			description: "This field is ...",
-			width: "180px"
+			width: "150px"
 		},
 		{
 			key: "volume",
@@ -88,14 +89,14 @@ const Explore = () => {
 			render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
 			sort: (i: any, v: any) => v,
 			description: "This field is ...",
-			width: "180px"
+			width: "150px"
 		},
 		{
 			key: "provolume",
 			label: "%Volume",
 			render: (i, v) => (<Span $style={{ weight: "bold", color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{v}%</Span>),
 			description: "This field is ...",
-			width: "180px"
+			width: "150px"
 		},
 		{
 			key: "uaw24h",
@@ -103,7 +104,7 @@ const Explore = () => {
 			render: (i, v) => (v),
 			sort: (i: any, v: any) => v,
 			description: "This field is ...",
-			width: "180px"
+			width: "150px"
 		},
 	]
 
@@ -119,11 +120,18 @@ const Explore = () => {
 					<P $style={{ size: '20px', align: 'center' }}>Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut vulputate nisi. Integer in felis </P>
 				</Flex>
 			</Flex>
-			<Flex $style={{
-				fDirection: 'column',
-				hAlign: 'flex-start',
-				gap: '8px'
-			}}>
+			<Flex
+				as={motion.div}
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{ duration: 2, delay: 0.5 }}
+				viewport={{ once: true }}
+				$style={{
+					fDirection: 'column',
+					hAlign: 'flex-start',
+					gap: '8px'
+				}}
+			>
 				<Flex $style={{
 					fDirection: 'row',
 					gap: '20px'

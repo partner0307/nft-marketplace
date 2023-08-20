@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from "framer-motion";
 import { ArrowButton, ArrowContainer, CardContainer, CardContainer1, CardWrapper, CollectionContainer, CollectionWrapper, ContentColor, Cursor, Mark1, Mark2, Progress, ProgressContainer, Rect1, Rect2, Rect3, SlideCard } from './style';
 import { Flex, Heading, P } from '@/components/basic';
 import { Button, Icon } from '@/components/custom';
@@ -21,7 +22,8 @@ const Collection = () => {
             <Flex $style={{
                 w: '100%',
                 fDirection: 'row',
-                hAlign: 'space-between'
+                hAlign: 'space-between',
+                mb: "2.75rem"
             }}>
                 <Heading level={1} $style={{
                     maxW: '500px'
@@ -32,34 +34,63 @@ const Collection = () => {
                     vAlign: 'flex-start',
                     gap: '24px'
                 }}>
-                    <P $style={{
-                        size: '20px'
-                    }}>Dorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan,..</P>
-                    <Button $style={{
-                        bg: GV('gradient'),
-                        p: '8px 48px',
-                        radius: '4px',
-                        shadow: '0px -8px 8px 0px rgba(0, 0, 0, 0.25);'
-                    }}>Explore All NFTs</Button>
+                    <Flex
+                        $style={{
+                            overflow: "hidden"
+                        }}
+                    >
+                        <P
+                            as={motion.div}
+                            initial={{ translateY: "100%" }}
+                            whileInView={{ translateY: 0 }}
+                            transition={{ duration: 0.5, delay: 0.5 }}
+                            viewport={{ once: true }}
+                            $style={{
+                                size: '20px'
+                            }}
+                        >Dorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan,..</P>
+                    </Flex>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                        viewport={{ once: true }}
+                    >
+                        <Button $style={{
+                            bg: GV('gradient'),
+                            p: '8px 48px',
+                            radius: '4px',
+                            shadow: '0px -8px 8px 0px rgba(0, 0, 0, 0.25);'
+                        }}>Explore All NFTs</Button>
+                    </motion.div>
                 </Flex>
             </Flex>
             <Flex $style={{
                 fDirection: 'row',
                 hAlign: 'space-between',
-                p: '54px 0 0',
                 w: '100%',
-                gap: "2rem"
+                gap: "5rem",
+                mb: "5rem"
             }}>
-                <Flex $style={{
-                    fDirection: 'column',
-                    vAlign: 'center',
-                    gap: '3.875rem'
-                }}>
-                    <Flex $style={{
+                <Flex
+                    as={motion.div}
+                    initial={{ translateX: "-200%", opacity: 0 }}
+                    whileInView={{ translateX: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    $style={{
                         fDirection: 'column',
-                        hAlign: 'space-between',
-                        gap: "1rem"
-                    }}>
+                        vAlign: 'center',
+                        gap: '3.875rem'
+                    }}
+                >
+                    <Flex
+                        $style={{
+                            fDirection: 'column',
+                            hAlign: 'space-between',
+                            gap: "1rem"
+                        }}
+                    >
                         <Flex $style={{
                             fDirection: 'column',
                             vAlign: 'flex-start',
@@ -103,11 +134,18 @@ const Collection = () => {
                         </ArrowContainer>
                     </ArrowButton>
                 </Flex>
-                <Flex $style={{
-                    fDirection: 'column',
-                    vAlign: 'flex-start',
-                    gap: '18px'
-                }}>
+                <Flex
+                    as={motion.div}
+                    initial={{ translateX: "100%", opacity: 0 }}
+                    whileInView={{ translateX: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    $style={{
+                        fDirection: 'column',
+                        vAlign: 'flex-start',
+                        gap: '18px'
+                    }}
+                >
                     <Flex $style={{
                         fDirection: 'row'
                     }}>
@@ -233,26 +271,75 @@ const Collection = () => {
                 </Flex>
             </Flex>
             <Flex $style={{
-                fDirection: 'row',
-                hAlign: 'center',
-                fWrap: 'wrap',
-                gap: '24px',
-                p: '80px 0 0'
+                fDirection: "column",
+                gap: "2rem"
             }}>
-                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
-                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
-                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
-                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
-                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
-                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
-                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
-                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <Flex
+                    as={motion.div}
+                    initial={{ translateX: "-100%", opacity: 0 }}
+                    whileInView={{ translateX: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    $style={{
+                        gap: "2rem"
+                    }}
+                >
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                </Flex>
+                <Flex
+                    as={motion.div}
+                    initial={{ translateX: "100%", opacity: 0 }}
+                    whileInView={{ translateX: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    $style={{
+                        gap: "2rem"
+                    }}
+                >
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                    <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                </Flex>
             </Flex>
-            <Flex $style={{
-                fDirection: 'row',
-                hAlign: 'center',
-                p: '80px 0 0'
-            }}>
+            {/* <Flex
+                as={motion.div}
+                initial={{ translateX: "-100%", opacity: 0 }}
+                whileInView={{ translateX: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                $style={{
+                    fDirection: 'row',
+                    hAlign: 'center',
+                    fWrap: 'wrap',
+                    gap: '24px',
+                    p: '80px 0 0'
+                }}
+            >
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+                <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
+            </Flex> */}
+            <Flex
+                as={motion.div}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                viewport={{ once: true }}
+                $style={{
+                    fDirection: 'row',
+                    hAlign: 'center',
+                    p: '80px 0 0'
+                }}
+            >
                 <Button $style={{
                     bg: GV('gradient'),
                     p: '8px 64px',

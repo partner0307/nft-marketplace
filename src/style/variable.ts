@@ -21,7 +21,7 @@ const variables = {
   bg: '#0C0D0E',
   'bg-sub': '#1A2D474D',
   color: '#FFFFFF',
-  'color-secondary': '#B6C4CA',
+  'color-secondary': '#9F96A7',
 
   'input-bg': '#191919',
   'input-color': '#9BA2B2',
@@ -36,6 +36,7 @@ const variables = {
 
   font1: 'Termina Test',
   font2: 'Neue Haas Grotesk Display Pro',
+  font3: 'Aeonik',
 
   'weight-xl': '700',
   'weight-lg': '600',

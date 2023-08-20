@@ -10,10 +10,10 @@ export const MenuContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  font-family: "Aeonik";
+font-family: ${GV("font3")};
 `;
 
-export const ItemContainer = styled.div`
+export const ItemContainer = styled.a`
   height: 2.5rem;
   padding: 0 1rem;
   display: flex;
@@ -21,6 +21,7 @@ export const ItemContainer = styled.div`
   align-items: center;
   gap: 0.3rem;
   font-size: ${GV("font-size")};
+  white-space: nowrap;
   border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;

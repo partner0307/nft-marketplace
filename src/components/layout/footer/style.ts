@@ -1,22 +1,15 @@
 import styled from "styled-components";
 
-export const FooterWrapper = styled.div`
+export const FooterContainer = styled.footer`
+  margin: -7rem 0 0;
+  padding: 12rem 0 0;
   background: #161616;
-  /* margin: -10rem 0 0; */
-  padding: 10rem 0 0;
-  display: flex;
-  justify-content: flex-start;
-  /* margin-left: 300px; */
 `;
 
-export const FooterContainer = styled.footer`
-  max-width: 1440px;
-  width: 100%;
+export const FooterWrapper = styled.div`
+  max-width: 1080px;
   margin: auto;
-
-  @media (max-width: 992px) {
-    padding: 2rem 2rem 2rem;
-  }
+  padding: 0 0 4rem;
 `;
 
 export const ContentColor = styled.div`

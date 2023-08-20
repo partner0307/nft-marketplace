@@ -1,5 +1,5 @@
 import { Flex } from "@/components/basic";
-import { StyledTable, StyledTd, StyledTh, StyledTr, TableContainer } from "./style";
+import { StyledTable, StyledTd, StyledTh, TableContainer } from "./style";
 import FilterSvg from "./FilterSvg";
 import React from "react";
 
@@ -20,23 +20,23 @@ interface TablePropsInterface {
 const Table = ({ fields, data }: TablePropsInterface) => {
 	return (
 		<TableContainer>
-			<StyledTable>
-				<StyledTr>
+			<StyledTable $gct={fields.map(i => i.width ?? "1fr")} >
+				<React.Fragment>
 					{fields.map((field, i) => (
-						<StyledTh width={field.width}>
+						<StyledTh key={i} $width={field.width}>
 							{field.label}
 							{field.sort !== null && (
 								<FilterSvg />
 							)}
 						</StyledTh>
 					))}
-				</StyledTr>
+				</React.Fragment>
 				{data.map((item: { [key: string]: any }, di: number) => (
-					<StyledTr>
+					<React.Fragment key={di}>
 						{fields.map((field, fi) => (
-							<StyledTd width={field.width}>{field.render(item, item[field.key], di)}</StyledTd>
+							<StyledTd key={fi} $width={field.width}>{field.render(item, item[field.key], di)}</StyledTd>
 						))}
-					</StyledTr>
+					</React.Fragment>
 				))}
 			</StyledTable>
 		</TableContainer>
