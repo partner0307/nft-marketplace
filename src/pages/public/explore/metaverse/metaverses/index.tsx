@@ -28,6 +28,8 @@ const tabList = [
 
 const Metaverses = () => {
     return <MetaversesContainer>
+        <Rect />
+        <Rect1 />
         <SubHeader title='Top Metaverses' tabList={tabList} isSearch rightComponent={
         <ItemContainer>
             <Dropdown initialLabel='All Chains' />
@@ -52,8 +54,6 @@ const Metaverses = () => {
             </Flex>
             <Pagination />
         </MetaverseWrapper>
-        <Rect />
-        <Rect1 />
     </MetaversesContainer>
 }
 

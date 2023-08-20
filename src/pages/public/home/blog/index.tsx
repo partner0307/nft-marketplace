@@ -29,6 +29,7 @@ import Image2 from "@/assets/img/avatar2.png";
 const Blog = () => {
   return (
     <BlogContainer>
+      <Rect />
       <Flex
         $style={{
           hAlign: "center",
@@ -237,7 +238,6 @@ const Blog = () => {
           </Flex>
         </BlogWrapper>
       </Flex>
-      <Rect />
       <Reveal>
         <Avatar1 src={Image2} />
         <Avatar2 src={Image2} />

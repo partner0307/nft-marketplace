@@ -185,7 +185,7 @@ const HireSection = () => {
                         fDirection: 'row',
                         gap: '45px'
                     }}>
-                        <ArrowButton isFill={false}><Icon icon='ArrowLeft' /></ArrowButton>
+                        <ArrowButton isFill={false}><Icon icon='ArrowColorLeft' /></ArrowButton>
                         <ArrowButton isFill={true}><Icon icon='ArrowRight' /></ArrowButton>
                     </Flex>
                 </Flex>

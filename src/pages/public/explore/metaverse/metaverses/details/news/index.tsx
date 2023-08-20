@@ -6,6 +6,7 @@ import Pagination from '@/components/custom/pagination';
 
 const News = () => {
     return <NewsContainer>
+        <Rect />
         <P $style={{ size: '32px', weight: '600' }}>Decentraland News</P>
         <Flex $style={{ fDirection: 'row', fWrap: 'wrap', w: '100%', hAlign: 'space-between', gap: '32px' }}>
             <NewsCard width='419px' />
@@ -19,7 +20,6 @@ const News = () => {
             <NewsCard width='419px' />
         </Flex>
         <Pagination />
-        <Rect />
     </NewsContainer>
 }
 
