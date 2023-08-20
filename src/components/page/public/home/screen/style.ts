@@ -1,11 +1,42 @@
-import styled from "styled-components";
+import Card from '@/components/custom/card';
+import styled from 'styled-components';
 
-export const CardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-  border: 1px solid rgba(198, 224, 255, 0.5);
-  border-radius: 1rem;
-  gap: 0.5rem;
-  width: 100%;
+export const SmallCardContainer = styled(Card)<{
+  position?: 'left' | 'right';
+  isFirst?: boolean;
+}>`
+  position: relative;
+  overflow: initial;
+  z-index: 5;
+`;
+
+export const SideRect = styled.div`
+  width: 1.625rem;
+  height: 1.0625rem;
+  background: rgba(198, 245, 255, 0.5);
+`;
+
+export const UpRect = styled.div<{
+  position?: 'left' | 'right';
+}>`
+  align-self: center;
+  transform: translateX(
+    ${({ position }) => (position === 'left' ? '-0.8rem' : '0.8rem')}
+  );
+  width: 1.25rem;
+  height: 1.9375rem;
+  background: rgba(198, 245, 255, 0.5);
+`;
+
+export const FirstRect = styled.div<{
+  position?: 'left' | 'right';
+}>`
+  align-self: center;
+  transform: translateX(
+    ${({ position }) => (position === 'left' ? '-0.8rem' : '0.8rem')}
+  );
+  width: 1.25rem;
+  height: 1.5625rem;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  background: rgba(198, 245, 255, 0.5);
 `;

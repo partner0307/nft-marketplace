@@ -19,6 +19,6 @@ export const ImageContainer = styled.div<ImagePropsInterface>`
 
 export const StyledImage = styled.img`
   width: 100%;
-  min-height: fit-content;
-  min-width: fit-content;
+  height: 100%;
+  object-fit: cover;
 `;
