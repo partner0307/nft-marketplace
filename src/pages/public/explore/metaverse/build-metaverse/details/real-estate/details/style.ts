@@ -80,12 +80,43 @@ export const PageButton = styled.div<{ isActive?: false }>`
     font-size: 20px;
     ${({ isActive }) => isActive ? `color: #3D3D3E;` : `color: #ffffff;`}
     ${({ isActive }) => isActive ? `background: #1E1E20;` : ``}
+`;
+
+export const LinearButton = styled.button`
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 8px;
+    background: linear-gradient(216deg, #F75BB1 1.04%, #C392DC 45.73%, #008782 100%);
 `
 
 export const ResidencStatusBar = styled.div`
     padding: 12px 0px;
     width: 100%;
-`
+`;
+
+export const Main = styled.div`
+    display: flex;
+    padding: 32px 24px;
+    flex-direction: column;
+    gap: 48px;
+    border-radius: 16px;
+    background: #121112;
+`;
+
+export const CustomTab = styled.button<{ isActive?: boolean }>`
+    padding: 12px 18px;
+    gap: 4px;
+    border-radius: 32px;
+    ${({ isActive }) => isActive ? `background: #D96BFF;` : `background: #191919;`}
+    ${({ isActive }) => !isActive ? `border: 1px solid #2B2928;` : ``}
+    ${({ isActive }) => isActive ? `font-weight: 600; color: #0C0D0E;` : ``}
+`;
+
+export const CustomColor = styled.div`
+    color: #1FDD00;
+`;
 
 export const Line = styled.div`
     width: 100%;
