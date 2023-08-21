@@ -47,7 +47,7 @@ export const StyledTable = styled.div<{ $gct: string[] }>`
     ${$gct
       .map(
         (i, k) =>
-          (k === 0 ? `` : `,`) + `\n>div:nth-child(${$gct.length * 2}n - ${k + 1})`
+          (k === 0 ? `` : `,`) + `\n>div:nth-child(${$gct.length * 2}n - ${k})`
       )
       .join('')} {
       background: #131313;

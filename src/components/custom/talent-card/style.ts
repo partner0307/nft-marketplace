@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { GV } from "@/utils/style.util";
 
 export const CardContainer = styled.div`
-  min-width: 300px;
+  width: 300px;
   border-radius: 18px;
   background: #f4edf8;
   position: relative;
