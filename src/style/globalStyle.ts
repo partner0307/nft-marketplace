@@ -331,7 +331,19 @@ const GlobalStyle = createGlobalStyle`
 	  }
 	  .swiper-pagination-bullet-active {
 		background:#4CAF50 !important;
-	  }
+	}
+	.fc-theme-standard td {
+		border-color: #4A4A4A;
+		width: 64px;
+		height: 64px;
+	}
+	.fc .fc-daygrid-day-top {
+		justify-content: center;
+	}
+	.fc-theme-standard th {
+		width: 64px;
+		height: 40px;
+	}
 `;
 
 export default GlobalStyle;

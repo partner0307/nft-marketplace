@@ -16,6 +16,8 @@ import PriceHistory from './price-history';
 import Cost from './monthly-cost';
 import NearbyBuilding from './nearby-buildings';
 import FloorPlan from './floor-plan';
+import Images from './images';
+import Appoinment from './book-appoinment';
 
 const RealEstateDetails = () => {
     const [tabIndex, setTabIndex] = React.useState(1);
@@ -81,6 +83,8 @@ const RealEstateDetails = () => {
                                 {tabIndex === 4 && <Cost />}
                                 {tabIndex === 5 && <NearbyBuilding />}
                                 {tabIndex === 6 && <FloorPlan />}
+                                {tabIndex === 7 && <Images />}
+                                {tabIndex === 8 && <Appoinment />}
                             </Main>
                         </Flex>
                         <StatusBar>

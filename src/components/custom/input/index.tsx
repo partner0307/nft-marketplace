@@ -36,11 +36,14 @@ export const Input: React.FC<InputPropsType> = ({
     )
 }
 
-type TextareaPropsType = InputPropsType & {}
+type TextareaPropsType = InputPropsType & {
+    rows?: string
+}
 
 export const Textarea: React.FC<TextareaPropsType> = ({
     label,
     helpSide,
+    rows,
     radius,
     ...rest
 }) => {
@@ -49,7 +52,7 @@ export const Textarea: React.FC<TextareaPropsType> = ({
             {label && (<InputLabel>{label}</InputLabel>)}
             <InputContent>
                 <InputWrapper padding="">
-                    <StyledTextarea as="textarea" rows={5} {...rest} />
+                    <StyledTextarea as="textarea" rows={rows ? rows : 5} {...rest} />
                     {helpSide}
                 </InputWrapper>
                 <InputBoard radius='' bg='' border="" />
