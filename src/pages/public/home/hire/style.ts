@@ -16,6 +16,13 @@ export const HireWrapper = styled.div`
   /* max-width: 1440px; */
   overflow: hidden;
   padding: 7rem 2rem;
+  .react-multi-carousel-track{
+    gap: 2rem;
+  }
+
+  .react-multi-carousel-item {
+    width: fit-content !important;
+  }
 `;
 
 export const Item = styled.div<{ isChecked: boolean }>`
