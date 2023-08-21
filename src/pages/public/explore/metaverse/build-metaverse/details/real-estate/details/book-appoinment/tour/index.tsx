@@ -27,7 +27,7 @@ const Tour = () => {
         <Flex $style={{ fDirection: 'column', gap: '20px' }}>
             <Input value='' padding='16px' helpSide={<Icon icon='User' />} placeholder='Tour day' />
             <Input value='' padding='16px' helpSide={<Icon icon='User' />} placeholder='Time' />
-            <Textarea value='' padding='16px' helpSide={<Icon icon='User' />} placeholder='Additional note' rows='2' />
+            <Textarea value='' padding='16px' helpSide={<Icon icon='User' />} placeholder='Additional note' rows={2} />
             <Flex $style={{ gap: '20px' }}>
                 <ProfileCard>
                     <ProfileAvatar src={Avatar} />
