@@ -68,7 +68,6 @@ export const StatusBar = styled.div`
     border-radius: 16px;
     border: 1px solid #1A1A1A;
     background: #0C0C0C;
-    margin-bottom: -100px;
 `;
 
 export const PageButton = styled.div<{ isActive?: false }>`
@@ -117,6 +116,17 @@ export const CustomTab = styled.button<{ isActive?: boolean }>`
 export const CustomColor = styled.div`
     color: #1FDD00;
 `;
+
+export const Similars = styled.div`
+    display: flex;
+    padding: 32px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border-radius: 16px;
+    border: 1px solid #1A1A1A;
+    background: rgba(12, 12, 12, 0.90);
+`
 
 export const Line = styled.div`
     width: 100%;
