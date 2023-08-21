@@ -7,6 +7,9 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import { slice } from './useStore';
 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 const store = configureStore({ reducer: slice.reducer });
 
 ReactDOM.createRoot(document.getElementById('app') as HTMLElement).render(

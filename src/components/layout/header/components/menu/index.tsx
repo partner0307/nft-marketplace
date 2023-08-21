@@ -15,7 +15,7 @@ const Menu = () => {
                 <Content>Explore</Content><Icon icon='Explore' />
             </ItemContainer>
             : <Link to='/'><ItemContainer onClick={() => dispatch({ type: "toggleMenu", value: {} })}>
-                <Icon icon='ArrowLeft' /><Content>Home</Content>
+                <Icon icon='ArrowColorLeft' /><Content>Home</Content>
             </ItemContainer></Link>}
             <ItemContainer>
                 <Dropdown initialLabel={<Content>Marketplaces</Content>} />
