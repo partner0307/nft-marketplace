@@ -37,7 +37,7 @@ export const Input: React.FC<InputPropsType> = ({
 }
 
 type TextareaPropsType = InputPropsType & {
-    rows?: string
+    rows?: number
 }
 
 export const Textarea: React.FC<TextareaPropsType> = ({
