@@ -12,7 +12,6 @@ export default class SimpleSlider extends Component {
     };
     return (
       <div>
-        <h2> Single Item</h2>
         <Slider {...settings}>
           <div>
             <h3>1</h3>
