@@ -23,18 +23,18 @@ const Build = () => {
         <BuildWrapper>
             <P $style={{ size: '20px', weight: '600' }}>Please select a metaverse area to build in</P>
             <Flex $style={{ hAlign: 'center', fDirection: 'row', fWrap: 'wrap', gap: '32px' }}>
-                <Link to='/real-estate-details'><Builder title='Real Estate' image={RealEstate} icon={RealEstateIcon} /></Link>
-                <Link to='/real-estate-details'><Builder title='Ecommerce' image={Ecommerce} icon={EcommerceIcon} /></Link>
-                <Link to='/real-estate-details'><Builder title='Entertainment' image={Entertainment} icon={EntertainmentIcon} /></Link>
-                <Link to='/real-estate-details'><Builder title='Real Estate' image={RealEstate} icon={RealEstateIcon} /></Link>
-                <Link to='/real-estate-details'><Builder title='Ecommerce' image={Ecommerce} icon={EcommerceIcon} /></Link>
-                <Link to='/real-estate-details'><Builder title='Entertainment' image={Entertainment} icon={EntertainmentIcon} /></Link>
-                <Link to='/real-estate-details'><Builder title='Real Estate' image={RealEstate} icon={RealEstateIcon} /></Link>
-                <Link to='/real-estate-details'><Builder title='Ecommerce' image={Ecommerce} icon={EcommerceIcon} /></Link>
-                <Link to='/real-estate-details'><Builder title='Entertainment' image={Entertainment} icon={EntertainmentIcon} /></Link>
-                <Link to='/real-estate-details'><Builder title='Real Estate' image={RealEstate} icon={RealEstateIcon} /></Link>
-                <Link to='/real-estate-details'><Builder title='Ecommerce' image={Ecommerce} icon={EcommerceIcon} /></Link>
-                <Link to='/real-estate-details'><Builder title='Entertainment' image={Entertainment} icon={EntertainmentIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Real Estate' image={RealEstate} icon={RealEstateIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Ecommerce' image={Ecommerce} icon={EcommerceIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Entertainment' image={Entertainment} icon={EntertainmentIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Real Estate' image={RealEstate} icon={RealEstateIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Ecommerce' image={Ecommerce} icon={EcommerceIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Entertainment' image={Entertainment} icon={EntertainmentIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Real Estate' image={RealEstate} icon={RealEstateIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Ecommerce' image={Ecommerce} icon={EcommerceIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Entertainment' image={Entertainment} icon={EntertainmentIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Real Estate' image={RealEstate} icon={RealEstateIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Ecommerce' image={Ecommerce} icon={EcommerceIcon} /></Link>
+                <Link to='/real-estate'><Builder title='Entertainment' image={Entertainment} icon={EntertainmentIcon} /></Link>
             </Flex>
         </BuildWrapper>
     </BuildContainer>

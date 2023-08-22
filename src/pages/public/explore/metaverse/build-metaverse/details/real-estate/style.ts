@@ -32,13 +32,16 @@ export const MenuContainer = styled.div`
     width: 270px;
 `;
 
-export const MenuItem = styled.div<{ isSelected?: boolean }>`
+export const MenuItem = styled.div<{ isSelected?: boolean, isLast?: boolean }>`
+    width: 100%;
     display: flex;
     padding: 12px;
     align-items: center;
     gap: 12px;
     border-radius: 4px;
-    ${({ isSelected }) => isSelected ? `color: #C40941` : `color: #fff`}
+    border-bottom: 1px solid #2A282B;
+    ${({ isSelected }) => isSelected ? `color: #C40941;` : `color: #fff;`}
+    ${({ isLast }) => isLast ? `border: none;` : ``}
 `;
 
 export const Line = styled.div`
