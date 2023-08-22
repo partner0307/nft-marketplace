@@ -1,6 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Background from "@/assets/img/background.png";
 import { motion } from "framer-motion";
+
+const prevAnime = keyframes`
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+`;
 
 export const HeroContainer = styled.div`
   background: no-repeat url(${Background});
