@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { GV } from "@/utils/style.util";
+import styled from 'styled-components';
+import { GV } from '@/utils/style.util';
 
 export type StyledButtonType = {
   bg?: string;
@@ -18,19 +18,22 @@ export const StyledButton = styled.button<StyledButtonType>`
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
-  font-size: ${GV("font-size")};
+  font-family: ${GV('font3')};
   transition: all ease-in-out 0.1s;
   letter-spacing: 1px;
 
   ${({ w }) => (w ? `width: ${w};` : ``)}
-  ${({ h }) => `line-height: ${h ? h : "2.69rem"};`}
-    ${({ h }) => `min-height: ${h ? h : "2.69rem"};`}
-    ${({ p }) => `padding: ${p ?? "0 1rem"};`}
-    ${({ color }) => (color ? `color: ${color};` : ``)}
-    ${({ bg }) => (bg ? `background: ${bg} !important;` : ``)}
-    ${({ fsize }) => (fsize ? `font-size: ${fsize};` : ``)}
-    ${({ radius }) => (radius ? `border-radius: ${radius} !important;` : ``)}
-    ${({ shadow }) => (shadow ? `box-shadow: ${shadow}` : ``)}
-    ${({ border, bg }) =>
-    `border:  1px solid ${border ?? bg ?? "transparent"};`}
+  ${({ h }) => `line-height: ${h ? h : '4.5rem'};`}
+  ${({ h }) => `min-height: ${h ? h : '4.5rem'};`}
+  ${({ p }) => `padding: ${p ?? '0 6.65rem'};`}
+  ${({ color }) => (color ? `color: ${color};` : ``)}
+  ${({ bg }) =>
+    `background: ${
+      bg ??
+      `var(--gradient,linear-gradient(216deg, #f75bb1 1.04%, #c392dc 45.73%, #008782 100%))`
+    } !important;`}
+  ${({ fsize }) => `font-size: ${fsize ?? GV('font-size-3')};`}
+  ${({ radius }) => `border-radius: ${radius ?? '0.5rem'};`}
+  ${({ shadow }) => `box-shadow: ${shadow ?? '0px 4px 12px 0px rgba(0, 0, 0, 0.25)'};`}
+  ${({ border, bg }) => `border:  1px solid ${border ?? bg ?? 'transparent'};`}
 `;

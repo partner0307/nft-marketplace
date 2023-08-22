@@ -7,6 +7,7 @@ export const SmallCardContainer = styled(Card)<{
 }>`
   position: relative;
   overflow: initial;
+  padding: 0.3rem;
   z-index: 5;
 `;
 

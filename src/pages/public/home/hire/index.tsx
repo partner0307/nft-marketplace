@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
@@ -19,6 +19,10 @@ import Person1 from '@/assets/img/avatar/pic1.png';
 import Person2 from '@/assets/img/avatar/pic2.png';
 import Person3 from '@/assets/img/avatar/pic3.png';
 import Person4 from '@/assets/img/avatar/pic4.png';
+
+const categories = [
+    "All", "Metaverse", "Web3", "Designers", "Developers", "Modelers", "AI Experts", "Animators", "Managers"
+]
 
 const talents: TablentObject[] = [
     {
@@ -94,13 +98,17 @@ const talents: TablentObject[] = [
 ]
 
 const HireSection = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
+    const [checkedList, setCheckedList] = useState<boolean[]>(new Array(categories.length).fill(false));
+
+    const set = (index: number) => {
+        let tempList = [...checkedList];
+        tempList[index] = !tempList[index];
+        setCheckedList(tempList);
+    }
+
+    useEffect(() => {
+        set(0);
+    }, [])
 
     const renderTalentCards = () => {
         return (
@@ -159,33 +167,11 @@ const HireSection = () => {
                                 viewport={{ once: true }}
                             >
                                 <ItemList>
-                                    <Item isChecked>
-                                        <Checkbox label='All' isChecked />
-                                    </Item>
-                                    <Item isChecked={false}>
-                                        <Checkbox label='Metaverse' />
-                                    </Item>
-                                    <Item isChecked={false}>
-                                        <Checkbox label='Web3' />
-                                    </Item>
-                                    <Item isChecked={false}>
-                                        <Checkbox label='Designers' />
-                                    </Item>
-                                    <Item isChecked={false}>
-                                        <Checkbox label='Developers' />
-                                    </Item>
-                                    <Item isChecked={false}>
-                                        <Checkbox label='Modelers' />
-                                    </Item>
-                                    <Item isChecked={false}>
-                                        <Checkbox label='AI Experts' />
-                                    </Item>
-                                    <Item isChecked={false}>
-                                        <Checkbox label='Animators' />
-                                    </Item>
-                                    <Item isChecked={false}>
-                                        <Checkbox label='Managers' />
-                                    </Item>
+                                    {categories.map((category, index) => (
+                                        <Item isChecked={checkedList[index]} onClick={() => {set(index)}}>
+                                            <Checkbox label={category} isChecked={checkedList[index]} />
+                                        </Item>
+                                    ))}
                                 </ItemList>
                             </motion.div>
                         </Flex>
@@ -245,15 +231,12 @@ const HireSection = () => {
                         viewport={{ once: true }}
                         $style={{
                             fDirection: 'row',
+                            vAlign: "center",
                             hAlign: 'space-between',
                             p: '5rem 32px 0 0'
                         }}
                     >
-                        <Button $style={{
-                            bg: GV('gradient'),
-                            radius: '8px',
-                            p: '0.25rem 3rem',
-                        }}>View All Talent</Button>
+                        <Button>View All Talent</Button>
                         <Flex $style={{
                             fDirection: 'row',
                             gap: '45px'

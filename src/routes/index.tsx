@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createBrowserRouter, Navigate, Outlet } from "react-router-dom";
 
 import _ROUTERS from "@/constants/menu.constant";
 
@@ -25,41 +25,116 @@ const routers = createBrowserRouter([
                 element: <HomePage />
             },
             {
-                path: _ROUTERS.metaverses,
+                path: _ROUTERS.metaverse,
                 element: <Metaverses />
+            },
+            {
+                path: _ROUTERS.metaverse,
+                element: <Outlet />,
+                children: [
+                    {
+                        path: _ROUTERS.overflow,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.collectibles,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.land,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.marketplace,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.news,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.about,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.comments,
+                        element: <MetaverseDetails />
+                    },
+                ]
             },
             {
                 path: _ROUTERS.metaverse_marketplace,
                 element: <Marketplace />
             },
             {
-                path: _ROUTERS.metaverse_details,
-                element: <MetaverseDetails />
-            },
-            {
                 path: _ROUTERS.build_metaverse,
-                element: <BuildMeta />
+                element: <BuildMeta />,
+                children: [
+                    {
+                        path: "",
+                        element: (
+                            <>
+                                <Heading level={1}>Tab layout example</Heading>
+                                <Outlet />
+                            </>
+                        ),
+                        children: [
+                            {
+                                path: _ROUTERS.overflow,
+                                element: <MetaverseDetails />
+                            },
+                            {
+                                path: _ROUTERS.features,
+                                element: <MetaverseDetails />
+                            },
+                            {
+                                path: _ROUTERS.price_history,
+                                element: <MetaverseDetails />
+                            },
+                            {
+                                path: _ROUTERS.monthly_cost,
+                                element: <MetaverseDetails />
+                            },
+                            {
+                                path: _ROUTERS.nearby_buildings,
+                                element: <MetaverseDetails />
+                            },
+                            {
+                                path: _ROUTERS.floor_plan,
+                                element: <MetaverseDetails />
+                            },
+                            {
+                                path: _ROUTERS.images,
+                                element: <MetaverseDetails />
+                            },
+                            {
+                                path: _ROUTERS.books,
+                                element: <MetaverseDetails />
+                            },
+                        ]
+                    }
+                ]
             },
-            {
-                path: _ROUTERS.buy_nft,
-                element: <BuyNFT />
-            },
-            {
-                path: _ROUTERS.nft_marketplace,
-                element: <NFTMarketplace />
-            },
-            {
-                path: _ROUTERS.nft_details,
-                element: <NFTDetails />
-            },
-            {
-                path: _ROUTERS.real_estate,
-                element: <BuildDetails />
-            },
-            {
-                path: _ROUTERS.real_estate_details,
-                element: <RealEstateDetails />
-            },
+            // {
+            //     path: _ROUTERS.buy_nft,
+            //     element: <BuyNFT />
+            // },
+            // {
+            //     path: _ROUTERS.nft_marketplace,
+            //     element: <NFTMarketplace />
+            // },
+            // {
+            //     path: _ROUTERS.nft_details,
+            //     element: <NFTDetails />
+            // },
+            // {
+            //     path: _ROUTERS.real_estate,
+            //     element: <BuildDetails />
+            // },
+            // {
+            //     path: _ROUTERS.real_estate_details,
+            //     element: <RealEstateDetails />
+            // },
             {
                 path: "*",
                 element: (

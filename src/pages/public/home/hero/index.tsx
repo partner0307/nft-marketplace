@@ -8,7 +8,7 @@ import Screen from '@/assets/img/screen.png';
 import Screen1 from '@/assets/img/screen1.png';
 import Screen2 from '@/assets/img/screen1.png';
 import Screen3 from '@/assets/img/screen1.png';
-import { DownButton, HeroContainer } from './style';
+import { CenterRect, DownButton, HeroContainer, HoveredHeading } from './style';
 import { motion } from "framer-motion";
 import { FirstRect, SideRect, UpRect } from '@/components/page/public/home/screen/style';
 
@@ -27,11 +27,11 @@ const Hero = () => {
                     mb: "-3rem"
                 }}
             >
-                <Heading level={1} $style={{
+                <HoveredHeading level={1} $style={{
                     txtTransform: 'uppercase',
                     align: "center",
                     maxW: "34.875rem"
-                }}>All metaverses at one place</Heading>
+                }}>All metaverses at one place</HoveredHeading>
             </Flex>
             <Flex $style={{
                 vAlign: 'flex-end'
@@ -71,26 +71,16 @@ const Hero = () => {
                         flex: '1',
                         fDirection: 'column',
                         hAlign: 'flex-end',
-                        gap: '5rem',
-                        p: "0 0 0.5rem",
+                        p: "0 0 0.3rem",
                         overflow: "hidden"
                     }}
                 >
                     <Flex $style={{
                         hAlign: "center"
                     }}>
-                        <Button $style={{
-                            w: '366px',
-                            h: '72px',
-                            p: '0 24px',
-                            bg: GV('gradient'),
-                            radius: '8px',
-                        }}>
-                            <P $style={{
-                                size: '20px'
-                            }}>See Full Metaverse</P>
-                        </Button>
+                        <Button>See Full Metaverse</Button>
                     </Flex>
+                    <CenterRect />
                     <BigCard image={Screen} title='Decentraland' />
                 </Flex>
                 <Flex
