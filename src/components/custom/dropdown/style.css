@@ -63,7 +63,7 @@
     position: absolute;
     top: calc(100% + 0.3rem);
     width: 100%;
-    background: white;
+    background: #191919;
     padding: 0.8rem 0.5rem;
     border: 1px solid var(--border);
     border-radius: 0.3rem;

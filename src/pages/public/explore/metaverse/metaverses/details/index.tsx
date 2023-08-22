@@ -76,9 +76,9 @@ const MetaverseDetails = () => {
                         </Flex>
                         <Flex $style={{ fDirection: 'column', gap: '40px', p: '16px 0 0' }}>
                             <Flex $style={{ fDirection: 'row', hAlign: 'flex-end', gap: '24px', p: '0 32px' }}>
-                                <Link to='#'><img src={Instagram} alt="" /></Link>
-                                <Link to='#'><img src={Twitter} alt="" /></Link>
-                                <Link to='#'><img src={Discord} alt="" /></Link>
+                                <Link to='https://www.instagram.com'><img src={Instagram} alt="" /></Link>
+                                <Link to='https://www.twitter.com'><img src={Twitter} alt="" /></Link>
+                                <Link to=''><img src={Discord} alt="" /></Link>
                             </Flex>
                             <StatusBar>
                                 <Flex $style={{ vAlign: 'flex-start', w: '100%', hAlign: 'space-between' }}>

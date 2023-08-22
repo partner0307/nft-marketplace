@@ -1,5 +1,5 @@
 import React from 'react';
-import { SubHeaderContainer, ItemContainer, TabButton, TabGroup } from './style';
+import { SubHeaderContainer, ItemContainer, TabButton, TabGroup, DropdownContainer, DropdownItem } from './style';
 import { Flex, Heading, P } from '@/components/basic';
 import { Dropdown, Icon, Input } from '@/components/custom';
 
@@ -13,6 +13,8 @@ type SubHeaderType = {
 }
 
 const SubHeader: React.FC<SubHeaderType> = ({ rightComponent, title, description, tabList, isNFT, isSearch }) => {
+    const [tabIndex, setTabIndex] = React.useState(1);
+    const [keyword, setKeyword] = React.useState('');
     return <>
         <SubHeaderContainer>
             <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '18px' }}>
@@ -31,15 +33,25 @@ const SubHeader: React.FC<SubHeaderType> = ({ rightComponent, title, description
                     <Dropdown initialLabel='Filter' hideIcon customIcon={<Icon icon='Filter' />} />
                 </ItemContainer>
                 <Flex $style={{ flex: '6' }}>
-                    <Input value='' placeholder={isNFT ? 'Search NFTs' : 'Search Metaverse'} padding='6px 12px' helpSide={<Icon icon='Search' />} />
+                    <Input value={keyword} placeholder={isNFT ? 'Search NFTs' : 'Search Metaverse'} padding='6px 12px' helpSide={<Icon icon='Search' />} onChange={(e: any) => setKeyword(e.target.value)} />
                 </Flex>
                 <ItemContainer>
-                    <Dropdown initialLabel={isNFT ? 'Trending' : 'Newly Listed'} />
+                    <Dropdown initialLabel={isNFT ? 'Trending' : 'Newly Listed'} container={() => (
+                    <DropdownContainer>
+                        <DropdownItem>Item</DropdownItem>
+                        <DropdownItem>Item</DropdownItem>
+                    </DropdownContainer>
+                )} />
                 </ItemContainer>
             </Flex>
             <TabGroup>
-                {tabList?.map((p: any) => <TabButton isSelected={p.active}>{p.name}</TabButton>)}
-                {!isNFT && <TabButton isSelected={false}><Dropdown initialLabel='More' /></TabButton>}
+                {tabList?.map((p: any, i: number) => <TabButton isSelected={(i+1) === tabIndex} onClick={() => setTabIndex(i + 1)}>{p.name}</TabButton>)}
+                {!isNFT && <TabButton isSelected={false}><Dropdown initialLabel='More' container={() => (
+                    <DropdownContainer>
+                        <DropdownItem>Item</DropdownItem>
+                        <DropdownItem>Item</DropdownItem>
+                    </DropdownContainer>
+                )} /></TabButton>}
             </TabGroup>
         </Flex>
         : ''}

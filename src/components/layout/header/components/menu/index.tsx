@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Content, ItemContainer, MenuContainer } from './style';
 import { Icon, Input, Dropdown } from '@/components/custom';
@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 const Menu = () => {
     const { hash, pathname, search } = useLocation();
     const { slideOpened, dispatch } = usePublicLayoutContext();
+    const [keyword, setKeyword] = useState('');
     return (
         <MenuContainer>
             {pathname === '/'
@@ -23,7 +24,7 @@ const Menu = () => {
             <ItemContainer>
                 <Content>Academy</Content>
             </ItemContainer>
-            <Input value='' placeholder='Search...' padding='6px 12px' helpSide={<Icon icon='Search' />}></Input>
+            <Input value={keyword} placeholder='Search...' padding='6px 12px' helpSide={<Icon icon='Search' />} onChange={(e: any) => setKeyword(e.target.value)} />
         </MenuContainer>
     )
 }
