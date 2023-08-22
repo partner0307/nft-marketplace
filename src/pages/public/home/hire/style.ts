@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Backgound from "@/assets/img/hire_bg.png";
-import { GV } from "@/utils/style.util";
+import Backgound from '@/assets/img/hire_bg.png';
+import { GV } from '@/utils/style.util';
 
 export const HireContainer = styled.div`
   display: flex;
@@ -16,12 +16,16 @@ export const HireWrapper = styled.div`
   /* max-width: 1440px; */
   overflow: hidden;
   padding: 7rem 2rem;
-  .react-multi-carousel-track{
-    gap: 2rem;
+  .swiper-backface-hidden .swiper-slide {
+    width: fit-content;
   }
-
-  .react-multi-carousel-item {
-    width: fit-content !important;
+  .swiper {
+    overflow: auto;
+    padding-bottom: 0.5rem;
+  }
+  .swiper-button-prev {
+  }
+  .swiper-button-next {
   }
 `;
 
@@ -33,7 +37,7 @@ export const Item = styled.div<{ isChecked: boolean }>`
   width: 154px;
   border-radius: 32px;
   border: 1px solid #2b2928;
-  ${({ isChecked }) => (isChecked ? `background-color: ${GV("white")};` : ``)}
+  ${({ isChecked }) => (isChecked ? `background-color: ${GV('white')};` : ``)}
 `;
 
 export const ItemList = styled.div`
@@ -70,8 +74,7 @@ export const ArrowButton = styled.div<{ isFill: boolean }>`
   border: 1px solid transparent;
   background:
     linear-gradient(#430f41, #430f41) padding-box,
-    linear-gradient(264.4deg, #f75bb1 -6.74%, #c392dc 43.26%, #008782 103.97%)
-      border-box;
+    linear-gradient(264.4deg, #f75bb1 -6.74%, #c392dc 43.26%, #008782 103.97%) border-box;
 
-  ${({ isFill }) => (isFill ? `background: ${GV("gradient")}` : ``)}
+  ${({ isFill }) => (isFill ? `background: ${GV('gradient')}` : ``)}
 `;
