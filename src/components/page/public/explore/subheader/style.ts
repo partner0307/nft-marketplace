@@ -30,6 +30,20 @@ export const TabButton = styled.button<{ isSelected: boolean }>`
   ${({ isSelected }) => (!isSelected ? `border: 1px solid #2B2928;` : ``)}
 `;
 
+export const DropdownContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const DropdownItem = styled.div`
+  width: 100%;
+  padding: 6px 12px;
+  &:hover {
+    background: #D96BFF;
+    color: #191919;
+  }
+`
+
 export const ItemContainer = styled.div`
   flex: 1;
   height: 2.5rem;
