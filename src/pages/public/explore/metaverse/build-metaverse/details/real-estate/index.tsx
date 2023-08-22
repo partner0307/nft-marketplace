@@ -7,11 +7,13 @@ import HomeImage from '@/assets/img/home.png';
 import RealEstateCard from '@/components/page/public/explore/real-estate-card';
 
 const RealEstate = () => {
+    const [tabIndex, setTabIndex] = React.useState(1);
+
     return <RealEstateContainer>
         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
             <P $style={{ size: '32px', weight: '700' }}>Real Estate</P>
             <Flex $style={{ gap: '12px', vAlign: 'center' }}>
-                <Input value='' placeholder='Search...' padding='6px 12px' />
+                <Input value='' placeholder='Search...' padding='6px 12px' helpSide={<Icon icon='Search' />} />
                 <CustomDropdown>
                     <Dropdown initialLabel='Newly Listed' />
                 </CustomDropdown>
@@ -19,15 +21,11 @@ const RealEstate = () => {
         </Flex>
         <Flex $style={{ gap: '32px' }}>
             <MenuContainer>
-                <MenuItem isSelected>All</MenuItem>
-                <Line />
-                <MenuItem>Residential</MenuItem>
-                <Line />
-                <MenuItem>Commercial</MenuItem>
-                <Line />
-                <MenuItem>New Condo</MenuItem>
-                <Line />
-                <MenuItem>Land</MenuItem>
+                <MenuItem isSelected={tabIndex === 1} onClick={() => setTabIndex(1)}>All</MenuItem>
+                <MenuItem isSelected={tabIndex === 2} onClick={() => setTabIndex(2)}>Residential</MenuItem>
+                <MenuItem isSelected={tabIndex === 3} onClick={() => setTabIndex(3)}>Commercial</MenuItem>
+                <MenuItem isSelected={tabIndex === 4} onClick={() => setTabIndex(4)}>New Condo</MenuItem>
+                <MenuItem isSelected={tabIndex === 5} onClick={() => setTabIndex(5)} isLast={true}>Land</MenuItem>
             </MenuContainer>
             <Flex $style={{ fDirection: 'column', gap: '24px', flex: '1' }}>
                 <Flex>

@@ -26,7 +26,17 @@ const routers = createBrowserRouter([
             },
             {
                 path: _ROUTERS.metaverses,
-                element: <Metaverses />
+                element: <></>,
+                children: [
+                    {
+                        path: "/",
+                        element: <Metaverses />
+                    },
+                    {
+                        path: "detail",
+                        element: <></>
+                    }
+                ]
             },
             {
                 path: _ROUTERS.metaverse_marketplace,

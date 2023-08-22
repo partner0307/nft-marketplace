@@ -1,5 +1,5 @@
 import React from "react";
-import { ActionContainer, Content } from "./style";
+import { ActionContainer, Content, ItemContainer } from "./style";
 import { Flex, Link } from "@/components/basic";
 import { Button, Icon } from "@/components/custom";
 import { GV } from "@/utils/style.util";
@@ -43,28 +43,21 @@ const Actions = () => {
           <Content>Work in Metaverse</Content>
         </Link>
       </Flex>
-      <Flex
-        $style={{
-          vAlign: "center",
-          fDirection: "row",
-          h: "40px",
-          p: "0 12px",
-          gap: "8px",
-        }}
-      >
-        <Link to="/">
+      <ItemContainer>
+        <Link to="/signin" $style={{ color: 'purple' }}>
           <Content>Sign in</Content>
         </Link>
         <Icon icon="Login" />
-      </Flex>
-      <Button
-        $style={{
-          bg: GV("gradient"),
-          radius: "8px",
-        }}
-      >
-        <Content>Register</Content>
-      </Button>
+      </ItemContainer>
+      <Link to="/signup">
+        <Button
+          $style={{
+            bg: GV("gradient"),
+            radius: "8px",
+          }}
+        >
+          <Content>Register</Content>
+        </Button></Link>
     </ActionContainer>
   );
 };
