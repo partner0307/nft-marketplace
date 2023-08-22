@@ -12,6 +12,7 @@ export const BuildDetailsWrapper = styled.div`
     max-width: 1440px;
     display: flex;
     gap: 32px;
+    padding: 0 0 200px;
 `;
 
 export const Rect = styled.div`
@@ -24,6 +25,23 @@ export const Rect = styled.div`
     border-radius: 450px;
     background: rgba(235, 104, 198, 0.20);
 `;
+
+export const MenuItem = styled.div<{ isActive?: boolean }>`
+    display: flex;
+    width: 96px;
+    height: 96px;
+    padding: 24px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 16px;
+    border: 1px solid #3D3D3E;
+    ${({ isActive }) => isActive ? `background: #780640;` : `background: rgba(25, 25, 25, 0.80);`}
+    backdrop-filter: blur(7.5px);
+`;
+
+export const CustomFont = styled.div`
+    color: '#8D8E8D'
+`
 
 export const Rect1 = styled.div`
     position: absolute;
