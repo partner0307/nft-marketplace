@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 import { GV } from '@/utils/style.util';
 
+export const MetaverseComponent = styled.div`
+  position: relative;
+`
+
 export const MetaversesContainer = styled.div`
   background: #0c0d0e;
-  position: relative;
   display: flex;
   flex-direction: column;
 `;
@@ -33,6 +36,20 @@ export const ItemContainer = styled.div`
   background: #191919;
   border-radius: 12px;
 `;
+
+export const DropdownContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const DropdownItem = styled.div`
+  width: 100%;
+  padding: 6px 12px;
+  &:hover {
+    background: #D96BFF;
+    color: #191919;
+  }
+`
 
 export const Rect = styled.div`
   position: absolute;

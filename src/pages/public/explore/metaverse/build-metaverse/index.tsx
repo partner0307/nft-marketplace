@@ -14,10 +14,11 @@ import EntertainmentIcon from '@/assets/img/build-metaverse/entertainment-icon.p
 import { Link } from 'react-router-dom';
 
 const Build = () => {
+    const [keyword, setKeyword] = React.useState('');
     return <BuildContainer>
         <SubHeader title='Build Metaverse' rightComponent={
             <Flex $style={{ maxW: '200px' }}>
-                <Input value='' placeholder='Search' padding='6px 12px' helpSide={<Icon icon='Search' />} />
+                <Input value={keyword} placeholder='Search' padding='6px 12px' helpSide={<Icon icon='Search' />} onChange={(e: any) => setKeyword(e.target.value)} />
             </Flex>
         } />
         <BuildWrapper>
