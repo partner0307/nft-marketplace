@@ -19,7 +19,6 @@ import Person1 from '@/assets/img/avatar/pic1.png';
 import Person2 from '@/assets/img/avatar/pic2.png';
 import Person3 from '@/assets/img/avatar/pic3.png';
 import Person4 from '@/assets/img/avatar/pic4.png';
-import SimpleSlider from './slide';
 
 const talents: TablentObject[] = [
     {
@@ -102,9 +101,24 @@ const HireSection = () => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+
+    const renderTalentCards = () => {
+        return (
+            <React.Fragment>
+                {talents.map((talent, i) => (
+                    <SwiperSlide>
+                        <TalentCard
+                            key={i}
+                            talent={talent}
+                        />
+                    </SwiperSlide>
+                ))}
+            </React.Fragment>
+        )
+    }
+
     return (
         <React.Fragment>
-            <SimpleSlider />
             <HireContainer>
                 <HireWrapper>
                     <Flex
@@ -212,22 +226,15 @@ const HireSection = () => {
                         <Swiper
                             slidesPerView={'auto'}
                             spaceBetween={30}
-                            loop={true}
                             pagination={{
-                              clickable: true,
+                                clickable: true,
                             }}
+                            navigation
+                            modules={[Navigation]}
+                            grabCursor={true}
                             className="mySwiper"
-                            // grabCursor={true}
                         >
-
-                            {talents.map((talent, i) => (
-                                <SwiperSlide>
-                                    <TalentCard
-                                        key={i}
-                                        talent={talent}
-                                    />
-                                </SwiperSlide>
-                            ))}
+                            {renderTalentCards()}
                         </Swiper>
                     </motion.div>
                     <Flex
@@ -239,7 +246,7 @@ const HireSection = () => {
                         $style={{
                             fDirection: 'row',
                             hAlign: 'space-between',
-                            p: '0 32px 0 0'
+                            p: '5rem 32px 0 0'
                         }}
                     >
                         <Button $style={{
