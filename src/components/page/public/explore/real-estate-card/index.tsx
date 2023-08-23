@@ -1,13 +1,14 @@
 import React from 'react';
 import { CardContainer, CardLine, CustomFont, ImageLoader } from './style';
 
-import Image from '@/assets/img/avatar1.png';
+import Img from '@/assets/img/avatar1.png';
 import { Flex, List, ListItem, P } from '@/components/basic';
+import Image from '@/components/basic/img';
 
 const RealEstateCard = () => {
     return <>
         <CardContainer>
-            <ImageLoader src={Image} />
+            <Image src={Img} alt='' h='14.125rem' />
             <Flex $style={{ fDirection: 'column', gap: '8px', w: '100%' }}>
                 <P $style={{ size: '20px', weight: '700' }}>Single Family Residential</P>
                 <CardLine />

@@ -2,7 +2,7 @@ import React from 'react';
 import SubMenu from '@/components/page/public/explore/submenu';
 import { CustomButton, CustomButton1, CustomFont, CustomTab, DetailsWrapper, HeroContainer, LinearButton, Main, MarkContainer, PageButton, Similars, StatusBar } from './style';
 import { Flex, Heading, List, ListItem, P } from '@/components/basic';
-import { Link } from 'react-router-dom';
+import { Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
 
 import Mark from '@/assets/img/metaverse/mana.png';
 import Ether from '@/assets/img/metaverse/ether.png';
@@ -10,17 +10,12 @@ import { Icon } from '@/components/custom';
 import { Line } from 'recharts';
 
 import RealEstateCard from '@/components/page/public/explore/real-estate-card';
-import Overview from './overview';
-import Features from './features';
-import PriceHistory from './price-history';
-import Cost from './monthly-cost';
-import NearbyBuilding from './nearby-buildings';
-import FloorPlan from './floor-plan';
-import Images from './images';
-import Appoinment from './book-appoinment';
+import { routerer } from '@/utils/util';
 
 const RealEstateDetails = () => {
     const [tabIndex, setTabIndex] = React.useState(1);
+    const navigate = useNavigate();
+    const { pathname } = useLocation();
 
     return <>
         <SubMenu />
@@ -68,23 +63,24 @@ const RealEstateDetails = () => {
                             <Heading level={1}>Single Family Residence</Heading>
                             <Main>
                                 <Flex $style={{ gap: '16px', overflow: 'hidden' }}>
-                                    <CustomTab isActive={tabIndex === 1} onClick={() => setTabIndex(1)}>Overview</CustomTab>
-                                    <CustomTab isActive={tabIndex === 2} onClick={() => setTabIndex(2)}>Features</CustomTab>
-                                    <CustomTab isActive={tabIndex === 3} onClick={() => setTabIndex(3)}>Price History</CustomTab>
-                                    <CustomTab isActive={tabIndex === 4} onClick={() => setTabIndex(4)}>Monthly Cost</CustomTab>
-                                    <CustomTab isActive={tabIndex === 5} onClick={() => setTabIndex(5)}>Nearby Buildings</CustomTab>
-                                    <CustomTab isActive={tabIndex === 6} onClick={() => setTabIndex(6)}>Floor Plan</CustomTab>
-                                    <CustomTab isActive={tabIndex === 7} onClick={() => setTabIndex(7)}>Images</CustomTab>
-                                    <CustomTab isActive={tabIndex === 8} onClick={() => setTabIndex(8)}>Book Appoinment</CustomTab>
+                                    <CustomTab isActive={pathname.split("/")[3] === "overview"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "overview"))}>Overview</CustomTab>
+                                    <CustomTab isActive={pathname.split("/")[3] === "features"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "features"))}>Features</CustomTab>
+                                    <CustomTab isActive={pathname.split("/")[3] === "price-history"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "price_history"))}>Price History</CustomTab>
+                                    <CustomTab isActive={pathname.split("/")[3] === "monthly-cost"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "monthly_cost"))}>Monthly Cost</CustomTab>
+                                    <CustomTab isActive={pathname.split("/")[3] === "nearby-buildings"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "nearby_buildings"))}>Nearby Buildings</CustomTab>
+                                    <CustomTab isActive={pathname.split("/")[3] === "floor-plan"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "floor_plan"))}>Floor Plan</CustomTab>
+                                    <CustomTab isActive={pathname.split("/")[3] === "images"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "images"))}>Images</CustomTab>
+                                    <CustomTab isActive={pathname.split("/")[3] === "books"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "books"))}>Book Appoinment</CustomTab>
                                 </Flex>
-                                {tabIndex === 1 && <Overview />}
+                                <Outlet />
+                                {/* {tabIndex === 1 && <Overview />}
                                 {tabIndex === 2 && <Features />}
                                 {tabIndex === 3 && <PriceHistory />}
                                 {tabIndex === 4 && <Cost />}
                                 {tabIndex === 5 && <NearbyBuilding />}
                                 {tabIndex === 6 && <FloorPlan />}
                                 {tabIndex === 7 && <Images />}
-                                {tabIndex === 8 && <Appoinment />}
+                                {tabIndex === 8 && <Appoinment />} */}
                             </Main>
                         </Flex>
                         <StatusBar>

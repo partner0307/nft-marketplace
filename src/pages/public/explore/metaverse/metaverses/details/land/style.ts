@@ -18,7 +18,7 @@ export const TitleBar = styled.div`
 
 export const NFTs = styled.div`
     width: 100%;
-    padding: 32px 0;
+    padding: 2rem;
     border-radius: 16px;
     border: 1px solid #1A1A1A;
     background: rgba(12, 12, 12, 0.90);

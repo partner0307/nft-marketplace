@@ -9,9 +9,10 @@ export const CardContainer = styled.div`
     border: 1px solid #191919;
     background: rgba(0, 0, 0, 1);
     padding: 16px 12px;
+    transition: all ease-in-out .2s;
 
     &:hover {
-        filter: drop-shadow(0px 0px 24px rgba(61, 255, 243, 0.50));
+        filter: drop-shadow(0px 0px 8px rgba(61, 255, 243, 0.50));
         border-color: ${GV('info')};
     }
 `;

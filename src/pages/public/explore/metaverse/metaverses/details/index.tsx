@@ -13,12 +13,12 @@ import Instagram from '@/assets/img/metaverse/instagram.png';
 import Ether from '@/assets/img/metaverse/ether.png';
 import Polygon from '@/assets/img/metaverse/polygon.png';
 import _ROUTERS from '@/constants/route.constant';
+import { routerer } from '@/utils/util';
 
 const MetaverseDetails = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location);
 
     return <DetailsContainer>
         <SubMenu />
@@ -62,13 +62,13 @@ const MetaverseDetails = () => {
                                 </Flex>
                             </Flex>
                             <Flex $style={{ gap: '20px' }}>
-                                <CustomTab isActive={location.pathname.split("/")[2] === 'overview'} onClick={() => navigate(_ROUTERS.overview)}>Overview</CustomTab>
-                                <CustomTab isActive={location.pathname.split("/")[2] === 'collectibles'} onClick={() => navigate(_ROUTERS.collectibles)}>Collectible</CustomTab>
-                                <CustomTab isActive={location.pathname.split("/")[2] === 'land'} onClick={() => navigate(_ROUTERS.land)}>Land</CustomTab>
-                                <CustomTab isActive={location.pathname.split("/")[2] === 'marketplace'} onClick={() => navigate(_ROUTERS.marketplace)}>Marketplace</CustomTab>
-                                <CustomTab isActive={location.pathname.split("/")[2] === 'news'} onClick={() => navigate(_ROUTERS.overview)}>News</CustomTab>
-                                <CustomTab isActive={location.pathname.split("/")[2] === 'comments'} onClick={() => navigate(_ROUTERS.overview)}>About</CustomTab>
-                                <CustomTab isActive={location.pathname.split("/")[2] === 'overview'} onClick={() => navigate(_ROUTERS.overview)}>Comments</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'overview'} onClick={() => navigate(routerer("metaverse", "overview"))}>Overview</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'collectibles'} onClick={() => navigate(routerer("metaverse", "collectibles"))}>Collectible</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'land'} onClick={() => navigate(routerer("metaverse", "land"))}>Land</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'marketplace'} onClick={() => navigate(routerer("metaverse", "marketplace"))}>Marketplace</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'news'} onClick={() => navigate(routerer("metaverse", "news"))}>News</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'about'} onClick={() => navigate(routerer("metaverse", "about"))}>About</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'comments'} onClick={() => navigate(routerer("metaverse", "comments"))}>Comments</CustomTab>
                             </Flex>
                         </Flex>
                         <Flex $style={{ fDirection: 'column', gap: '40px', p: '16px 0 0' }}>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Avatar, CardContainer, IconLoader, ImageLoader } from './style';
 import { Flex, P } from '@/components/basic';
+import Image from '@/components/basic/img';
 
 type CardType = {
     title?: string,
@@ -12,7 +13,7 @@ type CardType = {
 
 const Card: React.FC<CardType> = ({ title, image, avatar, icon1, icon2 }) => {
     return <CardContainer>
-        <ImageLoader src={image} />
+        <Image src={image || ""} alt='' h='12.5rem' />
         <Flex $style={{ hAlign: 'space-between', vAlign: 'center' }}>
             <Flex $style={{ fDirection: 'row', hAlign: 'flex-start', gap: '12px' }}>
                 <Avatar>

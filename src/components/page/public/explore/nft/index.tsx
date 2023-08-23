@@ -3,6 +3,7 @@ import { CustomButton, IconWrapper, ImageComponent, NFTContainer, StateBar } fro
 import { Flex, P } from '@/components/basic';
 import Ether from '@/assets/img/ether-icon.png';
 import Polygon from '@/assets/img/metaverse/polygon.png';
+import Image from '@/components/basic/img';
 
 type NFTType = {
     image?: string
@@ -16,7 +17,7 @@ type NFTType = {
 const NFT: React.FC<NFTType> = ({ image, name, price, network, usd, isCount }) => {
     return <NFTContainer>
         <Flex $style={{ fDirection: 'column', gap: '14px' }}>
-            <ImageComponent src={image} />
+            <Image src={image || ""} alt='' h='15.18456rem' />
             <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
                 <P $style={{ size: '20px', color: 'info' }}>{name}</P>
                 <Flex $style={{ gap: '2px' }}>

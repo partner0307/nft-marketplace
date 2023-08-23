@@ -16,6 +16,7 @@ import Mana from '@/assets/img/metaverse/mana.png';
 import Mana1 from '@/assets/img/metaverse/mana1.png';
 import { Link } from 'react-router-dom';
 import _ROUTERS from '@/constants/route.constant';
+import { routerer } from '@/utils/util';
 
 const tabList = [
     { name: 'All Categories' },
@@ -43,21 +44,21 @@ const Metaverses = () => {
             </ItemContainer>} />
             <MetaverseWrapper>
                 <Flex $style={{ hAlign: 'center', fWrap: 'wrap', gap: '32px' }}>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image2} avatar={Avatar1} icon1={Mana1} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image2} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image2} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image2} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image2} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
-                    <Link to={_ROUTERS.metaverse + _ROUTERS.overview}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image2} avatar={Avatar1} icon1={Mana1} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image2} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image2} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image2} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image2} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
+                    <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
                 </Flex>
                 <Pagination />
             </MetaverseWrapper>
