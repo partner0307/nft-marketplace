@@ -22,7 +22,7 @@ const metaverse_fields: TableFieldInterface[] = [
                         gap: "0.75rem",
                         vAlign: "center"
                     }}>
-                        <img src={`public/imgs/${i.avatar}`} width={40} height={40} />
+                        <img src={`src/assets/img/${i.avatar}`} width={40} height={40} />
                         <Flex $style={{
                             fDirection: "column"
                         }}>
@@ -38,7 +38,7 @@ const metaverse_fields: TableFieldInterface[] = [
                                             gap: "0.25rem",
                                             vAlign: "center"
                                         }}>
-                                            <img src={`public/imgs/chains/ethereum.png`} width={12} height={12} />
+                                            <img src={`src/assets/img/chains/ethereum.png`} width={12} height={12} />
                                             <Span $style={{
                                                 size: "12px"
                                             }}>{network}</Span>
