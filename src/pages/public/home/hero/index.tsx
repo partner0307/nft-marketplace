@@ -11,6 +11,8 @@ import Screen3 from '@/assets/img/screen1.png';
 import { CenterRect, DownButton, HeroContainer, HoveredButton, HoveredHeading } from './style';
 import { motion } from "framer-motion";
 import { FirstRect, SideRect, UpRect } from '@/components/page/public/home/screen/style';
+import { Link } from 'react-router-dom';
+import _ROUTERS from '@/constants/route.constant';
 
 const Hero = () => {
     return (
@@ -78,7 +80,7 @@ const Hero = () => {
                     <Flex $style={{
                         hAlign: "center"
                     }}>
-                        <HoveredButton>See Full Metaverse</HoveredButton>
+                        <Link to={_ROUTERS.metaverse}><HoveredButton>See Full Metaverse</HoveredButton></Link>
                     </Flex>
                     <CenterRect />
                     <BigCard image={Screen} title='Decentraland' />

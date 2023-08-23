@@ -4,7 +4,7 @@ import { Flex, Heading, P, Span } from '@/components/basic';
 import { Button, Icon } from '@/components/custom';
 import { GV } from '@/utils/style.util';
 import Table, { TableFieldInterface } from '@/components/custom/table';
-import { metaverses } from './mockdata';
+import { blockchains, dapps, metaverses, nfts } from './mockdata';
 import { tokillo } from '@/utils/util';
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom';
@@ -12,7 +12,7 @@ import _ROUTERS from '@/constants/route.constant';
 
 const Explore = () => {
 
-	const fields: TableFieldInterface[] = [
+	const metaverse_fields: TableFieldInterface[] = [
 		{
 			key: "name",
 			label: "Name",
@@ -108,6 +108,113 @@ const Explore = () => {
 			description: "This field is ...",
 			width: "150px"
 		},
+	];
+
+
+	const nft_fields: TableFieldInterface[] = [
+		{
+			key: 'collections',
+			label: 'COLLECTIONS',
+			render: (i, v, n) => (
+				<Flex $style={{
+					vAlign: "center",
+					gap: "1rem"
+				}}>
+					<Span>{n + 1}</Span>
+					<Flex $style={{
+						vAlign: "center"
+					}}>
+						<Flex $style={{
+							gap: "0.75rem",
+							vAlign: "center"
+						}}>
+							<img src={`public/imgs/${i.avatar}`} width={40} height={40} />
+							<Flex $style={{
+								fDirection: "column"
+							}}>
+								<Flex>
+									<Span $style={{
+										weight: "bold"
+									}}>{v}</Span>
+								</Flex>
+								<Flex>
+									{i.networks.map((network: string, i: number) => (
+										<React.Fragment key={i}>
+											<Flex $style={{
+												gap: "0.25rem",
+												vAlign: "center"
+											}}>
+												<img src={`public/imgs/chains/ethereum.png`} width={12} height={12} />
+												<Span $style={{
+													size: "12px"
+												}}>{network}</Span>
+											</Flex>
+										</React.Fragment>
+									))}
+								</Flex>
+							</Flex>
+						</Flex>
+					</Flex>
+				</Flex>
+			),
+			sort: (i: any, v: any) => v,
+			description: "This field is ..."
+		},
+		{
+			key: 'floorprice',
+			label: 'FLOOR PRICE',
+			render: (i, v, n) => (
+				<Flex $style={{ fDirection: 'column' }}>
+					<Span $style={{ weight: 'bold' }}>{v}</Span>
+					<Span $style={{ color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.floorpercent}%</Span>
+				</Flex>
+			),
+			sort: (i: any, v: any) => v,
+			description: "This field is ..."
+		},
+		{
+			key: 'avgprice',
+			label: 'AVG.PRICE',
+			render: (i, v, n) => (
+				<Flex $style={{ fDirection: 'column' }}>
+					<Span $style={{ weight: 'bold' }}>{v}</Span>
+					<Span $style={{ color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.avgpercent}%</Span>
+				</Flex>
+			),
+			sort: (i: any, v: any) => v,
+			description: "This field is ..."
+		},
+		{
+			key: 'mktcap',
+			label: 'MKT.CAP',
+			render: (i, v, n) => (
+				<Flex $style={{ fDirection: 'column' }}>
+					<Span $style={{ weight: 'bold' }}>{v}</Span>
+					<Span $style={{ color: v < 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.mktpercent}%</Span>
+				</Flex>
+			),
+			sort: (i: any, v: any) => v,
+			description: "This field is ..."
+		},
+		{
+			key: 'volume',
+			label: 'VOLUME',
+			render: (i, v, n) => (
+				<Flex $style={{ fDirection: 'column' }}>
+					<Span $style={{ weight: 'bold' }}>{v}</Span>
+					<Span $style={{ color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.volumepercent}%</Span>
+				</Flex>
+			),
+			sort: (i: any, v: any) => v,
+			description: "This field is ..."
+		},
+		{
+			key: 'supply',
+			label: 'SUPPLY',
+			render: (i, v, n) => <Span $style={{ weight: 'bold' }}>{v}</Span>,
+			sort: (i: any, v: any) => v,
+			description: "This field is ..."
+		}
 	]
 
 	const [tabIndex, setTabIndex] = useState<number>(0);
@@ -157,16 +264,16 @@ const Explore = () => {
 						onClick={() => setTabIndex(3)}
 					>Blockchains</TabButton>
 				</Flex>
-				{tabIndex ===1 && <Flex $style={{
+				<Flex $style={{
 					fDirection: 'column',
 					p: '24px 0 0',
 					gap: '4px'
 				}}>
 					<Table
-						data={metaverses}
-						fields={fields}
+						data={tabIndex === 0 ? metaverses : tabIndex === 1 ? nfts : tabIndex === 2 ? dapps : blockchains}
+						fields={metaverse_fields}
 					/>
-				</Flex>}
+				</Flex>
 			</Flex>
 			<Flex $style={{
 				hAlign: "center"
