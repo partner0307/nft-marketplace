@@ -65,5 +65,6 @@ export const CustomFont = styled.div`
 
 export const Line = styled.div`
     width: 0.0625rem;
+    height: 1.25rem;
     background: #8DD3ED;
 `

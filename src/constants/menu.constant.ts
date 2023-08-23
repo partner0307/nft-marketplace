@@ -9,7 +9,9 @@ const _ROUTERS = {
     nft_marketplace: '/nft-marketplace',
     nft_details: '/nft-details',
     real_estate: '/real-estate',
-    real_estate_details: '/real-estate-details'
+    real_estate_details: '/real-estate-details',
+    hire_talent: '/hire-talent',
+    marketplace: '/marketplace'
 }
 
 export default _ROUTERS;

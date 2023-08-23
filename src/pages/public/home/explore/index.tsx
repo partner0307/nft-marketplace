@@ -7,8 +7,11 @@ import Table, { TableFieldInterface } from '@/components/custom/table';
 import { metaverses } from './mockdata';
 import { tokillo } from '@/utils/util';
 import { motion } from "framer-motion"
+import { Link } from 'react-router-dom';
+import _ROUTERS from '@/constants/menu.constant';
 
 const Explore = () => {
+	const [tabIndex, setTabIndex] = React.useState(1);
 
 	const fields: TableFieldInterface[] = [
 		{
@@ -136,12 +139,12 @@ const Explore = () => {
 					fDirection: 'row',
 					gap: '20px'
 				}}>
-					<TabButton isSelected={true}>Metaverses</TabButton>
-					<TabButton isSelected={false}>NFTs</TabButton>
-					<TabButton isSelected={false}>DApps</TabButton>
-					<TabButton isSelected={false}>Blockchains</TabButton>
+					<TabButton isSelected={tabIndex === 1} onClick={() => setTabIndex(1)}>Metaverses</TabButton>
+					<TabButton isSelected={tabIndex === 2} onClick={() => setTabIndex(2)}>NFTs</TabButton>
+					<TabButton isSelected={tabIndex === 3} onClick={() => setTabIndex(3)}>DApps</TabButton>
+					<TabButton isSelected={tabIndex === 4} onClick={() => setTabIndex(4)}>Blockchains</TabButton>
 				</Flex>
-				<Flex $style={{
+				{tabIndex ===1 && <Flex $style={{
 					fDirection: 'column',
 					p: '24px 0 0',
 					gap: '4px'
@@ -151,16 +154,18 @@ const Explore = () => {
 						data={metaverses}
 						fields={fields}
 					/>
-				</Flex>
+				</Flex>}
 			</Flex>
 			<Flex $style={{
 				hAlign: "center"
 			}}>
-				<Button $style={{
-					bg: GV('gradient'),
-					radius: '4px',
-					p: '8px 64px'
-				}}>View All Marketplace</Button>
+				<Link to={_ROUTERS.marketplace}>
+					<Button $style={{
+						bg: GV('gradient'),
+						radius: '4px',
+						p: '8px 64px'
+					}}>View All Marketplace</Button>
+				</Link>
 			</Flex>
 		</ExploreContainer>
 	)
