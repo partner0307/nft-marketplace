@@ -18,6 +18,9 @@ const _ROUTERS = {
 	metaverse: 'metaverse/',
 	metaverse_marketplace: 'metaverse-marketplace/',
 	build_metaverse: 'build-metaverse/',
+	buy_nft: 'buy-nft/',
+	sell_nft: 'sell-nft/',
+	nft_marketplace: 'nft-marketplace',
 	hire_talents: 'hire/',
 	post_project: 'post/',
 	work: 'work/',
@@ -54,6 +57,13 @@ const _ROUTERS = {
 	hotel: 'hotel/',
 	restaurant: 'restaurant/',
 	tab_marketplace: 'marketplace/',
+
+	// nft-marketplace
+	nft_details: 'nft-details/',
+	nft_collections: 'nft-collections/',
+
+	// e-commerce
+	detail: 'detail/',
 
 	// hire routes
 	talents: 'talent/',

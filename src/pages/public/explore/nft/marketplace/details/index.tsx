@@ -2,7 +2,7 @@ import React from 'react';
 import { CustomButton, CustomButton1, CustomColor, CustomFont, CustomTab, CustomeButton2, DetailsContainer, DetailsContent, DetailsWrapper, HeroContainer, MarkContainer, StatusBar, VLine } from './style';
 import SubMenu from '@/components/page/public/explore/submenu';
 import { Flex, Heading, P } from '@/components/basic';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 import Mark from '@/assets/img/metaverse/mana.png';
 import CircleCheck from '@/assets/img/metaverse/circle_check.png';
@@ -12,7 +12,7 @@ import Instagram from '@/assets/img/metaverse/instagram.png';
 import Ether from '@/assets/img/metaverse/ether.png';
 import { Icon } from '@/components/custom';
 import { Line } from 'recharts';
-import Content from './content/content';
+import NFTCollections from './content/content';
 
 const NFTDetails = () => {
     const [tabIndex, setTabIndex] = React.useState(1);
@@ -114,7 +114,7 @@ const NFTDetails = () => {
                         </Flex>
                     </Flex>
                     <Flex $style={{ p: '54px 0 0', w: '100%', maxW: '1440px' }}>
-                        <Content />
+                        <Outlet />
                     </Flex>
                 </DetailsContent>
             </Flex>

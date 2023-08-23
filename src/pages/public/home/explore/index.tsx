@@ -1,222 +1,20 @@
 import React, { useState } from 'react';
-import { Content, ContentColor, ExploreContainer, TabButton } from './style';
+import { AnimatedTableContainer, Content, ContentColor, ExploreContainer, TabButton } from './style';
 import { Flex, Heading, P, Span } from '@/components/basic';
 import { Button, Icon } from '@/components/custom';
 import { GV } from '@/utils/style.util';
 import Table, { TableFieldInterface } from '@/components/custom/table';
-import { blockchains, dapps, metaverses, nfts } from './mockdata';
 import { tokillo } from '@/utils/util';
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom';
 import _ROUTERS from '@/constants/route.constant';
+import { metaverses } from '@/constants/mockup/metaverses';
+import MetaverseTable from './tables/metaverse';
+import NftTable from './tables/nfts';
+import DappTable from './tables/dapps';
+import BlockchainTable from './tables/blockchains';
 
 const Explore = () => {
-
-	const metaverse_fields: TableFieldInterface[] = [
-		{
-			key: "name",
-			label: "Name",
-			render: (i, v, n) => (
-				<Flex $style={{
-					vAlign: "center",
-					gap: "1rem"
-				}}>
-					<Span>{n + 1}</Span>
-					<Flex $style={{
-						vAlign: "center"
-					}}>
-						<Flex $style={{
-							gap: "0.75rem",
-							vAlign: "center"
-						}}>
-							<img src={`public/imgs/${i.avatar}`} width={40} height={40} />
-							<Flex $style={{
-								fDirection: "column"
-							}}>
-								<Flex>
-									<Span $style={{
-										weight: "bold"
-									}}>{v}</Span>
-								</Flex>
-								<Flex>
-									{i.networks.map((network: string, i: number) => (
-										<React.Fragment key={i}>
-											<Flex $style={{
-												gap: "0.25rem",
-												vAlign: "center"
-											}}>
-												<img src={`public/imgs/chains/ethereum.png`} width={12} height={12} />
-												<Span $style={{
-													size: "12px"
-												}}>{network}</Span>
-											</Flex>
-										</React.Fragment>
-									))}
-								</Flex>
-							</Flex>
-						</Flex>
-					</Flex>
-				</Flex>
-			),
-			sort: (i: any, v: any) => v,
-			description: "This field is ..."
-		},
-		{
-			key: "balance",
-			label: "Balance",
-			render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
-			sort: (i: any, v: any) => v,
-			description: "This field is ...",
-			width: "150px"
-		},
-		{
-			key: "uaw",
-			label: "UAW",
-			render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
-			sort: (i: any, v: any) => v,
-			description: "This field is ...",
-			width: "150px"
-		},
-		{
-			key: "prouaw",
-			label: "%UAW",
-			render: (i, v) => (<Span $style={{ weight: "bold", color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{v}%</Span>),
-			sort: (i: any, v: any) => v,
-			description: "This field is ...",
-			width: "150px"
-		},
-		{
-			key: "volume",
-			label: "Volume",
-			render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
-			sort: (i: any, v: any) => v,
-			description: "This field is ...",
-			width: "150px"
-		},
-		{
-			key: "provolume",
-			label: "%Volume",
-			render: (i, v) => (<Span $style={{ weight: "bold", color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{v}%</Span>),
-			description: "This field is ...",
-			width: "150px"
-		},
-		{
-			key: "uaw24h",
-			label: "24HUAW",
-			render: (i, v) => (v),
-			sort: (i: any, v: any) => v,
-			description: "This field is ...",
-			width: "150px"
-		},
-	];
-
-
-	const nft_fields: TableFieldInterface[] = [
-		{
-			key: 'collections',
-			label: 'COLLECTIONS',
-			render: (i, v, n) => (
-				<Flex $style={{
-					vAlign: "center",
-					gap: "1rem"
-				}}>
-					<Span>{n + 1}</Span>
-					<Flex $style={{
-						vAlign: "center"
-					}}>
-						<Flex $style={{
-							gap: "0.75rem",
-							vAlign: "center"
-						}}>
-							<img src={`public/imgs/${i.avatar}`} width={40} height={40} />
-							<Flex $style={{
-								fDirection: "column"
-							}}>
-								<Flex>
-									<Span $style={{
-										weight: "bold"
-									}}>{v}</Span>
-								</Flex>
-								<Flex>
-									{i.networks.map((network: string, i: number) => (
-										<React.Fragment key={i}>
-											<Flex $style={{
-												gap: "0.25rem",
-												vAlign: "center"
-											}}>
-												<img src={`public/imgs/chains/ethereum.png`} width={12} height={12} />
-												<Span $style={{
-													size: "12px"
-												}}>{network}</Span>
-											</Flex>
-										</React.Fragment>
-									))}
-								</Flex>
-							</Flex>
-						</Flex>
-					</Flex>
-				</Flex>
-			),
-			sort: (i: any, v: any) => v,
-			description: "This field is ..."
-		},
-		{
-			key: 'floorprice',
-			label: 'FLOOR PRICE',
-			render: (i, v, n) => (
-				<Flex $style={{ fDirection: 'column' }}>
-					<Span $style={{ weight: 'bold' }}>{v}</Span>
-					<Span $style={{ color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.floorpercent}%</Span>
-				</Flex>
-			),
-			sort: (i: any, v: any) => v,
-			description: "This field is ..."
-		},
-		{
-			key: 'avgprice',
-			label: 'AVG.PRICE',
-			render: (i, v, n) => (
-				<Flex $style={{ fDirection: 'column' }}>
-					<Span $style={{ weight: 'bold' }}>{v}</Span>
-					<Span $style={{ color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.avgpercent}%</Span>
-				</Flex>
-			),
-			sort: (i: any, v: any) => v,
-			description: "This field is ..."
-		},
-		{
-			key: 'mktcap',
-			label: 'MKT.CAP',
-			render: (i, v, n) => (
-				<Flex $style={{ fDirection: 'column' }}>
-					<Span $style={{ weight: 'bold' }}>{v}</Span>
-					<Span $style={{ color: v < 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.mktpercent}%</Span>
-				</Flex>
-			),
-			sort: (i: any, v: any) => v,
-			description: "This field is ..."
-		},
-		{
-			key: 'volume',
-			label: 'VOLUME',
-			render: (i, v, n) => (
-				<Flex $style={{ fDirection: 'column' }}>
-					<Span $style={{ weight: 'bold' }}>{v}</Span>
-					<Span $style={{ color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.volumepercent}%</Span>
-				</Flex>
-			),
-			sort: (i: any, v: any) => v,
-			description: "This field is ..."
-		},
-		{
-			key: 'supply',
-			label: 'SUPPLY',
-			render: (i, v, n) => <Span $style={{ weight: 'bold' }}>{v}</Span>,
-			sort: (i: any, v: any) => v,
-			description: "This field is ..."
-		}
-	]
-
 	const [tabIndex, setTabIndex] = useState<number>(0);
 
 	return (
@@ -264,16 +62,18 @@ const Explore = () => {
 						onClick={() => setTabIndex(3)}
 					>Blockchains</TabButton>
 				</Flex>
-				<Flex $style={{
-					fDirection: 'column',
-					p: '24px 0 0',
-					gap: '4px'
-				}}>
-					<Table
-						data={tabIndex === 0 ? metaverses : tabIndex === 1 ? nfts : tabIndex === 2 ? dapps : blockchains}
-						fields={metaverse_fields}
-					/>
-				</Flex>
+				{tabIndex === 0 && (
+					<MetaverseTable />
+				)}
+				{tabIndex === 1 && (
+					<NftTable />
+				)}
+				{tabIndex === 2 && (
+					<DappTable />
+				)}
+				{tabIndex === 3 && (
+					<BlockchainTable />
+				)}
 			</Flex>
 			<Flex $style={{
 				hAlign: "center"

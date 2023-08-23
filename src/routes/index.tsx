@@ -28,6 +28,9 @@ import NearbyBuilding from "@/pages/public/explore/metaverse/build-metaverse/det
 import FloorPlan from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details/floor-plan";
 import Images from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details/images";
 import Appoinment from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details/book-appoinment";
+import Ecommerce from "@/pages/public/explore/metaverse/build-metaverse/details/ecommerce";
+import EcommerceDetails from "@/pages/public/explore/metaverse/build-metaverse/details/ecommerce/details";
+import NFTCollections from "@/pages/public/explore/nft/marketplace/details/content/content";
 
 const routers = createBrowserRouter([
     {
@@ -132,8 +135,40 @@ const routers = createBrowserRouter([
                     },
                     {
                         path: _ROUTERS.ecommerce,
-                        element: <MetaverseDetails />
+                        element: <Ecommerce />
                     },
+                    {
+                        path: _ROUTERS.ecommerce,
+                        element: <Ecommerce />,
+                        children: [
+                            {
+                                path: _ROUTERS.detail,
+                                element: <EcommerceDetails />
+                            }
+                        ]
+                    },
+                ]
+            },
+            {
+                path: _ROUTERS.buy_nft,
+                element: <BuyNFT />
+            },
+            {
+                path: _ROUTERS.sell_nft,
+                element: <BuyNFT />
+            },
+            {
+                path: _ROUTERS.nft_marketplace,
+                element: <NFTMarketplace />
+            },
+            {
+                path: _ROUTERS.nft_details,
+                element: <NFTDetails />,
+                children: [
+                    {
+                        path: _ROUTERS.nft_collections,
+                        element: <NFTCollections />
+                    }
                 ]
             },
             {
