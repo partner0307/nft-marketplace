@@ -7,6 +7,8 @@ import Table, { TableFieldInterface } from '@/components/custom/table';
 import { metaverses } from './mockdata';
 import { tokillo } from '@/utils/util';
 import { motion } from "framer-motion"
+import { Link } from 'react-router-dom';
+import _ROUTERS from '@/constants/route.constant';
 
 const Explore = () => {
 
@@ -155,7 +157,7 @@ const Explore = () => {
 						onClick={() => setTabIndex(3)}
 					>Blockchains</TabButton>
 				</Flex>
-				<Flex $style={{
+				{tabIndex ===1 && <Flex $style={{
 					fDirection: 'column',
 					p: '24px 0 0',
 					gap: '4px'
@@ -165,16 +167,18 @@ const Explore = () => {
 						data={metaverses}
 						fields={fields}
 					/>
-				</Flex>
+				</Flex>}
 			</Flex>
 			<Flex $style={{
 				hAlign: "center"
 			}}>
-				<Button $style={{
-					bg: GV('gradient'),
-					radius: '4px',
-					p: '8px 64px'
-				}}>View All Marketplace</Button>
+				<Link to={_ROUTERS.marketplace}>
+					<Button $style={{
+						bg: GV('gradient'),
+						radius: '4px',
+						p: '8px 64px'
+					}}>View All Marketplace</Button>
+				</Link>
 			</Flex>
 		</ExploreContainer>
 	)

@@ -75,6 +75,7 @@ export const ArrowButton = styled.div<{ isFill: boolean }>`
   padding: 10px;
   border-radius: 50%;
   border: 1px solid transparent;
+  cursor: pointer;
   background:
     linear-gradient(#430f41, #430f41) padding-box,
     linear-gradient(264.4deg, #f75bb1 -6.74%, #c392dc 43.26%, #008782 103.97%) border-box;
