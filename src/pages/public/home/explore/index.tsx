@@ -162,7 +162,6 @@ const Explore = () => {
 					p: '24px 0 0',
 					gap: '4px'
 				}}>
-
 					<Table
 						data={metaverses}
 						fields={fields}
