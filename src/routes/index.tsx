@@ -77,7 +77,7 @@ const routers = createBrowserRouter([
             },
             {
                 path: _ROUTERS.build_metaverse,
-                element: <></>,
+                element: <Outlet />,
                 children: [
                     {
                         path: _ROUTERS.overview,

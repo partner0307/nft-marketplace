@@ -28,7 +28,7 @@ export const HoveredHeading = styled(Heading)`
 `;
 
 export const HoveredButton = styled(Button)`
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out .0s;
   &:hover {
     border: 1px solid #fff;
     background: #950554 !important;

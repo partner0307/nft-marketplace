@@ -23,7 +23,7 @@ export const StyledButton = styled.button<StyledButtonType>`
   letter-spacing: 1px;
 
   ${({ w }) => (w ? `width: ${w};` : ``)}
-  ${({ h }) => `line-height: ${h ? h : '4.5rem'};`}
+  /* ${({ h }) => `line-height: ${h ? h : '4.5rem'};`} */
   ${({ h }) => `min-height: ${h ? h : '4.5rem'};`}
   ${({ p }) => `padding: ${p ?? '0 6.65rem'};`}
   ${({ color }) => (color ? `color: ${color};` : ``)}
