@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, forwardRef } from "react";
 import { SpanWrapper, TextPropsType, TextWrapper } from "./style";
 
 interface SpanPropsType {
@@ -13,7 +13,7 @@ interface PPropsType {
     [key: string]: any
 }
 
-export const Span: FC<SpanPropsType> = ({ children, $style, ...rest }) => {
+export const Span: FC<SpanPropsType> = forwardRef(({ children, $style, ...rest }, ref) => {
     return (
         <SpanWrapper
             {...$style}
@@ -23,9 +23,9 @@ export const Span: FC<SpanPropsType> = ({ children, $style, ...rest }) => {
             {children}
         </SpanWrapper>
     )
-}
+});
 
-export const P: FC<PPropsType> = ({ children, $style, ...rest }) => {
+export const P: FC<PPropsType> = forwardRef(({ children, $style, ...rest }, ref) => {
     return (
         <TextWrapper
             as='p'
@@ -35,4 +35,4 @@ export const P: FC<PPropsType> = ({ children, $style, ...rest }) => {
             {children}
         </TextWrapper>
     )
-}
+});
