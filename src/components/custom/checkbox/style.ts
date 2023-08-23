@@ -24,5 +24,6 @@ export const StyledCheckbox = styled.div<{ isChecked: boolean, width?: string, h
     isChecked ? `box-shadow: 0px 1px 0px 0px #552493 inset;` : ``}
     filter: drop-shadow(0px 2px 5px rgba(109, 34, 229, 0.12)) drop-shadow(0px 0px 0px #25004A) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14));
   border-radius: 4px;
+  transition: all ease-in-out .2s;
   cursor: pointer;
 `;

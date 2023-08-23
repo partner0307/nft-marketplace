@@ -21,7 +21,7 @@ export const HireWrapper = styled.div`
   }
   .swiper {
     overflow: auto;
-    padding-bottom: 0.5rem;
+    padding-bottom: 2rem;
   }
   .swiper-button-prev {
   }
@@ -38,6 +38,7 @@ export const Item = styled.div<{ isChecked: boolean }>`
   border-radius: 32px;
   border: 1px solid #2b2928;
   ${({ isChecked }) => (isChecked ? `background-color: ${GV('white')};` : ``)}
+  transition: all ease-in-out .2s;
 `;
 
 export const ItemList = styled.div`
@@ -51,6 +52,7 @@ export const ItemList = styled.div`
   border-radius: 12px;
   border: 1px solid #2b2928;
   background: #000;
+  transition: all ease-in-out .2s;
 `;
 
 export const Avatar = styled.img`
