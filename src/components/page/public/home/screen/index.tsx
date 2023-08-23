@@ -40,7 +40,7 @@ export const SmallCard: React.FC<SmallCardType> = ({ image, title, price, positi
                     bradius: "1rem"
                 }}
                 mediaOption={{
-                    src: "public/video.gif",
+                    src: "src/assets/img/video.gif",
                     type: "gif"
                 }}
             />
@@ -73,7 +73,7 @@ export const BigCard: React.FC<BigCardType> = ({ image, title }) => {
                     bradius: "1rem"
                 }}
                 mediaOption={{
-                    src: "public/video.gif",
+                    src: "src/assets/img/video.gif",
                     type: "gif"
                 }}
             />
