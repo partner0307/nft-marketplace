@@ -54,6 +54,9 @@ const Actions = () => {
           $style={{
             bg: GV("gradient"),
             radius: "8px",
+            h: "2.5rem",
+            p: "0 1rem",
+            fsize: GV("font-size-5")
           }}
         >
           <Content>Register</Content>

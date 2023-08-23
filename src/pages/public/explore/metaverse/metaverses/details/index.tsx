@@ -2,7 +2,7 @@ import React from 'react';
 import { CustomButton, CustomButton1, CustomColor, CustomFont, CustomTab, CustomeButton2, DetailsContainer, DetailsContent, DetailsWrapper, HeroContainer, Line, MarkContainer, StatusBar, VLine } from './style';
 import SubMenu from '@/components/page/public/explore/submenu';
 import { Flex, Heading, P } from '@/components/basic';
-import { Link } from 'react-router-dom';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { Icon } from '@/components/custom';
 
 import Mark from '@/assets/img/metaverse/mana.png';
@@ -12,16 +12,13 @@ import Discord from '@/assets/img/metaverse/discord.png';
 import Instagram from '@/assets/img/metaverse/instagram.png';
 import Ether from '@/assets/img/metaverse/ether.png';
 import Polygon from '@/assets/img/metaverse/polygon.png';
-import Overview from './overview';
-import News from './news';
-import Comment from './comment';
-import Collectible from './collectibles';
-import Land from './land';
-import Marketplace from './marketplace';
-import About from './about';
+import _ROUTERS from '@/constants/route.constant';
 
 const MetaverseDetails = () => {
-    const [tabIndex, setTabIndex] = React.useState(1);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location);
 
     return <DetailsContainer>
         <SubMenu />
@@ -65,13 +62,13 @@ const MetaverseDetails = () => {
                                 </Flex>
                             </Flex>
                             <Flex $style={{ gap: '20px' }}>
-                                <CustomTab isActive={tabIndex === 1} onClick={() => setTabIndex(1)}>Overview</CustomTab>
-                                <CustomTab isActive={tabIndex === 2} onClick={() => setTabIndex(2)}>Collectible</CustomTab>
-                                <CustomTab isActive={tabIndex === 3} onClick={() => setTabIndex(3)}>Land</CustomTab>
-                                <CustomTab isActive={tabIndex === 4} onClick={() => setTabIndex(4)}>Marketplace</CustomTab>
-                                <CustomTab isActive={tabIndex === 5} onClick={() => setTabIndex(5)}>News</CustomTab>
-                                <CustomTab isActive={tabIndex === 6} onClick={() => setTabIndex(6)}>About</CustomTab>
-                                <CustomTab isActive={tabIndex === 7} onClick={() => setTabIndex(7)}>Comments</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'overview'} onClick={() => navigate(_ROUTERS.overview)}>Overview</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'collectibles'} onClick={() => navigate(_ROUTERS.collectibles)}>Collectible</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'land'} onClick={() => navigate(_ROUTERS.land)}>Land</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'marketplace'} onClick={() => navigate(_ROUTERS.marketplace)}>Marketplace</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'news'} onClick={() => navigate(_ROUTERS.overview)}>News</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'comments'} onClick={() => navigate(_ROUTERS.overview)}>About</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'overview'} onClick={() => navigate(_ROUTERS.overview)}>Comments</CustomTab>
                             </Flex>
                         </Flex>
                         <Flex $style={{ fDirection: 'column', gap: '40px', p: '16px 0 0' }}>
@@ -117,13 +114,14 @@ const MetaverseDetails = () => {
                         </Flex>
                     </Flex>
                     <Flex $style={{ p: '54px 0 0', w: '100%', maxW: '1440px' }}>
-                        {tabIndex === 1 && <Overview />}
+                        {/* {tabIndex === 1 && <Overview />}
                         {tabIndex === 2 && <Collectible />}
                         {tabIndex === 3 && <Land />}
                         {tabIndex === 4 && <Marketplace />}
                         {tabIndex === 5 && <News />}
                         {tabIndex === 6 && <About />}
-                        {tabIndex === 7 && <Comment />}
+                        {tabIndex === 7 && <Comment />} */}
+                        <Outlet />
                     </Flex>
                 </DetailsContent>
             </Flex>

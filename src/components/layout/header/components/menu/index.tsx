@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Content, ItemContainer, MenuContainer } from './style';
 import { Icon, Input, Dropdown } from '@/components/custom';
@@ -9,13 +9,19 @@ const Menu = () => {
     const { hash, pathname, search } = useLocation();
     const { slideOpened, dispatch } = usePublicLayoutContext();
     const [keyword, setKeyword] = useState('');
+    const location = useLocation();
+    useEffect(() => {
+        if (location.pathname.split("/")[2] && location.pathname.split("/")[2] !== "") {
+            dispatch({ type: "toggleMenu", value: { slideOpened: false } });
+        }
+    }, [location])
     return (
         <MenuContainer>
             {pathname === '/'
-            ? <ItemContainer onClick={() => dispatch({ type: "toggleMenu", value: {} })}>
+            ? <ItemContainer onClick={() => dispatch({ type: "toggleMenu", value: {slideOpened: !slideOpened} })}>
                 <Content>Explore</Content><Icon icon='Explore' />
             </ItemContainer>
-            : <Link to='/'><ItemContainer onClick={() => dispatch({ type: "toggleMenu", value: {} })}>
+            : <Link to='/'><ItemContainer onClick={() => dispatch({ type: "toggleMenu", value: {slideOpened: false} })}>
                 <Icon icon='ArrowColorLeft' /><Content>Home</Content>
             </ItemContainer></Link>}
             <ItemContainer>

@@ -8,7 +8,7 @@ import Screen from '@/assets/img/screen.png';
 import Screen1 from '@/assets/img/screen1.png';
 import Screen2 from '@/assets/img/screen1.png';
 import Screen3 from '@/assets/img/screen1.png';
-import { CenterRect, DownButton, HeroContainer, HoveredHeading } from './style';
+import { CenterRect, DownButton, HeroContainer, HoveredButton, HoveredHeading } from './style';
 import { motion } from "framer-motion";
 import { FirstRect, SideRect, UpRect } from '@/components/page/public/home/screen/style';
 
@@ -78,7 +78,7 @@ const Hero = () => {
                     <Flex $style={{
                         hAlign: "center"
                     }}>
-                        <Button>See Full Metaverse</Button>
+                        <HoveredButton>See Full Metaverse</HoveredButton>
                     </Flex>
                     <CenterRect />
                     <BigCard image={Screen} title='Decentraland' />

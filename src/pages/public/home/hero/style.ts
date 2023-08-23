@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import Background from '@/assets/img/background.png';
 import { motion } from 'framer-motion';
 import { Heading } from '@/components/basic';
+import { Button } from '@/components/custom';
 
 const prevAnime = keyframes`
     0% {
@@ -19,6 +20,19 @@ export const HoveredHeading = styled(Heading)`
   max-width: 34.875rem;
   text-transform: uppercase;
   text-align: center;
+  transition: all ease-in-out 0.2s;
+
+  &:hover {
+    text-shadow: 0px 0px 8px rgba(61, 255, 243, 0.7);
+  }
+`;
+
+export const HoveredButton = styled(Button)`
+  transition: all ease-in-out .2s;
+  &:hover {
+    border: 1px solid #fff;
+    background: #950554 !important;
+  }
 `;
 
 export const HeroContainer = styled.div`
@@ -30,13 +44,13 @@ export const HeroContainer = styled.div`
   flex-direction: column;
   padding: 0 2rem 4rem;
 
-  >div:first-child {
+  > div:first-child {
     position: absolute;
     top: 3rem;
     left: 50%;
     transform: translate(-50%);
   }
-  >div:nth-child(2) {
+  > div:nth-child(2) {
     height: calc(100vh - 64px - 5rem);
   }
 `;
