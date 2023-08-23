@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
+
+import _ROUTERS from '@/constants/route.constant';
+import { categories, talents } from '@/constants/mockup/tablents';
+
 import { ArrowButton, Avatar, HireContainer, HireWrapper, ImageWrapper, Item, ItemList } from './style';
 import { Flex, Heading, P, Span } from '@/components/basic';
 import { GV } from '@/utils/style.util';
@@ -14,90 +19,6 @@ import "swiper/css/pagination";
 import Image1 from '@/assets/img/hire1.png';
 import Avatar1 from '@/assets/img/avatar1.png';
 import Avatar2 from '@/assets/img/avatar2.png';
-
-import Person1 from '@/assets/img/avatar/pic1.png';
-import Person2 from '@/assets/img/avatar/pic2.png';
-import Person3 from '@/assets/img/avatar/pic3.png';
-import Person4 from '@/assets/img/avatar/pic4.png';
-import { Link } from 'react-router-dom';
-import _ROUTERS from '@/constants/route.constant';
-
-const categories = [
-    "All", "Metaverse", "Web3", "Designers", "Developers", "Modelers", "AI Experts", "Animators", "Managers"
-]
-
-const talents: TablentObject[] = [
-    {
-        name: "Rafel Benitez",
-        picture: Person1,
-        profession: "UIUX Designer",
-        price: 50,
-        rate: 4.5,
-        favors: 23,
-        endjobs: 41,
-        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
-    },
-    {
-        name: "Rafel Benitez",
-        picture: Person2,
-        profession: "UIUX Designer",
-        price: 50,
-        rate: 4.5,
-        favors: 23,
-        endjobs: 41,
-        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
-    },
-    {
-        name: "Rafel Benitez",
-        picture: Person3,
-        profession: "UIUX Designer",
-        price: 50,
-        rate: 4.5,
-        favors: 23,
-        endjobs: 41,
-        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
-    },
-    {
-        name: "Rafel Benitez",
-        picture: Person4,
-        profession: "UIUX Designer",
-        price: 50,
-        rate: 4.5,
-        favors: 23,
-        endjobs: 41,
-        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
-    },
-    {
-        name: "Rafel Benitez",
-        picture: Person1,
-        profession: "UIUX Designer",
-        price: 50,
-        rate: 4.5,
-        favors: 23,
-        endjobs: 41,
-        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
-    },
-    {
-        name: "Rafel Benitez",
-        picture: Person1,
-        profession: "UIUX Designer",
-        price: 50,
-        rate: 4.5,
-        favors: 23,
-        endjobs: 41,
-        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
-    },
-    {
-        name: "Rafel Benitez",
-        picture: Person1,
-        profession: "UIUX Designer",
-        price: 50,
-        rate: 4.5,
-        favors: 23,
-        endjobs: 41,
-        skills: ["Prototyping", "Prototyping", "Prototyping", "Prototyping", "Prototyping"]
-    }
-]
 
 const HireSection = () => {
     const [checkedList, setCheckedList] = useState<boolean[]>(new Array(categories.length).fill(false));

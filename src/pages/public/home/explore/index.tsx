@@ -269,7 +269,6 @@ const Explore = () => {
 					p: '24px 0 0',
 					gap: '4px'
 				}}>
-
 					<Table
 						data={tabIndex === 0 ? metaverses : tabIndex === 1 ? nfts : tabIndex === 2 ? dapps : blockchains}
 						fields={metaverse_fields}

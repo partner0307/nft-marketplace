@@ -20,7 +20,7 @@ export const HireWrapper = styled.div`
     width: fit-content;
   }
   .swiper {
-    overflow: auto;
+    /* overflow: auto; */
     padding-bottom: 2rem;
   }
   .swiper-button-prev {
