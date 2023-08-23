@@ -20,7 +20,7 @@ import Person2 from '@/assets/img/avatar/pic2.png';
 import Person3 from '@/assets/img/avatar/pic3.png';
 import Person4 from '@/assets/img/avatar/pic4.png';
 import { Link } from 'react-router-dom';
-import _ROUTERS from '@/constants/menu.constant';
+import _ROUTERS from '@/constants/route.constant';
 
 const categories = [
     "All", "Metaverse", "Web3", "Designers", "Developers", "Modelers", "AI Experts", "Animators", "Managers"
