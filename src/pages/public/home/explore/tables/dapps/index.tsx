@@ -1,15 +1,11 @@
-import React from 'react';
-import { MarketplaceContainer, Rect, Rect1 } from './style';
-import SubHeader from '@/components/page/public/explore/subheader';
-import { ItemContainer } from '../metaverses/style';
-import { Dropdown } from '@/components/custom';
-import Pagination from '@/components/custom/pagination';
-import Table, { TableFieldInterface } from '@/components/custom/table';
-import { Flex, Span } from '@/components/basic';
-import { tokillo } from '@/utils/util';
-import { metaverses } from '@/constants/mockup/metaverses';
+import { dapps } from "@/constants/mockup/dapps"
+import { AnimatedTableContainer } from "../../style"
+import Table, { TableFieldInterface } from "@/components/custom/table"
+import { Flex, Span } from "@/components/basic";
+import React from "react";
+import { tokillo } from "@/utils/util";
 
-const fields: TableFieldInterface[] = [
+const dapp_fields: TableFieldInterface[] = [
     {
         key: "name",
         label: "Name",
@@ -26,7 +22,7 @@ const fields: TableFieldInterface[] = [
                         gap: "0.75rem",
                         vAlign: "center"
                     }}>
-                        <img src={`../public/imgs/${i.avatar}`} width={40} height={40} />
+                        <img src={`public/imgs/${i.avatar}`} width={40} height={40} />
                         <Flex $style={{
                             fDirection: "column"
                         }}>
@@ -37,12 +33,12 @@ const fields: TableFieldInterface[] = [
                             </Flex>
                             <Flex>
                                 {i.networks.map((network: string, i: number) => (
-                                    <React.Fragment>
+                                    <React.Fragment key={i}>
                                         <Flex $style={{
                                             gap: "0.25rem",
                                             vAlign: "center"
                                         }}>
-                                            <img src={`../public/imgs/chains/ethereum.png`} width={12} height={12} />
+                                            <img src={`public/imgs/chains/ethereum.png`} width={12} height={12} />
                                             <Span $style={{
                                                 size: "12px"
                                             }}>{network}</Span>
@@ -64,7 +60,7 @@ const fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "120px"
+        width: "150px"
     },
     {
         key: "uaw",
@@ -72,7 +68,7 @@ const fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "120px"
+        width: "150px"
     },
     {
         key: "prouaw",
@@ -80,7 +76,7 @@ const fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold", color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{v}%</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "120px"
+        width: "150px"
     },
     {
         key: "volume",
@@ -88,14 +84,14 @@ const fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "120px"
+        width: "150px"
     },
     {
         key: "provolume",
         label: "%Volume",
         render: (i, v) => (<Span $style={{ weight: "bold", color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{v}%</Span>),
         description: "This field is ...",
-        width: "120px"
+        width: "150px"
     },
     {
         key: "uaw24h",
@@ -103,39 +99,19 @@ const fields: TableFieldInterface[] = [
         render: (i, v) => (v),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "160px"
+        width: "150px"
     },
-]
+];
 
-const tabList = [
-    { name: 'All Categories', active: true },
-    { name: 'Games', active: false },
-    { name: 'Gambling', active: false},
-    { name: 'Social', active: false},
-    { name: 'Collectibles', active: false},
-    { name: 'Marketplace', active: false},
-    { name: 'Real Estate', active: false }
-]
-
-
-const Marketplace = () => {
-    return <MarketplaceContainer>
-        <Rect />
-        <Rect1 />
-        <SubHeader title='Top Metaverses' tabList={tabList} isSearch rightComponent={
-        <ItemContainer>
-            <Dropdown initialLabel='All Chains' />
-        </ItemContainer>} />
-        <Flex $style={{ p: '32px' }}>
+const DappTable = () => {
+    return (
+        <AnimatedTableContainer>
             <Table
-                data={metaverses}
-                fields={fields}
+                data={dapps}
+                fields={dapp_fields}
             />
-        </Flex>
-        <Flex $style={{ p: '0 32px 48px' }}>
-            <Pagination />
-        </Flex>
-    </MarketplaceContainer>
+        </AnimatedTableContainer>
+    )
 }
 
-export default Marketplace;
+export default DappTable;
