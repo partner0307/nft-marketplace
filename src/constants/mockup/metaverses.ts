@@ -1,7 +1,9 @@
+import MetaverseIcon1 from "@/assets/img/metaverses/1.png";
+
 export const metaverses = [
   {
     name: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "MANA"],
     balance: 597992.3256,
     uaw: 597992.3256,
@@ -12,7 +14,7 @@ export const metaverses = [
   },
   {
     name: "Yacth CLub",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "MANA"],
     balance: 597992.3256,
     uaw: 597992.3256,
@@ -23,7 +25,7 @@ export const metaverses = [
   },
   {
     name: "Ape Yacth",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "MANA"],
     balance: 597992.3256,
     uaw: 597992.3256,
@@ -34,7 +36,7 @@ export const metaverses = [
   },
   {
     name: "Mutant Yacth",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "MANA"],
     balance: 597992.3256,
     uaw: 597992.3256,
@@ -45,7 +47,7 @@ export const metaverses = [
   },
   {
     name: "Ape Yacth",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "MANA"],
     balance: 597992.3256,
     uaw: 597992.3256,
@@ -56,7 +58,7 @@ export const metaverses = [
   },
   {
     name: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "MANA"],
     balance: 597992.3256,
     uaw: 597992.3256,
@@ -67,7 +69,7 @@ export const metaverses = [
   },
   {
     name: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "MANA"],
     balance: 597992.3256,
     uaw: 597992.3256,
@@ -78,7 +80,7 @@ export const metaverses = [
   },
   {
     name: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "MANA"],
     balance: 597992.3256,
     uaw: 597992.3256,
@@ -89,7 +91,7 @@ export const metaverses = [
   },
   {
     name: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "MANA"],
     balance: 597992.3256,
     uaw: 597992.3256,
@@ -100,7 +102,7 @@ export const metaverses = [
   },
   {
     name: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "MANA"],
     balance: 597992.3256,
     uaw: 597992.3256,
