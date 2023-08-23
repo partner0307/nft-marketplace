@@ -1,8 +1,9 @@
+import Avatar from "@/assets/img/avatar/pic1.png";
 
 export const talents: TablentObject[] = [
   {
     name: 'Rafel Benitez',
-    picture: "src/assets/img/avatar/pic1.png",
+    picture: Avatar,
     profession: 'UIUX Designer',
     price: 50,
     rate: 4.5,
@@ -12,7 +13,7 @@ export const talents: TablentObject[] = [
   },
   {
     name: 'Rafel Benitez',
-    picture: "src/assets/img/avatar/pic2.png",
+    picture: Avatar,
     profession: 'UIUX Designer',
     price: 50,
     rate: 4.5,
@@ -22,7 +23,7 @@ export const talents: TablentObject[] = [
   },
   {
     name: 'Rafel Benitez',
-    picture: "src/assets/img/avatar/pic3.png",
+    picture: Avatar,
     profession: 'UIUX Designer',
     price: 50,
     rate: 4.5,
@@ -32,7 +33,7 @@ export const talents: TablentObject[] = [
   },
   {
     name: 'Rafel Benitez',
-    picture: "src/assets/img/avatar/pic4.png",
+    picture: Avatar,
     profession: 'UIUX Designer',
     price: 50,
     rate: 4.5,
@@ -42,7 +43,7 @@ export const talents: TablentObject[] = [
   },
   {
     name: 'Rafel Benitez',
-    picture: "src/assets/img/avatar/pic1.png",
+    picture: Avatar,
     profession: 'UIUX Designer',
     price: 50,
     rate: 4.5,
@@ -52,7 +53,7 @@ export const talents: TablentObject[] = [
   },
   {
     name: 'Rafel Benitez',
-    picture: "src/assets/img/avatar/pic2.png",
+    picture: Avatar,
     profession: 'UIUX Designer',
     price: 50,
     rate: 4.5,
@@ -62,7 +63,7 @@ export const talents: TablentObject[] = [
   },
   {
     name: 'Rafel Benitez',
-    picture: "src/assets/img/avatar/pic3.png",
+    picture: Avatar,
     profession: 'UIUX Designer',
     price: 50,
     rate: 4.5,
