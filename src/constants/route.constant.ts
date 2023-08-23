@@ -13,39 +13,52 @@
 // };
 
 const _ROUTERS = {
-  // home routes
-  home: '/',
-  metaverse: '/metaverse/',
-  metaverse_marketplace: '/metaverse-marketplace',
-  build_metaverse: '/build-metaverse/',
-  ecommerce: '/ecommerce',
-  hire_talents: '/hire',
-  post_project: '/post',
-  work: '/work',
-  avatar: '/avatar',
+	// home routes
+	home: '/',
+	metaverse: 'metaverse/',
+	metaverse_marketplace: 'metaverse-marketplace/',
+	build_metaverse: 'build-metaverse/',
+	hire_talents: 'hire/',
+	post_project: 'post/',
+	work: 'work/',
+	avatar: 'avatar/',
 
-  // metaverse tabs
-  overview: 'overview',
-  collectibles: 'collectibles',
-  land: 'land',
-  marketplace: 'marketplace',
-  news: 'news',
-  about: 'about',
-  comments: 'comments',
+	// metaverse tabs
+	overview: 'overview/',
+	collectibles: 'collectibles/',
+	land: 'land/',
+	marketplace: 'marketplace/',
+	news: 'news/',
+	about: 'about/',
+	comments: 'comments/',
 
-  // build-metaverse routes
-  features: 'features',
-  price_history: 'price-history',
-  monthly_cost: 'monthly-cost',
-  nearby_buildings: 'nearby-buildings',
-  floor_plan: 'floor-plan',
-  images: 'images',
-  books: 'books',
+	// build-metaverse routes
+	real_estate: 'real-estate/',
+	ecommerce: 'ecommerce/',
+	entertainment: 'entertainment/',
+	automobile: 'automobile/',
+	sport_nutritions: 'sport-nutritions/',
+	education: 'education/',
+	gaming: 'gaming/',
 
-  // hire routes
-  talents: 'talent',
+	// real-estate routes
+	features: 'features/',
+	price_history: 'price-history/',
+	monthly_cost: 'monthly-cost/',
+	nearby_buildings: 'nearby-buildings/',
+	floor_plan: 'floor-plan/',
+	images: 'images/',
+	books: 'books/',
+	dispensary: 'dispensary/',
+	cryptocurrency: 'cryptocurrency/',
+	hotel: 'hotel/',
+	restaurant: 'restaurant/',
+	tab_marketplace: 'marketplace/',
 
-  // post-project routes
+	// hire routes
+	talents: 'talent/',
+
+	// post-project routes
 };
 
 export default _ROUTERS;

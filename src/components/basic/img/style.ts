@@ -1,3 +1,4 @@
+import { GV } from '@/utils/style.util';
 import styled from 'styled-components';
 
 export interface ImagePropsInterface {
@@ -13,7 +14,7 @@ export const ImageContainer = styled.div<ImagePropsInterface>`
   width: ${({ w }) => w ?? `100%`};
   max-width: 100%;
   height: ${({ h }) => h ?? `auto`};
-  ${({ bradius }) => (bradius ? `border-radius: ${bradius};` : `border-radius: ${bradius};`)}
+  ${({ bradius }) => (bradius ? `border-radius: ${bradius};` : `border-radius: ${GV("radius-md")};`)}
   overflow: hidden;
 `;
 

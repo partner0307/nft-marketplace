@@ -1,4 +1,4 @@
-import { Flex, P } from '@/components/basic';
+import { Flex, Grid, P } from '@/components/basic';
 import React from 'react';
 import { CollectiblesContainer, CustomButton, Eclipse, ItemContainer, NFTs, Options, Rect, TitleBar } from './style';
 import TimeBar from '@/components/page/public/explore/timebar';
@@ -56,7 +56,7 @@ const Collectible = () => {
                     </Flex>
                 </TitleBar>
                 <NFTs>
-                    <Flex $style={{ hAlign: 'center', fWrap: 'wrap', gap: '32px', w: '100%' }}>
+                    <Grid $style={{columns: "3", gap: "2rem"}}>
                         <NFT image={Image1} name='Mall Street' price='4.45ETH' network='MANA' usd='1500' />
                         <NFT image={Image2} name='Orange Amor' price='4.45ETH' network='MANA' usd='1500' />
                         <NFT image={Image3} name='Southam Lir...' price='4.45ETH' network='MANA' usd='1500' />
@@ -66,7 +66,7 @@ const Collectible = () => {
                         <NFT image={Image1} name='Mall Street' price='4.45ETH' network='MANA' usd='1500' />
                         <NFT image={Image2} name='Orange Amor' price='4.45ETH' network='MANA' usd='1500' />
                         <NFT image={Image3} name='Southam Lir...' price='4.45ETH' network='MANA' usd='1500' />
-                    </Flex>
+                    </Grid>
                     <Flex $style={{ w: '100%', p: '32px 24px 24px' }}>
                         <Pagination />
                     </Flex>

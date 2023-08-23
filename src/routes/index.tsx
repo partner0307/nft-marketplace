@@ -6,7 +6,7 @@ import PublicPage from "@/pages/public";
 import HomePage from "@/pages/public/home";
 import Metaverses from "@/pages/public/explore/metaverse/metaverses";
 import Marketplace from "@/pages/public/explore/metaverse/marketplace";
-import BuildMeta from "@/pages/public/explore/metaverse/build-metaverse";
+import BuildMetaverse from "@/pages/public/explore/metaverse/build-metaverse";
 import MetaverseDetails from "@/pages/public/explore/metaverse/metaverses/details";
 import { Flex, Heading } from "@/components/basic";
 import BuyNFT from "@/pages/public/explore/nft/buy";
@@ -19,6 +19,15 @@ import MetaverseCollectiles from "@/pages/public/explore/metaverse/metaverses/de
 import MetaverseLand from "@/pages/public/explore/metaverse/metaverses/details/land";
 import MetaverseMarket from "@/pages/public/explore/metaverse/metaverses/details/marketplace";
 import MetaverseAbout from "@/pages/public/explore/metaverse/metaverses/details/about";
+import RealEstate from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate";
+import RealEsateOverview from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details/overview";
+import Features from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details/features";
+import PriceHistory from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details/price-history";
+import Cost from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details/monthly-cost";
+import NearbyBuilding from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details/nearby-buildings";
+import FloorPlan from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details/floor-plan";
+import Images from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details/images";
+import Appoinment from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details/book-appoinment";
 
 const routers = createBrowserRouter([
     {
@@ -73,66 +82,60 @@ const routers = createBrowserRouter([
             },
             {
                 path: _ROUTERS.build_metaverse,
-                element: <BuildMeta />
+                element: <BuildMetaverse />
             },
             {
                 path: _ROUTERS.build_metaverse,
-                element: <Outlet />,
+                element: <><Outlet /></>,
                 children: [
                     {
-                        path: _ROUTERS.overview,
-                        element: <MetaverseDetails />
+                        path: _ROUTERS.real_estate,
+                        element: <RealEstate />
                     },
                     {
-                        path: _ROUTERS.features,
-                        element: <MetaverseDetails />
+                        path: _ROUTERS.real_estate,
+                        element: <RealEstateDetails />,
+                        children: [
+                            {
+                                path: _ROUTERS.overview,
+                                element: <RealEsateOverview />
+                            },
+                            {
+                                path: _ROUTERS.features,
+                                element: <Features />
+                            },
+                            {
+                                path: _ROUTERS.price_history,
+                                element: <PriceHistory />
+                            },
+                            {
+                                path: _ROUTERS.monthly_cost,
+                                element: <Cost />
+                            },
+                            {
+                                path: _ROUTERS.nearby_buildings,
+                                element: <NearbyBuilding />
+                            },
+                            {
+                                path: _ROUTERS.floor_plan,
+                                element: <FloorPlan />
+                            },
+                            {
+                                path: _ROUTERS.images,
+                                element: <Images />
+                            },
+                            {
+                                path: _ROUTERS.books,
+                                element: <Appoinment />
+                            },
+                        ]
                     },
                     {
-                        path: _ROUTERS.price_history,
-                        element: <MetaverseDetails />
-                    },
-                    {
-                        path: _ROUTERS.monthly_cost,
-                        element: <MetaverseDetails />
-                    },
-                    {
-                        path: _ROUTERS.nearby_buildings,
-                        element: <MetaverseDetails />
-                    },
-                    {
-                        path: _ROUTERS.floor_plan,
-                        element: <MetaverseDetails />
-                    },
-                    {
-                        path: _ROUTERS.images,
-                        element: <MetaverseDetails />
-                    },
-                    {
-                        path: _ROUTERS.books,
+                        path: _ROUTERS.ecommerce,
                         element: <MetaverseDetails />
                     },
                 ]
             },
-            // {
-            //     path: _ROUTERS.buy_nft,
-            //     element: <BuyNFT />
-            // },
-            // {
-            //     path: _ROUTERS.nft_marketplace,
-            //     element: <NFTMarketplace />
-            // },
-            // {
-            //     path: _ROUTERS.nft_details,
-            //     element: <NFTDetails />
-            // },
-            // {
-            //     path: _ROUTERS.real_estate,
-            //     element: <BuildDetails />
-            // },
-            // {
-            //     path: _ROUTERS.real_estate_details,
-            //     element: <RealEstateDetails />
-            // },
             {
                 path: "*",
                 element: (

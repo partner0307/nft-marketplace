@@ -10,7 +10,6 @@ import LocationInActive from '@/assets/img/location-inactive.png';
 import Contact from './contact';
 import Tour from './tour';
 
-
 const Appoinment = () => {
     const [tabIndex, setTabIndex] = React.useState(1);
 
