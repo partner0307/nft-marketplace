@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate, Outlet } from "react-router-dom";
 
-import _ROUTERS from "@/constants/menu.constant";
+import _ROUTERS from "@/constants/route.constant";
 
 import PublicPage from "@/pages/public";
 import HomePage from "@/pages/public/home";
@@ -14,6 +14,11 @@ import NFTMarketplace from "@/pages/public/explore/nft/marketplace";
 import NFTDetails from "@/pages/public/explore/nft/marketplace/details";
 import BuildDetails from "@/pages/public/explore/metaverse/build-metaverse/details";
 import RealEstateDetails from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details";
+import MetaverseOverview from "@/pages/public/explore/metaverse/metaverses/details/overview";
+import MetaverseCollectiles from "@/pages/public/explore/metaverse/metaverses/details/collectibles";
+import MetaverseLand from "@/pages/public/explore/metaverse/metaverses/details/land";
+import MetaverseMarket from "@/pages/public/explore/metaverse/metaverses/details/marketplace";
+import MetaverseAbout from "@/pages/public/explore/metaverse/metaverses/details/about";
 
 const routers = createBrowserRouter([
     {
@@ -30,23 +35,23 @@ const routers = createBrowserRouter([
             },
             {
                 path: _ROUTERS.metaverse,
-                element: <Outlet />,
+                element: <MetaverseDetails />,
                 children: [
                     {
-                        path: _ROUTERS.overflow,
-                        element: <MetaverseDetails />
+                        path: _ROUTERS.overview,
+                        element: <MetaverseOverview />
                     },
                     {
                         path: _ROUTERS.collectibles,
-                        element: <MetaverseDetails />
+                        element: <MetaverseCollectiles />
                     },
                     {
                         path: _ROUTERS.land,
-                        element: <MetaverseDetails />
+                        element: <MetaverseLand />
                     },
                     {
                         path: _ROUTERS.marketplace,
-                        element: <MetaverseDetails />
+                        element: <MetaverseMarket />
                     },
                     {
                         path: _ROUTERS.news,
@@ -54,7 +59,7 @@ const routers = createBrowserRouter([
                     },
                     {
                         path: _ROUTERS.about,
-                        element: <MetaverseDetails />
+                        element: <MetaverseAbout />
                     },
                     {
                         path: _ROUTERS.comments,
@@ -68,51 +73,44 @@ const routers = createBrowserRouter([
             },
             {
                 path: _ROUTERS.build_metaverse,
-                element: <BuildMeta />,
+                element: <BuildMeta />
+            },
+            {
+                path: _ROUTERS.build_metaverse,
+                element: <></>,
                 children: [
                     {
-                        path: "",
-                        element: (
-                            <>
-                                <Heading level={1}>Tab layout example</Heading>
-                                <Outlet />
-                            </>
-                        ),
-                        children: [
-                            {
-                                path: _ROUTERS.overflow,
-                                element: <MetaverseDetails />
-                            },
-                            {
-                                path: _ROUTERS.features,
-                                element: <MetaverseDetails />
-                            },
-                            {
-                                path: _ROUTERS.price_history,
-                                element: <MetaverseDetails />
-                            },
-                            {
-                                path: _ROUTERS.monthly_cost,
-                                element: <MetaverseDetails />
-                            },
-                            {
-                                path: _ROUTERS.nearby_buildings,
-                                element: <MetaverseDetails />
-                            },
-                            {
-                                path: _ROUTERS.floor_plan,
-                                element: <MetaverseDetails />
-                            },
-                            {
-                                path: _ROUTERS.images,
-                                element: <MetaverseDetails />
-                            },
-                            {
-                                path: _ROUTERS.books,
-                                element: <MetaverseDetails />
-                            },
-                        ]
-                    }
+                        path: _ROUTERS.overview,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.features,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.price_history,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.monthly_cost,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.nearby_buildings,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.floor_plan,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.images,
+                        element: <MetaverseDetails />
+                    },
+                    {
+                        path: _ROUTERS.books,
+                        element: <MetaverseDetails />
+                    },
                 ]
             },
             // {

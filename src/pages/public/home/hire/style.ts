@@ -39,6 +39,7 @@ export const Item = styled.div<{ isChecked: boolean }>`
   border: 1px solid #2b2928;
   ${({ isChecked }) => (isChecked ? `background-color: ${GV('white')};` : ``)}
   transition: all ease-in-out .2s;
+  cursor: pointer;
 `;
 
 export const ItemList = styled.div`

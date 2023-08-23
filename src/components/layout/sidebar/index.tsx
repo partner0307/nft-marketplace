@@ -14,7 +14,7 @@ import StakingIcon from '@/assets/img/menu/staking.png';
 import Ads from '@/assets/img/menu/ads.png';
 import { usePublicLayoutContext } from '@/layouts/PublicLayout/context';
 import { Link } from 'react-router-dom';
-import _ROUTERS from '@/constants/menu.constant';
+import _ROUTERS from '@/constants/route.constant';
 
 const Sidebar = () => {
     const { hash, pathname, search } = useLocation();

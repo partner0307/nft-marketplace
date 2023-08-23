@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Content, ContentColor, ExploreContainer, TabButton } from './style';
 import { Flex, Heading, P, Span } from '@/components/basic';
 import { Button, Icon } from '@/components/custom';
@@ -108,6 +108,8 @@ const Explore = () => {
 		},
 	]
 
+	const [tabIndex, setTabIndex] = useState<number>(0);
+
 	return (
 		<ExploreContainer>
 			<Flex $style={{
@@ -136,10 +138,22 @@ const Explore = () => {
 					fDirection: 'row',
 					gap: '20px'
 				}}>
-					<TabButton isSelected={true}>Metaverses</TabButton>
-					<TabButton isSelected={false}>NFTs</TabButton>
-					<TabButton isSelected={false}>DApps</TabButton>
-					<TabButton isSelected={false}>Blockchains</TabButton>
+					<TabButton
+						isSelected={tabIndex === 0}
+						onClick={() => setTabIndex(0)}
+					>Metaverses</TabButton>
+					<TabButton
+						isSelected={tabIndex === 1}
+						onClick={() => setTabIndex(1)}
+					>NFTs</TabButton>
+					<TabButton
+						isSelected={tabIndex === 2}
+						onClick={() => setTabIndex(2)}
+					>DApps</TabButton>
+					<TabButton
+						isSelected={tabIndex === 3}
+						onClick={() => setTabIndex(3)}
+					>Blockchains</TabButton>
 				</Flex>
 				<Flex $style={{
 					fDirection: 'column',

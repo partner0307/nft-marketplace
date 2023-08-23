@@ -6,7 +6,7 @@ export const MenuContainer = styled.div`
   align-items: center;
   align-self: stretch;
   padding: 0 2rem;
-  gap: 2px;
+  gap: 2rem;
 `;
 
 export const Content = styled.div`
@@ -15,7 +15,6 @@ font-family: ${GV("font3")};
 
 export const ItemContainer = styled.a`
   height: 2.5rem;
-  padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;

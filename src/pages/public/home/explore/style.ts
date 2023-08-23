@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { GV } from "@/utils/style.util";
+import styled from 'styled-components';
+import { GV } from '@/utils/style.util';
 
-import Background from "@/assets/img/explore-bg.png";
+import Background from '@/assets/img/explore-bg.png';
 
 export const ExploreContainer = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ export const ExploreContainer = styled.div`
 `;
 
 export const Content = styled.span`
-  background-image: ${GV("gradient")};
+  background-image: ${GV('gradient')};
   -webkit-background-clip: text;
   color: transparent;
 `;
@@ -23,8 +23,15 @@ export const TabButton = styled.button<{ isSelected: boolean }>`
   background: #191919;
   border-radius: 100px;
   padding: 12px 24px;
-  ${({ isSelected }) => (isSelected ? `background: ${GV("gradient")};` : ``)};
-  ${({ isSelected }) => (!isSelected ? `border: 1px solid #2B2928;` : ``)}
+  /* transition: all ease-in-out .2s; */
+  ${({ isSelected }) =>
+    isSelected
+      ? `
+    background: ${GV('gradient')};
+    border: 1px solid #2B2928;
+    font-weight: ${GV("weight-lg")}
+    `
+      : ``};
 `;
 
 export const ContentColor = styled.div`

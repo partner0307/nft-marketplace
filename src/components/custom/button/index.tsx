@@ -5,6 +5,7 @@ interface ButtonType {
     children: any
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
     disabled?: boolean
+    to?: string
     $style?: StyledButtonType
 }
 

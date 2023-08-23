@@ -114,7 +114,7 @@ const HireSection = () => {
         return (
             <React.Fragment>
                 {talents.map((talent, i) => (
-                    <SwiperSlide>
+                    <SwiperSlide key={i}>
                         <TalentCard
                             key={i}
                             talent={talent}
@@ -168,7 +168,7 @@ const HireSection = () => {
                             >
                                 <ItemList>
                                     {categories.map((category, index) => (
-                                        <Item isChecked={checkedList[index]} onClick={() => {set(index)}}>
+                                        <Item key={index} isChecked={checkedList[index]} onClick={() => {set(index)}}>
                                             <Checkbox label={category} isChecked={checkedList[index]} />
                                         </Item>
                                     ))}

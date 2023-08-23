@@ -25,7 +25,7 @@ const _ROUTERS = {
   avatar: '/avatar',
 
   // metaverse tabs
-  overflow: 'overflow',
+  overview: 'overview',
   collectibles: 'collectibles',
   land: 'land',
   marketplace: 'marketplace',

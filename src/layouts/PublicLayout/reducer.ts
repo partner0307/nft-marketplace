@@ -4,7 +4,7 @@ import { Dispatch } from 'react';
 
 export const initialState: PublicLayoutProviderInterface = {
   slideOpened: false,
-  dispatch: () => {}
+  dispatch: () => {},
 };
 
 export interface PublicLayoutActionInterface {
@@ -20,7 +20,7 @@ export function reducer(
 
   switch (type) {
     case 'toggleMenu':
-      return { ...state, slideOpened: !state.slideOpened };
+      return { ...state, ...value };
     default:
       throw new Error();
   }
