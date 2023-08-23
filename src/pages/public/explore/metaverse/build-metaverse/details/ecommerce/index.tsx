@@ -39,7 +39,7 @@ const Ecommerce = () => {
                             <CustomFont>$197</CustomFont>
                             <P $style={{ size: '2rem', weight: '600' }}>$197</P>
                         </Flex>
-                        <Flex $style={{ vAlign: 'center' }}>
+                        <Flex $style={{ vAlign: 'center', gap: '0.5rem' }}>
                             <Flex $style={{ vAlign: 'center', gap: '0.25rem' }}>
                                 <Icon icon='Star' />
                                 <Span>4.5</Span>
@@ -49,6 +49,9 @@ const Ecommerce = () => {
                         </Flex>
                     </Flex>
                 </BannerContent>
+            </Flex>
+            <Flex>
+                
             </Flex>
         </Flex>
     </Flex>

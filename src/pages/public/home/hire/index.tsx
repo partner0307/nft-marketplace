@@ -19,6 +19,8 @@ import Person1 from '@/assets/img/avatar/pic1.png';
 import Person2 from '@/assets/img/avatar/pic2.png';
 import Person3 from '@/assets/img/avatar/pic3.png';
 import Person4 from '@/assets/img/avatar/pic4.png';
+import { Link } from 'react-router-dom';
+import _ROUTERS from '@/constants/menu.constant';
 
 const categories = [
     "All", "Metaverse", "Web3", "Designers", "Developers", "Modelers", "AI Experts", "Animators", "Managers"
@@ -236,7 +238,13 @@ const HireSection = () => {
                             p: '5rem 32px 0 0'
                         }}
                     >
-                        <Button>View All Talent</Button>
+                        <Link to={_ROUTERS.hire_talents}>
+                            <Button $style={{
+                                bg: GV('gradient'),
+                                radius: '8px',
+                                p: '0.25rem 3rem',
+                            }}>View All Talent</Button>
+                        </Link>
                         <Flex $style={{
                             fDirection: 'row',
                             gap: '45px'
