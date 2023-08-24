@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header<{ isTop: boolean }>`
-  ${({ isTop }) =>
+  position: fixed;
+  transform: translate(-50%, 0);
+  /* ${({ isTop }) =>
     !isTop
       ? `position: fixed; transform: translate(-50%, 0);`
-      : `position: relative`}
+      : `position: relative`} */
   left: 50%;
   z-index: 8000;
   width: 100%;

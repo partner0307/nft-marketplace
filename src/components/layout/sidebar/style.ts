@@ -34,9 +34,14 @@ export const SidebarContainer = styled.div<{ slideOpened: boolean; opened: boole
   max-width: 300px;
   height: calc(100vh - 64px);
   background: #780640;
-  /* animation: ${({ slideOpened }) => (slideOpened ? fadeIn : fadeOut)} 0.4s; */
+  overflow: auto;
   z-index: 999;
 `;
+
+export const SidebarWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 export const Title = styled.div`
   min-height: 90px;

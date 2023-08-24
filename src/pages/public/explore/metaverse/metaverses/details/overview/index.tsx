@@ -64,11 +64,11 @@ const Overview = () => {
                         <Icon icon='Zoom' />
                     </Flex>
                     <Flex $style={{ hAlign: 'flex-end', gap: '24px', w: '100%' }}>
-                        <Flex $style={{ gap: '12px' }}>
+                        <Flex $style={{ vAlign: "center", gap: '12px' }}>
                             <CircleIcon color={GV('purple')} />
                             <P>Volume</P>
                         </Flex>
-                        <Flex $style={{ gap: '12px' }}>
+                        <Flex $style={{ vAlign: "center", gap: '12px' }}>
                             <CircleIcon color={GV('blue')} />
                             <P>UAW</P>
                         </Flex>

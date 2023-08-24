@@ -14,12 +14,14 @@ const PieComponent: React.FC<PicComponent> = ({ data }) => {
             data={data}
             cx="50%"
             cy="50%"
-            labelLine={false}
+            innerRadius={30}
             outerRadius={200}
             dataKey="value"
+            startAngle={260}
+            endAngle={360 + 260}
           >
             {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} stroke='rgb(18, 17, 18)' strokeWidth={5} />
             ))}
           </Pie>
         </PieChart>

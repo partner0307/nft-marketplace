@@ -4,6 +4,7 @@ import { Flex, P } from '@/components/basic';
 import Ether from '@/assets/img/ether-icon.png';
 import Polygon from '@/assets/img/metaverse/polygon.png';
 import Image from '@/components/basic/img';
+import { GV } from '@/utils/style.util';
 
 type NFTType = {
     image?: string
@@ -19,7 +20,7 @@ const NFT: React.FC<NFTType> = ({ image, name, price, network, usd, isCount }) =
         <Flex $style={{ fDirection: 'column', gap: '14px' }}>
             <Image src={image || ""} alt='' h='15.18456rem' />
             <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                <P $style={{ size: '20px', color: 'info' }}>{name}</P>
+                <P $style={{ size: '20px', color: 'info', weight: GV("weight-xl") }}>{name}</P>
                 <Flex $style={{ gap: '2px' }}>
                     <IconWrapper>
                         <img src={Ether} alt="" width='100%' />
@@ -31,12 +32,12 @@ const NFT: React.FC<NFTType> = ({ image, name, price, network, usd, isCount }) =
             </Flex>
             <StateBar>
                 <Flex $style={{ fDirection: 'column', gap: '4px' }}>
-                    <P $style={{ weight: '600' }}>{price}</P>
-                    <P $style={{ size: '10px' }}>{network}</P>
+                    <P $style={{ size: GV("font-size-5"), weight: GV("weight-xl") }}>{price}</P>
+                    <P $style={{ size: GV("font-size-6") }}>{network}</P>
                 </Flex>
                 <Flex $style={{ fDirection: 'column', gap: '4px' }}>
-                    <P $style={{ weight: '600' }}>{usd}</P>
-                    <P $style={{ size: '10px', color: 'purple' }}>USD</P>
+                    <P $style={{ size: GV("font-size-5"), weight: GV("weight-xl") }}>${usd}</P>
+                    <P $style={{ size: GV("font-size-6"), color: 'purple' }}>USD</P>
                 </Flex>
                 {isCount && <CustomButton><P>8 Land(s)</P></CustomButton>}
             </StateBar>
