@@ -46,8 +46,6 @@ export const Options = styled.div`
     flex: 1;
     padding: 24px 24px 32px 24px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
     border-radius: 16px;
     background: #0C0C0C;
 `;

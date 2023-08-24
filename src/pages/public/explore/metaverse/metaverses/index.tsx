@@ -2,7 +2,7 @@ import React from 'react';
 import SubHeader from '@/components/page/public/explore/subheader';
 import { Dropdown, Icon } from '@/components/custom';
 import { DropdownContainer, DropdownItem, ItemContainer, MetaverseWrapper, MetaversesContainer, Rect, Rect1 } from './style';
-import { Flex, P } from '@/components/basic';
+import { Flex, Grid, P } from '@/components/basic';
 import Card from '@/components/page/public/explore/metaverse-card';
 import Pagination from '@/components/custom/pagination';
 
@@ -34,16 +34,16 @@ const Metaverses = () => {
             <Rect />
             <Rect1 />
             <SubHeader title='Top Metaverses' tabList={tabList} isSearch rightComponent={
-            <ItemContainer>
-                <Dropdown initialLabel='All Chains' container={() => (
-                    <DropdownContainer>
-                        <DropdownItem>Item</DropdownItem>
-                        <DropdownItem>Item</DropdownItem>
-                    </DropdownContainer>
-                )} />
-            </ItemContainer>} />
+                <ItemContainer>
+                    <Dropdown initialLabel='All Chains' container={() => (
+                        <DropdownContainer>
+                            <DropdownItem>Item</DropdownItem>
+                            <DropdownItem>Item</DropdownItem>
+                        </DropdownContainer>
+                    )} />
+                </ItemContainer>} />
             <MetaverseWrapper>
-                <Flex $style={{ hAlign: 'center', fWrap: 'wrap', gap: '32px' }}>
+                <Grid $style={{ columns: "3", gap: "1.625rem 2rem" }}>
                     <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
                     <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image2} avatar={Avatar1} icon1={Mana1} icon2={Ether} /></Link>
                     <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
@@ -59,7 +59,7 @@ const Metaverses = () => {
                     <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image1} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
                     <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image2} avatar={Avatar} icon1={Mana1} icon2={Ether} /></Link>
                     <Link to={routerer("metaverse", "overview")}><Card title='Decentraland' image={Image3} avatar={Avatar} icon1={Mana} icon2={Ether} /></Link>
-                </Flex>
+                </Grid>
                 <Pagination />
             </MetaverseWrapper>
         </MetaversesContainer>
