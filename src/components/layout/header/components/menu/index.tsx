@@ -4,6 +4,7 @@ import { Content, ItemContainer, MenuContainer } from './style';
 import { Icon, Input, Dropdown } from '@/components/custom';
 import { usePublicLayoutContext } from '@/layouts/PublicLayout/context';
 import { Link } from 'react-router-dom';
+import _ROUTERS from '@/constants/route.constant';
 
 const Menu = () => {
     const { hash, pathname, search } = useLocation();
@@ -24,8 +25,8 @@ const Menu = () => {
             : <Link to='/'><ItemContainer onClick={() => dispatch({ type: "toggleMenu", value: {slideOpened: false} })}>
                 <Icon icon='ArrowColorLeft' /><Content>Home</Content>
             </ItemContainer></Link>}
-            <ItemContainer>
-                <Dropdown initialLabel={<Content>Marketplaces</Content>} />
+            <ItemContainer isActive={pathname.includes('marketplaces')}>
+                <Link to={_ROUTERS.marketplaces}><Dropdown initialLabel={<Content>Marketplaces</Content>} /></Link>
             </ItemContainer>
             <ItemContainer>
                 <Content>Academy</Content>

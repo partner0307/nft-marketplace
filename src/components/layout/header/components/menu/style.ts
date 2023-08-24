@@ -13,7 +13,7 @@ export const Content = styled.div`
 font-family: ${GV("font3")};
 `;
 
-export const ItemContainer = styled.a`
+export const ItemContainer = styled.a<{ isActive?: boolean }>`
   height: 2.5rem;
   display: flex;
   justify-content: center;
@@ -24,9 +24,10 @@ export const ItemContainer = styled.a`
   border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;
+  ${({ isActive }) => isActive ? `background: #950554;` : ``}
 
   &:hover {
-    background: #111;
+    ${({ isActive }) => isActive ? `background: #950554;` : `background: #111;`}
     border-color: #1c1c1c;
     border-radius: 8px;
   }

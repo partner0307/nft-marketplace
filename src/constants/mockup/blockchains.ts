@@ -1,7 +1,9 @@
+import MetaverseIcon1 from "@/assets/img/metaverses/1.png";
+
 export const blockchains = [
   {
     currency: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     price: 597992.3256,
     volume1: 0.63,
     volume2: 0.63,
@@ -10,7 +12,7 @@ export const blockchains = [
   },
   {
     currency: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     price: 597992.3256,
     volume1: 0.63,
     volume2: 0.63,
@@ -19,7 +21,7 @@ export const blockchains = [
   },
   {
     currency: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     price: 597992.3256,
     volume1: 0.63,
     volume2: 0.63,
@@ -28,7 +30,7 @@ export const blockchains = [
   },
   {
     currency: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     price: 597992.3256,
     volume1: 0.63,
     volume2: 0.63,
@@ -37,7 +39,7 @@ export const blockchains = [
   },
   {
     currency: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     price: 597992.3256,
     volume1: 0.63,
     volume2: 0.63,
@@ -46,7 +48,7 @@ export const blockchains = [
   },
   {
     currency: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     price: 597992.3256,
     volume1: 0.63,
     volume2: 0.63,
@@ -55,7 +57,7 @@ export const blockchains = [
   },
   {
     currency: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     price: 597992.3256,
     volume1: 0.63,
     volume2: 0.63,
@@ -64,7 +66,7 @@ export const blockchains = [
   },
   {
     currency: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     price: 597992.3256,
     volume1: 0.63,
     volume2: 0.63,
@@ -73,7 +75,7 @@ export const blockchains = [
   },
   {
     currency: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     price: 597992.3256,
     volume1: 0.63,
     volume2: 0.63,
@@ -82,7 +84,7 @@ export const blockchains = [
   },
   {
     currency: "Mutant Ape",
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     price: 597992.3256,
     volume1: 0.63,
     volume2: 0.63,

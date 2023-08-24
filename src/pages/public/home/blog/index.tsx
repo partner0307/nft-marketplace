@@ -5,32 +5,25 @@ import {
   Avatar2,
   Avatar3,
   BlogContainer,
-  BlogImage,
   BlogWrapper,
   ContentColor,
   Line,
   MainBlog,
-  NewsImage1,
-  NewsImage2,
-  NewsImage3,
-  Newsletter,
   Rect,
   Reveal,
   SmallBlog,
 } from "./style";
 
 import { Flex, Heading, P, Span } from "@/components/basic";
-import { Button, Icon, Input } from "@/components/custom";
+import { Button, Icon } from "@/components/custom";
 import { GV } from "@/utils/style.util";
 
 import BlogImg1 from "@/assets/img/main-blog.png";
 import BlogImg2 from "@/assets/img/blog.png";
-import Avatar from "@/assets/img/avatar2.png";
 import Image from "@/components/basic/img";
+import NewsLetter from "@/components/custom/newsletter";
 
 const Blog = () => {
-  const [email, setEmail] = React.useState('');
-
   return (
     <BlogContainer>
       <Rect />
@@ -285,76 +278,7 @@ const Blog = () => {
           <Icon icon="Line" />
         </Line>
       </Reveal>
-      <Flex
-        $style={{
-          hAlign: "center",
-        }}
-      >
-        <Newsletter>
-          <Flex
-            $style={{
-              fDirection: "row",
-              vAlign: "center",
-            }}
-          >
-            <NewsImage1 src={Avatar} />
-            <NewsImage2 src={Avatar} />
-            <NewsImage3 src={Avatar} />
-          </Flex>
-          <Flex
-            $style={{
-              maxW: "550px",
-              fDirection: "column",
-              gap: "24px",
-            }}
-          >
-            <Heading
-              level={3}
-              $style={{
-                color: "black",
-              }}
-            >
-              Be Up To Date
-            </Heading>
-            <P
-              $style={{
-                size: "20px",
-                color: "black",
-              }}
-            >
-              Subscribe to our news letter and never miss our latest news and
-              promotions. Our news letter is sent once a week, every Teusday
-            </P>
-            <Input
-              value={email}
-              placeholder="Enter email address"
-              padding="8px 24px"
-              radius="999px"
-              bg="#53BBB5"
-              border="#000"
-              onChange={(e: any) => setEmail(e.target.value)}
-              helpSide={
-                <Button
-                  $style={{
-                    bg: GV("black"),
-                    color: "bg",
-                    radius: "999px",
-                    p: "8px 24px",
-                  }}
-                >
-                  <P
-                    $style={{
-                      size: "20px",
-                    }}
-                  >
-                    Subscribe
-                  </P>
-                </Button>
-              }
-            />
-          </Flex>
-        </Newsletter>
-      </Flex>
+      <NewsLetter />
     </BlogContainer>
   );
 };
