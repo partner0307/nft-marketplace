@@ -7,13 +7,13 @@ import { Dropdown, Icon, Input } from '@/components/custom';
 import { CustomTab } from '../style';
 import Table, { TableFieldInterface } from '@/components/custom/table';
 import { tokillo } from '@/utils/util';
-import { nfts } from '@/pages/public/home/explore/mockdata';
 
 import Image1 from '@/assets/img/metaverse/1.png';
 import Image2 from '@/assets/img/metaverse/2.png';
 import Image3 from '@/assets/img/metaverse/3.png';
 import Pagination from '@/components/custom/pagination';
 import SlideTab from '@/components/page/public/explore/slidetab';
+import { nfts } from '@/constants/mockup/nfts';
 
 const fields: TableFieldInterface[] = [
     {

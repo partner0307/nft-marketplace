@@ -29,6 +29,8 @@ import Avatar from "@/assets/img/avatar2.png";
 import Image from "@/components/basic/img";
 
 const Blog = () => {
+  const [email, setEmail] = React.useState('');
+
   return (
     <BlogContainer>
       <Rect />
@@ -324,12 +326,13 @@ const Blog = () => {
               promotions. Our news letter is sent once a week, every Teusday
             </P>
             <Input
-              value=""
+              value={email}
               placeholder="Enter email address"
               padding="8px 24px"
               radius="999px"
               bg="#53BBB5"
               border="#000"
+              onChange={(e: any) => setEmail(e.target.value)}
               helpSide={
                 <Button
                   $style={{

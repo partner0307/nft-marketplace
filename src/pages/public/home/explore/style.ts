@@ -27,12 +27,15 @@ export const TabButton = styled.button<{ isSelected: boolean }>`
   ${({ isSelected }) =>
     isSelected
       ? `
-    background: ${GV('gradient')};
-    border: 1px solid #2B2928;
-    font-weight: ${GV("weight-lg")}
-    `
-      : ``};
+      background: ${GV('gradient')};
+      border: 1px solid #2B2928;
+      font-weight: ${GV('weight-lg')};
+    ` : ``}
 `;
+
+export const AnimatedTableContainer = styled.div`
+  padding: 1.5rem 0 0;
+`
 
 export const ContentColor = styled.div`
   color: #3dfff3;

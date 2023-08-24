@@ -1,13 +1,15 @@
 import React from 'react';
 import { Flex, P, Span } from '@/components/basic';
 
-import Mana from '@/assets/img/mana.png';
-import Ether from '@/assets/img/ether.png';
 import { GV } from '@/utils/style.util';
 import Card from '@/components/custom/card';
 import Image from '@/components/basic/img';
 import { SmallCardContainer } from './style';
 import HoverableMedia from '@/components/custom/hoverable-media';
+
+import Mana from '@/assets/img/mana.png';
+import Ether from '@/assets/img/ether.png';
+import GifImg from '@/assets/img/video.gif'
 
 type SmallCardType = {
     image?: string,
@@ -40,7 +42,7 @@ export const SmallCard: React.FC<SmallCardType> = ({ image, title, price, positi
                     bradius: "1rem"
                 }}
                 mediaOption={{
-                    src: "public/video.gif",
+                    src: GifImg,
                     type: "gif"
                 }}
             />
@@ -73,7 +75,7 @@ export const BigCard: React.FC<BigCardType> = ({ image, title }) => {
                     bradius: "1rem"
                 }}
                 mediaOption={{
-                    src: "public/video.gif",
+                    src: GifImg,
                     type: "gif"
                 }}
             />

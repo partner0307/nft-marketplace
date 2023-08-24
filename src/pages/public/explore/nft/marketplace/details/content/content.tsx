@@ -10,7 +10,7 @@ import Image from '@/assets/img/avatar1.png';
 import Avatar from '@/assets/img/avatar1.png';
 import CardItem from '@/components/page/public/home/carditem';
 
-const Content = () => {
+const NFTCollections = () => {
     const [isLive, setLive] = React.useState(false);
     const [isStatusOpen, setStatusOpen] = React.useState(true);
     const [isPriceOpen, setPriceOpen] = React.useState(false);
@@ -254,4 +254,4 @@ const Content = () => {
     </Container>
 }
 
-export default Content;
+export default NFTCollections;
