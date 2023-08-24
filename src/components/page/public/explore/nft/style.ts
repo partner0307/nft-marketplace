@@ -37,7 +37,7 @@ export const StateBar = styled.div`
     display: flex;
     padding: 8px;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     align-self: stretch;
     border-radius: 4px;
     background: #000;
