@@ -3,6 +3,7 @@ import { ActionContainer, Content, ItemContainer } from "./style";
 import { Flex, Link } from "@/components/basic";
 import { Button, Icon } from "@/components/custom";
 import { GV } from "@/utils/style.util";
+import _ROUTERS from "@/constants/route.constant";
 
 const Actions = () => {
   return (
@@ -44,12 +45,12 @@ const Actions = () => {
         </Link>
       </Flex>
       <ItemContainer>
-        <Link to="/signin" $style={{ color: 'purple' }}>
+        <Link to={_ROUTERS.signin} $style={{ color: 'purple' }}>
           <Content>Sign in</Content>
         </Link>
         <Icon icon="Login" />
       </ItemContainer>
-      <Link to="/signup">
+      <Link to={_ROUTERS.signup}>
         <Button
           $style={{
             bg: GV("gradient"),
