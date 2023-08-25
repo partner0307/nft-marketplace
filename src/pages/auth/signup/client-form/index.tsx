@@ -15,6 +15,11 @@ const ClientForm = () => {
                     <Input value='' placeholder='First Name' preSide={<Icon icon='User' />} padding='1rem' radius='1rem' />
                     <Input value='' placeholder='Last Name' preSide={<Icon icon='User' />} padding='1rem' radius='1rem' />
                 </Flex>
+                <Input value='' placeholder='Email Address' preSide={<Icon icon='User' />} padding='1rem' radius='1rem' />
+                <Flex $style={{ gap: '1rem' }}>
+                    <Input value='' placeholder='Password' preSide={<Icon icon='User' />} padding='1rem' radius='1rem' />
+                    <Input value='' placeholder='Confirm Password' preSide={<Icon icon='User' />} padding='1rem' radius='1rem' />
+                </Flex>
             </Flex>
         </AuthForm>
     )

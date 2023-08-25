@@ -9,9 +9,19 @@ import _ROUTERS from '@/constants/route.constant';
 import Pattern from './pattern';
 import Talent from '@/assets/img/talent.png';
 import Client from '@/assets/img/client.png';
+import ClientForm from './client-form';
 
 const Signup = () => {
     const [clientOrTalent, setClientOrTalent] = React.useState(0);
+    const [isClientSignup, setClientSignup] = React.useState(false);
+    const [isTalentSignup, setTalentSignup] = React.useState(false);
+
+    const handleContinue = () => {
+        if (clientOrTalent === 1)
+            setClientSignup(true);
+        else if(clientOrTalent === 2)
+            setTalentSignup(true);
+    }
 
     return (
         <SignupContainer>
@@ -28,7 +38,7 @@ const Signup = () => {
                         </Flex>
                     </Link>
                 </MarkBar>
-                <AuthForm>
+                {!(isClientSignup || isTalentSignup) && <AuthForm>
                     <P $style={{ size: '2rem', weight: '700', align: 'center' }}>JOIN AS A CLIENT OR TALENT</P>
                     <Flex $style={{ gap: '2rem' }}>
                         <CardOption onClick={() => setClientOrTalent(1)}>
@@ -54,12 +64,15 @@ const Signup = () => {
                             {clientOrTalent === 2 ? <ActiveRadioOption /> : <InActiveRadioOption />}
                         </CardOption>
                     </Flex>
-                    <SubmitButton isActive={clientOrTalent > 0}>Submit</SubmitButton>
+                    <SubmitButton isActive={clientOrTalent > 0} onClick={handleContinue}>Continue</SubmitButton>
                     <Flex $style={{ vAlign: 'center', gap: '0.25rem', w: '100%', hAlign: 'center' }}>
                         <CustomFont1>Already have an account? </CustomFont1>
                         <Link to={_ROUTERS.signup}><P $style={{ size: '1.25rem', color: 'info' }}>Sign In</P></Link>
                     </Flex>
-                </AuthForm>
+                </AuthForm>}
+                {clientOrTalent === 1 && isClientSignup && (
+                    <ClientForm />
+                )}
             </Flex>
             <Rect />
             <Rect1 />
