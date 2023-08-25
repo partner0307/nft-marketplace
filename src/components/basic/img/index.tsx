@@ -1,14 +1,14 @@
-import { ImageContainer, ImagePropsInterface, StyledImage } from "./style";
+import { ImageContainer, StyledFlexPropsType, StyledImage } from "./style";
 
-export interface ImageProps extends ImagePropsInterface {
+export interface ImageProps {
     src: string,
     alt: string,
+    $style?: StyledFlexPropsType
 }
 
-const Image = ({ ...props }: ImageProps) => {
-    const { src, alt, ...rest } = props;
+const Image = ({ src, alt, $style }: ImageProps) => {
     return (
-        <ImageContainer {...rest}>
+        <ImageContainer $style={$style || {}}>
             <StyledImage src={src} alt={alt} />
         </ImageContainer>
     )
