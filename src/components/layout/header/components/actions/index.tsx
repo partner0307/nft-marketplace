@@ -18,7 +18,7 @@ const Actions = () => {
         <Link
           to="/"
           $style={{
-            color: "purple",
+            color: GV("atomicpink"),
             decorator: "underline",
             offset: "0.5rem",
           }}
@@ -36,7 +36,7 @@ const Actions = () => {
         <Link
           to="/"
           $style={{
-            color: "purple",
+            color: GV("atomicpink"),
             decorator: "underline",
             offset: "0.5rem",
           }}
@@ -45,7 +45,7 @@ const Actions = () => {
         </Link>
       </Flex>
       <ItemContainer>
-        <Link to={_ROUTERS.signin} $style={{ color: 'purple' }}>
+        <Link to={_ROUTERS.signin} $style={{ color: GV("atomicpink") }}>
           <Content>Sign in</Content>
         </Link>
         <Icon icon="Login" />
