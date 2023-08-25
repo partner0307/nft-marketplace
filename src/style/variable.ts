@@ -34,6 +34,7 @@ const variables = {
   'radius-lg': '1.5rem',
   'radius-xl': '2rem',
   'radius-xxl': '2.5rem',
+  'radius-round': '999px',
 
   font1: 'Termina Test',
   font2: 'Neue Haas Grotesk Display Pro',
