@@ -2,6 +2,7 @@ const variables = {
   white: '#FFFFFF',
   danger: '#E03F3F',
   purple: '#D100BC',
+  atomicpink: '#F75BB1',
   blue: '#08A0D8',
   gray: '#3d3d3e',
   black: '#000000',
