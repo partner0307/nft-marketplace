@@ -1,5 +1,5 @@
-import { Flex, P, Span } from '@/components/basic';
 import React from 'react';
+import { Flex, P, Span } from '@/components/basic';
 import { AuthForm, CustomButton, CustomFont, CustomFont1, CustomLine, LetterContainer, MarkBar, Rect, Rect1, SigninContainer, SignupButton, SubmitButton } from './style';
 import { Link } from 'react-router-dom';
 import Logo from "@/assets/img/logo.png"
@@ -9,7 +9,7 @@ import _ROUTERS from '@/constants/route.constant';
 const Signin = () => {
     return (
         <SigninContainer>
-            <Flex $style={{ fDirection: 'column', vAlign: 'center', gap: '2rem', h: '100%' }}>
+            <Flex $style={{ fDirection: 'column', vAlign: 'center', gap: '3rem', h: '100%' }}>
                 <MarkBar>
                     <Link to='/'>
                         <Flex $style={{

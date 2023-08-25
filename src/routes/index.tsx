@@ -36,8 +36,8 @@ import MarketplaceMetaverses from "@/pages/public/marketplace/metaverses";
 import MarketplaceNfts from "@/pages/public/marketplace/nfts";
 import MarketplaceDapps from "@/pages/public/marketplace/dapps";
 import MarketplaceBlockchains from "@/pages/public/marketplace/blockchains";
-import Signin from "@/components/page/auth/signin";
-import Signup from "@/components/page/auth/signup";
+import Signin from "@/pages/auth/signin";
+import Signup from "@/pages/auth/signup";
 
 const routers = createBrowserRouter([
     {
