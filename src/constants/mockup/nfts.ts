@@ -1,7 +1,9 @@
+import MetaverseIcon1 from "@/assets/img/metaverses/1.png";
+
 export const nfts = [
   {
     collections: 'Mutant Ape',
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "ETH"],
     floorprice: 597992.3256,
     floorpercent: 21.34,
@@ -15,7 +17,7 @@ export const nfts = [
   },
   {
     collections: 'Mutant Ape',
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "ETH"],
     floorprice: 597992.3256,
     floorpercent: 21.34,
@@ -29,7 +31,7 @@ export const nfts = [
   },
   {
     collections: 'Mutant Ape',
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "ETH"],
     floorprice: 597992.3256,
     floorpercent: 21.34,
@@ -43,7 +45,7 @@ export const nfts = [
   },
   {
     collections: 'Mutant Ape',
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "ETH"],
     floorprice: 597992.3256,
     floorpercent: 21.34,
@@ -57,7 +59,7 @@ export const nfts = [
   },
   {
     collections: 'Mutant Ape',
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "ETH"],
     floorprice: 597992.3256,
     floorpercent: 21.34,
@@ -71,7 +73,7 @@ export const nfts = [
   },
   {
     collections: 'Mutant Ape',
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "ETH"],
     floorprice: 597992.3256,
     floorpercent: 21.34,
@@ -85,7 +87,7 @@ export const nfts = [
   },
   {
     collections: 'Mutant Ape',
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "ETH"],
     floorprice: 597992.3256,
     floorpercent: 21.34,
@@ -99,7 +101,7 @@ export const nfts = [
   },
   {
     collections: 'Mutant Ape',
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "ETH"],
     floorprice: 597992.3256,
     floorpercent: 21.34,
@@ -113,7 +115,7 @@ export const nfts = [
   },
   {
     collections: 'Mutant Ape',
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "ETH"],
     floorprice: 597992.3256,
     floorpercent: 21.34,
@@ -127,7 +129,7 @@ export const nfts = [
   },
   {
     collections: 'Mutant Ape',
-    avatar: "metaverses/1.png",
+    avatar: MetaverseIcon1,
     networks: ["ETH", "ETH"],
     floorprice: 597992.3256,
     floorpercent: 21.34,

@@ -4,6 +4,7 @@ import Table, { TableFieldInterface } from "@/components/custom/table"
 import { Flex, Span } from "@/components/basic";
 import React from "react";
 import { tokillo } from "@/utils/util";
+import EtherImg from "@/assets/img/chains/ethereum.png";
 
 const dapp_fields: TableFieldInterface[] = [
     {
@@ -22,7 +23,7 @@ const dapp_fields: TableFieldInterface[] = [
                         gap: "0.75rem",
                         vAlign: "center"
                     }}>
-                        <img src={`public/imgs/${i.avatar}`} width={40} height={40} />
+                        <img src={i.avatar} width={40} height={40} />
                         <Flex $style={{
                             fDirection: "column"
                         }}>
@@ -38,7 +39,7 @@ const dapp_fields: TableFieldInterface[] = [
                                             gap: "0.25rem",
                                             vAlign: "center"
                                         }}>
-                                            <img src={`public/imgs/chains/ethereum.png`} width={12} height={12} />
+                                            <img src={EtherImg} width={12} height={12} />
                                             <Span $style={{
                                                 size: "12px"
                                             }}>{network}</Span>

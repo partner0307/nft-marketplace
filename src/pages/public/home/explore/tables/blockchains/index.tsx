@@ -5,6 +5,7 @@ import { Flex, Span } from "@/components/basic";
 import React from "react";
 import { tokillo } from "@/utils/util";
 import { blockchains } from "@/constants/mockup/blockchains";
+import EtherImg from "@/assets/img/chains/ethereum.png";
 
 const blockchain_fields: TableFieldInterface[] = [
     {
@@ -23,7 +24,7 @@ const blockchain_fields: TableFieldInterface[] = [
                         gap: "0.75rem",
                         vAlign: "center"
                     }}>
-                        <img src={`public/imgs/${i.avatar}`} width={40} height={40} />
+                        <img src={i.avatar} width={40} height={40} />
                         <Flex>
                             <Span $style={{
                                 weight: "bold"

@@ -1,12 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 import variables, { desVariables, smVariables, tabVariables } from "./variable";
 import { GV, declearStyleVariables } from "@/utils/style.util";
+import AeonikFont from "@/assets/fonts/aeonik/Aeonik-Regular.otf";
 
 const GlobalStyle = createGlobalStyle`
 
 	@font-face {
 		font-family: 'Aeonik';
-		src: url('src/assets/fonts/aeonik/Aeonik-Regular.otf') format('opentype');
+		src: url(${AeonikFont}) format('opentype');
 	}
 	:root {
 		${declearStyleVariables(variables)}

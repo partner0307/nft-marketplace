@@ -31,6 +31,13 @@ import Appoinment from "@/pages/public/explore/metaverse/build-metaverse/details
 import Ecommerce from "@/pages/public/explore/metaverse/build-metaverse/details/ecommerce";
 import EcommerceDetails from "@/pages/public/explore/metaverse/build-metaverse/details/ecommerce/details";
 import NFTCollections from "@/pages/public/explore/nft/marketplace/details/content/content";
+import Marketplaces from "@/pages/public/marketplace";
+import MarketplaceMetaverses from "@/pages/public/marketplace/metaverses";
+import MarketplaceNfts from "@/pages/public/marketplace/nfts";
+import MarketplaceDapps from "@/pages/public/marketplace/dapps";
+import MarketplaceBlockchains from "@/pages/public/marketplace/blockchains";
+import Signin from "@/pages/auth/signin";
+import Signup from "@/pages/auth/signup";
 
 const routers = createBrowserRouter([
     {
@@ -172,6 +179,32 @@ const routers = createBrowserRouter([
                 ]
             },
             {
+                path: _ROUTERS.marketplaces,
+                element: <Marketplaces />,
+                children: [
+                    {
+                        path: "",
+                        element: <MarketplaceMetaverses />
+                    },
+                    {
+                        path: _ROUTERS.marketplace_metaverses,
+                        element: <MarketplaceMetaverses />
+                    },
+                    {
+                        path: _ROUTERS.marketplace_nfts,
+                        element: <MarketplaceNfts />
+                    },
+                    {
+                        path: _ROUTERS.marketplace_dapps,
+                        element: <MarketplaceDapps />
+                    },
+                    {
+                        path: _ROUTERS.marketplace_blockchains,
+                        element: <MarketplaceBlockchains />
+                    }
+                ]
+            },
+            {
                 path: "*",
                 element: (
                     <Flex $style={{
@@ -184,6 +217,14 @@ const routers = createBrowserRouter([
                 )
             }
         ],
+    },
+    {
+        path: 'signin/',
+        element: <Signin />
+    },
+    {
+        path: 'signup/',
+        element: <Signup />
     },
     {
         path: "*",

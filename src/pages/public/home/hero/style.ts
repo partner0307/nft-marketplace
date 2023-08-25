@@ -53,6 +53,7 @@ export const HeroContainer = styled.div`
   > div:nth-child(2) {
     height: calc(100vh - 64px - 5rem);
     min-height: 750px;
+    max-height: 1020px;
   }
 `;
 

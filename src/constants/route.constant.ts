@@ -13,6 +13,10 @@
 // };
 
 const _ROUTERS = {
+	// auth routes
+	signin: 'signin/',
+	signup: 'signup/',
+
 	// home routes
 	home: '/',
 	metaverse: 'metaverse/',
@@ -25,6 +29,7 @@ const _ROUTERS = {
 	post_project: 'post/',
 	work: 'work/',
 	avatar: 'avatar/',
+	marketplaces: 'marketplaces/',
 
 	// metaverse tabs
 	overview: 'overview/',
@@ -61,6 +66,12 @@ const _ROUTERS = {
 	// nft-marketplace
 	nft_details: 'nft-details/',
 	nft_collections: 'nft-collections/',
+
+	// marketplaces
+	marketplace_metaverses: 'marketplace-metaverses/',
+	marketplace_nfts: 'marketplace-nfts/',
+	marketplace_dapps: 'marketplace-dapps/',
+	marketplace_blockchains: 'marketplace-blockchains/',
 
 	// e-commerce
 	detail: 'detail/',
