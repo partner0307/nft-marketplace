@@ -46,7 +46,7 @@ export const HeroContainer = styled.div`
 
   > div:first-child {
     position: absolute;
-    top: 3rem;
+    top: 5vh;
     left: 50%;
     transform: translate(-50%);
   }

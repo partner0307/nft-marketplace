@@ -27,8 +27,8 @@ type BigCardType = {
 export const SmallCard: React.FC<SmallCardType> = ({ image, title, price, position, isFirst }) => {
     return (
         <SmallCardContainer
-            w='16rem'
-            // h='12.1875rem'
+            w='20vw'
+            h='20vh'
             transform={`perspective(23rem) rotateY(${position === 'left' ? `5deg` : `-5deg`}) translateX(${position === 'left' ? `5px` : `-5px`})`}
             position={position}
             isFirst={isFirst}
@@ -38,7 +38,7 @@ export const SmallCard: React.FC<SmallCardType> = ({ image, title, price, positi
                 imageOption={{
                     alt: "Hero",
                     src: image || "",
-                    h: "9.3rem",
+                    h: "calc(20vh - 35px)",
                     bradius: "1rem"
                 }}
                 mediaOption={{
@@ -71,7 +71,7 @@ export const BigCard: React.FC<BigCardType> = ({ image, title }) => {
                 imageOption={{
                     alt: "Hero",
                     src: image || "",
-                    h: "21.25rem",
+                    h: "calc(41.75vh - 50px)",
                     bradius: "1rem"
                 }}
                 mediaOption={{
