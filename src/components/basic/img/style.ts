@@ -1,21 +1,51 @@
 import { GV } from '@/utils/style.util';
 import styled from 'styled-components';
 
-export interface ImagePropsInterface {
+export interface InlineImagePropsType {
   w?: string;
   h?: string;
   bradius?: string;
 }
 
-export const ImageContainer = styled.div<ImagePropsInterface>`
+type QueryType = { [key: string]: InlineImagePropsType };
+
+export interface StyledFlexPropsType extends InlineImagePropsType {
+  queries?: QueryType;
+}
+
+const setStyle = ({ w, h, bradius }: InlineImagePropsType) => {
+  return `
+    width: ${w ?? `100%`};
+    height: ${h ?? `auto`};
+    border-radius: ${bradius ?? GV('radius-md')};
+	`;
+};
+
+export const ImageContainer = styled.div<{ $style: StyledFlexPropsType }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${({ w }) => w ?? `100%`};
   max-width: 100%;
-  height: ${({ h }) => h ?? `auto`};
-  ${({ bradius }) => (bradius ? `border-radius: ${bradius};` : `border-radius: ${GV("radius-md")};`)}
   overflow: hidden;
+
+  ${({ $style }) => {
+    const { queries, ...rest } = $style;
+    return `
+      ${setStyle(rest)}
+      ${
+        queries
+          ? Object.keys(queries)
+              .reverse()
+              ?.map((breakpoint: string) => {
+                return `@media (max-width: ${breakpoint}px) {
+                ${setStyle(queries[breakpoint])}
+              }`;
+              })
+              .join('')
+          : ``
+      }
+    `;
+  }}
 `;
 
 export const StyledImage = styled.img`

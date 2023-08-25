@@ -13,7 +13,7 @@ type CardType = {
 
 const Card: React.FC<CardType> = ({ title, image, avatar, icon1, icon2 }) => {
     return <CardContainer>
-        <Image src={image || ""} alt='' h='12.5rem' />
+        <Image src={image || ""} alt='' $style={{ h: '12.5rem' }} />
         <Flex $style={{ hAlign: 'space-between', vAlign: 'center' }}>
             <Flex $style={{ fDirection: 'row', hAlign: 'flex-start', gap: '12px' }}>
                 <Avatar>

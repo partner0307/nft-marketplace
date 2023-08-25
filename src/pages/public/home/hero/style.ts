@@ -46,9 +46,24 @@ export const HeroContainer = styled.div`
 
   > div:first-child {
     position: absolute;
-    top: 5vh;
+    top: 3rem;
     left: 50%;
     transform: translate(-50%);
+    @media (min-height: 960px) {
+      top: 5rem;
+    }
+    @media (min-height: 1000px) {
+      top: 3rem;
+    }
+    @media (min-height: 1050px) {
+      top: 4%.5;
+    }
+    @media (min-height: 1100px) {
+      top: 6rem;
+    }
+    @media (min-height: 1200px) {
+      top: 7rem;
+    }
   }
   > div:nth-child(2) {
     height: calc(100vh - 64px - 5rem);
