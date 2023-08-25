@@ -6,7 +6,8 @@ type InputPropsType = {
     value: string
     onChange?: any
     placeholder?: string
-    helpSide?: any
+    helpSide?: any,
+    preSide?: any,
     padding?: string,
     radius?: string,
     bg?: string,
@@ -16,6 +17,7 @@ type InputPropsType = {
 export const Input: React.FC<InputPropsType> = ({
     label,
     helpSide,
+    preSide,
     padding,
     radius,
     bg,
@@ -27,6 +29,7 @@ export const Input: React.FC<InputPropsType> = ({
             {label && (<InputLabel>{label}</InputLabel>)}
             <InputContent>
                 <InputWrapper padding={padding ?? ''}>
+                    {preSide}
                     <StyledInput {...rest} />
                     {helpSide}
                 </InputWrapper>
