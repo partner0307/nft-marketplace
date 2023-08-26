@@ -37,18 +37,16 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
             // dropdownElement.style.opacity = "0";
         }
 
-        mouseLeaveHandle();
+        // if (containerRef.current) {
 
-        if (containerRef.current) {
+        //     containerRef.current.addEventListener("mouseenter", mouseEnterHandle)
+        //     containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
 
-            containerRef.current.addEventListener("mouseenter", mouseEnterHandle)
-            containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
-
-            return () => {
-                containerRef.current.removeEventListener("mouseenter", mouseEnterHandle)
-                containerRef.current.removeEventListener("mouseleave", mouseLeaveHandle)
-            }
-        }
+        //     return () => {
+        //         containerRef.current.removeEventListener("mouseenter", mouseEnterHandle)
+        //         containerRef.current.removeEventListener("mouseleave", mouseLeaveHandle)
+        //     }
+        // }
     }, [])
 
     return (
