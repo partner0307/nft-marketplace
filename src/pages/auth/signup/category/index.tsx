@@ -89,7 +89,7 @@ const Category = () => {
             )}
             <Divider />
             <Flex $style={{ gap: '2rem' }}>
-                <BackButton>Back</BackButton>
+                <Link to={routerer('_SIGNUP', '_SIGNUP_TALENT')}><BackButton>Back</BackButton></Link>
                 <SubmitButton onClick={handleContinue}>Continue</SubmitButton>
             </Flex>
             <Flex $style={{ vAlign: 'center', gap: '0.25rem', w: '100%', hAlign: 'center' }}>

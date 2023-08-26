@@ -404,7 +404,7 @@ const Icon: React.FC<IconType> = ({
     icon
 }) => {
     return (
-        <IconWrapper $width={width} $height={height} $color={color}>
+        <IconWrapper $width={width || "24px"} $height={height || "24px"} $color={color}>
             {icons[icon]}
         </IconWrapper>
     )

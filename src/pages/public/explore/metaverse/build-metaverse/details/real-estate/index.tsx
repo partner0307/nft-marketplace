@@ -63,7 +63,7 @@ const RealEstate = () => {
                         </Flex>
                     </Flex>
                 </Link>
-                <Grid $style={{ columns: "2", gap: "2rem" }}>
+                <Grid $style={{ columns: "3", gap: "2rem" }}>
                     <RealEstateCard />
                     <RealEstateCard />
                     <RealEstateCard />

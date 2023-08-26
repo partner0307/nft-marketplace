@@ -51,7 +51,7 @@ export const Line = styled.div`
 `;
 
 export const HeroImage = styled.div`
-    width: 560px;
+    width: 60%;
     border-radius: 16px 0px 0px 16px;
     position: relative;
 `;
