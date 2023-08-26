@@ -6,12 +6,15 @@ import { usePublicLayoutContext } from '@/layouts/PublicLayout/context';
 import { Link } from 'react-router-dom';
 import _ROUTERS from '@/constants/route.constant';
 import { Flex } from '@/components/basic';
-import { findAll } from 'styled-components/test-utils';
+import { find, findAll } from 'styled-components/test-utils';
 
 interface MenuItemPropsType {
     isActived?: boolean
     to?: string
-    dropdownItems?: string[] | number[] | React.ReactNode[]
+    dropdownItems?: {
+        to: string
+        render: string | number | React.ReactNode
+    }[]
     children?: React.ReactNode
     [key: string]: any
 }
@@ -26,27 +29,37 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
     const containerRef = useRef<any>(null);
 
     useEffect(() => {
-        const mouseEnterHandle = (e?: any) => {
-            // const dropdownElements = findAll(containerRef.current, DropdownMenuContainer);
-            // const dropdownElement = dropdownElements?.item(0) as HTMLElement;
-            // dropdownElement.style.opacity = "1";
+        if (containerRef.current === null) return;
+    
+        const dropdownElement = find(containerRef.current, DropdownMenuContainer);
+
+        const mouseEnterHandle = () => {
+            if (dropdownElement !== null) {
+                dropdownElement.style.visibility = "visible";
+                dropdownElement.style.opacity = "1";
+            }
         }
-        const mouseLeaveHandle = (e?: any) => {
-            // const dropdownElements = findAll(containerRef.current, DropdownMenuContainer);
-            // const dropdownElement = dropdownElements?.item(0) as HTMLElement;
-            // dropdownElement.style.opacity = "0";
+        const mouseLeaveHandle = () => {
+            if (dropdownElement !== null) {
+                dropdownElement.style.opacity = "0";
+                // setTimeout(() => {
+                dropdownElement.style.visibility = "hidden";
+                // }, 300)
+            }
         }
 
-        // if (containerRef.current) {
+        mouseLeaveHandle();
 
-        //     containerRef.current.addEventListener("mouseenter", mouseEnterHandle)
-        //     containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
+        if (containerRef.current !== null) {
 
-        //     return () => {
-        //         containerRef.current.removeEventListener("mouseenter", mouseEnterHandle)
-        //         containerRef.current.removeEventListener("mouseleave", mouseLeaveHandle)
-        //     }
-        // }
+            containerRef.current.addEventListener("mouseenter", mouseEnterHandle)
+            containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
+
+            return () => (
+                containerRef.current.addEventListener("mouseenter", mouseEnterHandle),
+                containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
+            )
+        }
     }, [])
 
     return (
@@ -58,7 +71,7 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
             {dropdownItems && (
                 <DropdownMenuContainer>
                     {dropdownItems.map((item, key) => (
-                        <DropdownMenuItem key={key}>{item}</DropdownMenuItem>
+                        <DropdownMenuItem to={item.to} key={key}>{item.render}</DropdownMenuItem>
                     ))}
                 </DropdownMenuContainer>
             )}
@@ -93,10 +106,10 @@ const Menu = () => {
                 </MenuItem>
             )}
             <MenuItem dropdownItems={[
-                "Metaverse",
-                "NFTs",
-                "DApps",
-                "Blockchain",
+                { render: "Metaverse", to: "/" },
+                { render: "NFTs", to: "/" },
+                { render: "DApps", to: "/" },
+                { render: "Blockchain", to: "/" }
             ]}>Marketplaces</MenuItem>
             <MenuItem to='/'>Academy</MenuItem>
             <SearchInputContainer>

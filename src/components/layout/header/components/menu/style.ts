@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { GV } from '@/utils/style.util';
+import { Link } from 'react-router-dom';
 
 export const MenuContainer = styled.div`
   display: flex;
@@ -18,9 +19,24 @@ export const DropdownMenuContainer = styled.div`
   position: absolute;
   top: 100%;
   left: 0;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 0.5rem;
+  background: ${GV("bg")};
+  border: 1px solid #1C1C1C;
+  border-radius: ${GV("radius-sm")};
   transition: all ease-in-out .3s;
+`;
+
+export const DropdownMenuItem = styled(Link)`
+  padding: 0.25rem 0.5rem;
+  border-radius: ${GV("radius-sm")};
+  transition: all ease-in-out .3s;
+
+  &:hover {
+    background: #000;
+  }
 `;
 
 export const MenuItemContainer = styled.div<{ isActived?: boolean, isDropdown?: boolean }>`
@@ -35,7 +51,7 @@ export const MenuItemContainer = styled.div<{ isActived?: boolean, isDropdown?: 
   font-family: ${GV('font3')};
   white-space: nowrap;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: ${GV("radius-xs")};
   cursor: pointer;
   transition: all ease-in-out .5s;
   ${({ isActived }) => isActived ? `
@@ -43,8 +59,6 @@ export const MenuItemContainer = styled.div<{ isActived?: boolean, isDropdown?: 
     background: #111;
   ` : ``}
 `;
-
-export const DropdownMenuItem = styled.div``;
 
 export const ItemContainer = styled.a<{ isActive?: boolean }>`
   height: 2.5rem;
