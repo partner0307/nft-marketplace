@@ -7,3 +7,4 @@ export { default as Panel } from "./panel";
 // export { default as Badge } from "./select";
 export { default as Slidebar } from "./slidebar";
 export { default as Dropdown } from './dropdown';
+export { default as RadioButton } from './radio';

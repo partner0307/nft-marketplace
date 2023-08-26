@@ -50,7 +50,7 @@ const Signin = () => {
                     </Flex>
                     <Flex $style={{ vAlign: 'center', gap: '0.25rem', w: '100%', hAlign: 'center' }}>
                         <CustomFont1>Don't have an account? </CustomFont1>
-                        <Link to={_ROUTERS.signup}><P $style={{ size: '1.25rem', color: 'info' }}>Register here</P></Link>
+                        <Link to={_ROUTERS._SIGNUP}><P $style={{ size: '1.25rem', color: 'info' }}>Register here</P></Link>
                     </Flex>
                 </AuthForm>
             </Flex>
