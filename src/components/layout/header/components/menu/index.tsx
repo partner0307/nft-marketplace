@@ -27,14 +27,14 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
 
     useEffect(() => {
         const mouseEnterHandle = (e?: any) => {
-            const dropdownElements = findAll(containerRef.current, DropdownMenuContainer);
-            const dropdownElement = dropdownElements?.item(0) as HTMLElement;
-            dropdownElement.style.opacity = "1";
+            // const dropdownElements = findAll(containerRef.current, DropdownMenuContainer);
+            // const dropdownElement = dropdownElements?.item(0) as HTMLElement;
+            // dropdownElement.style.opacity = "1";
         }
         const mouseLeaveHandle = (e?: any) => {
-            const dropdownElements = findAll(containerRef.current, DropdownMenuContainer);
-            const dropdownElement = dropdownElements?.item(0) as HTMLElement;
-            dropdownElement.style.opacity = "0";
+            // const dropdownElements = findAll(containerRef.current, DropdownMenuContainer);
+            // const dropdownElement = dropdownElements?.item(0) as HTMLElement;
+            // dropdownElement.style.opacity = "0";
         }
 
         mouseLeaveHandle();
