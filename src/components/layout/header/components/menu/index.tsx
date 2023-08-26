@@ -1,13 +1,74 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Content, ItemContainer, MenuContainer } from './style';
+import { Content, DropdownMenuContainer, DropdownMenuItem, ItemContainer, MenuContainer, MenuItemContainer, SearchInputContainer } from './style';
 import { Icon, Input, Dropdown } from '@/components/custom';
 import { usePublicLayoutContext } from '@/layouts/PublicLayout/context';
 import { Link } from 'react-router-dom';
 import _ROUTERS from '@/constants/route.constant';
+import { Flex } from '@/components/basic';
+import { findAll } from 'styled-components/test-utils';
+
+interface MenuItemPropsType {
+    isActived?: boolean
+    to?: string
+    dropdownItems?: string[] | number[] | React.ReactNode[]
+    children?: React.ReactNode
+    [key: string]: any
+}
+
+const MenuItem: React.FC<MenuItemPropsType> = ({
+    isActived,
+    to,
+    dropdownItems,
+    children,
+    ...rest
+}) => {
+    const containerRef = useRef<any>(null);
+
+    useEffect(() => {
+        const mouseEnterHandle = (e?: any) => {
+            const dropdownElements = findAll(containerRef.current, DropdownMenuContainer);
+            const dropdownElement = dropdownElements?.item(0) as HTMLElement;
+            dropdownElement.style.opacity = "1";
+        }
+        const mouseLeaveHandle = (e?: any) => {
+            const dropdownElements = findAll(containerRef.current, DropdownMenuContainer);
+            const dropdownElement = dropdownElements?.item(0) as HTMLElement;
+            dropdownElement.style.opacity = "0";
+        }
+
+        mouseLeaveHandle();
+
+        if (containerRef.current) {
+
+            containerRef.current.addEventListener("mouseenter", mouseEnterHandle)
+            containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
+
+            return () => {
+                containerRef.current.removeEventListener("mouseenter", mouseEnterHandle)
+                containerRef.current.removeEventListener("mouseleave", mouseLeaveHandle)
+            }
+        }
+    }, [])
+
+    return (
+        <MenuItemContainer ref={containerRef} isActived={isActived} as={to ? Link : "a"} to={to} {...rest}>
+            {children}
+            {dropdownItems && (
+                <Icon icon='ChevronArrowDown' />
+            )}
+            {dropdownItems && (
+                <DropdownMenuContainer>
+                    {dropdownItems.map((item, key) => (
+                        <DropdownMenuItem key={key}>{item}</DropdownMenuItem>
+                    ))}
+                </DropdownMenuContainer>
+            )}
+        </MenuItemContainer>
+    )
+}
 
 const Menu = () => {
-    const { hash, pathname, search } = useLocation();
     const { slideOpened, dispatch } = usePublicLayoutContext();
     const [keyword, setKeyword] = useState('');
     const location = useLocation();
@@ -18,20 +79,37 @@ const Menu = () => {
     }, [location])
     return (
         <MenuContainer>
-            {pathname === '/'
-            ? <ItemContainer onClick={() => dispatch({ type: "toggleMenu", value: {slideOpened: !slideOpened} })}>
-                <Content>Explore</Content><Icon icon='Explore' />
-            </ItemContainer>
-            : <Link to='/'><ItemContainer onClick={() => dispatch({ type: "toggleMenu", value: {slideOpened: false} })}>
-                <Icon icon='ArrowColorLeft' /><Content>Home</Content>
-            </ItemContainer></Link>}
-            <ItemContainer isActive={pathname.includes('marketplaces')}>
-                <Link to={_ROUTERS.marketplaces}><Dropdown initialLabel={<Content>Marketplaces</Content>} /></Link>
-            </ItemContainer>
-            <ItemContainer>
-                <Content>Academy</Content>
-            </ItemContainer>
-            <Input value={keyword} placeholder='Search...' padding='6px 12px' helpSide={<Icon icon='Search' />} onChange={(e: any) => setKeyword(e.target.value)} />
+            {location.pathname === '/' ? (
+                <MenuItem isActived onClick={() => dispatch({ type: "toggleMenu", value: { slideOpened: !slideOpened } })}>
+                    Explore
+                    <Icon icon='Explore' />
+                </MenuItem>
+            ) : (
+                <MenuItem isActived to='/' onClick={() => dispatch({ type: "toggleMenu", value: { slideOpened: false } })}>
+                    <Flex $style={{
+                        gap: "1.5rem"
+                    }}>
+                        <Icon icon='ArrowLeft' width='24px' />
+                        Home
+                    </Flex>
+                </MenuItem>
+            )}
+            <MenuItem dropdownItems={[
+                "Metaverse",
+                "NFTs",
+                "DApps",
+                "Blockchain",
+            ]}>Marketplaces</MenuItem>
+            <MenuItem to='/'>Academy</MenuItem>
+            <SearchInputContainer>
+                <Input
+                    value={keyword}
+                    placeholder='Search...'
+                    padding='0.375rem 0.75rem'
+                    helpSide={<Icon icon='Search' />}
+                    onChange={(e: any) => setKeyword(e.target.value)}
+                />
+            </SearchInputContainer>
         </MenuContainer>
     )
 }

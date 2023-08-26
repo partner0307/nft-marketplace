@@ -7,7 +7,7 @@ export interface IconWrapperType {
 }
 
 export const IconWrapper = styled.div<IconWrapperType>`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 

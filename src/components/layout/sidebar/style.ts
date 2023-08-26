@@ -30,6 +30,7 @@ export const SidebarContainer = styled.div<{ slideOpened: boolean; opened: boole
   left: 0;
   /* display: flex; */
   display: ${({ opened }) => (opened ? `flex` : `none`)};
+  animation: ${({ slideOpened }) => slideOpened ? fadeIn : fadeOut } .5s;
   flex-direction: column;
   max-width: 300px;
   height: calc(100vh - 64px);
