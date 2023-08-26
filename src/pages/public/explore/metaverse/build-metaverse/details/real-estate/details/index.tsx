@@ -36,7 +36,7 @@ const RealEstateDetails = () => {
                     </Flex>
                     <Flex $style={{ gap: '12px', vAlign: 'center' }}>
                         <PageButton isActive={false}>
-                            <Icon icon='ArrowLeft' />Previous
+                            <Icon icon='ArrowLeft' width='24px' height='24px' />Previous
                         </PageButton>
                         <PageButton isActive={false}>
                             Next<Icon icon='ArrowRight' />
@@ -118,7 +118,7 @@ const RealEstateDetails = () => {
                             <P $style={{ size: '32px', weight: '600' }}>Similar Metaverses</P>
                             <CustomTab>View more more</CustomTab>
                         </Flex>
-                        <Flex $style={{ hAlign: 'space-between', w: '100%' }}>
+                        <Flex $style={{ hAlign: 'space-between', w: '100%', fWrap: 'wrap' }}>
                             <RealEstateCard />
                             <RealEstateCard />
                             <RealEstateCard />

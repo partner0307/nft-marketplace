@@ -8,6 +8,7 @@ export const CardContainer = styled.div`
     border: 1px solid #3D3D3E;
     background: rgba(12, 12, 12, 0.90);
     padding: 14px;
+    width: 26.25rem;
 `;
 
 export const ImageLoader = styled.img`
