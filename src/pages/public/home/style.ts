@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.div`
   position: relative;
+  user-select: none;
   /* margin-left: 300px; */
 `;
 
