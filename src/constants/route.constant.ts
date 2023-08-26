@@ -14,8 +14,12 @@
 
 const _ROUTERS = {
 	// auth routes
-	signin: 'signin/',
-	signup: 'signup/',
+	_SIGNIN: 'signin/',
+	_SIGNUP: 'signup/',
+	_SIGNUP_CLIENT: 'client/',
+	_SIGNUP_TALENT: 'talent/',
+	_VERIFY_ENAIL: 'verify-email/',
+	_CATEGORY: 'talent-category/',
 
 	// home routes
 	home: '/',

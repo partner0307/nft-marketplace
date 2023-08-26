@@ -75,4 +75,12 @@ export const talents: TablentObject[] = [
 
 export const categories = [
     "All", "Metaverse", "Web3", "Designers", "Developers", "Modelers", "AI Experts", "Animators", "Managers"
+];
+
+export const talent_type = [
+  "Metaverse", "Modelers", "Architect", "Web3", "AI Experts", "Artist & Creator", "Designer", "Animators", "Fashion Designer", "Game Developer", "Managers", "Others"
+];
+
+export const software_list = [
+  "Unreal_Engine", "Cinema 4D", "Unity", "Blender", "3D Studio Max", "Nuclino", "Maya", "Revit", "Others"
 ]

@@ -1,5 +1,6 @@
 import React from "react";
 import { InputBoard, InputContainer, InputContent, InputLabel, InputWrapper, StyledInput, StyledTextarea } from "./style";
+import { Flex } from "@/components/basic";
 
 type InputPropsType = {
     label?: string | React.ReactNode
@@ -29,8 +30,10 @@ export const Input: React.FC<InputPropsType> = ({
             {label && (<InputLabel>{label}</InputLabel>)}
             <InputContent>
                 <InputWrapper padding={padding ?? ''}>
-                    {preSide}
-                    <StyledInput {...rest} />
+                    <Flex $style={{ gap: '1rem' }}>
+                        {preSide}
+                        <StyledInput {...rest} />
+                    </Flex>
                     {helpSide}
                 </InputWrapper>
                 <InputBoard radius={radius ?? ''} bg={bg ?? ''} border={border ?? ''} />

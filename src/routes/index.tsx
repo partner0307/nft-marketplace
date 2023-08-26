@@ -38,6 +38,11 @@ import MarketplaceDapps from "@/pages/public/marketplace/dapps";
 import MarketplaceBlockchains from "@/pages/public/marketplace/blockchains";
 import Signin from "@/pages/auth/signin";
 import Signup from "@/pages/auth/signup";
+import ClientForm from "@/pages/auth/signup/client-form";
+import TalentForm from "@/pages/auth/signup/talent-form";
+import ChooseForm from "@/pages/auth/signup/choose";
+import Category from "@/pages/auth/signup/category";
+import EmailVerify from "@/pages/auth/signup/email-verification";
 
 const routers = createBrowserRouter([
     {
@@ -219,12 +224,34 @@ const routers = createBrowserRouter([
         ],
     },
     {
-        path: 'signin/',
+        path: _ROUTERS._SIGNIN,
         element: <Signin />
     },
     {
-        path: 'signup/',
-        element: <Signup />
+        path: _ROUTERS._SIGNUP,
+        element: <Signup />,
+        children: [
+            {
+                path: '',
+                element: <ChooseForm />
+            },
+            {
+                path: _ROUTERS._SIGNUP_CLIENT,
+                element: <ClientForm />
+            },
+            {
+                path: _ROUTERS._SIGNUP_TALENT,
+                element: <TalentForm />
+            },
+            {
+                path: _ROUTERS._CATEGORY,
+                element: <Category />
+            },
+            {
+                path: _ROUTERS._VERIFY_ENAIL,
+                element: <EmailVerify />
+            }
+        ]
     },
     {
         path: "*",
