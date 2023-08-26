@@ -9,6 +9,28 @@ export const SmallCardContainer = styled(Card)<{
   overflow: initial;
   padding: 0.3rem;
   z-index: 5;
+
+  @media (min-height: 1000px) {
+    width: 20rem;
+    >div:first-child {
+      >div {
+        height: 12.5rem;
+      }
+    }
+  }
+`;
+
+export const BigCardContainer = styled(Card)<{
+  position?: 'left' | 'right';
+  isFirst?: boolean;
+}>`
+  @media (min-height: 1000px) {
+    >div:first-child {
+      >div {
+        height: 27.5rem;
+      }
+    }
+  }
 `;
 
 export const SideRect = styled.div`

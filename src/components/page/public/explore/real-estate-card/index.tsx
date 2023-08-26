@@ -8,7 +8,7 @@ import Image from '@/components/basic/img';
 const RealEstateCard = () => {
     return <>
         <CardContainer>
-            <Image src={Img} alt='' h='14.125rem' />
+            <Image src={Img} alt='' $style={{ h: '14.125rem' }} />
             <Flex $style={{ fDirection: 'column', gap: '8px', w: '100%' }}>
                 <P $style={{ size: '20px', weight: '700' }}>Single Family Residential</P>
                 <CardLine />

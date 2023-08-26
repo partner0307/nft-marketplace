@@ -28,10 +28,10 @@ export const HoveredHeading = styled(Heading)`
 `;
 
 export const HoveredButton = styled(Button)`
-  transition: all ease-in-out .0s;
+  transition: all ease-in-out .5s;
   &:hover {
-    border: 1px solid #fff;
-    background: #950554 !important;
+    /* border: 1px solid #fff; */
+    background: linear-gradient(216deg, #0000b1 1.04%, #c392dc 45.73%, #ff0000 100%) !important;
   }
 `;
 
@@ -49,6 +49,21 @@ export const HeroContainer = styled.div`
     top: 3rem;
     left: 50%;
     transform: translate(-50%);
+    @media (min-height: 960px) {
+      top: 5rem;
+    }
+    @media (min-height: 1000px) {
+      top: 3rem;
+    }
+    @media (min-height: 1050px) {
+      top: 4%.5;
+    }
+    @media (min-height: 1100px) {
+      top: 6rem;
+    }
+    @media (min-height: 1200px) {
+      top: 7rem;
+    }
   }
   > div:nth-child(2) {
     height: calc(100vh - 64px - 5rem);

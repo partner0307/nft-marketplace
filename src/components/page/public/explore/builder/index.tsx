@@ -34,7 +34,7 @@ const Builder: React.FC<BuilderType> = ({ to, image, icon, title }) => {
     return (
         <BuilderContainer to={to || ""} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
             <Flex $style={{ fDirection: 'column', h: "100%", gap: "0.5rem" }}>
-                <Image src={image || ""} alt='' bradius='1rem 1rem 0 0' h='100%' />
+                <Image src={image || ""} alt='' $style={{ bradius: '1rem 1rem 0 0', h: '100%' }} />
                 <DescriptionWrapper>
                     <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '18px' }}>
                         <BuilderIcon src={icon} />
