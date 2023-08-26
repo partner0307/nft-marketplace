@@ -45,12 +45,12 @@ const Actions = () => {
         </Link>
       </Flex>
       <ItemContainer>
-        <Link to={_ROUTERS.signin} $style={{ color: GV("atomicpink") }}>
+        <Link to={_ROUTERS._SIGNIN} $style={{ color: GV("atomicpink") }}>
           <Content>Sign in</Content>
         </Link>
         <Icon icon="Login" />
       </ItemContainer>
-      <Link to={_ROUTERS.signup}>
+      <Link to={_ROUTERS._SIGNUP}>
         <Button
           $style={{
             bg: GV("gradient"),
