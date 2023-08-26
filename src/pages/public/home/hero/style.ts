@@ -27,14 +27,6 @@ export const HoveredHeading = styled(Heading)`
   }
 `;
 
-export const HoveredButton = styled(Button)`
-  transition: all ease-in-out .5s;
-  &:hover {
-    /* border: 1px solid #fff; */
-    background: linear-gradient(216deg, #0000b1 1.04%, #c392dc 45.73%, #ff0000 100%) !important;
-  }
-`;
-
 export const HeroContainer = styled.div`
   position: relative;
   background: no-repeat url(${Background});
@@ -81,11 +73,13 @@ export const HeroWrapper = styled.div`
 `;
 
 export const CenterRect = styled.div`
+  position: relative;
   align-self: center;
   margin-top: -1rem;
   width: 1.25rem;
   height: 4.6875rem;
   background: rgba(198, 245, 255, 0.5);
+  z-index: 1;
 `;
 
 export const LeftSide = styled(motion.div)`

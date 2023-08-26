@@ -7,23 +7,21 @@ import Collection from "./collection";
 import Blog from "./blog";
 
 const HomePage = () => {
-    const [loaded, setLoaded] = React.useState(false);
+    // const [loaded, setLoaded] = React.useState(false);
 
     useEffect(() => {
-        const onPageLoad = () => {
-            setLoaded(true);
-        }
-        
-        if (document.readyState === 'complete') {
-            onPageLoad();
-        } else {
-            window.addEventListener("load", onPageLoad);
-            return window.removeEventListener("load", onPageLoad);
-        }
+        // const onPageLoad = () => {
+        //     setLoaded(true);
+        // }
+
+        // if (document.readyState === 'complete') {
+        //     onPageLoad();
+        // } else {
+        //     window.addEventListener("load", onPageLoad);
+        //     return window.removeEventListener("load", onPageLoad);
+        // }
     }, [])
-    return loaded ? (
-        <div>Loading...</div>
-    ) : (
+    return (
         <HomeContainer>
             <Hero />
             <HireSection />

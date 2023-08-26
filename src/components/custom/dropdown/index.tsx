@@ -5,6 +5,7 @@ import { Icon } from "@/components/custom";
 import { Flex } from "@/components/basic";
 
 type DropdownPropsType = {
+	eventType?: "hover" | "click";
 	initialLabel?: string | React.ReactNode;
 	label?: string;
 	hideIcon?: boolean;
@@ -17,6 +18,7 @@ type DropdownPropsType = {
 };
 
 const Dropdown: React.FC<DropdownPropsType> = ({
+	eventType,
 	initialLabel,
 	label,
 	hideIcon,
@@ -25,27 +27,39 @@ const Dropdown: React.FC<DropdownPropsType> = ({
 	customIcon,
 	rightSide,
 	isTop,
-	isSm,
-	...rest
+	isSm
 }) => {
 	const [isDropdown, setIsDropdown] = React.useState(false);
 	const dropdownRef = React.useRef<HTMLDivElement | null>(null);
 
 	React.useEffect(() => {
-		const windowClick = (e: any) => {
-
-			if (isDropdown === true) return;
-
-			if (dropdownRef !== null && dropdownRef?.current !== null) {
-				if (!dropdownRef.current.contains(e.target)) {
+		if (eventType) {
+			if (eventType === "hover") {
+				const mouseLeaveHandle = () => {
 					setIsDropdown(false);
 				}
+				const mouseEnterHandle = () => {
+					setIsDropdown(true);
+				}
+
+				
 			}
-		};
+		} else {
+			const windowClick = (e: any) => {
 
-		window.addEventListener("click", windowClick);
-
-		return () => window.removeEventListener("click", windowClick);
+				if (isDropdown === true) return;
+	
+				if (dropdownRef !== null && dropdownRef?.current !== null) {
+					if (!dropdownRef.current.contains(e.target)) {
+						setIsDropdown(false);
+					}
+				}
+			};
+	
+			window.addEventListener("click", windowClick);
+	
+			return () => window.removeEventListener("click", windowClick);
+		}
 	}, [isDropdown]);
 
 	return (

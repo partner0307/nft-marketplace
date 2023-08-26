@@ -6,5 +6,5 @@ export const Main = styled.main<{ slideOpened?: boolean }>`
     min-height: 100vh;
     padding-top: 64px;
     margin-left: ${({ slideOpened }) => !slideOpened ? `0px` : `300px`};
-    transition: all ease-in .3s;
+    transition: all ease-in .5s;
 `

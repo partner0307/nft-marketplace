@@ -11,9 +11,12 @@ export type StyledButtonType = {
   radius?: string;
   shadow?: string;
   border?: string;
+  hoveredBorder?: string;
+  hoveredBg?: string;
 };
 
 export const StyledButton = styled.button<StyledButtonType>`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,13 +30,63 @@ export const StyledButton = styled.button<StyledButtonType>`
   ${({ h }) => `min-height: ${h ? h : '4.5rem'};`}
   ${({ p }) => `padding: ${p ?? '0 6.65rem'};`}
   ${({ color }) => (color ? `color: ${color};` : ``)}
-  ${({ bg }) =>
-    `background: ${
-      bg ??
-      `var(--gradient,linear-gradient(216deg, #f75bb1 1.04%, #c392dc 45.73%, #008782 100%))`
-    } !important;`}
   ${({ fsize }) => `font-size: ${fsize ?? GV('font-size-3')};`}
   ${({ radius }) => `border-radius: ${radius ?? '0.5rem'};`}
   ${({ shadow }) => `box-shadow: ${shadow ?? '0px 4px 12px 0px rgba(0, 0, 0, 0.25)'};`}
-  ${({ border, bg }) => `border:  1px solid ${border ?? bg ?? 'transparent'};`}
+  overflow: hidden;
+  z-index: 0;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    ${({ border, bg }) => `border:  1px solid ${border ?? bg ?? 'transparent'};`}
+    ${({ radius }) => `border-radius: ${radius ?? '0.5rem'};`}
+    ${({ bg }) =>
+      `background: ${
+        bg ??
+        `var(--gradient,linear-gradient(216deg, #f75bb1 1.04%, #c392dc 45.73%, #008782 100%))`
+      } !important;`}
+    opacity: 1;
+    transition: all ease-in-out 0.4s;
+    z-index: -1;
+    content: '';
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    ${({ hoveredBg, hoveredBorder }) =>
+      `border:  1px solid ${hoveredBorder ?? hoveredBg ?? 'transparent'};`}
+    ${({ radius }) => `border-radius: ${radius ?? '0.5rem'};`}
+    ${({ hoveredBg }) =>
+      `background: ${
+        hoveredBg ??
+        `var(--gradient,linear-gradient(216deg, #f75bb1 1.04%, #c392dc 45.73%, #008782 100%))`
+      } !important;`}
+    opacity: 1;
+    transition: all ease-in-out 0.4s;
+    z-index: -1;
+    content: '';
+  }
+
+  ${({ hoveredBg }) =>
+    hoveredBg
+      ? `
+    &:hover { 
+      &:after {
+        opacity: 0;
+      }
+      &:before {
+        opacity: 1;
+      }
+    }
+  `
+      : ``}
 `;
