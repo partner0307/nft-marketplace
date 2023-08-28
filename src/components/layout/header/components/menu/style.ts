@@ -15,13 +15,12 @@ export const Content = styled.div`
 `;
 
 export const DropdownMenuContainer = styled.div`
-  padding: 0.25rem;
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 100%;
   display: flex;
   flex-direction: column;
+  min-width: 100%;
   padding: 0.5rem;
   background: ${GV("bg")};
   border: 1px solid #1C1C1C;
@@ -52,12 +51,16 @@ export const MenuItemContainer = styled.div<{ isActived?: boolean, isDropdown?: 
   white-space: nowrap;
   border: 1px solid transparent;
   border-radius: ${GV("radius-xs")};
-  cursor: pointer;
   transition: all ease-in-out .5s;
+  cursor: pointer;
   ${({ isActived }) => isActived ? `
     border: 1px solid #1C1C1C;
     background: #111;
   ` : ``}
+
+  &:hover {
+    background: #111;
+  }
 `;
 
 export const ItemContainer = styled.a<{ isActive?: boolean }>`

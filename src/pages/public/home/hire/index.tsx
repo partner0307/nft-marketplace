@@ -61,7 +61,7 @@ const HireSection = () => {
                         $style={{
                             p: "0 10rem 5rem",
                             vAlign: "center",
-                            maxW: '1440px',
+                            // maxW: '1440px',
                             overflow: "hidden"
                         }}
                     >
@@ -84,9 +84,9 @@ const HireSection = () => {
                                 <Heading level={1} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
                             </Flex>
                             <motion.div
-                                initial={{ translateX: "-100%" }}
-                                whileInView={{ translateX: 0 }}
-                                transition={{ duration: 1, delay: 0.5 }}
+                                initial={{ x: -720 }}
+                                whileInView={{ x: 0 }}
+                                transition={{ duration: 2, delay: 0 }}
                                 viewport={{ once: true }}
                             >
                                 <ItemList>
@@ -101,9 +101,9 @@ const HireSection = () => {
                         <ImageWrapper>
                             <Flex
                                 as={motion.div}
-                                initial={{ translateX: "100%" }}
-                                whileInView={{ translateX: "0%" }}
-                                transition={{ duration: 1.5, delay: 0.5 }}
+                                initial={{ translateX: "120%" }}
+                                whileInView={{ translateX: 0 }}
+                                transition={{ duration: 2, delay: 0 }}
                                 viewport={{ once: true }}
                             >
                                 <img src={Image1} alt="" />

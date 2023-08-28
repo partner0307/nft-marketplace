@@ -47,8 +47,8 @@ const MetaverseDetails = () => {
             </Flex>
             <Flex $style={{ hAlign: 'center' }}>
                 <DetailsContent>
-                    <Flex $style={{ hAlign: 'space-between', p: '40px 0 54px', w: '100%' }}>
-                        <Flex $style={{ fDirection: 'column', gap: '54px' }}>
+                    <Flex $style={{ p: '40px 0 54px', w: '100%' }}>
+                        <Flex $style={{ fDirection: 'column', gap: '54px', flex: '1' }}>
                             <Flex $style={{ fDirection: 'column', gap: '20px' }}>
                                 <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '8px' }}>
                                     <Heading level={1}>Decentraland</Heading>
@@ -71,7 +71,7 @@ const MetaverseDetails = () => {
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'comments'} onClick={() => navigate(routerer("metaverse", "comments"))}>Comments</CustomTab>
                             </Flex>
                         </Flex>
-                        <Flex $style={{ fDirection: 'column', gap: '40px', p: '16px 0 0' }}>
+                        <Flex $style={{ fDirection: 'column', gap: '40px', p: '16px 0 0', maxW: '440px' }}>
                             <Flex $style={{ fDirection: 'row', hAlign: 'flex-end', gap: '24px', p: '0 32px' }}>
                                 <Link to='https://www.instagram.com'><img src={Instagram} alt="" /></Link>
                                 <Link to='https://www.twitter.com'><img src={Twitter} alt="" /></Link>
@@ -113,16 +113,7 @@ const MetaverseDetails = () => {
                             </StatusBar>
                         </Flex>
                     </Flex>
-                    <Flex $style={{ p: '54px 0 0', w: '100%', maxW: '1440px' }}>
-                        {/* {tabIndex === 1 && <Overview />}
-                        {tabIndex === 2 && <Collectible />}
-                        {tabIndex === 3 && <Land />}
-                        {tabIndex === 4 && <Marketplace />}
-                        {tabIndex === 5 && <News />}
-                        {tabIndex === 6 && <About />}
-                        {tabIndex === 7 && <Comment />} */}
-                        <Outlet />
-                    </Flex>
+                    <Outlet />
                 </DetailsContent>
             </Flex>
         </DetailsWrapper>

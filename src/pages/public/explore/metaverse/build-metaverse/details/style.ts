@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const BuildDetailsContainer = styled.div`
@@ -9,7 +10,6 @@ export const BuildDetailsContainer = styled.div`
 `;
 
 export const BuildDetailsWrapper = styled.div`
-    max-width: 1440px;
     display: flex;
     gap: 32px;
     padding: 0 0 200px;
@@ -26,7 +26,7 @@ export const Rect = styled.div`
     background: rgba(235, 104, 198, 0.20);
 `;
 
-export const MenuItem = styled.div<{ isActive?: boolean }>`
+export const MenuItem = styled(Link)<{ isActive?: boolean }>`
     display: flex;
     width: 96px;
     height: 96px;
@@ -35,8 +35,16 @@ export const MenuItem = styled.div<{ isActive?: boolean }>`
     gap: 12px;
     border-radius: 16px;
     border: 1px solid #3D3D3E;
-    ${({ isActive }) => isActive ? `background: #780640;` : `background: rgba(25, 25, 25, 0.80);`}
+    background: rgba(25, 25, 25, 0.80);
     backdrop-filter: blur(7.5px);
+    transition: all ease-in-out .3s;
+    ${({ isActive }) => isActive ? `
+        background: #780640;
+    ` : `
+        &:hover {
+            background: #4c092c; 
+        }
+    `}
 `;
 
 export const CustomFont = styled.div`

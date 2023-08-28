@@ -13,7 +13,6 @@ export const DetailsWrapper = styled.div`
 `;
 
 export const DetailsContent = styled.div`
-    max-width: 1440px;
     width: 100%;
 `
 

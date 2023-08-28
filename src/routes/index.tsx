@@ -1,4 +1,5 @@
 import { createBrowserRouter, Navigate, Outlet } from "react-router-dom";
+import { Flex, Heading } from "@/components/basic";
 
 import _ROUTERS from "@/constants/route.constant";
 
@@ -8,9 +9,9 @@ import Metaverses from "@/pages/public/explore/metaverse/metaverses";
 import Marketplace from "@/pages/public/explore/metaverse/marketplace";
 import BuildMetaverse from "@/pages/public/explore/metaverse/build-metaverse";
 import MetaverseDetails from "@/pages/public/explore/metaverse/metaverses/details";
-import { Flex, Heading } from "@/components/basic";
 import BuyNFT from "@/pages/public/explore/nft/buy";
 import NFTMarketplace from "@/pages/public/explore/nft/marketplace";
+import News from "@/pages/public/explore/metaverse/metaverses/details/news";
 import NFTDetails from "@/pages/public/explore/nft/marketplace/details";
 import BuildDetails from "@/pages/public/explore/metaverse/build-metaverse/details";
 import RealEstateDetails from "@/pages/public/explore/metaverse/build-metaverse/details/real-estate/details";
@@ -43,6 +44,7 @@ import TalentForm from "@/pages/auth/signup/talent-form";
 import ChooseForm from "@/pages/auth/signup/choose";
 import Category from "@/pages/auth/signup/category";
 import EmailVerify from "@/pages/auth/signup/email-verification";
+import Comment from "@/pages/public/explore/metaverse/metaverses/details/comment";
 
 const routers = createBrowserRouter([
     {
@@ -79,7 +81,7 @@ const routers = createBrowserRouter([
                     },
                     {
                         path: _ROUTERS.news,
-                        element: <MetaverseDetails />
+                        element: <News />
                     },
                     {
                         path: _ROUTERS.about,
@@ -87,7 +89,7 @@ const routers = createBrowserRouter([
                     },
                     {
                         path: _ROUTERS.comments,
-                        element: <MetaverseDetails />
+                        element: <Comment />
                     },
                 ]
             },
@@ -101,7 +103,7 @@ const routers = createBrowserRouter([
             },
             {
                 path: _ROUTERS.build_metaverse,
-                element: <><Outlet /></>,
+                element: <BuildDetails />,
                 children: [
                     {
                         path: _ROUTERS.real_estate,

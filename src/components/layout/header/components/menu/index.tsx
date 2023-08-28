@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import _ROUTERS from '@/constants/route.constant';
 import { Flex } from '@/components/basic';
 import { find, findAll } from 'styled-components/test-utils';
+import { routerer } from '@/utils/util';
 
 interface MenuItemPropsType {
     isActived?: boolean
@@ -29,6 +30,7 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
     const containerRef = useRef<any>(null);
 
     useEffect(() => {
+        console.log(containerRef.current);
         if (containerRef.current === null) return;
     
         const dropdownElement = find(containerRef.current, DropdownMenuContainer);
@@ -71,7 +73,7 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
             {dropdownItems && (
                 <DropdownMenuContainer>
                     {dropdownItems.map((item, key) => (
-                        <DropdownMenuItem to={item.to} key={key}>{item.render}</DropdownMenuItem>
+                        <Link to=''><DropdownMenuItem to={item.to} key={key}>{item.render}</DropdownMenuItem></Link>
                     ))}
                 </DropdownMenuContainer>
             )}
@@ -98,7 +100,8 @@ const Menu = () => {
             ) : (
                 <MenuItem isActived to='/' onClick={() => dispatch({ type: "toggleMenu", value: { slideOpened: false } })}>
                     <Flex $style={{
-                        gap: "1.5rem"
+                        gap: "1.5rem",
+                        vAlign: "center"
                     }}>
                         <Icon icon='ArrowLeft' width='24px' />
                         Home
@@ -106,10 +109,10 @@ const Menu = () => {
                 </MenuItem>
             )}
             <MenuItem dropdownItems={[
-                { render: "Metaverse", to: "/" },
-                { render: "NFTs", to: "/" },
-                { render: "DApps", to: "/" },
-                { render: "Blockchain", to: "/" }
+                { render: "Metaverse", to: routerer('marketplaces', 'marketplace_metaverses') },
+                { render: "NFTs", to: routerer('marketplaces', 'marketplace_nfts') },
+                { render: "DApps", to: routerer('marketplaces', 'marketplace_dapps') },
+                { render: "Blockchain", to: routerer('marketplaces', 'marketplace_blockchains') }
             ]}>Marketplaces</MenuItem>
             <MenuItem to='/'>Academy</MenuItem>
             <SearchInputContainer>

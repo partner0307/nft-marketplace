@@ -8,7 +8,7 @@ export const MenuContainer = styled.div`
     gap: 2px;
     border-radius: 16px;
     background: #121112;
-    width: 270px;
+    width: 17rem;
 `;
 
 export const MenuItemContainer = styled.div<{ isLast?: boolean }>`

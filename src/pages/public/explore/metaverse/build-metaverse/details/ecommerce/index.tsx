@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Banner, BannerContent, BannerImage, CustomDropdown, CustomFont, EcommerceContainer, IconBar, Line } from './style';
-import { Flex, P, Span } from '@/components/basic';
+import { Flex, Grid, P, Span } from '@/components/basic';
 import { Dropdown, Icon, Input } from '@/components/custom';
 import EcommerceMenu from '@/components/page/public/explore/ecommerce-menu';
 
@@ -20,7 +20,7 @@ const Ecommerce = () => {
     </Flex>
     <Flex $style={{ gap: '32px' }}>
         <EcommerceMenu />
-        <Flex $style={{ fDirection: 'column', gap: '1.62rem', w: '100%' }}>
+        <Flex $style={{ fDirection: 'column', flex: '1', gap: '1.62rem', w: '100%' }}>
             <Flex>
                 <Banner>
                     <BannerImage src={Image} />
@@ -51,7 +51,7 @@ const Ecommerce = () => {
                     </Flex>
                 </BannerContent>
             </Flex>
-            <Flex $style={{ fWrap: 'wrap', gap: '2rem' }}>
+            <Grid $style={{  columns: '3', gap: '2rem' }}>
                 <EcommerceCard title='Golden Runner' description='Forem ipsum dolor sit amet, cons ectetur adipiscing elit. Nunkkkkrt' reduce_price='$197' current_price='$197' rate={4.5} visitors={12} />
                 <EcommerceCard title='Golden Runner' description='Forem ipsum dolor sit amet, cons ectetur adipiscing elit. Nunkkkkrt' reduce_price='$197' current_price='$197' rate={4.5} visitors={12} />
                 <EcommerceCard title='Golden Runner' description='Forem ipsum dolor sit amet, cons ectetur adipiscing elit. Nunkkkkrt' reduce_price='$197' current_price='$197' rate={4.5} visitors={12} />
@@ -62,7 +62,7 @@ const Ecommerce = () => {
                 <EcommerceCard title='Golden Runner' description='Forem ipsum dolor sit amet, cons ectetur adipiscing elit. Nunkkkkrt' reduce_price='$197' current_price='$197' rate={4.5} visitors={12} />
                 <EcommerceCard title='Golden Runner' description='Forem ipsum dolor sit amet, cons ectetur adipiscing elit. Nunkkkkrt' reduce_price='$197' current_price='$197' rate={4.5} visitors={12} />
                 <EcommerceCard title='Golden Runner' description='Forem ipsum dolor sit amet, cons ectetur adipiscing elit. Nunkkkkrt' reduce_price='$197' current_price='$197' rate={4.5} visitors={12} />
-            </Flex>
+            </Grid>
         </Flex>
     </Flex>
 </EcommerceContainer>

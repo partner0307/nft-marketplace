@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const EcommerCardContainer = styled.div`
     display: flex;
-    width: 17rem;
     padding: 0.5rem 0.5rem 1.5rem 0.5rem;
     flex-direction: column;
     align-items: flex-start;

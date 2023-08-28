@@ -7,7 +7,6 @@ export const LandContainer = styled.div`
 
 export const TitleBar = styled.div`
     display: flex;
-    width: 902px;
     padding: 24px;
     flex-direction: column;
     align-items: flex-start;
@@ -43,7 +42,6 @@ export const ItemContainer = styled.div<{ max?: string }>`
 export const Options = styled.div`
     display: flex;
     width: 440px;
-    flex: 1;
     padding: 24px 24px 32px 24px;
     flex-direction: column;
     border-radius: 16px;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const CommentContainer = styled.div`
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     width: 100%;
 `;
 
