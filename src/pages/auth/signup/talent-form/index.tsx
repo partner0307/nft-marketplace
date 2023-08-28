@@ -43,7 +43,7 @@ const TalentForm = () => {
             </Flex>
             <Flex $style={{ vAlign: 'center', gap: '0.25rem', w: '100%', hAlign: 'center' }}>
                 <CustomFont>Already have an account? </CustomFont>
-                <Link to={_ROUTERS._SIGNIN}><P $style={{ size: '1.25rem', color: 'info' }}>Sign In</P></Link>
+                <Link to={routerer('_SIGNIN')}><P $style={{ size: '1.25rem', color: 'info' }}>Sign In</P></Link>
             </Flex>
         </AuthForm>
     )

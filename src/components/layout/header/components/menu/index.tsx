@@ -57,10 +57,10 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
             containerRef.current.addEventListener("mouseenter", mouseEnterHandle)
             containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
 
-            return () => (
-                containerRef.current.addEventListener("mouseenter", mouseEnterHandle),
-                containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
-            )
+            // return () => (
+            //     containerRef.current.addEventListener("mouseenter", mouseEnterHandle),
+            //     containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
+            // )
         }
     }, [])
 
