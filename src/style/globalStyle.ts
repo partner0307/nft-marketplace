@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
 		-ms-text-size-adjust: 100%;
 		-webkit-text-size-adjust: 100%;
 		overflow-x: hidden;
+		scroll-behavior: smooth;
 
 		@media (max-width: 1200px) {
 			${declearStyleVariables(desVariables, "!important")}

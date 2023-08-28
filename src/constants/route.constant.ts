@@ -24,7 +24,7 @@ const _ROUTERS = {
 	// home routes
 	home: '/',
 	metaverse: 'metaverse/',
-	metaverse_marketplace: 'metaverse-marketplace/',
+	_MARKETPLACE: 'marketplace/',
 	build_metaverse: 'build-metaverse/',
 	buy_nft: 'buy-nft/',
 	sell_nft: 'sell-nft/',
@@ -72,10 +72,9 @@ const _ROUTERS = {
 	nft_collections: 'nft-collections/',
 
 	// marketplaces
-	marketplace_metaverses: 'marketplace-metaverses/',
-	marketplace_nfts: 'marketplace-nfts/',
-	marketplace_dapps: 'marketplace-dapps/',
-	marketplace_blockchains: 'marketplace-blockchains/',
+	_NFT: 'nft/',
+	_DAPP: 'dapp/',
+	_BLOCKCHAIN: 'blockchain/',
 
 	// e-commerce
 	detail: 'detail/',

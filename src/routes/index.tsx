@@ -92,7 +92,7 @@ const routers = createBrowserRouter([
                 ]
             },
             {
-                path: _ROUTERS.metaverse_marketplace,
+                path: _ROUTERS._MARKETPLACE,
                 element: <Marketplace />
             },
             {
@@ -192,19 +192,19 @@ const routers = createBrowserRouter([
                         element: <MarketplaceMetaverses />
                     },
                     {
-                        path: _ROUTERS.marketplace_metaverses,
+                        path: _ROUTERS._MARKETPLACE,
                         element: <MarketplaceMetaverses />
                     },
                     {
-                        path: _ROUTERS.marketplace_nfts,
+                        path: _ROUTERS._NFT,
                         element: <MarketplaceNfts />
                     },
                     {
-                        path: _ROUTERS.marketplace_dapps,
+                        path: _ROUTERS._DAPP,
                         element: <MarketplaceDapps />
                     },
                     {
-                        path: _ROUTERS.marketplace_blockchains,
+                        path: _ROUTERS._BLOCKCHAIN,
                         element: <MarketplaceBlockchains />
                     }
                 ]

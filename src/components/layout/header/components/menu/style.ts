@@ -39,7 +39,7 @@ export const DropdownMenuItem = styled(Link)`
   }
 `;
 
-export const MenuItemContainer = styled.div<{ isActived?: boolean, isDropdown?: boolean }>`
+export const MenuItemContainer = styled.div<{ isBg?: boolean, isActived?: boolean, isDropdown?: boolean }>`
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -54,10 +54,24 @@ export const MenuItemContainer = styled.div<{ isActived?: boolean, isDropdown?: 
   border-radius: ${GV("radius-xs")};
   cursor: pointer;
   transition: all ease-in-out .5s;
-  ${({ isActived }) => isActived ? `
+  ${({ isBg }) => isBg ? `
     border: 1px solid #1C1C1C;
     background: #111;
-  ` : ``}
+  ` : `
+    &:hover {
+      border: 1px solid #1C1C1C;
+      background: #111;
+    }
+  `}
+  ${({ isActived }) => isActived ? `
+    border: 1px solid #1C1C1C;
+    background: #950554;
+  ` : `
+    &:hover {
+      border: 1px solid #1C1C1C;
+      background: #111;
+    }
+  `}
 `;
 
 export const ItemContainer = styled.a<{ isActive?: boolean }>`

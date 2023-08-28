@@ -122,7 +122,7 @@ const Hero = () => {
                 fDirection: "column",
                 vAlign: "center"
             }}>
-                <DownButton><Icon icon='ArrowDown' /></DownButton>
+                <DownButton href='#hire_section'><Icon icon='ArrowDown' /></DownButton>
             </Flex>
         </HeroContainer>
     )

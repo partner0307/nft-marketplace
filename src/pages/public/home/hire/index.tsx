@@ -7,7 +7,7 @@ import { Pagination, Navigation } from "swiper";
 import _ROUTERS from '@/constants/route.constant';
 import { categories, talents } from '@/constants/mockup/tablents';
 
-import { ArrowButton, Avatar, HireContainer, HireWrapper, ImageWrapper, Item, ItemList } from './style';
+import { ArrowButton, Avatar, ContextContainer, HireContainer, HireWrapper, ImageWrapper, Item, ItemList } from './style';
 import { Flex, Heading, P, Span } from '@/components/basic';
 import { GV } from '@/utils/style.util';
 import { Button, Checkbox, Icon } from '@/components/custom';
@@ -52,19 +52,7 @@ const HireSection = () => {
         <React.Fragment>
             <HireContainer>
                 <HireWrapper>
-                    <Flex
-                        as={motion.div}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1.5, delay: 0.5 }}
-                        viewport={{ once: true }}
-                        $style={{
-                            p: "0 10rem 5rem",
-                            vAlign: "center",
-                            maxW: '1440px',
-                            overflow: "hidden"
-                        }}
-                    >
+                    <ContextContainer>
                         <Flex $style={{
                             fDirection: 'column',
                             hAlign: 'flex-start',
@@ -72,22 +60,36 @@ const HireSection = () => {
                             gap: '48px',
                             maxW: "80%"
                         }}>
-                            <Flex $style={{
-                                fDirection: 'column',
-                                vAlign: 'flex-start',
-                                gap: '4.5px'
-                            }}>
-                                <Span $style={{
-                                    size: '20px',
-                                    color: GV('caption-color1')
-                                }}>It's Time To</Span>
-                                <Heading level={1} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
+                            <Flex
+                                $style={{
+                                    fDirection: "column",
+                                    overflow: "hidden"
+                                }}
+                            >
+                                <motion.div
+                                    initial={{ y: "100%" }}
+                                    whileInView={{ y: 0 }}
+                                    transition={{ duration: 1 }}
+                                    viewport={{ once: true, margin: "-200px" }}
+                                >
+                                    <Flex $style={{
+                                        fDirection: 'column',
+                                        vAlign: 'flex-start',
+                                        gap: '4.5px'
+                                    }}>
+                                        <Span $style={{
+                                            size: '20px',
+                                            color: GV('caption-color1')
+                                        }}>It's Time To</Span>
+                                        <Heading level={1} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
+                                    </Flex>
+                                </motion.div>
                             </Flex>
                             <motion.div
-                                initial={{ translateX: "-100%" }}
-                                whileInView={{ translateX: 0 }}
-                                transition={{ duration: 1, delay: 0.5 }}
-                                viewport={{ once: true }}
+                                initial={{ x: "-100%", opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                transition={{ duration: 1 }}
+                                viewport={{ once: true, margin: "-200px" }}
                             >
                                 <ItemList>
                                     {categories.map((category, index) => (
@@ -103,8 +105,8 @@ const HireSection = () => {
                                 as={motion.div}
                                 initial={{ translateX: "100%" }}
                                 whileInView={{ translateX: "0%" }}
-                                transition={{ duration: 1.5, delay: 0.5 }}
-                                viewport={{ once: true }}
+                                transition={{ duration: 1.5 }}
+                                viewport={{ once: true, margin: "-200px" }}
                             >
                                 <img src={Image1} alt="" />
                             </Flex>
@@ -112,8 +114,8 @@ const HireSection = () => {
                                 as={motion.div}
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
-                                transition={{ duration: 1.5, delay: 0.5 }}
-                                viewport={{ once: true }}
+                                transition={{ duration: 1.5 }}
+                                viewport={{ once: true, margin: "-200px" }}
                                 $style={{
                                     fDirection: 'row',
                                     vAlign: 'center',
@@ -125,12 +127,12 @@ const HireSection = () => {
                                 <Avatar src={Avatar1} />
                             </Flex>
                         </ImageWrapper>
-                    </Flex>
+                    </ContextContainer>
                     <motion.div
                         initial={{ translateX: "100%" }}
                         whileInView={{ translateX: "0%" }}
-                        transition={{ duration: 0.5, delay: 0.5 }}
-                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true, margin: "-200px" }}
                     >
                         <Swiper
                             slidesPerView={'auto'}
@@ -150,8 +152,8 @@ const HireSection = () => {
                         as={motion.div}
                         initial={{ translateY: "100%" }}
                         whileInView={{ translateY: "0%" }}
-                        transition={{ duration: 1.5, delay: 0.5 }}
-                        viewport={{ once: true }}
+                        transition={{ duration: 1.5 }}
+                        viewport={{ once: true, margin: "-200px" }}
                         $style={{
                             fDirection: 'row',
                             vAlign: "center",
