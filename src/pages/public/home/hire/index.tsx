@@ -53,15 +53,9 @@ const HireSection = () => {
             <HireContainer>
                 <HireWrapper>
                     <Flex
-                        as={motion.div}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1.5, delay: 0.5 }}
-                        viewport={{ once: true }}
                         $style={{
                             p: "0 10rem 5rem",
                             vAlign: "center",
-                            // maxW: '1440px',
                             overflow: "hidden"
                         }}
                     >
@@ -77,16 +71,30 @@ const HireSection = () => {
                                 vAlign: 'flex-start',
                                 gap: '4.5px'
                             }}>
-                                <Span $style={{
-                                    size: '20px',
-                                    color: GV('caption-color1')
-                                }}>It's Time To</Span>
-                                <Heading level={1} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
+                                <motion.div
+                                    initial={{ translateY: "100%", opacity: 0 }}
+                                    whileInView={{ translateY: 0, opacity: 1 }}
+                                    transition={{ duration: 1, delay: 1 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <Span $style={{
+                                        size: '20px',
+                                        color: GV('caption-color1')
+                                    }}>It's Time To</Span>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ translateY: "100%", opacity: 0 }}
+                                    whileInView={{ translateY: 0, opacity: 1 }}
+                                    transition={{ duration: 1, delay: 1.5 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <Heading level={1} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
+                                </motion.div>
                             </Flex>
                             <motion.div
-                                initial={{ x: -720 }}
-                                whileInView={{ x: 0 }}
-                                transition={{ duration: 2, delay: 0 }}
+                                initial={{ translateX: '-100%', opacity: 0 }}
+                                whileInView={{ translateX: 0, opacity: 1 }}
+                                transition={{ duration: 1, delay: 2 }}
                                 viewport={{ once: true }}
                             >
                                 <ItemList>
@@ -99,15 +107,16 @@ const HireSection = () => {
                             </motion.div>
                         </Flex>
                         <ImageWrapper>
-                            <Flex
-                                as={motion.div}
-                                initial={{ translateX: "120%" }}
-                                whileInView={{ translateX: 0 }}
-                                transition={{ duration: 2, delay: 0 }}
+                            <motion.div
+                                initial={{ translateX: '130%', opacity: 0 }}
+                                whileInView={{ translateX: 0, opacity: 1 }}
+                                transition={{ duration: 1, delay: 2.5 }}
                                 viewport={{ once: true }}
                             >
-                                <img src={Image1} alt="" />
-                            </Flex>
+                                <Flex>
+                                    <img src={Image1} alt="" />
+                                </Flex>
+                            </motion.div>
                             <Flex
                                 as={motion.div}
                                 initial={{ opacity: 0 }}
@@ -127,9 +136,9 @@ const HireSection = () => {
                         </ImageWrapper>
                     </Flex>
                     <motion.div
-                        initial={{ translateX: "100%" }}
-                        whileInView={{ translateX: "0%" }}
-                        transition={{ duration: 0.5, delay: 0.5 }}
+                        initial={{ translateX: "100%", opacity: 0 }}
+                        whileInView={{ translateX: "0%", opacity: 1 }}
+                        transition={{ duration: 1, delay: 2 }}
                         viewport={{ once: true }}
                     >
                         <Swiper
@@ -148,9 +157,9 @@ const HireSection = () => {
                     </motion.div>
                     <Flex
                         as={motion.div}
-                        initial={{ translateY: "100%" }}
-                        whileInView={{ translateY: "0%" }}
-                        transition={{ duration: 1.5, delay: 0.5 }}
+                        initial={{ translateY: "100%", opacity: 0 }}
+                        whileInView={{ translateY: "0%", opacity: 1 }}
+                        transition={{ duration: 1.5, delay: 2 }}
                         viewport={{ once: true }}
                         $style={{
                             fDirection: 'row',

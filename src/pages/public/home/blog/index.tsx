@@ -35,9 +35,9 @@ const Blog = () => {
         <BlogWrapper>
           <Flex
             as={motion.div}
-            initial={{ translateX: "-100%" }}
-            whileInView={{ translateX: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            initial={{ translateX: "-100%", opacity: 0 }}
+            whileInView={{ translateX: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
             viewport={{ once: true }}
             $style={{
               w: "548px"
@@ -126,9 +126,9 @@ const Blog = () => {
             </Flex>
             <Flex
               as={motion.div}
-              initial={{ translateX: "100%" }}
-              whileInView={{ translateX: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              initial={{ translateX: "100%", opacity: 0 }}
+              whileInView={{ translateX: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 1.5 }}
               viewport={{ once: true }}
               $style={{
                 fDirection: "row",
