@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const RealEstateContainer = styled.div`
     display: flex;
-    width: 100%;
-    padding: 24px 32px;
     flex-direction: column;
     gap: 29px;
+    width: 100%;
+    padding: 24px 32px;
     border-radius: 16px;
     border: 1px solid #3D3D3E;
     background: rgba(25, 25, 25, 0.80);
@@ -51,7 +51,7 @@ export const Line = styled.div`
 `;
 
 export const HeroImage = styled.div`
-    width: 560px;
+    flex: 1;
     border-radius: 16px 0px 0px 16px;
     position: relative;
 `;
@@ -81,6 +81,7 @@ export const HeroContent = styled.div`
     padding: 24px 24px 8px;
     background: #780640;
     border-radius: 0 16px 0 0;
+    flex: 1;
 `;
 
 export const HeroContentLine = styled.div`
@@ -90,7 +91,6 @@ export const HeroContentLine = styled.div`
 `;
 
 export const TourButton = styled.div`
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;

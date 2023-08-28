@@ -16,12 +16,12 @@ import {
 
 import { Flex, Heading, P, Span } from "@/components/basic";
 import { Button, Icon } from "@/components/custom";
-import { GV } from "@/utils/style.util";
 
 import BlogImg1 from "@/assets/img/main-blog.png";
 import BlogImg2 from "@/assets/img/blog.png";
 import Image from "@/components/basic/img";
 import NewsLetter from "@/components/custom/newsletter";
+import { GV } from "@/utils/style.util";
 
 const Blog = () => {
   return (
@@ -33,60 +33,61 @@ const Blog = () => {
         }}
       >
         <BlogWrapper>
-          <Flex
-            as={motion.div}
-            initial={{ translateX: "-100%" }}
-            whileInView={{ translateX: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+          <motion.div
+            initial={{ translateX: "-100%", opacity: 0 }}
+            whileInView={{ translateX: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
             viewport={{ once: true }}
+          >
+            <Flex
             $style={{
               w: "548px"
             }}
-          >
-            <MainBlog>
-              {/* <Image src="" /> */}
-              <Image src={BlogImg1} alt="" />
-              <Flex
-                $style={{
-                  fDirection: "column",
-                  vAlign: "flex-start",
-                  gap: "24px",
-                }}
-              >
-                <P $style={{ size: "32px", weight: "900" }}>
-                  Morem ipsum dolor sit amet, consectetur adipiscing elit.
-                </P>
-                <P $style={{ size: "20px" }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                  metus nec fringilla accumsan, risus sem lit sed risus. amet
-                  lacinia. Aliquam in elementum tellus...
-                </P>
+            >
+              <MainBlog>
+                <Image src={BlogImg1} alt="" />
                 <Flex
-                  $style={{ fDirection: "row", hAlign: "center", gap: "30px" }}
+                  $style={{
+                    fDirection: "column",
+                    vAlign: "flex-start",
+                    gap: "24px",
+                  }}
                 >
-                  <Span $style={{ size: "10px" }}>2mins Read</Span>
+                  <P $style={{ size: "32px", weight: "900" }}>
+                    Morem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </P>
+                  <P $style={{ size: "20px" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                    eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                    metus nec fringilla accumsan, risus sem lit sed risus. amet
+                    lacinia. Aliquam in elementum tellus...
+                  </P>
                   <Flex
-                    $style={{ fDirection: "row", hAlign: "center", gap: "8px" }}
+                    $style={{ fDirection: "row", hAlign: "center", gap: "30px" }}
                   >
-                    <Icon icon="HeartBrown" />
-                    <Span $style={{ size: "10px" }}>28</Span>
+                    <Span $style={{ size: "10px" }}>2mins Read</Span>
+                    <Flex
+                      $style={{ fDirection: "row", hAlign: "center", gap: "8px" }}
+                    >
+                      <Icon icon="HeartBrown" />
+                      <Span $style={{ size: "10px" }}>28</Span>
+                    </Flex>
+                    <Flex
+                      $style={{
+                        fDirection: "row",
+                        hAlign: "center",
+                        gap: "8px",
+                      }}
+                    >
+                      <Icon icon="Share" />
+                      <Span $style={{ size: "10px" }}>72</Span>
+                    </Flex>
+                    <Icon icon="Bookmark" />
                   </Flex>
-                  <Flex
-                    $style={{
-                      fDirection: "row",
-                      hAlign: "center",
-                      gap: "8px",
-                    }}
-                  >
-                    <Icon icon="Share" />
-                    <Span $style={{ size: "10px" }}>72</Span>
-                  </Flex>
-                  <Icon icon="Bookmark" />
                 </Flex>
-              </Flex>
-            </MainBlog>
-          </Flex>
+              </MainBlog>
+            </Flex>
+          </motion.div>
           <Flex
             $style={{
               flex: "1",
@@ -95,40 +96,47 @@ const Blog = () => {
               gap: "64px",
             }}
           >
-            <Flex
-              $style={{
-                fDirection: "column",
-                vAlign: "flex-start",
-                gap: "24px",
-              }}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.5, delay: 1.5 }}
+              viewport={{ once: true }}
             >
-              <Heading level={1} $style={{ weight: '900' }}>
-                <ContentColor>News</ContentColor>
-              </Heading>
-              <P
+              <Flex
                 $style={{
-                  size: "20px",
+                  fDirection: "column",
+                  vAlign: "flex-start",
+                  gap: "24px",
                 }}
               >
-                Dorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fring.
-              </P>
-              <Button
-                $style={{
-                  bg: GV("gradient"),
-                  radius: "8px",
-                  p: "6px 64px",
-                }}
-              >
-                See All Post
-              </Button>
-            </Flex>
+                <Heading level={1} $style={{ weight: '900' }}>
+                  <ContentColor>News</ContentColor>
+                </Heading>
+                <P
+                  $style={{
+                    size: "20px",
+                  }}
+                >
+                  Dorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                  metus nec fring.
+                </P>
+                <Button
+                  $style={{
+                    bg: GV("gradient"),
+                    radius: "8px",
+                    p: "6px 64px",
+                  }}
+                >
+                  See All Post
+                </Button>
+              </Flex>
+            </motion.div>
             <Flex
               as={motion.div}
-              initial={{ translateX: "100%" }}
-              whileInView={{ translateX: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              initial={{ translateX: "100%", opacity: 0 }}
+              whileInView={{ translateX: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 2 }}
               viewport={{ once: true }}
               $style={{
                 fDirection: "row",
@@ -259,24 +267,31 @@ const Blog = () => {
         <Avatar1
           initial={{ translateY: "-300px" }}
           whileInView={{ translateY: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.3, delay: 2 }}
           viewport={{ once: true, margin: "-150px" }}
         />
         <Avatar2
           initial={{ translateX: "150px" }}
           whileInView={{ translateX: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.3, delay: 2.2 }}
           viewport={{ once: true, margin: "-150px" }}
         />
         <Avatar3
           initial={{ translateX: "-150px" }}
           whileInView={{ translateX: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.3, delay: 2.5 }}
           viewport={{ once: true, margin: "-150px" }}
         />
-        <Line>
-          <Icon icon="Line" />
-        </Line>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.5 }}
+          viewport={{ once: true }}
+        >
+          <Line>
+            <Icon icon="Line" width="192px" height="523px" />
+          </Line>
+        </motion.div>
       </Reveal>
       <NewsLetter />
     </BlogContainer>

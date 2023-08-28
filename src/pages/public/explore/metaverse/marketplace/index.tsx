@@ -4,10 +4,7 @@ import SubHeader from '@/components/page/public/explore/subheader';
 import { ItemContainer } from '../metaverses/style';
 import { Dropdown } from '@/components/custom';
 import Pagination from '@/components/custom/pagination';
-import Table, { TableFieldInterface } from '@/components/custom/table';
-import { Flex, Span } from '@/components/basic';
-import { tokillo } from '@/utils/util';
-import { metaverses } from '@/constants/mockup/metaverses';
+import { Flex } from '@/components/basic';
 import MetaverseTable from '@/pages/public/home/explore/tables/metaverse';
 
 const tabList = [
@@ -29,7 +26,7 @@ const Marketplace = () => {
         <ItemContainer>
             <Dropdown initialLabel='All Chains' />
         </ItemContainer>} />
-        <Flex $style={{ p: '32px' }}>
+        <Flex $style={{ fDirection: "column", p: '32px', w: '100%' }}>
             <MetaverseTable />
         </Flex>
         <Flex $style={{ p: '0 32px 48px' }}>

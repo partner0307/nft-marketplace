@@ -8,6 +8,7 @@ export const BlogContainer = styled.div`
   flex-direction: column;
   padding: 120px 32px 0;
   position: relative;
+  background: #1E2121;
 `;
 
 export const BlogWrapper = styled.div`

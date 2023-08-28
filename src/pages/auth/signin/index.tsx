@@ -1,10 +1,12 @@
 import React from 'react';
-import { Flex, P, Span } from '@/components/basic';
+import { Flex, P } from '@/components/basic';
 import { AuthForm, CustomButton, CustomFont, CustomFont1, CustomLine, LetterContainer, MarkBar, Rect, Rect1, SigninContainer, SignupButton, SubmitButton } from './style';
 import { Link } from 'react-router-dom';
-import Logo from "@/assets/img/logo.png"
+import Logo from "@/assets/img/logo.png";
+import LetterLogo from '@/assets/img/letter-logo.svg';
 import { Checkbox, Icon, Input } from '@/components/custom';
 import _ROUTERS from '@/constants/route.constant';
+import { routerer } from '@/utils/util';
 
 const Signin = () => {
     return (
@@ -18,10 +20,10 @@ const Signin = () => {
                             gap: '16px'
                         }}>
                             <img src={Logo} />
-                            <Icon icon='Logo' />
+                            <img src={LetterLogo} alt="" />
                         </Flex>
                     </Link>
-                    <SignupButton>Register</SignupButton>
+                    <Link to={routerer('_SIGNUP')}><SignupButton>Register</SignupButton></Link>
                 </MarkBar>
                 <AuthForm>
                     <Flex $style={{ fDirection: 'column', gap: '0.75rem', w: '100%' }}>
@@ -50,7 +52,7 @@ const Signin = () => {
                     </Flex>
                     <Flex $style={{ vAlign: 'center', gap: '0.25rem', w: '100%', hAlign: 'center' }}>
                         <CustomFont1>Don't have an account? </CustomFont1>
-                        <Link to={_ROUTERS._SIGNUP}><P $style={{ size: '1.25rem', color: 'info' }}>Register here</P></Link>
+                        <Link to={routerer('_SIGNUP')}><P $style={{ size: '1.25rem', color: 'info' }}>Register here</P></Link>
                     </Flex>
                 </AuthForm>
             </Flex>

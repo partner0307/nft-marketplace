@@ -52,7 +52,13 @@ const HireSection = () => {
         <React.Fragment>
             <HireContainer>
                 <HireWrapper>
-                    <ContextContainer>
+                    <Flex
+                        $style={{
+                            p: "0 10rem 5rem",
+                            vAlign: "center",
+                            overflow: "hidden"
+                        }}
+                    >
                         <Flex $style={{
                             fDirection: 'column',
                             hAlign: 'flex-start',
@@ -60,36 +66,36 @@ const HireSection = () => {
                             gap: '48px',
                             maxW: "80%"
                         }}>
-                            <Flex
-                                $style={{
-                                    fDirection: "column",
-                                    overflow: "hidden"
-                                }}
-                            >
+                            <Flex $style={{
+                                fDirection: 'column',
+                                vAlign: 'flex-start',
+                                gap: '4.5px'
+                            }}>
                                 <motion.div
-                                    initial={{ y: "100%" }}
-                                    whileInView={{ y: 0 }}
-                                    transition={{ duration: 1 }}
-                                    viewport={{ once: true, margin: "-200px" }}
+                                    initial={{ translateY: "100%", opacity: 0 }}
+                                    whileInView={{ translateY: 0, opacity: 1 }}
+                                    transition={{ duration: 1, delay: 1 }}
+                                    viewport={{ once: true }}
                                 >
-                                    <Flex $style={{
-                                        fDirection: 'column',
-                                        vAlign: 'flex-start',
-                                        gap: '4.5px'
-                                    }}>
-                                        <Span $style={{
-                                            size: '20px',
-                                            color: GV('caption-color1')
-                                        }}>It's Time To</Span>
-                                        <Heading level={1} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
-                                    </Flex>
+                                    <Span $style={{
+                                        size: '20px',
+                                        color: GV('caption-color1')
+                                    }}>It's Time To</Span>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ translateY: "100%", opacity: 0 }}
+                                    whileInView={{ translateY: 0, opacity: 1 }}
+                                    transition={{ duration: 1, delay: 1.5 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <Heading level={1} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
                                 </motion.div>
                             </Flex>
                             <motion.div
-                                initial={{ x: "-100%", opacity: 0 }}
-                                whileInView={{ x: 0, opacity: 1 }}
-                                transition={{ duration: 1 }}
-                                viewport={{ once: true, margin: "-200px" }}
+                                initial={{ translateX: "-100%" }}
+                                whileInView={{ translateX: 0 }}
+                                transition={{ duration: 1, delay: 0.5 }}
+                                viewport={{ once: true }}
                             >
                                 <ItemList>
                                     {categories.map((category, index) => (
@@ -101,21 +107,22 @@ const HireSection = () => {
                             </motion.div>
                         </Flex>
                         <ImageWrapper>
-                            <Flex
-                                as={motion.div}
-                                initial={{ translateX: "100%" }}
-                                whileInView={{ translateX: "0%" }}
-                                transition={{ duration: 1.5 }}
-                                viewport={{ once: true, margin: "-200px" }}
+                            <motion.div
+                                initial={{ translateX: '130%', opacity: 0 }}
+                                whileInView={{ translateX: 0, opacity: 1 }}
+                                transition={{ duration: 1, delay: 2 }}
+                                viewport={{ once: true }}
                             >
-                                <img src={Image1} alt="" />
-                            </Flex>
+                                <Flex>
+                                    <img src={Image1} alt="" />
+                                </Flex>
+                            </motion.div>
                             <Flex
                                 as={motion.div}
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
-                                transition={{ duration: 1.5 }}
-                                viewport={{ once: true, margin: "-200px" }}
+                                transition={{ duration: 1.5, delay: 1.8 }}
+                                viewport={{ once: true }}
                                 $style={{
                                     fDirection: 'row',
                                     vAlign: 'center',
@@ -127,12 +134,12 @@ const HireSection = () => {
                                 <Avatar src={Avatar1} />
                             </Flex>
                         </ImageWrapper>
-                    </ContextContainer>
+                    </Flex>
                     <motion.div
-                        initial={{ translateX: "100%" }}
-                        whileInView={{ translateX: "0%" }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true, margin: "-200px" }}
+                        initial={{ translateX: "100%", opacity: 0 }}
+                        whileInView={{ translateX: "0%", opacity: 1 }}
+                        transition={{ duration: 1, delay: 1.3 }}
+                        viewport={{ once: true }}
                     >
                         <Swiper
                             slidesPerView={'auto'}
@@ -150,10 +157,10 @@ const HireSection = () => {
                     </motion.div>
                     <Flex
                         as={motion.div}
-                        initial={{ translateY: "100%" }}
-                        whileInView={{ translateY: "0%" }}
-                        transition={{ duration: 1.5 }}
-                        viewport={{ once: true, margin: "-200px" }}
+                        initial={{ translateY: "100%", opacity: 0 }}
+                        whileInView={{ translateY: "0%", opacity: 1 }}
+                        transition={{ duration: 1, delay: 0 }}
+                        viewport={{ once: true }}
                         $style={{
                             fDirection: 'row',
                             vAlign: "center",

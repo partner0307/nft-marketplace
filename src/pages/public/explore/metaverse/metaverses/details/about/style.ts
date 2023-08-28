@@ -9,7 +9,7 @@ export const AboutContainer = styled.div`
 
 export const AboutWrapper = styled.div`
     display: flex;
-    width: 903px;
+    flex: 1;
     padding: 24px;
     flex-direction: column;
     align-items: flex-end;
@@ -21,7 +21,6 @@ export const AboutWrapper = styled.div`
 export const Options = styled.div`
     display: flex;
     width: 440px;
-    flex: 1;
     padding: 24px;
     flex-direction: column;
     align-items: flex-start;

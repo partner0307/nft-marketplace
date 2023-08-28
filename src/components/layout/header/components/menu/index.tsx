@@ -32,6 +32,7 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
     const containerRef = useRef<any>(null);
 
     useEffect(() => {
+        console.log(containerRef.current);
         if (containerRef.current === null) return;
     
         const dropdownElement = find(containerRef.current, DropdownMenuContainer);
@@ -58,10 +59,10 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
             containerRef.current.addEventListener("mouseenter", mouseEnterHandle)
             containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
 
-            return () => (
-                containerRef.current.addEventListener("mouseenter", mouseEnterHandle),
-                containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
-            )
+            // return () => (
+            //     containerRef.current.addEventListener("mouseenter", mouseEnterHandle),
+            //     containerRef.current.addEventListener("mouseleave", mouseLeaveHandle)
+            // )
         }
     }, [])
 
@@ -74,7 +75,7 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
             {dropdownItems && (
                 <DropdownMenuContainer>
                     {dropdownItems.map((item, key) => (
-                        <DropdownMenuItem to={item.to} key={key}>{item.render}</DropdownMenuItem>
+                        <Link to=''><DropdownMenuItem to={item.to} key={key}>{item.render}</DropdownMenuItem></Link>
                     ))}
                 </DropdownMenuContainer>
             )}
@@ -101,7 +102,8 @@ const Menu = () => {
             ) : (
                 <MenuItem isBg to='/' onClick={() => dispatch({ type: "toggleMenu", value: { slideOpened: false } })}>
                     <Flex $style={{
-                        gap: "1.5rem"
+                        gap: "1.5rem",
+                        vAlign: "center"
                     }}>
                         <Icon icon='ArrowLeft' width='24px' />
                         Home

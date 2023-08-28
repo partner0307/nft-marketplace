@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const NewsCardContainer = styled.div<{ width?: string }>`
-    ${({ width }) => width ? `width: ${width};` : `width: 392px;`}
     display: flex;
     flex-direction: column;
     gap: 24px;

@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { AnimatedTableContainer, Content, ContentColor, ExploreContainer, TabButton } from './style';
-import { Flex, Heading, P, Span } from '@/components/basic';
-import { Button, Icon } from '@/components/custom';
+import { Content, ExploreContainer, TabButton } from './style';
+import { Flex, Heading, P } from '@/components/basic';
+import { Button } from '@/components/custom';
 import { GV } from '@/utils/style.util';
-import Table, { TableFieldInterface } from '@/components/custom/table';
-import { tokillo } from '@/utils/util';
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom';
 import _ROUTERS from '@/constants/route.constant';
-import { metaverses } from '@/constants/mockup/metaverses';
 import MetaverseTable from './tables/metaverse';
 import NftTable from './tables/nfts';
 import DappTable from './tables/dapps';
@@ -33,7 +30,7 @@ const Explore = () => {
 				as={motion.div}
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
-				transition={{ duration: 2, delay: 0.5 }}
+				transition={{ duration: 2, delay: 1 }}
 				viewport={{ once: true }}
 				$style={{
 					fDirection: 'column',

@@ -32,7 +32,7 @@ const Footer = () => {
                         <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', maxW: '260px', gap: '30px' }}>
                             <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '24px' }}>
                                 <Logo src={LogoImage} />
-                                <Icon icon="Logo2" />
+                                <Icon icon="Logo2" width="180px" height="40px" />
                             </Flex>
                             <P $style={{ size: '16px' }}>Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget  lacus, ut interdum tellus elit sed risus. Maecenas eget lacus, ut interdum tellus elit sed risus. Maecenas eget </P>
                         </Flex>
