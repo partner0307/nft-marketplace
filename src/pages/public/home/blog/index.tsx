@@ -6,6 +6,7 @@ import {
   Avatar3,
   BlogContainer,
   BlogWrapper,
+  ContentColor,
   Line,
   MainBlog,
   Rect,
@@ -13,13 +14,14 @@ import {
   SmallBlog,
 } from "./style";
 
-import { Flex, P, Span } from "@/components/basic";
-import { Icon } from "@/components/custom";
+import { Flex, Heading, P, Span } from "@/components/basic";
+import { Button, Icon } from "@/components/custom";
 
 import BlogImg1 from "@/assets/img/main-blog.png";
 import BlogImg2 from "@/assets/img/blog.png";
 import Image from "@/components/basic/img";
 import NewsLetter from "@/components/custom/newsletter";
+import { GV } from "@/utils/style.util";
 
 const Blog = () => {
   return (
@@ -43,7 +45,6 @@ const Blog = () => {
             }}
             >
               <MainBlog>
-                {/* <Image src="" /> */}
                 <Image src={BlogImg1} alt="" />
                 <Flex
                   $style={{
@@ -99,7 +100,38 @@ const Blog = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1.5, delay: 1.5 }}
-            ></motion.div>
+              viewport={{ once: true }}
+            >
+              <Flex
+                $style={{
+                  fDirection: "column",
+                  vAlign: "flex-start",
+                  gap: "24px",
+                }}
+              >
+                <Heading level={1} $style={{ weight: '900' }}>
+                  <ContentColor>News</ContentColor>
+                </Heading>
+                <P
+                  $style={{
+                    size: "20px",
+                  }}
+                >
+                  Dorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                  metus nec fring.
+                </P>
+                <Button
+                  $style={{
+                    bg: GV("gradient"),
+                    radius: "8px",
+                    p: "6px 64px",
+                  }}
+                >
+                  See All Post
+                </Button>
+              </Flex>
+            </motion.div>
             <Flex
               as={motion.div}
               initial={{ translateX: "100%", opacity: 0 }}
@@ -257,7 +289,7 @@ const Blog = () => {
           viewport={{ once: true }}
         >
           <Line>
-            <Icon icon="Line" />
+            <Icon icon="Line" width="192px" height="523px" />
           </Line>
         </motion.div>
       </Reveal>
