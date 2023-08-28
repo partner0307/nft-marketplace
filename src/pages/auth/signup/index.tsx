@@ -3,9 +3,9 @@ import { Flex } from '@/components/basic';
 import { JoinButton, MarkBar, Rect, Rect1, SignupContainer } from './style';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import Logo from "@/assets/img/logo.png";
-import LetterLogo from '@/assets/img/letter-logo.svg';
 import _ROUTERS from '@/constants/route.constant';
 import { routerer } from '@/utils/util';
+import { Icon } from '@/components/custom';
 
 
 const Signup = () => {
@@ -22,7 +22,7 @@ const Signup = () => {
                             gap: '16px'
                         }}>
                             <img src={Logo} />
-                            <img src={LetterLogo} alt="" />
+                            <Icon icon='Logo2' width='180px' height='38px' />
                         </Flex>
                     </Link>
                     {location.pathname.includes('client') 
