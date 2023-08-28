@@ -88,7 +88,7 @@ export const LeftSide = styled(motion.div)`
   gap: 2rem;
 `;
 
-export const DownButton = styled.button`
+export const DownButton = styled.a`
   display: flex;
   height: 112px;
   margin: 38px 0 86px 0;
