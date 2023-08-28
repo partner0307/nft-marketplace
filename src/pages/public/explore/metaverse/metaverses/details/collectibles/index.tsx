@@ -15,22 +15,11 @@ import SlideTab from '@/components/page/public/explore/slidetab';
 
 const Collectible = () => {
     const [isLive, setLive] = React.useState(false);
-    const [isStatusOpen, setStatusOpen] = React.useState(true);
-    const [isPriceOpen, setPriceOpen] = React.useState(false);
-    const [isPropertyOpen, setPropertyOpen] = React.useState(false);
-    const [isClothOpen, setClothOpen] = React.useState(false);
-    const [isHatOpen, setHasOpen] = React.useState(false);
-    const [isMouthOpen, setMouthOpen] = React.useState(false);
-    const [isEyesOpen, setEyeOpen] = React.useState(false);
-    const [isFurOpen, setFurOpen] = React.useState(false);
-    const [isBackgroundOpen, setBackgroundOpen] = React.useState(false);
-    const [isGlassesOpen, setGlassesOpen] = React.useState(false);
-    const [isEarningOpen, setEarningOpen] = React.useState(false);
 
     return <CollectiblesContainer>
         <Rect />
         <Flex $style={{ w: '100%', gap: '26px', p: '0 0 32px' }}>
-            <Flex $style={{ maxW: '900px', w: '100%', fDirection: 'column', gap: '32px' }}>
+            <Flex $style={{ flex: '1', fDirection: 'column', gap: '32px', w: '100%'  }}>
                 <TitleBar>
                     <Flex $style={{ fDirection: 'column', w: '100%', gap: '20px' }}>
                         <Flex $style={{ vAlign: 'center', gap: '20px', w: '100%' }}>
@@ -38,8 +27,8 @@ const Collectible = () => {
                                 <P $style={{ weight: '600' }}>Live data</P>
                                 {isLive && <Eclipse />}
                             </Flex>
-                            <Input value='' placeholder='Search Collectibles' radius='12px' helpSide={<Icon icon='Search' />} />
-                            <ItemContainer max='200px'>
+                            <Input value='' placeholder='Search Collectibles' padding='0.375rem 0.75rem' radius='12px' helpSide={<Icon icon='Search' />} />
+                            <ItemContainer max='250px'>
                                 <Dropdown initialLabel='Recently Listed' />
                             </ItemContainer>
                         </Flex>

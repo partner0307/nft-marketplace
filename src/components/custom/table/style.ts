@@ -9,6 +9,7 @@ export const StyledTh = styled.div<{ $width?: string }>`
   ${({ $width }) => ($width ? `width: ${$width};` : ``)}
   padding: 1rem 1.5rem;
   font-size: ${GV('font-size-5')};
+  color: ${GV('info')}
 `;
 
 export const StyledTd = styled.div<{ $align?: string; $width?: string }>`

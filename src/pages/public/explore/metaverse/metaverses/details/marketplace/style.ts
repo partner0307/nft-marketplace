@@ -7,7 +7,6 @@ export const MarketplaceContainer = styled.div`
 
 export const TitleBar = styled.div`
     display: flex;
-    width: 902px;
     padding: 24px;
     flex-direction: column;
     align-items: flex-start;
@@ -35,7 +34,6 @@ export const ItemContainer = styled.div<{ max?: string }>`
 export const Options = styled.div`
     display: flex;
     width: 440px;
-    flex: 1;
     padding: 24px 24px 32px 24px;
     flex-direction: column;
     border-radius: 16px;
@@ -61,6 +59,13 @@ export const CustomImage = styled.img<{ w?: string, h?: string, r?: string }>`
     ${({ h }) => h ? `width: ${h};` : ``}
     ${({ r }) => r ? `border-radius: ${r};` :  ``}
     border: 1px solid #7A8799;
+`;
+
+export const CustomText = styled.div`
+    padding: 1rem 0 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 `
 
 export const Eclipse = styled.div`

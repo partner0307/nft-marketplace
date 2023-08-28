@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const TitleBar = styled.div`
     display: flex;
-    width: 902px;
     padding: 24px;
     flex-direction: column;
     align-items: flex-start;
@@ -12,8 +11,9 @@ export const TitleBar = styled.div`
 `;
 
 export const Activity = styled.div`
+    position: relative;
     display: flex;
-    width: 895px;
+    width: 100%;
     height: 524px;
     padding: 24px;
     flex-direction: column;

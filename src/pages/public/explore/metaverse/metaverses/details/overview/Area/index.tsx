@@ -7,8 +7,8 @@ type AreaType = {
 
 const AreaChartComponent: React.FC<AreaType> = ({ data }) => {
     return <>
-        <ResponsiveContainer width='100%' height='100%'>
-            <AreaChart width={900} height={450} data={data} margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
+        <ResponsiveContainer>
+            <AreaChart data={data} margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
                 <defs>
                     <linearGradient id="colorVolume" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="5%" stopColor="#D100BC" stopOpacity={0.9} />

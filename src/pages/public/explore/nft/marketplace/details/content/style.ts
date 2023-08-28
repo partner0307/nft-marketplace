@@ -7,7 +7,6 @@ export const Container = styled.div`
 
 export const TitleBar = styled.div`
     display: flex;
-    width: 902px;
     padding: 24px;
     flex-direction: column;
     align-items: flex-start;

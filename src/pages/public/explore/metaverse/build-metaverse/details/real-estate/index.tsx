@@ -21,7 +21,7 @@ const RealEstate = () => {
                 </CustomDropdown>
             </Flex>
         </Flex>
-        <Flex $style={{ gap: '32px' }}>
+        <Flex $style={{ gap: '32px', vAlign: 'flex-start' }}>
             <MenuContainer>
                 <MenuItem isSelected={tabIndex === 1} onClick={() => setTabIndex(1)}>All</MenuItem>
                 <MenuItem isSelected={tabIndex === 2} onClick={() => setTabIndex(2)}>Residential</MenuItem>
@@ -31,7 +31,7 @@ const RealEstate = () => {
             </MenuContainer>
             <Flex $style={{ fDirection: 'column', gap: '24px', flex: '1' }}>
                 <Link to={routerer("build_metaverse", "real_estate", "overview")}>
-                    <Flex>
+                    <Flex $style={{ maxH: '400px' }}>
                         <HeroImage>
                             <ImageLoader src={HomeImage} />
                             <IconBar>
@@ -41,7 +41,7 @@ const RealEstate = () => {
                                 <Icon icon='Like' />
                             </IconBar>
                         </HeroImage>
-                        <Flex $style={{ fDirection: 'column', flex: '1' }}>
+                        <Flex $style={{ fDirection: 'column', maxW: '300px' }}>
                             <HeroContent>
                                 <P $style={{ size: '20px', weight: '700' }}>Single Family Residential</P>
                                 <HeroContentLine />
@@ -63,7 +63,7 @@ const RealEstate = () => {
                         </Flex>
                     </Flex>
                 </Link>
-                <Grid $style={{ columns: "3", gap: "2rem" }}>
+                <Grid $style={{ columns: "2", gap: "2rem" }}>
                     <RealEstateCard />
                     <RealEstateCard />
                     <RealEstateCard />
