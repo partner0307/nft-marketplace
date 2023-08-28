@@ -30,7 +30,7 @@ const Explore = () => {
 				as={motion.div}
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
-				transition={{ duration: 2, delay: 2 }}
+				transition={{ duration: 2, delay: 1 }}
 				viewport={{ once: true }}
 				$style={{
 					fDirection: 'column',
