@@ -7,7 +7,7 @@ import { Pagination, Navigation } from "swiper";
 import _ROUTERS from '@/constants/route.constant';
 import { categories, talents } from '@/constants/mockup/tablents';
 
-import { ArrowButton, Avatar, ContextContainer, HireContainer, HireWrapper, ImageWrapper, Item, ItemList } from './style';
+import { ArrowButton, Avatar, HireContainer, HireWrapper, ImageWrapper, Item, ItemList } from './style';
 import { Flex, Heading, P, Span } from '@/components/basic';
 import { GV } from '@/utils/style.util';
 import { Button, Checkbox, Icon } from '@/components/custom';
@@ -92,9 +92,9 @@ const HireSection = () => {
                                 </motion.div>
                             </Flex>
                             <motion.div
-                                initial={{ translateX: "-100%" }}
-                                whileInView={{ translateX: 0 }}
-                                transition={{ duration: 1, delay: 0.5 }}
+                                initial={{ translateX: '-100%', opacity: 0 }}
+                                whileInView={{ translateX: 0, opacity: 1 }}
+                                transition={{ duration: 1, delay: 2 }}
                                 viewport={{ once: true }}
                             >
                                 <ItemList>
