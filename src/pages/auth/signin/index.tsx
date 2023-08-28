@@ -2,7 +2,8 @@ import React from 'react';
 import { Flex, P } from '@/components/basic';
 import { AuthForm, CustomButton, CustomFont, CustomFont1, CustomLine, LetterContainer, MarkBar, Rect, Rect1, SigninContainer, SignupButton, SubmitButton } from './style';
 import { Link } from 'react-router-dom';
-import Logo from "@/assets/img/logo.png"
+import Logo from "@/assets/img/logo.png";
+import LetterLogo from '@/assets/img/letter-logo.svg';
 import { Checkbox, Icon, Input } from '@/components/custom';
 import _ROUTERS from '@/constants/route.constant';
 import { routerer } from '@/utils/util';
@@ -19,7 +20,7 @@ const Signin = () => {
                             gap: '16px'
                         }}>
                             <img src={Logo} />
-                            <Icon icon='Logo' />
+                            <img src={LetterLogo} alt="" />
                         </Flex>
                     </Link>
                     <Link to={routerer('_SIGNUP')}><SignupButton>Register</SignupButton></Link>

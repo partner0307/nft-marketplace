@@ -74,7 +74,7 @@ const HireSection = () => {
                                 <motion.div
                                     initial={{ translateY: "100%", opacity: 0 }}
                                     whileInView={{ translateY: 0, opacity: 1 }}
-                                    transition={{ duration: 1, delay: 1 }}
+                                    transition={{ duration: 1, delay: 0.5 }}
                                     viewport={{ once: true }}
                                 >
                                     <Span $style={{
@@ -85,7 +85,7 @@ const HireSection = () => {
                                 <motion.div
                                     initial={{ translateY: "100%", opacity: 0 }}
                                     whileInView={{ translateY: 0, opacity: 1 }}
-                                    transition={{ duration: 1, delay: 1.5 }}
+                                    transition={{ duration: 1, delay: 0.8 }}
                                     viewport={{ once: true }}
                                 >
                                     <Heading level={1} weight='900'>Hire Perfect Talent For Your Web3 Project</Heading>
@@ -94,7 +94,7 @@ const HireSection = () => {
                             <motion.div
                                 initial={{ translateX: '-100%', opacity: 0 }}
                                 whileInView={{ translateX: 0, opacity: 1 }}
-                                transition={{ duration: 1, delay: 2 }}
+                                transition={{ duration: 1, delay: 1 }}
                                 viewport={{ once: true }}
                             >
                                 <ItemList>
@@ -110,7 +110,7 @@ const HireSection = () => {
                             <motion.div
                                 initial={{ translateX: '130%', opacity: 0 }}
                                 whileInView={{ translateX: 0, opacity: 1 }}
-                                transition={{ duration: 1, delay: 2.5 }}
+                                transition={{ duration: 1, delay: 1.5 }}
                                 viewport={{ once: true }}
                             >
                                 <Flex>
@@ -138,7 +138,7 @@ const HireSection = () => {
                     <motion.div
                         initial={{ translateX: "100%", opacity: 0 }}
                         whileInView={{ translateX: "0%", opacity: 1 }}
-                        transition={{ duration: 1, delay: 2 }}
+                        transition={{ duration: 1, delay: 1.3 }}
                         viewport={{ once: true }}
                     >
                         <Swiper
@@ -159,7 +159,7 @@ const HireSection = () => {
                         as={motion.div}
                         initial={{ translateY: "100%", opacity: 0 }}
                         whileInView={{ translateY: "0%", opacity: 1 }}
-                        transition={{ duration: 1.5, delay: 2 }}
+                        transition={{ duration: 1.5, delay: 0.5 }}
                         viewport={{ once: true }}
                         $style={{
                             fDirection: 'row',
