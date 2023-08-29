@@ -45,6 +45,7 @@ import ChooseForm from "@/pages/auth/signup/choose";
 import Category from "@/pages/auth/signup/category";
 import EmailVerify from "@/pages/auth/signup/email-verification";
 import Comment from "@/pages/public/explore/metaverse/metaverses/details/comment";
+import HireTalent from "@/pages/public/explore/hire-talent";
 
 const routers = createBrowserRouter([
     {
@@ -210,6 +211,10 @@ const routers = createBrowserRouter([
                         element: <MarketplaceBlockchains />
                     }
                 ]
+            },
+            {
+                path: _ROUTERS.hire_talents,
+                element: <HireTalent />
             },
             {
                 path: "*",

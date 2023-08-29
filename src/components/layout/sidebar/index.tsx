@@ -89,13 +89,17 @@ const Sidebar = () => {
                             </Flex>
                         </ListItem>
                         <ListItem hideDot>
-                            <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
-                                <ItemIcon src={HireIcon} alt="" />
-                                <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                                    <P $style={{ size: '20px' }}>Hire Talents</P>
-                                    <P>For your web3 projects</P>
-                                </Flex>
-                            </Flex>
+                            <Link to={_ROUTERS.hire_talents}>
+                                <ListItemContainer isOpened={pathname === _ROUTERS.hire_talents}>
+                                    <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
+                                        <ItemIcon src={HireIcon} alt="" />
+                                        <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
+                                            <P $style={{ size: '20px' }}>Hire Talents</P>
+                                            <P>For your web3 projects</P>
+                                        </Flex>
+                                    </Flex>
+                                </ListItemContainer>
+                            </Link>
                         </ListItem>
                         <ListItem hideDot>
                             <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>

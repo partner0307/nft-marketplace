@@ -11,6 +11,8 @@ const variables = {
   error: '#c40941',
   info: '#3dfff3',
 
+  'gray-100': '#94979E',
+
   'red-shadow': '#8264be',
   'purple-shadow': '#dc6062',
   'primary-green': '#19B698',
