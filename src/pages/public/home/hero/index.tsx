@@ -1,7 +1,6 @@
 import React from 'react';
-import { Flex, Heading, P } from '@/components/basic';
+import { Flex } from '@/components/basic';
 import { Button, Icon } from '@/components/custom';
-import { GV } from '@/utils/style.util';
 import { SmallCard, BigCard } from '@/components/page/public/home/screen';
 
 import Screen from '@/assets/img/screen.png';
@@ -12,16 +11,13 @@ import { CenterRect, DownButton, HeroContainer, HoveredHeading } from './style';
 import { motion } from "framer-motion";
 import { FirstRect, SideRect, UpRect } from '@/components/page/public/home/screen/style';
 import { Link } from 'react-router-dom';
+import Anime from 'react-anime';
 import _ROUTERS from '@/constants/route.constant';
 
 const Hero = () => {
     return (
         <HeroContainer>
             <Flex
-                as={motion.div}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: 0.5 }}
                 $style={{
                     fDirection: 'column',
                     vAlign: 'center',
@@ -29,46 +25,54 @@ const Hero = () => {
                     mb: "-3rem"
                 }}
             >
-                <HoveredHeading level={1} $style={{
-                    txtTransform: 'uppercase',
-                    align: "center",
-                    maxW: "34.875rem"
-                }}>All metaverses at one place</HoveredHeading>
+                <Anime
+                    easing="easeInOutSine"
+                    duration={1000}
+                    delay={() => 1000}
+                    translateY={['-10em', '0rem']}
+                    opacity={[0, 1]}
+                >
+                    <HoveredHeading level={1} $style={{
+                        txtTransform: 'uppercase',
+                        align: "center",
+                        maxW: "34.875rem"
+                    }}>All metaverses at one place</HoveredHeading>
+                </Anime>
             </Flex>
             <Flex $style={{
                 vAlign: 'flex-end'
             }}>
-                <Flex
-                    as={motion.div}
-                    initial={{ x: "-100%", opacity: 0 }}
-                    animate={{ x: "0", opacity: 1 }}
-                    transition={{ duration: 1, delay: 1.5 }}
-                    $style={{
-                        fDirection: 'column',
-                    }}
+                <Anime
+                    easing="easeInOutSine"
+                    duration={1500}
+                    delay={() => 2000}
+                    translateX={['-10em', '0rem']}
+                    opacity={[0, 1]}
                 >
-                    <FirstRect position='left' />
-                    <SmallCard image={Screen1} title='LalaVerse' price='1.4ETH' position={"left"} isFirst />
-                    <UpRect position={"left"} />
-                    <Flex $style={{
-                        vAlign: "center"
-                    }}>
-                        <SmallCard image={Screen2} title='Somnium' price='1.4ETH' position={"left"} />
-                        <SideRect />
+                    <Flex
+                        $style={{
+                            fDirection: 'column',
+                        }}
+                    >
+                        <FirstRect position='left' />
+                        <SmallCard image={Screen1} title='LalaVerse' price='1.4ETH' position={"left"} isFirst />
+                        <UpRect position={"left"} />
+                        <Flex $style={{
+                            vAlign: "center"
+                        }}>
+                            <SmallCard image={Screen2} title='Somnium' price='1.4ETH' position={"left"} />
+                            <SideRect />
+                        </Flex>
+                        <UpRect position={"left"} />
+                        <Flex $style={{
+                            vAlign: "center"
+                        }}>
+                            <SmallCard image={Screen3} title='Roblox' price='2.5ETH' position={"left"} />
+                            <SideRect />
+                        </Flex>
                     </Flex>
-                    <UpRect position={"left"} />
-                    <Flex $style={{
-                        vAlign: "center"
-                    }}>
-                        <SmallCard image={Screen3} title='Roblox' price='2.5ETH' position={"left"} />
-                        <SideRect />
-                    </Flex>
-                </Flex>
+                </Anime>
                 <Flex
-                    as={motion.div}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 1.5 }}
                     $style={{
                         flex: '1',
                         fDirection: 'column',
@@ -80,43 +84,64 @@ const Hero = () => {
                     <Flex $style={{
                         hAlign: "center"
                     }}>
-                        <Link to={_ROUTERS.metaverse}>
-                            <Button $style={{
-                                hoveredBg: "#950554",
-                                hoveredBorder: "#ffffff"
-                            }}>See Full Metaverse</Button>
-                        </Link>
+                        <Anime
+                            easing="easeInOutSine"
+                            duration={1500}
+                            delay={() => 1500}
+                            opacity={[0, 1]}
+                        >
+                            <Link to={_ROUTERS.metaverse}>
+                                <Button $style={{
+                                    hoveredBg: "#950554",
+                                    hoveredBorder: "#ffffff"
+                                }}>See Full Metaverse</Button>
+                            </Link>
+                        </Anime>
                     </Flex>
-                    <CenterRect />
-                    <BigCard image={Screen} title='Decentraland' />
+                    <Anime
+                        easing="easeInOutSine"
+                        duration={1500}
+                        delay={() => 1000}
+                        translateY={['20rem', '0rem']}
+                        opacity={[0, 1]}
+                    >
+                        <Flex $style={{ fDirection: 'column' }}>
+                            <CenterRect />
+                            <BigCard image={Screen} title='Decentraland' />
+                        </Flex>
+                    </Anime>
                 </Flex>
-                <Flex
-                    as={motion.div}
-                    initial={{ x: "100%", opacity: 0 }}
-                    animate={{ x: "0", opacity: 1 }}
-                    transition={{ duration: 1, delay: 1.5 }}
-                    $style={{
-                        fDirection: 'column',
-                        vAlign: 'flex-end'
-                    }}
+                <Anime
+                    easing="easeInOutSine"
+                    duration={1500}
+                    delay={() => 2000}
+                    translateX={['10em', '0rem']}
+                    opacity={[0, 1]}
                 >
-                    <FirstRect position='right' />
-                    <SmallCard image={Screen1} title='Geek Metaverse' price='1.4ETH' position={"right"} isFirst />
-                    <UpRect position={"right"} />
-                    <Flex $style={{
-                        vAlign: "center"
-                    }}>
-                        <SideRect />
-                        <SmallCard image={Screen2} title='Illuvium' price='1.4ETH' position={"right"} />
+                    <Flex
+                        $style={{
+                            fDirection: 'column',
+                            vAlign: 'flex-end'
+                        }}
+                    >
+                        <FirstRect position='right' />
+                        <SmallCard image={Screen1} title='Geek Metaverse' price='1.4ETH' position={"right"} isFirst />
+                        <UpRect position={"right"} />
+                        <Flex $style={{
+                            vAlign: "center"
+                        }}>
+                            <SideRect />
+                            <SmallCard image={Screen2} title='Illuvium' price='1.4ETH' position={"right"} />
+                        </Flex>
+                        <UpRect position={"right"} />
+                        <Flex $style={{
+                            vAlign: "center"
+                        }}>
+                            <SideRect />
+                            <SmallCard image={Screen3} title='Fortenite' price='2.5ETH' position={"right"} />
+                        </Flex>
                     </Flex>
-                    <UpRect position={"right"} />
-                    <Flex $style={{
-                        vAlign: "center"
-                    }}>
-                        <SideRect />
-                        <SmallCard image={Screen3} title='Fortenite' price='2.5ETH' position={"right"} />
-                    </Flex>
-                </Flex>
+                </Anime>
             </Flex>
             <Flex $style={{
                 fDirection: "column",
