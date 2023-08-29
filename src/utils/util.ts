@@ -6,4 +6,4 @@ export const tokillo = (n: number) =>
 type RouteKey = keyof typeof _ROUTERS;
 
 export const routerer = (...args: RouteKey[]) => 
-  args.map(route => "/" + _ROUTERS[route].replace("/", "")).join("");
+  args.map(route => "/" + _ROUTERS[route]?.replace("/", "")).join("");

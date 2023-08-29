@@ -45,13 +45,12 @@ export const DropdownItem = styled.div`
 `
 
 export const ItemContainer = styled.div`
-  flex: 1;
   height: 2.5rem;
   padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 200px;
   gap: 0.3rem;
   font-size: ${GV("font-size")};
   border: 1px solid #2b2928;

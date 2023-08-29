@@ -111,12 +111,12 @@ const Menu = () => {
                 </MenuItem>
             )}
             <MenuItem 
-                isActived={location.pathname.split("/")[1] === "marketplace"}
+                isActived={location.pathname.split("/")[1] === "marketplaces"}
                 dropdownItems={[
-                    { render: "Metaverse", to: routerer("_MARKETPLACE", "_NFT") },
-                    { render: "NFTs", to: routerer("_MARKETPLACE", "_NFT") },
-                    { render: "DApps", to: routerer("_MARKETPLACE", "_DAPP") },
-                    { render: "Blockchain", to: routerer("_MARKETPLACE", "_BLOCKCHAIN") }
+                    { render: "Metaverse", to: routerer("_MARKETPLACES", "_METAVERSE") },
+                    { render: "NFTs", to: routerer("_MARKETPLACES", "_NFT") },
+                    { render: "DApps", to: routerer("_MARKETPLACES", "_DAPP") },
+                    { render: "Blockchain", to: routerer("_MARKETPLACES", "_BLOCKCHAIN") }
                 ]}
             >Marketplaces</MenuItem>
             <MenuItem to='/'>Academy</MenuItem>

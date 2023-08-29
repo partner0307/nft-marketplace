@@ -12,7 +12,3 @@ export const ActionButton = styled.button<{ isListed?: boolean }>`
     border-radius: 24px;
     ${({ isListed }) => isListed ? `border: 1px solid ${GV('info')};` : `border: 1px solid #1FDD00;`}
 `
-
-export const GreenColor = styled.div`
-    color: '#1FDD00'
-`

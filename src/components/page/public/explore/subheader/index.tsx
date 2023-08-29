@@ -32,7 +32,7 @@ const SubHeader: React.FC<SubHeaderType> = ({ rightComponent, title, description
                 <ItemContainer>
                     <Dropdown initialLabel='Filter' hideIcon customIcon={<Icon icon='Filter' />} />
                 </ItemContainer>
-                <Flex $style={{ flex: '6' }}>
+                <Flex $style={{ flex: '1' }}>
                     <Input value={keyword} placeholder={isNFT ? 'Search NFTs' : 'Search Metaverse'} padding='6px 12px' helpSide={<Icon icon='Search' />} onChange={(e: any) => setKeyword(e.target.value)} />
                 </Flex>
                 <ItemContainer>

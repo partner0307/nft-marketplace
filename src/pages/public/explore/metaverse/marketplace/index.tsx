@@ -1,7 +1,7 @@
 import React from 'react';
 import { MarketplaceContainer, Rect, Rect1 } from './style';
 import SubHeader from '@/components/page/public/explore/subheader';
-import { ItemContainer } from '../metaverses/style';
+import { ItemContainer } from './style';
 import { Dropdown } from '@/components/custom';
 import Pagination from '@/components/custom/pagination';
 import { Flex } from '@/components/basic';

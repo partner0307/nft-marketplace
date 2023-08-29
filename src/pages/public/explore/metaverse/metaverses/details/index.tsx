@@ -65,7 +65,7 @@ const MetaverseDetails = () => {
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'overview'} onClick={() => navigate(routerer("metaverse", "overview"))}>Overview</CustomTab>
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'collectibles'} onClick={() => navigate(routerer("metaverse", "collectibles"))}>Collectible</CustomTab>
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'land'} onClick={() => navigate(routerer("metaverse", "land"))}>Land</CustomTab>
-                                <CustomTab isActive={location.pathname.split("/")[2] === 'marketplace'} onClick={() => navigate(routerer("metaverse", "marketplace"))}>Marketplace</CustomTab>
+                                <CustomTab isActive={location.pathname.split("/")[2] === 'metaverse_marketplace'} onClick={() => navigate(routerer("metaverse", "metaverse_marketplace"))}>Marketplace</CustomTab>
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'news'} onClick={() => navigate(routerer("metaverse", "news"))}>News</CustomTab>
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'about'} onClick={() => navigate(routerer("metaverse", "about"))}>About</CustomTab>
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'comments'} onClick={() => navigate(routerer("metaverse", "comments"))}>Comments</CustomTab>

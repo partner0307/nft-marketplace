@@ -15,6 +15,7 @@ import Ads from '@/assets/img/menu/ads.png';
 import { usePublicLayoutContext } from '@/layouts/PublicLayout/context';
 import { Link } from 'react-router-dom';
 import _ROUTERS from '@/constants/route.constant';
+import { routerer } from '@/utils/util';
 
 const Sidebar = () => {
     const { hash, pathname, search } = useLocation();
@@ -74,9 +75,7 @@ const Sidebar = () => {
     return (
         <SidebarContainer slideOpened={slideOpened} opened={opened}>
             <SidebarWrapper>
-                <Title>
-                    <P $style={{ weight: '600' }}>Join Community</P>
-                </Title>
+                <Title />
                 <ListContainer>
                     <List dir='column' gap='0'>
                         <ListItem hideDot>
@@ -121,19 +120,19 @@ const Sidebar = () => {
                                 </SlideHand>
                                 <SlideItem $isNFTOpened={isNFTOpened}>
                                     <NestedItemList>
-                                        <Link to={_ROUTERS.metaverse}>
+                                        <Link to={routerer('metaverse')}>
                                             <NestedItem isSelected={pathname === _ROUTERS.metaverse}>
                                                 <Dot />
                                                 <P $style={{ size: '20px' }}>Metaverses</P>
                                             </NestedItem>
                                         </Link>
-                                        <Link to={_ROUTERS._MARKETPLACE}>
-                                            <NestedItem isSelected={pathname === _ROUTERS._MARKETPLACE}>
+                                        <Link to={routerer('marketplace')}>
+                                            <NestedItem isSelected={pathname === _ROUTERS.marketplace}>
                                                 <Dot />
-                                                <P $style={{ size: '20px' }}>_MARKETPLACE</P>
+                                                <P $style={{ size: '20px' }}>Marketplace</P>
                                             </NestedItem>
                                         </Link>
-                                        <Link to={_ROUTERS.build_metaverse}>
+                                        <Link to={routerer('build_metaverse')}>
                                             <NestedItem isSelected={pathname === _ROUTERS.build_metaverse}>
                                                 <Dot />
                                                 <P $style={{ size: '20px' }}>Build Metaverse</P>

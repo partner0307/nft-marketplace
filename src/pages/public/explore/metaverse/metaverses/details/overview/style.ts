@@ -22,6 +22,10 @@ export const Activity = styled.div`
     flex-shrink: 0;
     border-radius: 16px;
     background: #121112;
+
+    & svg {
+        width: 100%;
+    }
 `;
 
 export const Transaction = styled.div`
@@ -48,7 +52,6 @@ export const Sales = styled.div`
 
 export const NewsContainer = styled.div`
     display: flex;
-    flex: 1;
     width: 440px;
     padding: 32px 24px;
     flex-direction: column;

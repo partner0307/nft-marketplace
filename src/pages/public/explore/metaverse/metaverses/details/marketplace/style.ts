@@ -63,6 +63,7 @@ export const CustomImage = styled.img<{ w?: string, h?: string, r?: string }>`
 
 export const CustomText = styled.div`
     padding: 1rem 0 0;
+    width: 180px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

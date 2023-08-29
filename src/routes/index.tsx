@@ -77,7 +77,7 @@ const routers = createBrowserRouter([
                         element: <MetaverseLand />
                     },
                     {
-                        path: _ROUTERS.marketplace,
+                        path: _ROUTERS.metaverse_marketplace,
                         element: <MetaverseMarket />
                     },
                     {
@@ -95,7 +95,7 @@ const routers = createBrowserRouter([
                 ]
             },
             {
-                path: _ROUTERS._MARKETPLACE,
+                path: _ROUTERS.marketplace,
                 element: <Marketplace />
             },
             {
@@ -187,7 +187,7 @@ const routers = createBrowserRouter([
                 ]
             },
             {
-                path: _ROUTERS.marketplaces,
+                path: _ROUTERS._MARKETPLACES,
                 element: <Marketplaces />,
                 children: [
                     {
@@ -195,7 +195,7 @@ const routers = createBrowserRouter([
                         element: <MarketplaceMetaverses />
                     },
                     {
-                        path: _ROUTERS._MARKETPLACE,
+                        path: _ROUTERS._METAVERSE,
                         element: <MarketplaceMetaverses />
                     },
                     {
