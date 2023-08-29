@@ -65,6 +65,10 @@ export const ListItemContainer = styled.div<{ isOpened: boolean }>`
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  &:hover {
+    background: #600031;
+  }
 `;
 
 export const NestedItemList = styled.div`

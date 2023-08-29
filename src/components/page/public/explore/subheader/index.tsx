@@ -5,7 +5,7 @@ import { Dropdown, Icon, Input } from '@/components/custom';
 
 type SubHeaderType = {
     rightComponent?: React.ReactNode
-    title?: string
+    title?: string | React.ReactNode
     description?: string
     tabList?: object[]
     isNFT?: boolean
