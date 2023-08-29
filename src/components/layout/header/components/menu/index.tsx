@@ -10,8 +10,9 @@ import { find, findAll } from 'styled-components/test-utils';
 import { routerer } from '@/utils/util';
 
 interface MenuItemPropsType {
-    isActived?: boolean
+    isBg?: boolean
     to?: string
+    isActived?: boolean
     dropdownItems?: {
         to: string
         render: string | number | React.ReactNode
@@ -21,6 +22,7 @@ interface MenuItemPropsType {
 }
 
 const MenuItem: React.FC<MenuItemPropsType> = ({
+    isBg,
     isActived,
     to,
     dropdownItems,
@@ -65,7 +67,7 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
     }, [])
 
     return (
-        <MenuItemContainer ref={containerRef} isActived={isActived} as={to ? Link : "a"} to={to} {...rest}>
+        <MenuItemContainer ref={containerRef} isBg={isBg} isActived={isActived} as={to ? Link : "a"} to={to} {...rest}>
             {children}
             {dropdownItems && (
                 <Icon icon='ChevronArrowDown' />
@@ -93,12 +95,12 @@ const Menu = () => {
     return (
         <MenuContainer>
             {location.pathname === '/' ? (
-                <MenuItem isActived onClick={() => dispatch({ type: "toggleMenu", value: { slideOpened: !slideOpened } })}>
+                <MenuItem isBg onClick={() => dispatch({ type: "toggleMenu", value: { slideOpened: !slideOpened } })}>
                     Explore
                     <Icon icon='Explore' />
                 </MenuItem>
             ) : (
-                <MenuItem isActived to='/' onClick={() => dispatch({ type: "toggleMenu", value: { slideOpened: false } })}>
+                <MenuItem isBg to='/' onClick={() => dispatch({ type: "toggleMenu", value: { slideOpened: false } })}>
                     <Flex $style={{
                         gap: "1.5rem",
                         vAlign: "center"
@@ -108,12 +110,15 @@ const Menu = () => {
                     </Flex>
                 </MenuItem>
             )}
-            <MenuItem dropdownItems={[
-                { render: "Metaverse", to: routerer('marketplaces', 'marketplace_metaverses') },
-                { render: "NFTs", to: routerer('marketplaces', 'marketplace_nfts') },
-                { render: "DApps", to: routerer('marketplaces', 'marketplace_dapps') },
-                { render: "Blockchain", to: routerer('marketplaces', 'marketplace_blockchains') }
-            ]}>Marketplaces</MenuItem>
+            <MenuItem 
+                isActived={location.pathname.split("/")[1] === "marketplace"}
+                dropdownItems={[
+                    { render: "Metaverse", to: routerer("_MARKETPLACE", "_NFT") },
+                    { render: "NFTs", to: routerer("_MARKETPLACE", "_NFT") },
+                    { render: "DApps", to: routerer("_MARKETPLACE", "_DAPP") },
+                    { render: "Blockchain", to: routerer("_MARKETPLACE", "_BLOCKCHAIN") }
+                ]}
+            >Marketplaces</MenuItem>
             <MenuItem to='/'>Academy</MenuItem>
             <SearchInputContainer>
                 <Input

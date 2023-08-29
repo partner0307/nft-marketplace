@@ -127,10 +127,10 @@ const Sidebar = () => {
                                                 <P $style={{ size: '20px' }}>Metaverses</P>
                                             </NestedItem>
                                         </Link>
-                                        <Link to={_ROUTERS.metaverse_marketplace}>
-                                            <NestedItem isSelected={pathname === _ROUTERS.metaverse_marketplace}>
+                                        <Link to={_ROUTERS._MARKETPLACE}>
+                                            <NestedItem isSelected={pathname === _ROUTERS._MARKETPLACE}>
                                                 <Dot />
-                                                <P $style={{ size: '20px' }}>Marketplace</P>
+                                                <P $style={{ size: '20px' }}>_MARKETPLACE</P>
                                             </NestedItem>
                                         </Link>
                                         <Link to={_ROUTERS.build_metaverse}>
