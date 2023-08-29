@@ -24,10 +24,10 @@ const Marketplaces = () => {
             </StatusBar>
             <Flex $style={{ gap: '4rem' }}>
                 <Flex $style={{ gap: '1.25rem' }}>
-                    <Link to={routerer('marketplaces', 'metaverse')}><CustomTab isActive={location.pathname.includes('marketplace-metaverses') || (location.pathname.endsWith('marketplaces'))}>Metaverses</CustomTab></Link>
-                    <Link to={routerer('marketplaces', '_NFT')}><CustomTab isActive={location.pathname.includes('marketplace-nfts')}>NFTs</CustomTab></Link>
-                    <Link to={routerer('marketplaces', '_DAPP')}><CustomTab isActive={location.pathname.includes('marketplace-dapps')}>DApps</CustomTab></Link>
-                    <Link to={routerer('marketplaces', '_MARKETPLACE')}><CustomTab isActive={location.pathname.includes('marketplace-blockchains')}>Blockchains</CustomTab></Link>
+                    <Link to={routerer('_MARKETPLACES', '_METAVERSE')}><CustomTab isActive={location.pathname.includes('marketplaces/marketplaces-metaverse') || (location.pathname.endsWith('marketplaces'))}>Metaverses</CustomTab></Link>
+                    <Link to={routerer('_MARKETPLACES', '_NFT')}><CustomTab isActive={location.pathname.includes('marketplaces/nft')}>NFTs</CustomTab></Link>
+                    <Link to={routerer('_MARKETPLACES', '_DAPP')}><CustomTab isActive={location.pathname.includes('marketplaces/dapp')}>DApps</CustomTab></Link>
+                    <Link to={routerer('_MARKETPLACES', '_BLOCKCHAIN')}><CustomTab isActive={location.pathname.includes('marketplaces/blockchain')}>Blockchains</CustomTab></Link>
                 </Flex>
                 <Flex $style={{ gap: '1.25rem', w: '100%' }}>
                     <Flex $style={{ flex: '1' }}>
