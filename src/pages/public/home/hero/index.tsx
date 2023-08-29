@@ -28,7 +28,7 @@ const Hero = () => {
                 <Anime
                     easing="easeInOutSine"
                     duration={1000}
-                    delay={() => 1000}
+                    delay={1000}
                     translateY={['-10em', '0rem']}
                     opacity={[0, 1]}
                 >
@@ -42,36 +42,82 @@ const Hero = () => {
             <Flex $style={{
                 vAlign: 'flex-end'
             }}>
-                <Anime
-                    easing="easeInOutSine"
-                    duration={1500}
-                    delay={() => 2000}
-                    translateX={['-10em', '0rem']}
-                    opacity={[0, 1]}
+                <Flex
+                    $style={{
+                        fDirection: 'column',
+                    }}
                 >
-                    <Flex
-                        $style={{
-                            fDirection: 'column',
-                        }}
+                    <Anime
+                        easing="linear"
+                        duration={500}
+                        delay={1000}
+                        translateY={['-2rem', '0rem']}
+                        opacity={[0, 1]}
                     >
-                        <FirstRect position='left' />
+                        <Flex $style={{ hAlign: 'center' }}>
+                            <FirstRect position='left' />
+                        </Flex>
+                    </Anime>
+                    <Anime
+                        easing="easeOutElastic"
+                        duration={500}
+                        delay={1500}
+                        translateX={['-10rem', '0rem']}
+                        opacity={[0, 1]}
+                    >
                         <SmallCard image={Screen1} title='LalaVerse' price='1.4ETH' position={"left"} isFirst />
-                        <UpRect position={"left"} />
+                    </Anime>
+                    <Anime
+                        easing="linear"
+                        duration={500}
+                        delay={2000}
+                        translateY={['-2rem', '0rem']}
+                        opacity={[0, 1]}
+                    >
+                        <Flex $style={{ hAlign: 'center' }}>
+                            <UpRect position={"left"} />
+                        </Flex>
+                    </Anime>
+                    <Anime
+                        easing="easeOutElastic"
+                        duration={500}
+                        delay={2500}
+                        translateX={['-10rem', '0rem']}
+                        opacity={[0, 1]}
+                    >
                         <Flex $style={{
                             vAlign: "center"
                         }}>
                             <SmallCard image={Screen2} title='Somnium' price='1.4ETH' position={"left"} />
                             <SideRect />
                         </Flex>
-                        <UpRect position={"left"} />
+                    </Anime>
+                    <Anime
+                        easing="linear"
+                        duration={500}
+                        delay={2500}
+                        translateY={['-2rem', '0rem']}
+                        opacity={[0, 1]}
+                    >
+                        <Flex $style={{ hAlign: 'center' }}>
+                            <UpRect position={"left"} />
+                        </Flex>
+                    </Anime>
+                    <Anime
+                        easing="easeOutElastic"
+                        duration={500}
+                        delay={3000}
+                        translateX={['-10rem', '0rem']}
+                        opacity={[0, 1]}
+                    >
                         <Flex $style={{
                             vAlign: "center"
                         }}>
                             <SmallCard image={Screen3} title='Roblox' price='2.5ETH' position={"left"} />
                             <SideRect />
                         </Flex>
-                    </Flex>
-                </Anime>
+                    </Anime>
+                </Flex>
                 <Flex
                     $style={{
                         flex: '1',
@@ -87,7 +133,7 @@ const Hero = () => {
                         <Anime
                             easing="easeInOutSine"
                             duration={1500}
-                            delay={() => 1500}
+                            delay={1500}
                             opacity={[0, 1]}
                         >
                             <Link to={_ROUTERS.metaverse}>
@@ -111,37 +157,84 @@ const Hero = () => {
                         </Flex>
                     </Anime>
                 </Flex>
-                <Anime
-                    easing="easeInOutSine"
-                    duration={1500}
-                    delay={() => 2000}
-                    translateX={['10em', '0rem']}
-                    opacity={[0, 1]}
+                <Flex
+                    $style={{
+                        fDirection: 'column'
+                    }}
                 >
-                    <Flex
-                        $style={{
-                            fDirection: 'column',
-                            vAlign: 'flex-end'
-                        }}
+                    <Anime
+                        easing="linear"
+                        duration={500}
+                        delay={6000}
+                        translateY={['2rem', '0rem']}
+                        opacity={[0, 1]}
                     >
-                        <FirstRect position='right' />
-                        <SmallCard image={Screen1} title='Geek Metaverse' price='1.4ETH' position={"right"} isFirst />
-                        <UpRect position={"right"} />
+                        <Flex $style={{ hAlign: 'center' }}>
+                            <FirstRect position='right' />
+                        </Flex>
+                    </Anime>
+                    <Anime
+                        easing="easeOutElastic"
+                        duration={500}
+                        delay={5500}
+                        translateX={['10rem', '0rem']}
+                        opacity={[0, 1]}
+                    >
+                        <Flex $style={{ hAlign: 'flex-end' }}>
+                            <SmallCard image={Screen1} title='Geek Metaverse' price='1.4ETH' position={"right"} isFirst />
+                        </Flex>
+                    </Anime>
+                    <Anime
+                        easing="linear"
+                        duration={500}
+                        delay={5000}
+                        translateY={['2rem', '0rem']}
+                        opacity={[0, 1]}
+                    >
+                        <Flex $style={{ hAlign: 'center' }}>
+                            <UpRect position={"right"} />
+                        </Flex>
+                    </Anime>
+                    <Anime
+                        easing="easeOutElastic"
+                        duration={500}
+                        delay={4500}
+                        translateX={['10rem', '0rem']}
+                        opacity={[0, 1]}
+                    >
                         <Flex $style={{
                             vAlign: "center"
                         }}>
                             <SideRect />
                             <SmallCard image={Screen2} title='Illuvium' price='1.4ETH' position={"right"} />
                         </Flex>
-                        <UpRect position={"right"} />
+                    </Anime>
+                    <Anime
+                        easing="linear"
+                        duration={500}
+                        delay={4000}
+                        translateY={['2rem', '0rem']}
+                        opacity={[0, 1]}
+                    >
+                        <Flex $style={{ hAlign: 'center' }}>
+                            <UpRect position={"right"} />
+                        </Flex>
+                    </Anime>
+                    <Anime
+                        easing="easeOutElastic"
+                        duration={500}
+                        delay={3500}
+                        translateX={['10rem', '0rem']}
+                        opacity={[0, 1]}
+                    >
                         <Flex $style={{
                             vAlign: "center"
                         }}>
                             <SideRect />
                             <SmallCard image={Screen3} title='Fortenite' price='2.5ETH' position={"right"} />
                         </Flex>
-                    </Flex>
-                </Anime>
+                    </Anime>
+                </Flex>
             </Flex>
             <Flex $style={{
                 fDirection: "column",

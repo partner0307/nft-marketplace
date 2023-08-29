@@ -1979,6 +1979,11 @@
     "react-fast-compare" "^3.2.0"
     "shallowequal" "^1.1.0"
 
+"react-intersection-observer@^9.5.2":
+  "integrity" "sha512-EmoV66/yvksJcGa1rdW0nDNc4I1RifDWkT50gXSFnPLYQ4xUptuDD4V7k+Rj1OgVAlww628KLGcxPXFlOkkU/Q=="
+  "resolved" "https://registry.npmjs.org/react-intersection-observer/-/react-intersection-observer-9.5.2.tgz"
+  "version" "9.5.2"
+
 "react-is@^16.10.2", "react-is@^16.13.1", "react-is@^16.7.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
