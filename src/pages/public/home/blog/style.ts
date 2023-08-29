@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import { GV } from '@/utils/style.util';
 import Avatar from "@/assets/img/avatar2.png";
 
@@ -71,7 +70,7 @@ export const Reveal = styled.div`
   margin-top: -32px;
 `;
 
-export const Avatar1 = styled(motion.div)`
+export const Avatar1 = styled.div`
   position: absolute;
   top: 0;
   left: 45%;
@@ -85,7 +84,7 @@ export const Avatar1 = styled(motion.div)`
   z-index: 1;
 `;
 
-export const Avatar2 = styled((motion.div))`
+export const Avatar2 = styled.div`
   position: absolute;
   top: 100px;
   left: 55%;
@@ -99,7 +98,7 @@ export const Avatar2 = styled((motion.div))`
   z-index: 1;
 `;
 
-export const Avatar3 = styled((motion.div))`
+export const Avatar3 = styled.div`
   position: absolute;
   bottom: 70px;
   left: 50%;
