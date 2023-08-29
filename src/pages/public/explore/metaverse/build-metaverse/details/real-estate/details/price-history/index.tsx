@@ -2,7 +2,7 @@ import React from 'react';
 import { Flex, P } from '@/components/basic';
 import Table, { TableFieldInterface } from '@/components/custom/table';
 import { histories } from './mockdata';
-import { ActionButton, GreenColor } from './style';
+import { ActionButton } from './style';
 
 const fields: TableFieldInterface[] = [
     {
@@ -22,7 +22,7 @@ const fields: TableFieldInterface[] = [
         label: 'VALUE',
         render: (d: any, v: any, i: number) => <Flex $style={{ fDirection: 'column', gap: '4px' }}>
             <P $style={{ size: '16px', weight: '700' }}>{v}</P>
-            <P><GreenColor>{v}</GreenColor></P>
+            <P $style={{ color: 'success', size: '0.875rem' }}>{v}</P>
         </Flex>,
         width: '200px'
     },

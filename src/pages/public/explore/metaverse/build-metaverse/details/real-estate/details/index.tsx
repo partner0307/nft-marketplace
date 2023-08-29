@@ -1,7 +1,7 @@
 import React from 'react';
 import SubMenu from '@/components/page/public/explore/submenu';
 import { CustomButton, CustomButton1, CustomFont, CustomTab, DetailsWrapper, HeroContainer, LinearButton, Main, MarkContainer, PageButton, Similars, StatusBar } from './style';
-import { Flex, Heading, List, ListItem, P } from '@/components/basic';
+import { Flex, Grid, Heading, List, ListItem, P } from '@/components/basic';
 import { Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
 
 import Mark from '@/assets/img/metaverse/mana.png';
@@ -11,6 +11,11 @@ import { Line } from 'recharts';
 
 import RealEstateCard from '@/components/page/public/explore/real-estate-card';
 import { routerer } from '@/utils/util';
+import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const RealEstateDetails = () => {
     const [tabIndex, setTabIndex] = React.useState(1);
@@ -57,30 +62,50 @@ const RealEstateDetails = () => {
                 </HeroContainer>
             </Flex>
             <Flex $style={{ hAlign: 'center' }}>
-                <Flex $style={{ fDirection: 'column', gap: '32px', maxW: '1440px', p: '40px 0 200px' }}>
-                    <Flex $style={{ gap: '26px' }}>
-                        <Flex $style={{ fDirection: 'column', gap: '14px', flex: '1' }}>
+                <Flex $style={{ fDirection: 'column', gap: '32px', p: '40px 0 200px', overflow: "hidden" }}>
+                    <Flex $style={{ gap: '26px', vAlign: 'flex-start' }}>
+                        <Flex $style={{ fDirection: 'column', gap: '14px', flex: '1', overflow: "hidden" }}>
                             <Heading level={1}>Single Family Residence</Heading>
                             <Main>
-                                <Flex $style={{ gap: '16px', overflow: 'hidden' }}>
-                                    <CustomTab isActive={pathname.split("/")[3] === "overview"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "overview"))}>Overview</CustomTab>
-                                    <CustomTab isActive={pathname.split("/")[3] === "features"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "features"))}>Features</CustomTab>
-                                    <CustomTab isActive={pathname.split("/")[3] === "price-history"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "price_history"))}>Price History</CustomTab>
-                                    <CustomTab isActive={pathname.split("/")[3] === "monthly-cost"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "monthly_cost"))}>Monthly Cost</CustomTab>
-                                    <CustomTab isActive={pathname.split("/")[3] === "nearby-buildings"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "nearby_buildings"))}>Nearby Buildings</CustomTab>
-                                    <CustomTab isActive={pathname.split("/")[3] === "floor-plan"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "floor_plan"))}>Floor Plan</CustomTab>
-                                    <CustomTab isActive={pathname.split("/")[3] === "images"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "images"))}>Images</CustomTab>
-                                    <CustomTab isActive={pathname.split("/")[3] === "books"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "books"))}>Book Appoinment</CustomTab>
-                                </Flex>
+                                <div style={{overflow: 'auto', width: "100%"}}>
+                                    <Swiper
+                                        slidesPerView={'auto'}
+                                        spaceBetween={5}
+                                        // pagination={{
+                                        //     clickable: true,
+                                        // }}
+                                        navigation
+                                        // modules={[Navigation]}
+                                        // grabCursor={true}
+                                        className="mySwiper"
+                                    >
+                                        <SwiperSlide>
+                                            <CustomTab isActive={pathname.split("/")[3] === "overview"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "overview"))}>Overview</CustomTab>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <CustomTab isActive={pathname.split("/")[3] === "features"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "features"))}>Features</CustomTab>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <CustomTab isActive={pathname.split("/")[3] === "price-history"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "price_history"))}>Price History</CustomTab>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <CustomTab isActive={pathname.split("/")[3] === "monthly-cost"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "monthly_cost"))}>Monthly Cost</CustomTab>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <CustomTab isActive={pathname.split("/")[3] === "nearby-buildings"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "nearby_buildings"))}>Nearby Buildings</CustomTab>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <CustomTab isActive={pathname.split("/")[3] === "floor-plan"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "floor_plan"))}>Floor Plan</CustomTab>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <CustomTab isActive={pathname.split("/")[3] === "images"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "images"))}>Images</CustomTab>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <CustomTab isActive={pathname.split("/")[3] === "books"} onClick={() => navigate(routerer("build_metaverse", "real_estate", "books"))}>Book Appoinment</CustomTab>
+                                        </SwiperSlide>
+                                    </Swiper>
+                                </div>
                                 <Outlet />
-                                {/* {tabIndex === 1 && <Overview />}
-                                {tabIndex === 2 && <Features />}
-                                {tabIndex === 3 && <PriceHistory />}
-                                {tabIndex === 4 && <Cost />}
-                                {tabIndex === 5 && <NearbyBuilding />}
-                                {tabIndex === 6 && <FloorPlan />}
-                                {tabIndex === 7 && <Images />}
-                                {tabIndex === 8 && <Appoinment />} */}
                             </Main>
                         </Flex>
                         <StatusBar>
@@ -113,17 +138,19 @@ const RealEstateDetails = () => {
                             <LinearButton>Book Appointment</LinearButton>
                         </StatusBar>
                     </Flex>
-                    {tabIndex === 1 && <Similars>
-                        <Flex $style={{ w: '100%', hAlign: 'space-between' }}>
-                            <P $style={{ size: '32px', weight: '600' }}>Similar Metaverses</P>
-                            <CustomTab>View more more</CustomTab>
-                        </Flex>
-                        <Flex $style={{ hAlign: 'space-between', w: '100%', fWrap: 'wrap' }}>
-                            <RealEstateCard />
-                            <RealEstateCard />
-                            <RealEstateCard />
-                        </Flex>
-                    </Similars>}
+                    {pathname.split("/")[3] === "overview" && (
+                        <Similars>
+                            <Flex $style={{ w: '100%', hAlign: 'space-between' }}>
+                                <P $style={{ size: '32px', weight: '600' }}>Similar Metaverses</P>
+                                <CustomTab>View more more</CustomTab>
+                            </Flex>
+                            <Grid $style={{ columns: '3', gap: '2rem', w: '100%' }}>
+                                <RealEstateCard />
+                                <RealEstateCard />
+                                <RealEstateCard />
+                            </Grid>
+                        </Similars>
+                    )}
                 </Flex>
             </Flex>
         </DetailsWrapper>

@@ -102,12 +102,58 @@ export const Main = styled.div`
     gap: 48px;
     border-radius: 16px;
     background: #121112;
+
+    
+  .swiper-backface-hidden .swiper-slide {
+    width: fit-content;
+  }
+
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translate(0, -50%);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #666;
+    z-index: 1;
+
+    &:after {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: rotate(45deg);
+        width: 50%;
+        height: 2px;
+        background: #fff;
+        border-radius: 999px;
+        content: "";
+    }
+
+    &:before {
+        position: absolute;
+        bottom: 25%;
+        left: 50%;
+        transform: rotate(-45deg);
+        width: 50%;
+        height: 2px;
+        background: #fff;
+        border-radius: 999px;
+        content: "";
+    }
+
+    &.swiper-button-disabled {
+        display: none;
+    }
+  }
 `;
 
 export const CustomTab = styled.button<{ isActive?: boolean }>`
     padding: 12px 18px;
     gap: 4px;
     border-radius: 32px;
+    white-space: nowrap;
     ${({ isActive }) => isActive ? `background: #D96BFF;` : `background: #191919;`}
     ${({ isActive }) => !isActive ? `border: 1px solid #2B2928;` : ``}
     ${({ isActive }) => isActive ? `font-weight: 600; color: #0C0D0E;` : ``}

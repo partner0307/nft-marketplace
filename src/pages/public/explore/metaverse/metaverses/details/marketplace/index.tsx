@@ -65,7 +65,7 @@ const fields: TableFieldInterface[] = [
         ),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "200px"
+        width: "150px"
     },
     {
         key: "address1",
@@ -77,7 +77,7 @@ const fields: TableFieldInterface[] = [
         ),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "250px"
+        width: "200px"
     },
     {
         key: "address2",
@@ -89,7 +89,7 @@ const fields: TableFieldInterface[] = [
         ),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "250px"
+        width: "200px"
     },
 ]
 

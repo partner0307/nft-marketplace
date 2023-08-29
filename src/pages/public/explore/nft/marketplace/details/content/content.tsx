@@ -36,7 +36,7 @@ const NFTCollections = () => {
                                 {isLive && <Eclipse />}
                             </Flex>
                             <Input value='' placeholder='Search Collectibles' radius='12px' helpSide={<Icon icon='Search' />} />
-                            <ItemContainer max='200px'>
+                            <ItemContainer max='250px'>
                                 <Dropdown initialLabel='Recently Listed' />
                             </ItemContainer>
                         </Flex>

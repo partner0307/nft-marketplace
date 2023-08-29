@@ -154,7 +154,7 @@ const Blog = () => {
                   easing="easeOutSine"
                   duration={1500}
                   delay={anime.stagger(500, { start: 2000 })}
-                  translateY={['-10rem', '0rem']}
+                  translateX={['10rem', '0rem']}
                   opacity={[0, 1]}
                 >
                   <SmallBlog>

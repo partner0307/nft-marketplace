@@ -61,7 +61,7 @@ const metaverse_fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: "uaw",
@@ -69,7 +69,7 @@ const metaverse_fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: "prouaw",
@@ -77,7 +77,7 @@ const metaverse_fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold", color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{v}%</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: "volume",
@@ -92,7 +92,7 @@ const metaverse_fields: TableFieldInterface[] = [
         label: "%Volume",
         render: (i, v) => (<Span $style={{ weight: "bold", color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{v}%</Span>),
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: "uaw24h",

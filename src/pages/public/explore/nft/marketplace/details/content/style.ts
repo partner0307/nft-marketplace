@@ -25,7 +25,7 @@ export const NFTs = styled.div`
 
 export const ItemContainer = styled.div<{ max?: string }>`
   height: 2.5rem;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;

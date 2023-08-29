@@ -21,28 +21,46 @@ const _ROUTERS = {
 	_VERIFY_ENAIL: 'verify-email/',
 	_CATEGORY: 'talent-category/',
 
-	// home routes
+
+
+
+	// submenu routes
 	home: '/',
+	post_project: 'post/',
+	hire_talents: 'hire/',
+	work: 'work/',
 	metaverse: 'metaverse/',
-	_MARKETPLACE: 'marketplace/',
+	marketplace: 'marketplace/',
 	build_metaverse: 'build-metaverse/',
 	buy_nft: 'buy-nft/',
 	sell_nft: 'sell-nft/',
 	nft_marketplace: 'nft-marketplace',
-	hire_talents: 'hire/',
-	post_project: 'post/',
-	work: 'work/',
 	avatar: 'avatar/',
-	marketplaces: 'marketplaces/',
+	staking: 'staking/',
+	
+
+
+
+	// menubar marketplace
+	_MARKETPLACES: 'marketplaces/',
+	_METAVERSE: 'marketplaces-metaverse/',
+	_NFT: 'nft/',
+	_DAPP: 'dapp/',
+	_BLOCKCHAIN: 'blockchain/',
+
+
 
 	// metaverse tabs
 	overview: 'overview/',
 	collectibles: 'collectibles/',
 	land: 'land/',
-	marketplace: 'marketplace/',
+	metaverse_marketplace: 'metaverse_marketplace/',
 	news: 'news/',
 	about: 'about/',
 	comments: 'comments/',
+
+
+
 
 	// build-metaverse routes
 	real_estate: 'real-estate/',
@@ -52,6 +70,10 @@ const _ROUTERS = {
 	sport_nutritions: 'sport-nutritions/',
 	education: 'education/',
 	gaming: 'gaming/',
+
+
+
+
 
 	// real-estate routes
 	features: 'features/',
@@ -65,16 +87,14 @@ const _ROUTERS = {
 	cryptocurrency: 'cryptocurrency/',
 	hotel: 'hotel/',
 	restaurant: 'restaurant/',
-	tab_marketplace: 'marketplace/',
+	real_estate_marketplace: 'real_estate_marketplace/',
+
+
+
 
 	// nft-marketplace
 	nft_details: 'nft-details/',
 	nft_collections: 'nft-collections/',
-
-	// marketplaces
-	_NFT: 'nft/',
-	_DAPP: 'dapp/',
-	_BLOCKCHAIN: 'blockchain/',
 
 	// e-commerce
 	detail: 'detail/',
