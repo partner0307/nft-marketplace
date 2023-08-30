@@ -19,6 +19,10 @@ export const BlogWrapper = styled.div`
   backdrop-filter: blur(10px);
   border-radius: 24px;
   z-index: 100;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const MainBlog = styled.div`
@@ -29,6 +33,10 @@ export const MainBlog = styled.div`
   border: 1px solid #222;
   background: #191919;
   padding: 16px;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const ContentColor = styled.div`
@@ -82,6 +90,11 @@ export const Avatar1 = styled.div`
   border-radius: 138px;
   border: 2px solid #6ed8d2;
   z-index: 1;
+
+  @media (max-width: 1024px) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 export const Avatar2 = styled.div`
@@ -96,6 +109,12 @@ export const Avatar2 = styled.div`
   border-radius: 173px;
   border: 2px solid #6ed8d2;
   z-index: 1;
+
+  @media (max-width: 1024px) {
+    width: 150px;
+    height: 150px;
+    left: 60%;
+  }
 `;
 
 export const Avatar3 = styled.div`
@@ -110,6 +129,11 @@ export const Avatar3 = styled.div`
   border-radius: 229px;
   border: 2px solid #6ed8d2;
   z-index: 1;
+
+  @media (max-width: 1024px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 export const Line = styled.div`

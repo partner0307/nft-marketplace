@@ -59,7 +59,12 @@ const HireSection = () => {
                         $style={{
                             p: "0 10rem 5rem",
                             vAlign: "center",
-                            overflow: "hidden"
+                            overflow: "hidden",
+                            queries: {
+                                1024: {
+                                    p: '0 0 5rem'
+                                }
+                            }
                         }}
                     >
                         <Flex $style={{

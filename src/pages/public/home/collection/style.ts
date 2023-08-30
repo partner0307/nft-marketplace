@@ -11,6 +11,11 @@ export const CollectionContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    padding: 120px 50px;
+    width: 100%;
+  }
 `;
 
 export const CollectionWrapper = styled.div`
@@ -43,6 +48,10 @@ export const CardContainer = styled.div`
   border: 2px solid ${GV("info")};
   border-radius: 12px 0 0 12px;
   background: ${GV("info")};
+
+  @media (max-width: 1024px) {
+    padding: 16px 12px 18px;
+  }
 `;
 
 export const CardWrapper = styled.div`
@@ -89,6 +98,10 @@ export const CardContainer1 = styled.div`
     rgba(205, 154, 43, 0.16) 100%
   );
   backdrop-filter: blur(10px);
+
+  @media (max-width: 1024px) {
+    padding: 16px 16px 0 24px;
+  }
 `;
 
 export const ProgressContainer = styled.div`

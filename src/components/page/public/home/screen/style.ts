@@ -10,6 +10,15 @@ export const SmallCardContainer = styled(Card)<{
   padding: 0.3rem;
   z-index: 5;
 
+  @media (max-width: 1024px) {
+    width: 12rem;
+    > div:first-child {
+      > div {
+        height: 7.3rem;
+      }
+    }
+  }
+
   @media (min-height: 1000px) {
     width: 20rem;
     >div:first-child {

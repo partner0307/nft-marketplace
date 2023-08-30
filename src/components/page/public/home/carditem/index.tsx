@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardAvatar, CardContainer, CardImage, ImageWrapper, MarkWrapper, StatusContainer } from './style';
+import { CardAvatar, CardContainer, CardHero, CardImage, ImageWrapper, MarkWrapper, StatusContainer } from './style';
 
 import { Flex, P, Span } from '@/components/basic';
 import { Icon } from '@/components/custom';
@@ -20,11 +20,12 @@ type CardItemType = {
 
 const CardItem: React.FC<CardItemType> = ({ nft, avatar, name, username, current_price, start_price, reduce_price, reduce_percent }) => {
     return <CardContainer>
-        <CardImage image={nft}>
+        <CardHero>
+            <CardImage src={nft} />
             <MarkWrapper>
                 <Span>Open Sea</Span>
             </MarkWrapper>
-        </CardImage>
+        </CardHero>
         <Flex $style={{
             fDirection: 'row',
             hAlign: 'space-between',
@@ -34,6 +35,7 @@ const CardItem: React.FC<CardItemType> = ({ nft, avatar, name, username, current
             <Flex $style={{
                 fDirection: 'row',
                 hAlign: 'flex-start',
+                vAlign: 'center',
                 gap: '8px'
             }}>
                 <CardAvatar src={avatar} />
