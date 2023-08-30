@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Background from '@/assets/img/metaverse/overview.png'
+import { GV } from '@/utils/style.util';
 
 export const DetailsWrapper = styled.div`
     padding: 0 32px;
@@ -36,9 +37,9 @@ export const MarkContainer = styled.div`
 `;
 
 export const CustomButton = styled.button`
-    font-size: 14px;
+    font-size: ${GV('font-size-5')};
     color: #000;
-    font-weight: 600;
+    font-weight: ${GV('weight-lg')};
     padding: 18px 54px;
     border-radius: 8px;
     background: #F75BB1;
@@ -76,14 +77,14 @@ export const PageButton = styled.div<{ isActive?: false }>`
     align-items: center;
     gap: 10px;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: ${GV('font-size-3')};
     ${({ isActive }) => isActive ? `color: #3D3D3E;` : `color: #ffffff;`}
     ${({ isActive }) => isActive ? `background: #1E1E20;` : ``}
 `;
 
 export const LinearButton = styled.button`
-    font-size: 20px;
-    font-weight: 600;
+    font-size: ${GV('font-size-3')};
+    font-weight: ${GV('weight-lg')};
     width: 100%;
     padding: 12px 0;
     border-radius: 8px;

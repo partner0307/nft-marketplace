@@ -9,6 +9,7 @@ import { Icon, Input, Textarea } from '@/components/custom';
 import { CustomButton, ProfileAvatar, ProfileCard } from './style';
 
 import Avatar from '@/assets/img/avatar1.png';
+import { GV } from '@/utils/style.util';
 
 const Tour = () => {
     return (
@@ -35,8 +36,8 @@ const Tour = () => {
                     <ProfileCard>
                         <ProfileAvatar src={Avatar} />
                         <Flex $style={{ fDirection: 'column', gap: '4px' }}>
-                            <P $style={{ size: '20px', weight: '600' }}>Edward Madarki</P>
-                            <P $style={{ size: '16px' }}>Edward Madarki</P>
+                            <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Edward Madarki</P>
+                            <P $style={{ size: GV('font-size') }}>Edward Madarki</P>
                         </Flex>
                     </ProfileCard>
                     <CustomButton>Submit</CustomButton>

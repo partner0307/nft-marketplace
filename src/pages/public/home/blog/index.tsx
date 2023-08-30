@@ -57,10 +57,10 @@ const Blog = () => {
                       gap: "24px",
                     }}
                   >
-                    <P $style={{ size: "32px", weight: "900" }}>
+                    <P $style={{ size: GV('font-size-2'), weight: GV('weight-xxl') }}>
                       Morem ipsum dolor sit amet, consectetur adipiscing elit.
                     </P>
-                    <P $style={{ size: "20px" }}>
+                    <P $style={{ size: GV('font-size-3') }}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                       eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
                       metus nec fringilla accumsan, risus sem lit sed risus. amet
@@ -69,12 +69,12 @@ const Blog = () => {
                     <Flex
                       $style={{ fDirection: "row", hAlign: "center", gap: "30px" }}
                     >
-                      <Span $style={{ size: "10px" }}>2mins Read</Span>
+                      <Span $style={{ size: GV('font-size-7') }}>2mins Read</Span>
                       <Flex
                         $style={{ fDirection: "row", hAlign: "center", gap: "8px" }}
                       >
                         <Icon icon="HeartBrown" />
-                        <Span $style={{ size: "10px" }}>28</Span>
+                        <Span $style={{ size: GV('font-size-7') }}>28</Span>
                       </Flex>
                       <Flex
                         $style={{
@@ -84,7 +84,7 @@ const Blog = () => {
                         }}
                       >
                         <Icon icon="Share" />
-                        <Span $style={{ size: "10px" }}>72</Span>
+                        <Span $style={{ size: GV('font-size-7') }}>72</Span>
                       </Flex>
                       <Icon icon="Bookmark" />
                     </Flex>
@@ -119,7 +119,7 @@ const Blog = () => {
                   </Heading>
                   <P
                     $style={{
-                      size: "20px",
+                      size: GV('font-size-3'),
                     }}
                   >
                     Dorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -168,15 +168,15 @@ const Blog = () => {
                     >
                       <P
                         $style={{
-                          size: "32px",
-                          weight: "900",
+                          size: GV('font-size-2'),
+                          weight: GV('weight-xxl'),
                         }}
                       >
                         Morem ipsum dolor sit amet, ing elit.
                       </P>
                       <P
                         $style={{
-                          size: "20px",
+                          size: GV('font-size-3'),
                         }}
                       >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -189,7 +189,7 @@ const Blog = () => {
                           gap: "30px",
                         }}
                       >
-                        <Span $style={{ size: "10px" }}>2mins Read</Span>
+                        <Span $style={{ size: GV('font-size-7') }}>2mins Read</Span>
                         <Flex
                           $style={{
                             fDirection: "row",
@@ -198,7 +198,7 @@ const Blog = () => {
                           }}
                         >
                           <Icon icon="HeartBrown" />
-                          <Span $style={{ size: "10px" }}>28</Span>
+                          <Span $style={{ size: GV('font-size-7') }}>28</Span>
                         </Flex>
                         <Flex
                           $style={{
@@ -208,7 +208,7 @@ const Blog = () => {
                           }}
                         >
                           <Icon icon="Share" />
-                          <Span $style={{ size: "10px" }}>72</Span>
+                          <Span $style={{ size: GV('font-size-7') }}>72</Span>
                         </Flex>
                         <Icon icon="Bookmark" />
                       </Flex>
@@ -226,15 +226,15 @@ const Blog = () => {
                     >
                       <P
                         $style={{
-                          size: "32px",
-                          weight: "900",
+                          size: GV('font-size-2'),
+                          weight: GV('weight-xxl'),
                         }}
                       >
                         Morem ipsum dolor sit amet, ing elit.
                       </P>
                       <P
                         $style={{
-                          size: "20px",
+                          size: GV('font-size-3'),
                         }}
                       >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -247,7 +247,7 @@ const Blog = () => {
                           gap: "30px",
                         }}
                       >
-                        <Span $style={{ size: "10px" }}>2mins Read</Span>
+                        <Span $style={{ size: GV('font-size-7') }}>2mins Read</Span>
                         <Flex
                           $style={{
                             fDirection: "row",
@@ -256,7 +256,7 @@ const Blog = () => {
                           }}
                         >
                           <Icon icon="HeartBrown" />
-                          <Span $style={{ size: "10px" }}>28</Span>
+                          <Span $style={{ size: GV('font-size-7') }}>28</Span>
                         </Flex>
                         <Flex
                           $style={{
@@ -266,7 +266,7 @@ const Blog = () => {
                           }}
                         >
                           <Icon icon="Share" />
-                          <Span $style={{ size: "10px" }}>72</Span>
+                          <Span $style={{ size: GV('font-size-7') }}>72</Span>
                         </Flex>
                         <Icon icon="Bookmark" />
                       </Flex>

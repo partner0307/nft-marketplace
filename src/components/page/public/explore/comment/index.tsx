@@ -2,6 +2,7 @@ import { Flex, P } from '@/components/basic';
 import React from 'react';
 import { Avatar, CommentWrapper } from './style';
 import { Icon } from '@/components/custom';
+import { GV } from '@/utils/style.util';
 
 type CommentComponentType = {
     image?: string
@@ -19,7 +20,7 @@ const CommentComponent: React.FC<CommentComponentType> = ({ image, name, date, c
             <Avatar src={image} />
             <Flex $style={{ fDirection: 'column', gap: '16px' }}>
                 <Flex $style={{ vAlign: 'center', gap: '8px' }}>
-                    <P $style={{ size: '20px', weight: '600' }}>{name}</P>
+                    <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>{name}</P>
                     <P>{date}</P>
                 </Flex>
                 <P>{content}</P>

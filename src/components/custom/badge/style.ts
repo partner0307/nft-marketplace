@@ -9,10 +9,10 @@ export const BadgeContainer = styled.div`
   color: ${GV("color-secondary")};
   border: 1px solid ${GV("danger")};
   border-radius: 10rem;
-  font-size: 0.7rem;
+  font-size: ${GV('font-size-6')};
 
   @media (max-width: 768px) {
-    font-size: 0.5rem;
+    font-size: ${GV('font-size-7')};
     border: 1px solid ${GV("danger")};
   }
 `;

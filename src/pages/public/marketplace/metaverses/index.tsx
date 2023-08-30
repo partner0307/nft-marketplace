@@ -12,6 +12,7 @@ import StatusLine from '../chart';
 import { ItemContainer } from '../style';
 import Pagination from '@/components/custom/pagination';
 import EtherImg from "@/assets/img/chains/ethereum.png";
+import { GV } from '@/utils/style.util';
 
 const mockData = [
     {value: 1.5},
@@ -58,7 +59,7 @@ const fields: TableFieldInterface[] = [
                                         }}>
                                             <img src={EtherImg} width={12} height={12} />
                                             <Span $style={{
-                                                size: "12px"
+                                                size: GV('font-size-6')
                                             }}>{network}</Span>
                                         </Flex>
                                     </React.Fragment>
@@ -126,8 +127,8 @@ const MarketplaceMetaverses = () => {
         <Flex $style={{ fDirection: 'column', gap: '1.5rem', w: '100%' }}>
             <Flex $style={{ gap: '6.25rem' }}>
                 <Flex $style={{ fDirection: 'column', gap: '0.8rem', maxW: '36.75rem' }}>
-                    <P $style={{ size: '2rem', weight: '600' }}>Top Ranking Metaverses</P>
-                    <Span $style={{ size: '0.875rem', weight: '400' }}>Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Vorem ipsum dolor sit amet.</Span>
+                    <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Top Ranking Metaverses</P>
+                    <Span $style={{ size: GV('font-size-5'), weight: GV('weight-sm') }}>Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Vorem ipsum dolor sit amet.</Span>
                 </Flex>
                 <Flex $style={{ gap: '0.7rem', w: '100%' }}>
                     <Flex $style={{ flex: '1', maxH: '3rem' }}>
@@ -147,8 +148,8 @@ const MarketplaceMetaverses = () => {
                             <CustomFont>Market Cap</CustomFont>
                             <Icon icon='Info' />
                         </Flex>
-                        <P $style={{ size: '1.25rem', weight: '600' }}>$346,789,356,231.00</P>
-                        <Span $style={{ size: '0.875rem', color: 'success' }}>+34%</Span>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>$346,789,356,231.00</P>
+                        <Span $style={{ size: GV('font-size-5'), color: 'success' }}>+34%</Span>
                     </Flex>
                     <StatusLine data={mockData} color='#1FDD00' />
                 </StatusCard>
@@ -158,8 +159,8 @@ const MarketplaceMetaverses = () => {
                             <CustomFont>Sales Volume</CustomFont>
                             <Icon icon='Info' />
                         </Flex>
-                        <P $style={{ size: '1.25rem', weight: '600' }}>$346,789,356,231.00</P>
-                        <Span $style={{ size: '0.875rem', color: 'success' }}>+34%</Span>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>$346,789,356,231.00</P>
+                        <Span $style={{ size: GV('font-size-5'), color: 'success' }}>+34%</Span>
                     </Flex>
                     <StatusLine data={mockData} color='#1FDD00' />
                 </StatusCard>
@@ -169,15 +170,15 @@ const MarketplaceMetaverses = () => {
                             <CustomFont>Total Sales</CustomFont>
                             <Icon icon='Info' />
                         </Flex>
-                        <P $style={{ size: '1.25rem', weight: '600' }}>$346,789,356,231.00</P>
-                        <Span $style={{ size: '0.875rem', color: 'success' }}>+34%</Span>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>$346,789,356,231.00</P>
+                        <Span $style={{ size: GV('font-size-5'), color: 'success' }}>+34%</Span>
                     </Flex>
                     <StatusLine data={mockData} color='#C40941' />
                 </StatusCard>
             </Flex>
             <Flex $style={{ vAlign: 'center', gap: '0.75rem' }}>
                 <ImageLoader src={IconImage} alt='' />
-                <P $style={{ size: '2rem', weight: '600' }}>Metaverse Market</P>
+                <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Metaverse Market</P>
             </Flex>
             <Flex>
                 <Table data={metaverses} fields={fields} />

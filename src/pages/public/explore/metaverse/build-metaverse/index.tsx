@@ -14,6 +14,7 @@ import EntertainmentIcon from '@/assets/img/build-metaverse/entertainment-icon.p
 import { Link } from 'react-router-dom';
 import _ROUTERS from '@/constants/route.constant';
 import { routerer } from '@/utils/util';
+import { GV } from '@/utils/style.util';
 
 const Build = () => {
     const [keyword, setKeyword] = React.useState('');
@@ -24,7 +25,7 @@ const Build = () => {
             </Flex>
         } />
         <BuildWrapper>
-            <P $style={{ size: '20px', weight: '600' }}>Please select a metaverse area to build in</P>
+            <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Please select a metaverse area to build in</P>
             <Grid $style={{ columns: "3", gap: "2rem" }}>
                 <Builder to={routerer("build_metaverse", "real_estate")} title='Real Estate' image={RealEstate} icon={RealEstateIcon} />
                 <Builder to={routerer("build_metaverse", "ecommerce")} title='Ecommerce' image={Ecommerce} icon={EcommerceIcon} />

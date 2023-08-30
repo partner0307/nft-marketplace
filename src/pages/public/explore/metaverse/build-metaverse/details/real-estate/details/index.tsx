@@ -16,6 +16,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { GV } from '@/utils/style.util';
 
 const RealEstateDetails = () => {
     const [tabIndex, setTabIndex] = React.useState(1);
@@ -29,15 +30,15 @@ const RealEstateDetails = () => {
                 <Flex $style={{ hAlign: 'space-between', vAlign: 'center' }}>
                     <Flex $style={{ gap: '4px', vAlign: 'center' }}>
                         <Link to='/metaverses'>
-                            <P $style={{ size: '14px', weight: '400' }}><CustomFont family='Aeonik'>Metaverse /</CustomFont></P>
+                            <P $style={{ size: GV('font-size-5'), weight: GV('weight-sm') }}><CustomFont family='Aeonik'>Metaverse /</CustomFont></P>
                         </Link>
                         <Link to='/build-metaverse'>
-                            <P $style={{ size: '14px', weight: '400' }}><CustomFont family='Aeonik'>Build Metaverse /</CustomFont></P>
+                            <P $style={{ size: GV('font-size-5'), weight: GV('weight-sm') }}><CustomFont family='Aeonik'>Build Metaverse /</CustomFont></P>
                         </Link>
                         <Link to='/real-estate'>
-                            <P $style={{ size: '14px', weight: '400' }}><CustomFont family='Aeonik'>Real Estate /</CustomFont></P>
+                            <P $style={{ size: GV('font-size-5'), weight: GV('weight-sm') }}><CustomFont family='Aeonik'>Real Estate /</CustomFont></P>
                         </Link>
-                        <P $style={{ size: '14px', weight: '400' }}><CustomFont family='Aeonik'>Single Family Residence</CustomFont></P>
+                        <P $style={{ size: GV('font-size-5'), weight: GV('weight-sm') }}><CustomFont family='Aeonik'>Single Family Residence</CustomFont></P>
                     </Flex>
                     <Flex $style={{ gap: '12px', vAlign: 'center' }}>
                         <PageButton isActive={false}>
@@ -113,10 +114,10 @@ const RealEstateDetails = () => {
                                 <P><CustomFont>Blockchain</CustomFont></P>
                                 <Flex $style={{ fDirection: 'column', gap: '8px' }}>
                                     <Flex $style={{ vAlign: 'center', gap: '12px' }}>
-                                        <P $style={{ size: '32px', weight: '700' }}>$2,587</P>
+                                        <P $style={{ size: GV('font-size-2'), weight: GV('weight-xl') }}>$2,587</P>
                                     </Flex>
                                     <Flex $style={{ vAlign: 'center', hAlign: 'space-between' }}>
-                                        <P $style={{ size: '20px' }}>0.78ETH</P>
+                                        <P $style={{ size: GV('font-size-3') }}>0.78ETH</P>
                                         <img src={Ether} alt="" />
                                     </Flex>
                                 </Flex>
@@ -125,14 +126,14 @@ const RealEstateDetails = () => {
                             <Flex $style={{ vAlign: 'flex-start', w: '100%', hAlign: 'space-between' }}>
                                 <P><CustomFont>Buffer agency fee</CustomFont></P>
                                 <Flex $style={{ fDirection: 'column', gap: '8px' }}>
-                                    <P $style={{ size: '32px', weight: '600' }}>2%</P>
+                                    <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>2%</P>
                                 </Flex>
                             </Flex>
                             <Line />
                             <Flex $style={{ vAlign: 'flex-start', w: '100%', hAlign: 'space-between' }}>
                                 <P><CustomFont>Land</CustomFont></P>
                                 <Flex $style={{ fDirection: 'column', gap: '8px' }}>
-                                    <P $style={{ size: '32px', weight: '600' }}>Land 9466sqft</P>
+                                    <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Land 9466sqft</P>
                                 </Flex>
                             </Flex>
                             <LinearButton>Book Appointment</LinearButton>
@@ -141,7 +142,7 @@ const RealEstateDetails = () => {
                     {pathname.split("/")[3] === "overview" && (
                         <Similars>
                             <Flex $style={{ w: '100%', hAlign: 'space-between' }}>
-                                <P $style={{ size: '32px', weight: '600' }}>Similar Metaverses</P>
+                                <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Similar Metaverses</P>
                                 <CustomTab>View more more</CustomTab>
                             </Flex>
                             <Grid $style={{ columns: '3', gap: '2rem', w: '100%' }}>

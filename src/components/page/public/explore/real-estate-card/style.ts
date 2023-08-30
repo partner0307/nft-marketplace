@@ -1,3 +1,4 @@
+import { GV } from '@/utils/style.util';
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
@@ -24,6 +25,6 @@ export const CardLine = styled.div`
 `;
 
 export const CustomFont = styled.div`
-    font-size: 16px;
+    font-size: ${GV('font-size')};
     color: #B4B4B4;
 `

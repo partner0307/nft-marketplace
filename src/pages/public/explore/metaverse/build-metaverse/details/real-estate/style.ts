@@ -1,3 +1,4 @@
+import { GV } from '@/utils/style.util';
 import styled from 'styled-components';
 
 export const RealEstateContainer = styled.div`
@@ -96,11 +97,11 @@ export const TourButton = styled.div`
     align-items: center;
     background: #0C0D0E;
     border-radius: 0 0 16px 0;
-    font-size: 20px;
+    font-size: ${GV('font-size-3')};
     padding: 20px;
 `
 
 export const CustomFont = styled.div`
     color: #EDB3C4;
-    font-size: 16px;
+    font-size: ${GV('font-size')};
 `

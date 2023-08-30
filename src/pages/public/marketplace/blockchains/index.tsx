@@ -13,6 +13,7 @@ import { ItemContainer } from '../style';
 import Pagination from '@/components/custom/pagination';
 import EtherImg from "@/assets/img/chains/ethereum.png";
 import AaveImg from '@/assets/img/marketplace-icon1.png';
+import { GV } from '@/utils/style.util';
 
 const mockData = [
     {value: 1.5},
@@ -59,7 +60,7 @@ const fields: TableFieldInterface[] = [
                                         }}>
                                             <img src={EtherImg} width={12} height={12} />
                                             <Span $style={{
-                                                size: "12px"
+                                                size: GV('font-size-6')
                                             }}>{network}</Span>
                                         </Flex>
                                     </React.Fragment>
@@ -127,8 +128,8 @@ const MarketplaceBlockchains = () => {
         <Flex $style={{ fDirection: 'column', gap: '1.5rem', w: '100%' }}>
             <Flex $style={{ gap: '6.25rem' }}>
                 <Flex $style={{ fDirection: 'column', gap: '0.8rem', maxW: '36.75rem' }}>
-                    <P $style={{ size: '2rem', weight: '600' }}>Top Cryptocurrencies</P>
-                    <Span $style={{ size: '0.875rem', weight: '400' }}>Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Vorem ipsum dolor sit amet.</Span>
+                    <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Top Cryptocurrencies</P>
+                    <Span $style={{ size: GV('font-size-5'), weight: GV('weight-sm') }}>Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Vorem ipsum dolor sit amet.</Span>
                 </Flex>
                 <Flex $style={{ gap: '0.7rem', w: '100%' }}>
                     <Flex $style={{ flex: '1', maxH: '3rem' }}>
@@ -146,7 +147,7 @@ const MarketplaceBlockchains = () => {
                     <Flex $style={{ w: '100%', hAlign: 'space-between', vAlign: 'center' }}>
                         <Flex $style={{ vAlign: 'center', gap: '0.75rem' }}>
                             <ImageLoader src={IconImage} alt='' />
-                            <P $style={{ size: '1.25rem', weight: '600' }}>Trending</P>
+                            <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Trending</P>
                         </Flex>
                         <CustomButton>View more</CustomButton>
                     </Flex>
@@ -157,12 +158,12 @@ const MarketplaceBlockchains = () => {
                             <Flex $style={{ gap: '0.75rem', vAlign: 'center' }}>
                                 <IconLoader src={AaveImg} />
                                 <Flex $style={{ vAlign: 'center', gap: '0.25rem' }}>
-                                    <P $style={{ size: '1rem', weight: '700' }}>Aave</P>
+                                    <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>Aave</P>
                                     <Icon icon='CircleCheck' />
                                 </Flex>
                             </Flex>
                         </Flex>
-                        <P $style={{ size: '1rem', color: 'success', weight: '600' }}>5.34%</P>
+                        <P $style={{ size: GV('font-size'), color: 'success', weight: GV('weight-lg') }}>5.34%</P>
                     </Flex>
                     <CustomLine />
                     <Flex $style={{ w: '100%', hAlign: 'space-between', vAlign: 'center' }}>
@@ -171,12 +172,12 @@ const MarketplaceBlockchains = () => {
                             <Flex $style={{ gap: '0.75rem', vAlign: 'center' }}>
                                 <IconLoader src={AaveImg} />
                                 <Flex $style={{ vAlign: 'center', gap: '0.25rem' }}>
-                                    <P $style={{ size: '1rem', weight: '700' }}>Aave</P>
+                                    <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>Aave</P>
                                     <Icon icon='CircleCheck' />
                                 </Flex>
                             </Flex>
                         </Flex>
-                        <P $style={{ size: '1rem', color: 'success', weight: '600' }}>5.34%</P>
+                        <P $style={{ size: GV('font-size'), color: 'success', weight: GV('weight-lg') }}>5.34%</P>
                     </Flex>
                     <CustomLine />
                     <Flex $style={{ w: '100%', hAlign: 'space-between', vAlign: 'center' }}>
@@ -185,18 +186,18 @@ const MarketplaceBlockchains = () => {
                             <Flex $style={{ gap: '0.75rem', vAlign: 'center' }}>
                                 <IconLoader src={AaveImg} />
                                 <Flex $style={{ vAlign: 'center', gap: '0.25rem' }}>
-                                    <P $style={{ size: '1rem', weight: '700' }}>Aave</P>
+                                    <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>Aave</P>
                                     <Icon icon='CircleCheck' />
                                 </Flex>
                             </Flex>
                         </Flex>
-                        <P $style={{ size: '1rem', color: 'success', weight: '600' }}>5.34%</P>
+                        <P $style={{ size: GV('font-size'), color: 'success', weight: GV('weight-lg') }}>5.34%</P>
                     </Flex>
                 </StatusCard>
                 <StatusCard>
                     <Flex $style={{ vAlign: 'center', gap: '0.75rem' }}>
                         <Icon icon='Star' />
-                        <P $style={{ size: '1.25rem', weight: '600' }}>Top Community</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Top Community</P>
                     </Flex>
                     <CustomLine />
                     <Flex $style={{ w: '100%', hAlign: 'space-between', vAlign: 'center' }}>
@@ -205,7 +206,7 @@ const MarketplaceBlockchains = () => {
                             <Flex $style={{ gap: '0.75rem', vAlign: 'center' }}>
                                 <IconLoader src={AaveImg} />
                                 <Flex $style={{ vAlign: 'center', gap: '0.25rem' }}>
-                                    <P $style={{ size: '1rem', weight: '700' }}>Aave</P>
+                                    <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>Aave</P>
                                     <Icon icon='CircleCheck' />
                                     <CustomSpan>@community_01</CustomSpan>
                                 </Flex>
@@ -222,7 +223,7 @@ const MarketplaceBlockchains = () => {
                             <Flex $style={{ gap: '0.75rem', vAlign: 'center' }}>
                                 <IconLoader src={AaveImg} />
                                 <Flex $style={{ vAlign: 'center', gap: '0.25rem' }}>
-                                    <P $style={{ size: '1rem', weight: '700' }}>Aave</P>
+                                    <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>Aave</P>
                                     <Icon icon='CircleCheck' />
                                     <CustomSpan>@community_01</CustomSpan>
                                 </Flex>
@@ -239,7 +240,7 @@ const MarketplaceBlockchains = () => {
                             <Flex $style={{ gap: '0.75rem', vAlign: 'center' }}>
                                 <IconLoader src={AaveImg} />
                                 <Flex $style={{ vAlign: 'center', gap: '0.25rem' }}>
-                                    <P $style={{ size: '1rem', weight: '700' }}>Aave</P>
+                                    <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>Aave</P>
                                     <Icon icon='CircleCheck' />
                                     <CustomSpan>@community_01</CustomSpan>
                                 </Flex>
@@ -252,7 +253,7 @@ const MarketplaceBlockchains = () => {
                 </StatusCard>
                 <StatusCard>
                     <Flex $style={{ vAlign: 'center', gap: '0.75rem' }}>
-                        <P $style={{ size: '1.25rem', weight: '600' }}>Fear & Grid Index</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Fear & Grid Index</P>
                         <Icon icon='Info' />
                     </Flex>
                     <GaugeChart />
@@ -260,7 +261,7 @@ const MarketplaceBlockchains = () => {
             </Flex>
             <Flex $style={{ vAlign: 'center', gap: '0.75rem' }}>
                 <ImageLoader src={IconImage} alt='' />
-                <P $style={{ size: '2rem', weight: '600' }}>Top Currencies</P>
+                <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Top Currencies</P>
             </Flex>
             <Flex>
                 <Table data={metaverses} fields={fields} />

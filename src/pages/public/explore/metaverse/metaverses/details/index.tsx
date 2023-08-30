@@ -14,6 +14,7 @@ import Ether from '@/assets/img/metaverse/ether.png';
 import Polygon from '@/assets/img/metaverse/polygon.png';
 import _ROUTERS from '@/constants/route.constant';
 import { routerer } from '@/utils/util';
+import { GV } from '@/utils/style.util';
 
 const MetaverseDetails = () => {
 
@@ -27,10 +28,10 @@ const MetaverseDetails = () => {
                 <Flex $style={{ gap: '4px', vAlign: 'center', }}>
                     <Link to='/metaverses'>
                         <Flex $style={{ hAlign: 'center', vAlign: 'center', gap: '4px', p: '4px' }}>
-                            <P $style={{ size: '14px', weight: '400' }}><CustomFont family='Aeonik'>Metaverse /</CustomFont></P>
+                            <P $style={{ size: GV('font-size-5'), weight: GV('weight-sm') }}><CustomFont family='Aeonik'>Metaverse /</CustomFont></P>
                         </Flex>
                     </Link>
-                    <P $style={{ size: '14px', weight: '400' }}><CustomFont family='Aeonik'>Decentraland</CustomFont></P>
+                    <P $style={{ size: GV('font-size-5'), weight: GV('weight-sm') }}><CustomFont family='Aeonik'>Decentraland</CustomFont></P>
                 </Flex>
                 <HeroContainer>
                     <MarkContainer>
@@ -56,7 +57,7 @@ const MetaverseDetails = () => {
                                 </Flex>
                                 <Flex $style={{ vAlign: 'center', hAlign: 'space-between', maxW: '780px' }}>
                                     <Flex $style={{ maxW: '580px' }}>
-                                        <P $style={{ size: '20px' }}>Decentraland is a decentralized virtual reality platform powered by blockchain technology. Within the Decentraland platform, users can create, experience, and monetize their content and applications.</P>
+                                        <P $style={{ size: GV('font-size-3') }}>Decentraland is a decentralized virtual reality platform powered by blockchain technology. Within the Decentraland platform, users can create, experience, and monetize their content and applications.</P>
                                     </Flex>
                                     <CustomeButton2>Buy Metaverse</CustomeButton2>
                                 </Flex>

@@ -5,6 +5,7 @@ import { Flex, Span } from "@/components/basic";
 import React from "react";
 import { tokillo } from "@/utils/util";
 import EtherImg from "@/assets/img/chains/ethereum.png";
+import { GV } from "@/utils/style.util";
 
 const dapp_fields: TableFieldInterface[] = [
     {
@@ -41,7 +42,7 @@ const dapp_fields: TableFieldInterface[] = [
                                         }}>
                                             <img src={EtherImg} width={12} height={12} />
                                             <Span $style={{
-                                                size: "12px"
+                                                size: GV('font-size-6')
                                             }}>{network}</Span>
                                         </Flex>
                                     </React.Fragment>

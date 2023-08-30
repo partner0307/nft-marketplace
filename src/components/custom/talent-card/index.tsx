@@ -2,6 +2,7 @@ import React from 'react';
 import { Avatar, CardContainer, CardMark, Category, ProfileButton, ReviewContainer } from './style';
 import { Flex, P, Span } from '@/components/basic';
 import { Icon } from '@/components/custom';
+import { GV } from '@/utils/style.util';
 
 const TalentCard: React.FC<{ talent: TablentObject }> = ({ talent }) => {
     const {
@@ -45,7 +46,7 @@ const TalentCard: React.FC<{ talent: TablentObject }> = ({ talent }) => {
                     vAlign: 'center',
                     gap: '8px'
                 }}>
-                    <P $style={{ size: '20px', weight: '600' }}>{name}</P>
+                    <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>{name}</P>
                     <P>{profession}</P>
                     <Flex $style={{
                         fDirection: 'row',

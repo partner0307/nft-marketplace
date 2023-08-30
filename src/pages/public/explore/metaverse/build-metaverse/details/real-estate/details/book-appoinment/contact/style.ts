@@ -22,7 +22,7 @@ export const BookButton = styled.button`
     padding: 12px 24px;
     border-radius: 8px;
     background: ${GV('gradient')};
-    font-size: 20px;
-    font-weight: 600;
+    font-size: ${GV('font-size-3')};
+    font-weight: ${GV('weight-lg')};
     height: 100%;
 `;

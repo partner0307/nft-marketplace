@@ -13,7 +13,7 @@ export const StatusCard = styled.div`
 
 export const CustomFont = styled.div`
     color: #8D8E8D;
-    font-size: 1.25rem;
+    font-size: ${GV('font-size-3')};
 `
 
 export const ItemContainer = styled.div`

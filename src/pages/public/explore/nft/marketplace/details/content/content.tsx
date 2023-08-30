@@ -9,6 +9,7 @@ import Pagination from '@/components/custom/pagination';
 import Image from '@/assets/img/avatar1.png';
 import Avatar from '@/assets/img/avatar1.png';
 import CardItem from '@/components/page/public/home/carditem';
+import { GV } from '@/utils/style.util';
 
 const NFTCollections = () => {
     const [isLive, setLive] = React.useState(false);
@@ -32,7 +33,7 @@ const NFTCollections = () => {
                     <Flex $style={{ fDirection: 'column', w: '100%', gap: '20px' }}>
                         <Flex $style={{ vAlign: 'center', gap: '20px', w: '100%' }}>
                             <Flex $style={{ w: '150px', gap: '12px', vAlign: 'center' }}>
-                                <P $style={{ weight: '600' }}>Live data</P>
+                                <P $style={{ weight: GV('weight-lg') }}>Live data</P>
                                 {isLive && <Eclipse />}
                             </Flex>
                             <Input value='' placeholder='Search Collectibles' radius='12px' helpSide={<Icon icon='Search' />} />
@@ -79,7 +80,7 @@ const NFTCollections = () => {
                 </ItemContainer>
                 <Flex $style={{ fDirection: 'column', gap: '20px', w: '100%' }}>
                     <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setStatusOpen(!isStatusOpen)}>
-                        <P $style={{ size: '20px', weight: '600' }}>Status</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Status</P>
                         {isStatusOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
                     {isStatusOpen && <Flex $style={{ fWrap: 'wrap', gap: '20px', w: '100%' }}>
@@ -91,7 +92,7 @@ const NFTCollections = () => {
                 </Flex>
                 <Flex $style={{ fDirection: 'column', gap: '20px', w: '100%' }}>
                     <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setPriceOpen(!isPriceOpen)}>
-                        <P $style={{ size: '20px', weight: '600' }}>Price</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Price</P>
                         {isPriceOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
                     {isPriceOpen && <>
@@ -104,148 +105,148 @@ const NFTCollections = () => {
                 </Flex>
                 <Flex $style={{ fDirection: 'column', gap: '20px', w: '100%' }}>
                     <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setPropertyOpen(!isPropertyOpen)}>
-                        <P $style={{ size: '20px', weight: '600' }}>Properties</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Properties</P>
                         {isPropertyOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
                     {isPropertyOpen && <Input value='' placeholder='Search properties' padding='6px 12px' helpSide={<Icon icon='Search' />} />}
                 </Flex>
                 <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
                     <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setClothOpen(!isClothOpen)}>
-                        <P $style={{ size: '20px', weight: '600' }}>Clothes</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Clothes</P>
                         {isClothOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
                     {isClothOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>}
                 </Flex>
                 <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
                     <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setHasOpen(!isHatOpen)}>
-                        <P $style={{ size: '20px', weight: '600' }}>Hat</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Hat</P>
                         {isHatOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
                     {isHatOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>}
                 </Flex>
                 <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
                     <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setMouthOpen(!isMouthOpen)}>
-                        <P $style={{ size: '20px', weight: '600' }}>Mouth</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Mouth</P>
                         {isMouthOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
                     {isMouthOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>}
                 </Flex>
                 <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
                     <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setEyeOpen(!isEyesOpen)}>
-                        <P $style={{ size: '20px', weight: '600' }}>Eyes</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Eyes</P>
                         {isEyesOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
                     {isEyesOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>}
                 </Flex>
                 <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
                     <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setFurOpen(!isFurOpen)}>
-                        <P $style={{ size: '20px', weight: '600' }}>Fur</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Fur</P>
                         {isFurOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
                     {isFurOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>}
                 </Flex>
                 <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
                     <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setBackgroundOpen(!isBackgroundOpen)}>
-                        <P $style={{ size: '20px', weight: '600' }}>Background</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Background</P>
                         {isBackgroundOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
                     {isBackgroundOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>}
                 </Flex>
                 <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
                     <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setGlassesOpen(!isGlassesOpen)}>
-                        <P $style={{ size: '20px', weight: '600' }}>Glasses</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Glasses</P>
                         {isGlassesOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
                     {isGlassesOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>}
                 </Flex>
                 <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
                     <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setEarningOpen(!isEarningOpen)}>
-                        <P $style={{ size: '20px', weight: '600' }}>Earning</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Earning</P>
                         {isEarningOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
                     {isEarningOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>}
                 </Flex>

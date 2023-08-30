@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, P } from "@/components/basic"
 import { Hr, SlideTabContainer, SlideTabContent, SlideTabContentWrapper } from "./style"
 import { Icon } from "@/components/custom";
+import { GV } from "@/utils/style.util";
 
 interface SlideTabPropsInterface {
     label: string;
@@ -28,7 +29,7 @@ const SlideTab: React.FC<SlideTabPropsInterface> = ({ label, isDefaultOpened, ch
     return (
         <SlideTabContainer>
             <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setOpened(!opened)}>
-                <P $style={{ size: '20px', weight: '600' }}>{label}</P>
+                <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>{label}</P>
                 {opened ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
             </Flex>
             <SlideTabContent ref={slideTabContentRef}>

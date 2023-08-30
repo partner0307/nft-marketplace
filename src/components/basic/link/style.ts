@@ -1,3 +1,4 @@
+import { GV } from "@/utils/style.util";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -11,7 +12,7 @@ export type StyledLinkPropsType = {
 export const StyledLink = styled(Link)<StyledLinkPropsType>`
   display: inline-flex;
   align-items: center;
-  font-size: 0.875rem;
+  font-size: ${GV('font-size-5')};
   ${({ decorator }) => (decorator ? `text-decoration: ${decorator};` : ``)}
   ${({ offset }) => (offset ? `text-underline-offset: ${offset};` : ``)}
     ${({ textTransform }) =>
@@ -19,6 +20,6 @@ export const StyledLink = styled(Link)<StyledLinkPropsType>`
     ${({ color }) => (color ? `color: ${color};` : ``)}
 
     @media (max-width: 768px) {
-    font-size: 0.5rem;
+    font-size: ${GV('font-size-6')};
   }
 `;

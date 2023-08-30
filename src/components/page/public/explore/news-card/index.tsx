@@ -5,12 +5,13 @@ import Img from '@/assets/img/avatar1.png';
 import { Flex, P, Span } from '@/components/basic';
 import { Icon } from '@/components/custom';
 import Image from '@/components/basic/img';
+import { GV } from '@/utils/style.util';
 
 const NewsCard = () => {
     return <NewsCardContainer>
         <Image src={Img} alt='' $style={{ h: '14.125rem' }} />
-        <P $style={{ size: '32px', weight: '900' }}>BBC host Asia verse on Decentraland th...</P>
-        <P $style={{ size: '20px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, entum tellus...</P>
+        <P $style={{ size: GV('font-size-2'), weight: GV('weight-xxl') }}>BBC host Asia verse on Decentraland th...</P>
+        <P $style={{ size: GV('font-size-3') }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, entum tellus...</P>
         <Flex
             $style={{
                 fDirection: "row",
@@ -18,7 +19,7 @@ const NewsCard = () => {
                 gap: "30px",
             }}
         >
-            <Span $style={{ size: "10px" }}>2mins Read</Span>
+            <Span $style={{ size: GV('font-size-7') }}>2mins Read</Span>
             <Flex
                 $style={{
                     fDirection: "row",
@@ -27,7 +28,7 @@ const NewsCard = () => {
                 }}
             >
                 <Icon icon="HeartBrown" />
-                <Span $style={{ size: "10px" }}>28</Span>
+                <Span $style={{ size: GV('font-size-7') }}>28</Span>
             </Flex>
             <Flex
                 $style={{
@@ -37,7 +38,7 @@ const NewsCard = () => {
                 }}
             >
                 <Icon icon="Share" />
-                <Span $style={{ size: "10px" }}>72</Span>
+                <Span $style={{ size: GV('font-size-7') }}>72</Span>
             </Flex>
             <Icon icon="Bookmark" />
         </Flex>

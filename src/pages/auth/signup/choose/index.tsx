@@ -8,6 +8,7 @@ import { ActiveRadioOption, InActiveRadioOption } from '../radio';
 import { Link, useNavigate } from 'react-router-dom';
 import _ROUTERS from '@/constants/route.constant';
 import { routerer } from '@/utils/util';
+import { GV } from '@/utils/style.util';
 
 const ChooseForm = () => {
     const [clientOrTalent, setClientOrTalent] = React.useState(0);
@@ -22,15 +23,15 @@ const ChooseForm = () => {
 
     return (
         <AuthForm>
-            <P $style={{ size: '2rem', weight: '700', align: 'center' }}>JOIN AS A CLIENT OR TALENT</P>
+            <P $style={{ size: GV('font-size-2'), weight: GV('weight-xl'), align: 'center' }}>JOIN AS A CLIENT OR TALENT</P>
             <Flex $style={{ gap: '2rem' }}>
                 <CardOption onClick={() => setClientOrTalent(1)}>
                     <TalentCardImageContainer option={clientOrTalent}>
                         <img src={Client} alt="" width='100%' height='100%' />
                     </TalentCardImageContainer>
                     <CardContent>
-                        <P $style={{ size: '1.25rem', weight: '700', align: 'center' }}>I Am A Client</P>
-                        <P $style={{ size: '1.25rem', align: 'center' }}>I am hiring for a talent while exploring the metaverse and other features.</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-xl'), align: 'center' }}>I Am A Client</P>
+                        <P $style={{ size: GV('font-size-3'), align: 'center' }}>I am hiring for a talent while exploring the metaverse and other features.</P>
                     </CardContent>
                     <Pattern isSelected={clientOrTalent === 1} />
                     {clientOrTalent === 1 ? <ActiveRadioOption /> : <InActiveRadioOption />}
@@ -40,8 +41,8 @@ const ChooseForm = () => {
                         <img src={Talent} alt="" width='100%' height='100%' />
                     </ClientCardImageContainer>
                     <CardContent>
-                        <P $style={{ size: '1.25rem', weight: '700', align: 'center' }}>I Am A Talent</P>
-                        <P $style={{ size: '1.25rem', align: 'center' }}>I am a talent looking for work in the metaverse</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-xl'), align: 'center' }}>I Am A Talent</P>
+                        <P $style={{ size: GV('font-size-3'), align: 'center' }}>I am a talent looking for work in the metaverse</P>
                     </CardContent>
                     <Pattern isSelected={clientOrTalent === 2} />
                     {clientOrTalent === 2 ? <ActiveRadioOption /> : <InActiveRadioOption />}
@@ -50,7 +51,7 @@ const ChooseForm = () => {
             <SubmitButton isActive={clientOrTalent > 0} onClick={handleContinue}>Continue</SubmitButton>
             <Flex $style={{ vAlign: 'center', gap: '0.25rem', w: '100%', hAlign: 'center' }}>
                 <CustomFont1>Already have an account? </CustomFont1>
-                <Link to={routerer('_SIGNIN')}><P $style={{ size: '1.25rem', color: 'info' }}>Sign In</P></Link>
+                <Link to={routerer('_SIGNIN')}><P $style={{ size: GV('font-size-3'), color: 'info' }}>Sign In</P></Link>
             </Flex>
         </AuthForm>
     )

@@ -42,6 +42,7 @@ const variables = {
   font2: 'Neue Haas Grotesk Display Pro',
   font3: 'Aeonik',
 
+  'weight-xxl': '900',
   'weight-xl': '700',
   'weight-lg': '600',
   'weight-md': '500',
@@ -52,15 +53,16 @@ const variables = {
   'font-size-2': '2rem',
   'font-size-3': '1.25rem',
   'font-size-4': '1rem',
-  'font-size-5': '0.75rem',
-  'font-size-6': '0.5rem',
+  'font-size-5': '0.875rem',
+  'font-size-6': '0.75rem',
+  'font-size-7': '0.5rem',
 
   'line-height': '1.35',
 };
 
 export const desVariables = {
   'font-size': '14px',
-  'font-size-1': '4rem',
+  'font-size-1': '2.5rem',
   'font-size-3': '1.5rem',
   'font-size-4': '1.3rem',
 };

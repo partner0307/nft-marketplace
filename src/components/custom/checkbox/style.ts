@@ -7,8 +7,8 @@ export const CheckboxContainer = styled.div<{ isChecked: boolean }>`
   gap: 0.5rem;
   ${({ isChecked }) =>
     isChecked ? `color: #430E41;` : `color: ${GV("white")};`}
-  ${({ isChecked }) => (isChecked ? `font-weight: 600;` : ``)}
-    font-size: 20px;
+  ${({ isChecked }) => (isChecked ? `font-weight: ${GV('weight-lg')};` : ``)}
+    font-size: ${GV('font-size-3')};
 `;
 
 export const StyledCheckbox = styled.div<{ isChecked: boolean, width?: string, height?: string }>`

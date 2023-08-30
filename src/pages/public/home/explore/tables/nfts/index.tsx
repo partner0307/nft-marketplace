@@ -5,6 +5,7 @@ import { Flex, Span } from "@/components/basic";
 import React from "react";
 import { tokillo } from "@/utils/util";
 import EtherImg from "@/assets/img/chains/ethereum.png";
+import { GV } from "@/utils/style.util";
 
 const nft_fields: TableFieldInterface[] = [
     {
@@ -41,7 +42,7 @@ const nft_fields: TableFieldInterface[] = [
                                         }}>
                                             <img src={EtherImg} width={12} height={12} />
                                             <Span $style={{
-                                                size: "12px"
+                                                size: GV('font-size-6')
                                             }}>{network}</Span>
                                         </Flex>
                                     </React.Fragment>
@@ -61,7 +62,7 @@ const nft_fields: TableFieldInterface[] = [
         render: (i, v, n) => (
             <Flex $style={{ fDirection: 'column' }}>
                 <Span $style={{ weight: 'bold' }}>{tokillo(v)}</Span>
-                <Span $style={{ size: '14px', color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.floorpercent}%</Span>
+                <Span $style={{ size: GV('font-size-5'), color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.floorpercent}%</Span>
             </Flex>
         ),
         sort: (i: any, v: any) => v,
@@ -74,7 +75,7 @@ const nft_fields: TableFieldInterface[] = [
         render: (i, v, n) => (
             <Flex $style={{ fDirection: 'column' }}>
                 <Span $style={{ weight: 'bold' }}>{tokillo(v)}</Span>
-                <Span $style={{ size: '14px', color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.avgpercent}%</Span>
+                <Span $style={{ size: GV('font-size-5'), color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.avgpercent}%</Span>
             </Flex>
         ),
         sort: (i: any, v: any) => v,
@@ -87,7 +88,7 @@ const nft_fields: TableFieldInterface[] = [
         render: (i, v, n) => (
             <Flex $style={{ fDirection: 'column' }}>
                 <Span $style={{ weight: 'bold' }}>{tokillo(v)}</Span>
-                <Span $style={{ size: '14px', color: v < 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.mktpercent}%</Span>
+                <Span $style={{ size: GV('font-size-5'), color: v < 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.mktpercent}%</Span>
             </Flex>
         ),
         sort: (i: any, v: any) => v,
@@ -100,7 +101,7 @@ const nft_fields: TableFieldInterface[] = [
         render: (i, v, n) => (
             <Flex $style={{ fDirection: 'column' }}>
                 <Span $style={{ weight: 'bold' }}>{tokillo(v)}</Span>
-                <Span $style={{ size: '14px', color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.volumepercent}%</Span>
+                <Span $style={{ size: GV('font-size-5'), color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{i.volumepercent}%</Span>
             </Flex>
         ),
         sort: (i: any, v: any) => v,

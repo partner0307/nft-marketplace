@@ -20,7 +20,7 @@ const NFT: React.FC<NFTType> = ({ image, name, price, network, usd, isCount }) =
         <Flex $style={{ fDirection: 'column', gap: '14px' }}>
             <Image src={image || ""} alt='' $style={{ h: '15.18456rem' }} />
             <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                <P $style={{ size: '20px', color: 'info', weight: GV("weight-xl") }}>{name}</P>
+                <P $style={{ size: GV('font-size-3'), color: 'info', weight: GV("weight-xl") }}>{name}</P>
                 <Flex $style={{ gap: '2px' }}>
                     <IconWrapper>
                         <img src={Ether} alt="" width='100%' />

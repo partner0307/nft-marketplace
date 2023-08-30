@@ -32,7 +32,7 @@ const Explore = () => {
 				>
 					<Heading level={1}><Content>Explore The Marketplace</Content></Heading>
 					<Flex $style={{ maxW: '700px' }}>
-						<P $style={{ size: '20px', align: 'center' }}>Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut vulputate nisi. Integer in felis </P>
+						<P $style={{ size: GV('font-size-3'), align: 'center' }}>Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut vulputate nisi. Integer in felis </P>
 					</Flex>
 				</Anime>
 			</Flex>}

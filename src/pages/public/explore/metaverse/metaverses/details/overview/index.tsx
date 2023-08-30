@@ -46,7 +46,7 @@ const Overview = () => {
             <Flex $style={{ fDirection: 'column', gap: '32px', flex: '1' }}>
                 <TitleBar>
                     <Flex $style={{ fDirection: 'column', w: '100%', gap: '20px' }}>
-                        <P $style={{ size: '32px', weight: '600' }}>Decentraland Stat</P>
+                        <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Decentraland Stat</P>
                         <Flex $style={{ w: '500px' }}>
                             <TimeBar />
                         </Flex>
@@ -60,7 +60,7 @@ const Overview = () => {
                 </TitleBar>
                 <Activity>
                     <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                        <P $style={{ size: '32px', weight: '600' }}>Market Activities</P>
+                        <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Market Activities</P>
                         <Icon icon='Zoom' />
                     </Flex>
                     <Flex $style={{ hAlign: 'flex-end', gap: '24px', w: '100%' }}>
@@ -77,7 +77,7 @@ const Overview = () => {
                 </Activity>
                 <Transaction>
                     <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                        <P $style={{ size: '32px', weight: '600' }}>Wallet Transactions</P>
+                        <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Wallet Transactions</P>
                         <Icon icon='Zoom' />
                     </Flex>
                     <Flex $style={{ vAlign: 'center', gap: '200px' }}>
@@ -100,7 +100,7 @@ const Overview = () => {
                 </Transaction>
                 <Sales>
                     <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                        <P $style={{ size: '32px', weight: '600' }}>Top 3 Sales</P>
+                        <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Top 3 Sales</P>
                         <CustomButton><P>View more</P></CustomButton>
                     </Flex>
                     <Flex $style={{ gap: '32px' }}>
@@ -112,7 +112,7 @@ const Overview = () => {
             </Flex>
             <NewsContainer>
                 <Flex $style={{ w: '100%' }}>
-                    <P $style={{ size: '32px', weight: '600' }}>Decentraland News</P>
+                    <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Decentraland News</P>
                 </Flex>
                 <NewsCard />
                 <NewsCard />
@@ -124,7 +124,7 @@ const Overview = () => {
         </Flex>
         <Similars>
             <Flex $style={{ w: '100%', hAlign: 'space-between' }}>
-                <P $style={{ size: '32px', weight: '600' }}>Similar Metaverses</P>
+                <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Similar Metaverses</P>
                 <CustomButton>View more news</CustomButton>
             </Flex>
             <Flex $style={{ gap: '32px' }}>

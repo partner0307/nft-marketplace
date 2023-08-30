@@ -40,6 +40,7 @@ export const HeroContainer = styled.div`
     position: absolute;
     top: 3rem;
     left: 50%;
+    width: 100%;
     transform: translate(-50%);
     @media (min-height: 960px) {
       top: 5rem;

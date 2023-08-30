@@ -7,13 +7,14 @@ import HomeImage from '@/assets/img/home.png';
 import RealEstateCard from '@/components/page/public/explore/real-estate-card';
 import { Link } from 'react-router-dom';
 import { routerer } from '@/utils/util';
+import { GV } from '@/utils/style.util';
 
 const RealEstate = () => {
     const [tabIndex, setTabIndex] = React.useState(1);
 
     return <RealEstateContainer>
         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-            <P $style={{ size: '32px', weight: '700' }}>Real Estate</P>
+            <P $style={{ size: GV('font-size-2'), weight: GV('weight-xl') }}>Real Estate</P>
             <Flex $style={{ gap: '12px', vAlign: 'center' }}>
                 <Input value='' placeholder='Search...' padding='6px 12px' helpSide={<Icon icon='Search' />} />
                 <CustomDropdown>
@@ -43,7 +44,7 @@ const RealEstate = () => {
                         </HeroImage>
                         <Flex $style={{ fDirection: 'column', maxW: '300px' }}>
                             <HeroContent>
-                                <P $style={{ size: '20px', weight: '700' }}>Single Family Residential</P>
+                                <P $style={{ size: GV('font-size-3'), weight: GV('weight-xl') }}>Single Family Residential</P>
                                 <HeroContentLine />
                                 <List dir='column'>
                                     <ListItem><CustomFont>Built in 1989</CustomFont></ListItem>
@@ -55,7 +56,7 @@ const RealEstate = () => {
                                 </List>
                                 <HeroContentLine />
                                 <Flex $style={{ fDirection: 'column' }}>
-                                    <P $style={{ size: '32px', weight: '700' }}>$197</P>
+                                    <P $style={{ size: GV('font-size-2'), weight: GV('weight-xl') }}>$197</P>
                                     <CustomFont>price/sqft</CustomFont>
                                 </Flex>
                             </HeroContent>

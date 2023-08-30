@@ -4,6 +4,7 @@ import React from 'react';
 import { BookButton, ProfileAvatar, ProfileCard } from './style';
 
 import Avatar from '@/assets/img/avatar1.png';
+import { GV } from '@/utils/style.util';
 
 const Contact = () => {
     return <Flex $style={{ gap: '32px' }}>
@@ -21,8 +22,8 @@ const Contact = () => {
     <Flex $style={{ fDirection: 'column', gap: '32px', maxW: '200px' }}>
         <ProfileCard>
             <ProfileAvatar src={Avatar} />
-            <P $style={{ size: '20px', weight: '600' }}>Edward Madarki</P>
-            <P $style={{ size: '16px' }}>info@metaverse.com</P>
+            <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Edward Madarki</P>
+            <P $style={{ size: GV('font-size') }}>info@metaverse.com</P>
         </ProfileCard>
         <BookButton>Book Appointment</BookButton>
     </Flex>

@@ -7,6 +7,7 @@ import LetterLogo from '@/assets/img/letter-logo.svg';
 import { Checkbox, Icon, Input } from '@/components/custom';
 import _ROUTERS from '@/constants/route.constant';
 import { routerer } from '@/utils/util';
+import { GV } from '@/utils/style.util';
 
 const Signin = () => {
     return (
@@ -27,8 +28,8 @@ const Signin = () => {
                 </MarkBar>
                 <AuthForm>
                     <Flex $style={{ fDirection: 'column', gap: '0.75rem', w: '100%' }}>
-                        <P $style={{ size: '2rem', weight: '700', align: 'center' }}>WELCOME BACK</P>
-                        <P $style={{ size: '1.25rem', align: 'center' }}>Enter your name and  email address to receive updates  on your activities.</P>
+                        <P $style={{ size: GV('font-size-2'), weight: GV('weight-xl'), align: 'center' }}>WELCOME BACK</P>
+                        <P $style={{ size: GV('font-size-3'), align: 'center' }}>Enter your name and  email address to receive updates  on your activities.</P>
                     </Flex>
                     <Flex $style={{ w: '100%', hAlign: 'center' }}>
                         <Flex $style={{ fDirection: 'column', w: '30rem', gap: '1.25rem' }}>
@@ -36,8 +37,8 @@ const Signin = () => {
                             <Input value='' placeholder='Password' padding='1rem' radius='1rem' helpSide={<Icon icon='EyeClosed' />} />
                             <SubmitButton>Submit</SubmitButton>
                             <Flex $style={{ hAlign: 'space-between' }}>
-                                <Checkbox label={<P $style={{ size: '0.875rem' }}><CustomFont>Keep me logged in</CustomFont></P>} />
-                                <P $style={{ weight: '700', size: "0.875rem" }}>Forget Password</P>
+                                <Checkbox label={<P $style={{ size: GV('font-size-5') }}><CustomFont>Keep me logged in</CustomFont></P>} />
+                                <P $style={{ weight: GV('weight-xl'), size: GV('font-size-5') }}>Forget Password</P>
                             </Flex>
                         </Flex>
                     </Flex>
@@ -47,12 +48,12 @@ const Signin = () => {
                         <CustomLine />
                     </Flex>
                     <Flex $style={{ hAlign: 'center', gap: '1rem', w: '100%' }}>
-                        <CustomButton><P $style={{ size: '1.25rem' }}>Sign in with Google</P><Icon icon='Google' /></CustomButton>
-                        <CustomButton><P $style={{ size: '1.25rem' }}>Sign in with Google</P><Icon icon='Google' /></CustomButton>
+                        <CustomButton><P $style={{ size: GV('font-size-3') }}>Sign in with Google</P><Icon icon='Google' /></CustomButton>
+                        <CustomButton><P $style={{ size: GV('font-size-3') }}>Sign in with Google</P><Icon icon='Google' /></CustomButton>
                     </Flex>
                     <Flex $style={{ vAlign: 'center', gap: '0.25rem', w: '100%', hAlign: 'center' }}>
                         <CustomFont1>Don't have an account? </CustomFont1>
-                        <Link to={routerer('_SIGNUP')}><P $style={{ size: '1.25rem', color: 'info' }}>Register here</P></Link>
+                        <Link to={routerer('_SIGNUP')}><P $style={{ size: GV('font-size-3'), color: 'info' }}>Register here</P></Link>
                     </Flex>
                 </AuthForm>
             </Flex>
