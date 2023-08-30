@@ -19,7 +19,7 @@ const Collectible = () => {
 
     return <CollectiblesContainer>
         <Rect />
-        <Flex $style={{ w: '100%', gap: '26px', p: '0 0 32px' }}>
+        <Flex $style={{ w: '100%', vAlign: 'flex-start', gap: '26px', p: '0 0 32px' }}>
             <Flex $style={{ flex: '1', fDirection: 'column', gap: '32px', w: '100%'  }}>
                 <TitleBar>
                     <Flex $style={{ fDirection: 'column', w: '100%', gap: '20px' }}>
@@ -34,20 +34,34 @@ const Collectible = () => {
                             </ItemContainer>
                         </Flex>
                         <TimeBar />
-                        <Flex $style={{ w: '100%', hAlign: 'space-between', gap: '16px' }}>
+                        <Grid $style={{
+                            columns: '3',
+                            gap: '16px',
+                            queries: {
+                                1024: {
+                                    columns: '2'
+                                }
+                            }
+                        }}>
                             <StatusBar title='Volume' number='439' right={<Icon icon='Info' />} percent='+34%' percent_color='#1FDD00' />
                             <StatusBar title='Traders' number='$20.99k' right={<Icon icon='Info' />} percent='-56.40%' percent_color='#E85051' />
                             <StatusBar title='Floor Price' number='1.37k' right={<Icon icon='Info' />} percent='+36.97%' percent_color='#1FDD00' />
-                        </Flex>
-                        <Flex $style={{ w: '100%', hAlign: 'space-between', gap: '16px' }}>
                             <StatusBar title='Avg, Price' number='439' right={<Icon icon='Info' />} percent='+34%' percent_color='#1FDD00' />
                             <StatusBar title='Sales' number='$20.99k' right={<Icon icon='Info' />} percent='-56.40%' percent_color='#E85051' />
                             <StatusBar title='Market Cap.' number='1.37k' right={<Icon icon='Info' />} percent='+36.97%' percent_color='#1FDD00' />
-                        </Flex>
+                        </Grid>
                     </Flex>
                 </TitleBar>
                 <NFTs>
-                    <Grid $style={{ columns: "3", gap: "2rem" }}>
+                    <Grid $style={{
+                        columns: "3",
+                        gap: "2rem",
+                        queries: {
+                            1024: {
+                                columns: '2'
+                            }
+                        }
+                    }}>
                         <NFT image={Image1} name='Mall Street' price='4.45ETH' network='MANA' usd='1500' />
                         <NFT image={Image2} name='Orange Amor' price='4.45ETH' network='MANA' usd='1500' />
                         <NFT image={Image3} name='Southam Lir...' price='4.45ETH' network='MANA' usd='1500' />

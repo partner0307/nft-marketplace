@@ -1,4 +1,4 @@
-import { Flex, P } from '@/components/basic';
+import { Flex, Grid, P } from '@/components/basic';
 import React from 'react';
 import { Container, CustomButton, Eclipse, ItemContainer, NFTs, Options, Rect, TitleBar, CustomTab } from './style';
 import TimeBar from '@/components/page/public/explore/timebar';
@@ -10,6 +10,7 @@ import Image from '@/assets/img/avatar1.png';
 import Avatar from '@/assets/img/avatar1.png';
 import CardItem from '@/components/page/public/home/carditem';
 import { GV } from '@/utils/style.util';
+import SlideTab from '@/components/page/public/explore/slidetab';
 
 const NFTCollections = () => {
     const [isLive, setLive] = React.useState(false);
@@ -27,8 +28,8 @@ const NFTCollections = () => {
 
     return <Container>
         <Rect />
-        <Flex $style={{ w: '100%', gap: '26px', p: '0 0 32px' }}>
-            <Flex $style={{ maxW: '900px', w: '100%', fDirection: 'column', gap: '32px' }}>
+        <Flex $style={{ w: '100%', vAlign: 'flex-start', gap: '26px', p: '0 0 32px' }}>
+            <Flex $style={{ fDirection: 'column', gap: '32px', flex: '1' }}>
                 <TitleBar>
                     <Flex $style={{ fDirection: 'column', w: '100%', gap: '20px' }}>
                         <Flex $style={{ vAlign: 'center', gap: '20px', w: '100%' }}>
@@ -42,20 +43,34 @@ const NFTCollections = () => {
                             </ItemContainer>
                         </Flex>
                         <TimeBar />
-                        <Flex $style={{ w: '100%', hAlign: 'space-between', gap: '16px' }}>
+                        <Grid $style={{
+                            columns: '3',
+                            gap: '16px',
+                            queries: {
+                                1024: {
+                                    columns: '2'
+                                }
+                            }
+                        }}>
                             <StatusBar title='Volume' number='439' right={<Icon  icon='Info'/>} percent='+34%' percent_color='#1FDD00' />
                             <StatusBar title='Traders' number='$20.99k' right={<Icon  icon='Info'/>} percent='-56.40%' percent_color='#E85051' />
                             <StatusBar title='Floor Price' number='1.37k' right={<Icon  icon='Info'/>} percent='+36.97%' percent_color='#1FDD00' />
-                        </Flex>
-                        <Flex $style={{ w: '100%', hAlign: 'space-between', gap: '16px' }}>
                             <StatusBar title='Avg, Price' number='439' right={<Icon  icon='Info'/>} percent='+34%' percent_color='#1FDD00' />
                             <StatusBar title='Sales' number='$20.99k' right={<Icon  icon='Info'/>} percent='-56.40%' percent_color='#E85051' />
                             <StatusBar title='Market Cap.' number='1.37k' right={<Icon  icon='Info'/>} percent='+36.97%' percent_color='#1FDD00' />
-                        </Flex>
+                        </Grid>
                     </Flex>
                 </TitleBar>
                 <NFTs>
-                    <Flex $style={{ hAlign: 'center', fWrap: 'wrap', gap: '16px', w: '100%' }}>
+                    <Grid $style={{
+                        columns: '3',
+                        gap: '16px',
+                        queries: {
+                            1024: {
+                                columns: '2'
+                            }
+                        }
+                    }}>
                         <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                         <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                         <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
@@ -68,7 +83,7 @@ const NFTCollections = () => {
                         <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                         <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                         <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
-                    </Flex>
+                    </Grid>
                     <Flex $style={{ w: '100%', p: '32px 24px 24px' }}>
                         <Pagination />
                     </Flex>
@@ -78,44 +93,63 @@ const NFTCollections = () => {
                 <ItemContainer>
                     <Dropdown initialLabel='Filter' hideIcon customIcon={<Icon icon='Filter' />} />
                 </ItemContainer>
-                <Flex $style={{ fDirection: 'column', gap: '20px', w: '100%' }}>
-                    <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setStatusOpen(!isStatusOpen)}>
-                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Status</P>
-                        {isStatusOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
-                    </Flex>
-                    {isStatusOpen && <Flex $style={{ fWrap: 'wrap', gap: '20px', w: '100%' }}>
+                <SlideTab label='Status'>
+                    <Flex $style={{ fWrap: 'wrap', gap: '20px', w: '100%' }}>
                         <CustomTab isActive>All Collections</CustomTab>
                         <CustomTab>Live Auction</CustomTab>
                         <CustomTab>Not For Sale</CustomTab>
                         <CustomTab>Buy Now</CustomTab>
-                    </Flex>}
-                </Flex>
-                <Flex $style={{ fDirection: 'column', gap: '20px', w: '100%' }}>
-                    <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setPriceOpen(!isPriceOpen)}>
-                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Price</P>
-                        {isPriceOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
-                    {isPriceOpen && <>
+                </SlideTab>
+                <SlideTab label='Price'>
                     <Flex $style={{ fDirection: 'row', gap: '16px', vAlign: 'flex-end' }}>
                         <Input value='' placeholder='Min' padding='6px 12px' />
                         <Icon icon='ArrowRight' />
                         <Input value='' placeholder='Min' padding='6px 12px' />
                     </Flex>
-                    <CustomButton>Submit</CustomButton></>}
-                </Flex>
-                <Flex $style={{ fDirection: 'column', gap: '20px', w: '100%' }}>
-                    <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setPropertyOpen(!isPropertyOpen)}>
-                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Properties</P>
-                        {isPropertyOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
+                    <CustomButton>Submit</CustomButton>
+                </SlideTab>
+                <SlideTab label='Properties'>
+                    <Input value='' placeholder='Search properties' padding='6px 12px' helpSide={<Icon icon='Search' />} />
+                </SlideTab>
+                <SlideTab label='Clothes'>
+                    <Flex $style={{ fDirection: 'column', gap: '12px' }}>
+                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
+                        </Flex>
+                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
+                        </Flex>
+                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
+                        </Flex>
+                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
+                        </Flex>
+                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
+                        </Flex>
                     </Flex>
-                    {isPropertyOpen && <Input value='' placeholder='Search properties' padding='6px 12px' helpSide={<Icon icon='Search' />} />}
-                </Flex>
-                <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
-                    <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setClothOpen(!isClothOpen)}>
-                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Clothes</P>
-                        {isClothOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
+                </SlideTab>
+                <SlideTab label='Hat'>
+                    <Flex $style={{ fDirection: 'column', gap: '12px' }}>
+                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
+                        </Flex>
+                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
+                        </Flex>
                     </Flex>
-                    {isClothOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
+                </SlideTab>
+                <SlideTab label='Mouth'>
+                    <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
@@ -124,26 +158,10 @@ const NFTCollections = () => {
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
-                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
-                            <P $style={{ size: GV('font-size') }}>42</P>
-                        </Flex>
-                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
-                            <P $style={{ size: GV('font-size') }}>42</P>
-                        </Flex>
-                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
-                            <P $style={{ size: GV('font-size') }}>42</P>
-                        </Flex>
-                    </Flex>}
-                </Flex>
-                <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
-                    <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setHasOpen(!isHatOpen)}>
-                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Hat</P>
-                        {isHatOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
-                    {isHatOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
+                </SlideTab>
+                <SlideTab label='Eyes'>
+                    <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
@@ -152,14 +170,10 @@ const NFTCollections = () => {
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
-                    </Flex>}
-                </Flex>
-                <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
-                    <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setMouthOpen(!isMouthOpen)}>
-                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Mouth</P>
-                        {isMouthOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
-                    {isMouthOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
+                </SlideTab>
+                <SlideTab label='Fur'>
+                    <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
@@ -168,14 +182,10 @@ const NFTCollections = () => {
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
-                    </Flex>}
-                </Flex>
-                <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
-                    <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setEyeOpen(!isEyesOpen)}>
-                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Eyes</P>
-                        {isEyesOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
-                    {isEyesOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
+                </SlideTab>
+                <SlideTab label='Background'>
+                    <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
@@ -184,14 +194,10 @@ const NFTCollections = () => {
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
-                    </Flex>}
-                </Flex>
-                <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
-                    <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setFurOpen(!isFurOpen)}>
-                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Fur</P>
-                        {isFurOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
-                    {isFurOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
+                </SlideTab>
+                <SlideTab label='Glasses'>
+                    <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
@@ -200,14 +206,10 @@ const NFTCollections = () => {
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
-                    </Flex>}
-                </Flex>
-                <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
-                    <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setBackgroundOpen(!isBackgroundOpen)}>
-                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Background</P>
-                        {isBackgroundOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
-                    {isBackgroundOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
+                </SlideTab>
+                <SlideTab label='Earning'>
+                    <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
@@ -216,40 +218,8 @@ const NFTCollections = () => {
                             <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
                             <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
-                    </Flex>}
-                </Flex>
-                <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
-                    <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setGlassesOpen(!isGlassesOpen)}>
-                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Glasses</P>
-                        {isGlassesOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
                     </Flex>
-                    {isGlassesOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
-                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
-                            <P $style={{ size: GV('font-size') }}>42</P>
-                        </Flex>
-                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
-                            <P $style={{ size: GV('font-size') }}>42</P>
-                        </Flex>
-                    </Flex>}
-                </Flex>
-                <Flex $style={{ fDirection: 'column', gap: '16px', w: '100%' }}>
-                    <Flex $style={{ hAlign: 'space-between', w: '100%' }} onClick={() => setEarningOpen(!isEarningOpen)}>
-                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>Earning</P>
-                        {isEarningOpen ? <Icon icon='ChevronArrowRight' /> : <Icon icon='ChevronArrowDown' />}
-                    </Flex>
-                    {isEarningOpen && <Flex $style={{ fDirection: 'column', gap: '12px' }}>
-                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
-                            <P $style={{ size: GV('font-size') }}>42</P>
-                        </Flex>
-                        <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
-                            <P $style={{ size: GV('font-size') }}>42</P>
-                        </Flex>
-                    </Flex>}
-                </Flex>
+                </SlideTab>
             </Options>
         </Flex>
     </Container>

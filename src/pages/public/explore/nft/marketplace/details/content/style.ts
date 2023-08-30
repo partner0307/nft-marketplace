@@ -42,13 +42,15 @@ export const ItemContainer = styled.div<{ max?: string }>`
 export const Options = styled.div`
     display: flex;
     width: 440px;
-    flex: 1;
     padding: 24px 24px 32px 24px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    gap: 0.25rem;
     border-radius: 16px;
     background: #0C0C0C;
+
+    @media (max-width: 1024px) {
+        width: 300px;
+    }
 `;
 
 export const CustomButton = styled.button`

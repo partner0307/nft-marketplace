@@ -82,6 +82,29 @@ export const CustomeButton2 = styled.button`
     font-weight: ${GV('weight-lg')};
 `;
 
+export const OriginalTabContainer = styled.div`
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+`
+
+export const MediaTabContainer = styled.div`
+    max-width: 600px;
+    overflow: auto;
+    display: none;
+
+    .swiper-backface-hidden .swiper-slide {
+        width: fit-content;
+    }
+
+    @media (max-width: 1024px) {
+        display: block;
+    }
+`
+
 export const CustomTab = styled.button<{ isActive?: boolean }>`
     padding: 12px 18px;
     gap: 4px;
@@ -89,6 +112,10 @@ export const CustomTab = styled.button<{ isActive?: boolean }>`
     ${({ isActive }) => isActive ? `background: #D96BFF;` : `background: #191919;`}
     ${({ isActive }) => !isActive ? `border: 1px solid #2B2928;` : ``}
     ${({ isActive }) => isActive ? `font-weight: 600; color: #0C0D0E;` : ``}
+
+    @media (max-width: 1024px) {
+        font-size: ${GV('font-size')}
+    }
 `;
 
 export const StatusBar = styled.div`
@@ -101,7 +128,10 @@ export const StatusBar = styled.div`
     border-radius: 16px;
     border: 1px solid #1A1A1A;
     background: #0C0C0C;
-    margin-bottom: -100px;
+
+    @media (max-width: 1024px) {
+        width: 300px
+    }
 `;
 
 export const Line = styled.div`

@@ -3,8 +3,10 @@ import styled from 'styled-components';
 export const AboutContainer = styled.div`
     position: relative;
     display: flex;
+    align-items: flex-start;
     gap: 26px;
     padding: 24px 0 32px;
+    z-index: 1;
 `;
 
 export const AboutWrapper = styled.div`
@@ -27,6 +29,10 @@ export const Options = styled.div`
     gap: 20px;
     border-radius: 16px;
     background: #0C0C0C;
+
+    @media (max-width: 1024px) {
+        width: 300px;
+    }
 `;
 
 export const StatusBar = styled.div`
@@ -59,4 +65,5 @@ export const Rect = styled.div`
     border-radius: 978px;
     background: rgba(104, 235, 227, 0.10);
     filter: blur(150px);
+    z-index: 0;
 `

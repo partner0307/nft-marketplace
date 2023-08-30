@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import Anime from 'react-anime';

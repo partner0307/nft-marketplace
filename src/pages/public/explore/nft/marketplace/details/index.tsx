@@ -1,8 +1,8 @@
 import React from 'react';
-import { CustomButton, CustomButton1, CustomColor, CustomFont, CustomTab, CustomeButton2, DetailsContainer, DetailsContent, DetailsWrapper, HeroContainer, MarkContainer, StatusBar, VLine } from './style';
+import { CustomButton, CustomButton1, CustomColor, CustomFont, CustomTab, CustomeButton2, DetailsContainer, DetailsContent, DetailsWrapper, HeroContainer, MarkContainer, MediaTabContainer, OriginalTabContainer, StatusBar, VLine } from './style';
 import SubMenu from '@/components/page/public/explore/submenu';
 import { Flex, Heading, P } from '@/components/basic';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 import Mark from '@/assets/img/metaverse/mana.png';
 import CircleCheck from '@/assets/img/metaverse/circle_check.png';
@@ -12,11 +12,17 @@ import Instagram from '@/assets/img/metaverse/instagram.png';
 import Ether from '@/assets/img/metaverse/ether.png';
 import { Icon } from '@/components/custom';
 import { Line } from 'recharts';
-import NFTCollections from './content/content';
 import { GV } from '@/utils/style.util';
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import { routerer } from '@/utils/util';
+
 const NFTDetails = () => {
-    const [tabIndex, setTabIndex] = React.useState(1);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     return <DetailsContainer>
         <SubMenu />
@@ -45,7 +51,7 @@ const NFTDetails = () => {
             </Flex>
             <Flex $style={{ hAlign: 'center' }}>
                 <DetailsContent>
-                    <Flex $style={{ hAlign: 'space-between', p: '40px 0 54px', w: '100%' }}>
+                    <Flex $style={{ hAlign: 'space-between', gap: '1.5rem', p: '40px 0 54px', w: '100%' }}>
                         <Flex $style={{ fDirection: 'column', gap: '54px' }}>
                             <Flex $style={{ fDirection: 'column', gap: '20px' }}>
                                 <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '8px' }}>
@@ -59,20 +65,78 @@ const NFTDetails = () => {
                                     </Flex>
                                 </Flex>
                                 <Flex $style={{ vAlign: 'center', hAlign: 'space-between', maxW: '780px' }}>
-                                    <Flex $style={{ maxW: '580px' }}>
+                                    <Flex $style={{
+                                        maxW: '580px',
+                                        queries: {
+                                            1024: {
+                                                maxW: '450px'
+                                            }
+                                        }
+                                    }}>
                                         <P $style={{ size: GV('font-size-3') }}>The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits.</P>
                                     </Flex>
                                     <CustomeButton2>Place Floor Bid</CustomeButton2>
                                 </Flex>
                             </Flex>
-                            <Flex $style={{ gap: '20px' }}>
-                                <CustomTab isActive={tabIndex === 1} onClick={() => setTabIndex(1)}>NFT Collections</CustomTab>
-                                <CustomTab isActive={tabIndex === 2} onClick={() => setTabIndex(2)}>Recent Activities</CustomTab>
-                                <CustomTab isActive={tabIndex === 3} onClick={() => setTabIndex(3)}>About</CustomTab>
-                                <CustomTab isActive={tabIndex === 4} onClick={() => setTabIndex(4)}>News</CustomTab>
-                                <CustomTab isActive={tabIndex === 5} onClick={() => setTabIndex(5)}>Analytics</CustomTab>
-                                <CustomTab isActive={tabIndex === 6} onClick={() => setTabIndex(6)}>Comments</CustomTab>
-                            </Flex>
+                            <OriginalTabContainer>
+                                <Link to={routerer('nft_details', 'nft_collections')}>
+                                    <CustomTab isActive={location.pathname.split('/')[2] === 'nft-collections'}>NFT Collections</CustomTab>
+                                </Link>
+                                <Link to='#'>
+                                    <CustomTab isActive={location.pathname.split('/')[2] === ''}>Recent Activities</CustomTab>
+                                </Link>
+                                <Link to='#'>
+                                    <CustomTab isActive={location.pathname.split('/')[2] === ''}>About</CustomTab>
+                                </Link>
+                                <Link to='#'>
+                                    <CustomTab isActive={location.pathname.split('/')[2] === ''}>News</CustomTab>
+                                </Link>
+                                <Link to='#'>
+                                    <CustomTab isActive={location.pathname.split('/')[2] === ''}>Analytics</CustomTab>
+                                </Link>
+                                <Link to='#'>
+                                    <CustomTab isActive={location.pathname.split('/')[2] === ''}>Comments</CustomTab>
+                                </Link>
+                            </OriginalTabContainer>
+                            <MediaTabContainer>
+                                <Swiper
+                                    slidesPerView={'auto'}
+                                    spaceBetween={10}
+                                    navigation
+                                    className="mySwiper"
+                                >
+                                    <SwiperSlide>
+                                        <Link to={routerer('nft_details', 'nft_collections')}>
+                                            <CustomTab isActive={location.pathname.split('/')[2] === 'nft-collections'}>NFT Collections</CustomTab>
+                                        </Link>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Link to='#'>
+                                            <CustomTab isActive={location.pathname.split('/')[2] === ''}>Recent Activities</CustomTab>
+                                        </Link>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Link to='#'>
+                                            <CustomTab isActive={location.pathname.split('/')[2] === ''}>About</CustomTab>
+                                        </Link>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Link to='#'>
+                                            <CustomTab isActive={location.pathname.split('/')[2] === ''}>News</CustomTab>
+                                        </Link>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Link to='#'>
+                                            <CustomTab isActive={location.pathname.split('/')[2] === ''}>Analytics</CustomTab>
+                                        </Link>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Link to='#'>
+                                            <CustomTab isActive={location.pathname.split('/')[2] === ''}>Comments</CustomTab>
+                                        </Link>
+                                    </SwiperSlide>
+                                </Swiper>
+                            </MediaTabContainer>
                         </Flex>
                         <Flex $style={{ fDirection: 'column', gap: '40px', p: '16px 0 0' }}>
                             <Flex $style={{ fDirection: 'row', hAlign: 'flex-end', gap: '24px', p: '0 32px' }}>
@@ -114,7 +178,7 @@ const NFTDetails = () => {
                             </StatusBar>
                         </Flex>
                     </Flex>
-                    <Flex $style={{ p: '54px 0 0', w: '100%', maxW: '1440px' }}>
+                    <Flex $style={{ p: '54px 0 0' }}>
                         <Outlet />
                     </Flex>
                 </DetailsContent>

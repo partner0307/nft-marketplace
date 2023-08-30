@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, P, Span } from '@/components/basic';
+import { Flex, Grid, P, Span } from '@/components/basic';
 
 import IconImage from '@/assets/img/marketplace-icon.png';
 import Table, { TableFieldInterface } from '@/components/custom/table';
@@ -125,7 +125,14 @@ const fields: TableFieldInterface[] = [
 const MarketplaceNfts = () => {
     return (
         <Flex $style={{ fDirection: 'column', gap: '1.5rem', w: '100%' }}>
-            <Flex $style={{ gap: '6.25rem' }}>
+            <Flex $style={{
+                gap: '6.25rem',
+                queries: {
+                    1024: {
+                        gap: '2rem'
+                    }
+                }
+            }}>
                 <Flex $style={{ fDirection: 'column', gap: '0.8rem', maxW: '36.75rem' }}>
                     <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Highest Price NFT Stats</P>
                     <Span $style={{ size: GV('font-size-5'), weight: GV('weight-sm') }}>Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Vorem ipsum dolor sit amet.</Span>
@@ -141,7 +148,15 @@ const MarketplaceNfts = () => {
                     </Flex>
                 </Flex>
             </Flex>
-            <Flex $style={{ hAlign: 'space-between' }}>
+            <Grid $style={{
+                columns: '3',
+                gap: '1.25rem',
+                queries: {
+                    1024: {
+                        columns: '2'
+                    }
+                }
+            }}>
                 <StatusCard>
                     <Flex $style={{ fDirection: 'column', gap: '0.5rem' }}>
                         <Flex $style={{ gap: '0.25rem', vAlign: 'center' }}>
@@ -175,7 +190,7 @@ const MarketplaceNfts = () => {
                     </Flex>
                     <StatusLine data={mockData} color='#C40941' />
                 </StatusCard>
-            </Flex>
+            </Grid>
             <Flex $style={{ vAlign: 'center', gap: '0.75rem' }}>
                 <ImageLoader src={IconImage} alt='' />
                 <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>NFTs Market</P>

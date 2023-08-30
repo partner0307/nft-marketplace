@@ -35,7 +35,7 @@ export const MainBlog = styled.div`
   padding: 16px;
 
   @media (max-width: 1024px) {
-    display: none;
+    flex-direction: row;
   }
 `;
 

@@ -19,7 +19,6 @@ import "swiper/css/pagination";
 import { GV } from '@/utils/style.util';
 
 const RealEstateDetails = () => {
-    const [tabIndex, setTabIndex] = React.useState(1);
     const navigate = useNavigate();
     const { pathname } = useLocation();
 
@@ -71,13 +70,8 @@ const RealEstateDetails = () => {
                                 <div style={{overflow: 'auto', width: "100%"}}>
                                     <Swiper
                                         slidesPerView={'auto'}
-                                        spaceBetween={5}
-                                        // pagination={{
-                                        //     clickable: true,
-                                        // }}
+                                        spaceBetween={10}
                                         navigation
-                                        // modules={[Navigation]}
-                                        // grabCursor={true}
                                         className="mySwiper"
                                     >
                                         <SwiperSlide>

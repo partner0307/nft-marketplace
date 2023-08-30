@@ -43,7 +43,7 @@ const fields: TableFieldInterface[] = [
 
 const About = () => {
     return <>
-        <Rect />
+        {/* <Rect /> */}
         <AboutContainer>
             <AboutWrapper>
                 <Flex $style={{ w: '100%' }}>
@@ -56,7 +56,7 @@ const About = () => {
             </AboutWrapper>
             <Options>
                 <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Decentraland Details</P>
-                <Flex $style={{ gap: '16px' }}>
+                <Flex $style={{ gap: '16px', fWrap: 'wrap' }}>
                     <StatusBar>
                         <P $style={{ size: GV('font-size-3') }}>Date Listed</P>
                         <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>July 23, 2023</P>

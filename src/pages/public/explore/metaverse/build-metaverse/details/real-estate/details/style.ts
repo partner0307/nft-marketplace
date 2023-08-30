@@ -69,6 +69,10 @@ export const StatusBar = styled.div`
     border-radius: 16px;
     border: 1px solid #1A1A1A;
     background: #0C0C0C;
+
+    @media (max-width: 1024px) {
+        width: 350px;
+    }
 `;
 
 export const PageButton = styled.div<{ isActive?: false }>`
@@ -109,7 +113,7 @@ export const Main = styled.div`
     width: fit-content;
   }
 
-  .swiper-button-prev {
+  /* .swiper-button-prev {
     position: absolute;
     top: 50%;
     left: 12px;
@@ -147,7 +151,7 @@ export const Main = styled.div`
     &.swiper-button-disabled {
         display: none;
     }
-  }
+  } */
 `;
 
 export const CustomTab = styled.button<{ isActive?: boolean }>`
@@ -157,7 +161,11 @@ export const CustomTab = styled.button<{ isActive?: boolean }>`
     white-space: nowrap;
     ${({ isActive }) => isActive ? `background: #D96BFF;` : `background: #191919;`}
     ${({ isActive }) => !isActive ? `border: 1px solid #2B2928;` : ``}
-    ${({ isActive }) => isActive ? `font-weight: 600; color: #0C0D0E;` : ``}
+    ${({ isActive }) => isActive ? `font-weight: ${GV('weight-lg')}; color: #0C0D0E;` : ``}
+
+    @media (max-width: 1024px) {
+        font-size: ${GV('font-size')}
+    }
 `;
 
 export const CustomColor = styled.div`

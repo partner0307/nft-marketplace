@@ -16,10 +16,11 @@ type CardItemType = {
     start_price?: string
     reduce_price?: string
     reduce_percent?: string
+    isLast?: boolean
 }
 
-const CardItem: React.FC<CardItemType> = ({ nft, avatar, name, username, current_price, start_price, reduce_price, reduce_percent }) => {
-    return <CardContainer>
+const CardItem: React.FC<CardItemType> = ({ nft, avatar, name, username, current_price, start_price, reduce_price, reduce_percent, isLast }) => {
+    return <CardContainer isLast={isLast}>
         <CardHero>
             <CardImage src={nft} />
             <MarkWrapper>

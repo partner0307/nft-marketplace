@@ -42,7 +42,14 @@ const percent = [
 
 const Overview = () => {
     return <Flex $style={{ fDirection: 'column', gap: '32px' }}>
-        <Flex $style={{ gap: '26px' }}>
+        <Flex $style={{
+            gap: '26px',
+            queries: {
+                1024: {
+                    fDirection: 'column'
+                }
+            }
+        }}>
             <Flex $style={{ fDirection: 'column', gap: '32px', flex: '1' }}>
                 <TitleBar>
                     <Flex $style={{ fDirection: 'column', w: '100%', gap: '20px' }}>
@@ -114,9 +121,19 @@ const Overview = () => {
                 <Flex $style={{ w: '100%' }}>
                     <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Decentraland News</P>
                 </Flex>
-                <NewsCard />
-                <NewsCard />
-                <NewsCard />
+                <Flex $style={{
+                    fDirection: 'column',
+                    gap: '32px',
+                    queries: {
+                        1024: {
+                            fDirection: 'row'
+                        }
+                    }
+                }}>
+                    <NewsCard />
+                    <NewsCard />
+                    <NewsCard />
+                </Flex>
                 <Flex $style={{ w: '100%', hAlign: 'flex-end' }}>
                     <CustomButton>View more news</CustomButton>
                 </Flex>
