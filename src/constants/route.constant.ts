@@ -95,6 +95,11 @@ const _ROUTERS = {
 	// nft-marketplace
 	nft_details: 'nft-details/',
 	nft_collections: 'nft-collections/',
+	recent_activities: 'recent-activities/',
+	nft_about: 'nft-about/',
+	nft_news: 'nft-news/',
+	nft_analytics: 'nft-analytics/',
+	nft_comments: 'nft-comments/',
 
 	// e-commerce
 	detail: 'detail/',

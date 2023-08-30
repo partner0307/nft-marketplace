@@ -60,6 +60,10 @@ export const NewsContainer = styled.div`
     border-radius: 16px;
     border: 1px solid #1E1E20;
     background: rgba(12, 13, 14, 0.80);
+
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
 `
 
 export const Similars = styled.div`

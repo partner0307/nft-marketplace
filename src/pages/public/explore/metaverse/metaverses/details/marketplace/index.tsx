@@ -35,7 +35,8 @@ const fields: TableFieldInterface[] = [
             </Flex>
         ),
         sort: (i: any, v: any) => v,
-        description: "This field is ..."
+        description: "This field is ...",
+        width: '200px'
     },
     {
         key: "time",

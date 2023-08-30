@@ -10,7 +10,7 @@ export const MarketplaceContainer = styled.div`
 `;
 
 export const StatusBar = styled.div`
-    display: flex;
+    display: grid;
     height: 4rem;
     padding: 0rem 2rem;
     justify-content: center;
@@ -18,6 +18,12 @@ export const StatusBar = styled.div`
     gap: 0.75rem;
     background: rgba(41, 41, 41, 0.30);
     backdrop-filter: blur(8px);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    @media (max-width: 1580px) {
+        height: 6rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 `;
 
 export const StatusItem = styled.div`

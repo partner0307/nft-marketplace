@@ -1,5 +1,5 @@
 import React from 'react';
-import { CustomButton, CustomButton1, CustomColor, CustomFont, CustomTab, CustomeButton2, DetailsContainer, DetailsContent, DetailsWrapper, HeroContainer, Line, MarkContainer, StatusBar, VLine } from './style';
+import { CustomButton, CustomButton1, CustomColor, CustomFont, CustomTab, CustomeButton2, DetailsContainer, DetailsContent, DetailsWrapper, HeroContainer, Line, MarkContainer, MediaTabContainer, OriginalTabContainer, StatusBar, VLine } from './style';
 import SubMenu from '@/components/page/public/explore/submenu';
 import { Flex, Heading, P } from '@/components/basic';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
@@ -15,6 +15,10 @@ import Polygon from '@/assets/img/metaverse/polygon.png';
 import _ROUTERS from '@/constants/route.constant';
 import { routerer } from '@/utils/util';
 import { GV } from '@/utils/style.util';
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const MetaverseDetails = () => {
 
@@ -48,7 +52,15 @@ const MetaverseDetails = () => {
             </Flex>
             <Flex $style={{ hAlign: 'center' }}>
                 <DetailsContent>
-                    <Flex $style={{ p: '40px 0 54px', w: '100%' }}>
+                    <Flex $style={{
+                        p: '40px 0 54px',
+                        w: '100%',
+                        queries: {
+                            1024: {
+                                gap: '2rem'
+                            }
+                        }
+                    }}>
                         <Flex $style={{ fDirection: 'column', gap: '54px', flex: '1' }}>
                             <Flex $style={{ fDirection: 'column', gap: '20px' }}>
                                 <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '8px' }}>
@@ -56,13 +68,20 @@ const MetaverseDetails = () => {
                                     <img src={CircleCheck} alt="" />
                                 </Flex>
                                 <Flex $style={{ vAlign: 'center', hAlign: 'space-between', maxW: '780px' }}>
-                                    <Flex $style={{ maxW: '580px' }}>
+                                    <Flex $style={{
+                                        maxW: '580px',
+                                        queries: {
+                                            1024: {
+                                                maxW: '450px'
+                                            }
+                                        }
+                                    }}>
                                         <P $style={{ size: GV('font-size-3') }}>Decentraland is a decentralized virtual reality platform powered by blockchain technology. Within the Decentraland platform, users can create, experience, and monetize their content and applications.</P>
                                     </Flex>
                                     <CustomeButton2>Buy Metaverse</CustomeButton2>
                                 </Flex>
                             </Flex>
-                            <Flex $style={{ gap: '20px' }}>
+                            <OriginalTabContainer>
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'overview'} onClick={() => navigate(routerer("metaverse", "overview"))}>Overview</CustomTab>
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'collectibles'} onClick={() => navigate(routerer("metaverse", "collectibles"))}>Collectible</CustomTab>
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'land'} onClick={() => navigate(routerer("metaverse", "land"))}>Land</CustomTab>
@@ -70,7 +89,37 @@ const MetaverseDetails = () => {
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'news'} onClick={() => navigate(routerer("metaverse", "news"))}>News</CustomTab>
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'about'} onClick={() => navigate(routerer("metaverse", "about"))}>About</CustomTab>
                                 <CustomTab isActive={location.pathname.split("/")[2] === 'comments'} onClick={() => navigate(routerer("metaverse", "comments"))}>Comments</CustomTab>
-                            </Flex>
+                            </OriginalTabContainer>
+                            <MediaTabContainer>
+                                <Swiper
+                                    slidesPerView={'auto'}
+                                    spaceBetween={10}
+                                    navigation
+                                    className="mySwiper"
+                                >
+                                    <SwiperSlide>
+                                        <CustomTab isActive={location.pathname.split("/")[2] === 'overview'} onClick={() => navigate(routerer("metaverse", "overview"))}>Overview</CustomTab>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <CustomTab isActive={location.pathname.split("/")[2] === 'collectibles'} onClick={() => navigate(routerer("metaverse", "collectibles"))}>Collectible</CustomTab>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <CustomTab isActive={location.pathname.split("/")[2] === 'land'} onClick={() => navigate(routerer("metaverse", "land"))}>Land</CustomTab>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <CustomTab isActive={location.pathname.split("/")[2] === 'metaverse_marketplace'} onClick={() => navigate(routerer("metaverse", "metaverse_marketplace"))}>Marketplace</CustomTab>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <CustomTab isActive={location.pathname.split("/")[2] === 'news'} onClick={() => navigate(routerer("metaverse", "news"))}>News</CustomTab>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <CustomTab isActive={location.pathname.split("/")[2] === 'about'} onClick={() => navigate(routerer("metaverse", "about"))}>About</CustomTab>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <CustomTab isActive={location.pathname.split("/")[2] === 'comments'} onClick={() => navigate(routerer("metaverse", "comments"))}>Comments</CustomTab>
+                                    </SwiperSlide>
+                                </Swiper>
+                            </MediaTabContainer>
                         </Flex>
                         <Flex $style={{ fDirection: 'column', gap: '40px', p: '16px 0 0', maxW: '440px' }}>
                             <Flex $style={{ fDirection: 'row', hAlign: 'flex-end', gap: '24px', p: '0 32px' }}>

@@ -63,6 +63,7 @@ const variables = {
 export const desVariables = {
   'font-size': '14px',
   'font-size-1': '2.5rem',
+  'font-size-2': '1.5rem',
   'font-size-3': '1rem',
   'font-size-4': '0.875rem',
   'font-size-5': '0.75rem'

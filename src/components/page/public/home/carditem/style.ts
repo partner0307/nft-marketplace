@@ -5,7 +5,7 @@ import { GV } from "@//utils/style.util";
 import Image from "@//assets/img/avatar1.png";
 import Mark from "@//assets/img/mark.svg";
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.div<{ isLast?: boolean }>`
   border-radius: 18px;
   border: 1px solid rgba(198, 224, 255, 0.5);
   background: rgba(217, 217, 217, 0.2);
@@ -18,6 +18,10 @@ export const CardContainer = styled.div`
   &:hover {
     filter: drop-shadow(0px 0px 24px rgba(61, 255, 243, 0.5));
     border-color: ${GV("info")};
+  }
+
+  @media (max-width: 1024px) {
+    ${({ isLast }) => isLast ? `display: none;` : ``}
   }
 `;
 

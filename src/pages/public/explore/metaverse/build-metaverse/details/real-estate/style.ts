@@ -31,6 +31,10 @@ export const MenuContainer = styled.div`
     border-radius: 16px;
     background: #121112;
     width: 270px;
+
+    @media (max-width: 1024px) {
+        width: 200px;
+    }
 `;
 
 export const MenuItem = styled.div<{ isSelected?: boolean, isLast?: boolean }>`

@@ -46,6 +46,10 @@ export const Options = styled.div`
     flex-direction: column;
     border-radius: 16px;
     background: #0C0C0C;
+
+    @media (max-width: 1024px) {
+        width: 300px;
+    }
 `;
 
 export const CustomButton = styled.button`

@@ -17,9 +17,14 @@ const NewsCard = () => {
                 fDirection: "row",
                 hAlign: "flex-start",
                 gap: "30px",
+                queries: {
+                    1024: {
+                        gap: '10px'
+                    }
+                }
             }}
         >
-            <Span $style={{ size: GV('font-size-7') }}>2mins Read</Span>
+            <Span $style={{ size: GV('font-size-6') }}>2mins Read</Span>
             <Flex
                 $style={{
                     fDirection: "row",
@@ -28,7 +33,7 @@ const NewsCard = () => {
                 }}
             >
                 <Icon icon="HeartBrown" />
-                <Span $style={{ size: GV('font-size-7') }}>28</Span>
+                <Span $style={{ size: GV('font-size-6') }}>28</Span>
             </Flex>
             <Flex
                 $style={{
@@ -38,7 +43,7 @@ const NewsCard = () => {
                 }}
             >
                 <Icon icon="Share" />
-                <Span $style={{ size: GV('font-size-7') }}>72</Span>
+                <Span $style={{ size: GV('font-size-6') }}>72</Span>
             </Flex>
             <Icon icon="Bookmark" />
         </Flex>
