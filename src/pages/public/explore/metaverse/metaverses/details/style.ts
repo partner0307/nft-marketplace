@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Background from '@/assets/img/metaverse/overview.png'
+import { GV } from '@/utils/style.util';
 
 export const DetailsContainer = styled.div`
     background: #0C0D0E;
@@ -48,9 +49,9 @@ export const MarkContainer = styled.div`
 `;
 
 export const CustomButton = styled.button`
-    font-size: 14px;
+    font-size: ${GV('font-size-5')};
     color: #000;
-    font-weight: 600;
+    font-weight: ${GV('weight-lg')};
     padding: 18px 54px;
     border-radius: 8px;
     background: #F75BB1;
@@ -77,8 +78,8 @@ export const CustomeButton2 = styled.button`
     border-radius: 12px;
     background: #0C0C0C;
     color: #D96BFF;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: ${GV('font-size-3')};
+    font-weight: ${GV('weight-lg')};
 `;
 
 export const CustomTab = styled.button<{ isActive?: boolean }>`

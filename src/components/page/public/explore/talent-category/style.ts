@@ -44,7 +44,7 @@ export const TalentCounter = styled.div`
     border: 1px solid #C392DC;
     background: #241A20;
     box-shadow: -9px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    font-size: 0.75rem;
+    font-size: ${GV('font-size-6')};
     font-weight: 600;
     margin-left: -0.9375rem;
 `

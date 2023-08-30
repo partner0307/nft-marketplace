@@ -53,8 +53,8 @@ export const SubmitButton = styled.button<{ isActive?: boolean }>`
     padding: 0rem 1.5rem;
     gap: 0.5rem;
     align-self: stretch;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: ${GV('font-size-3')};
+    font-weight: ${GV('weight-lg')};
     border: 1px solid #3D3D3E;
     ${({ isActive }) => isActive ? `background: ${GV('gradient')};border: none;` : ``}
 `;
@@ -66,5 +66,5 @@ export const CustomFont = styled.div`
 export const CustomFont1 = styled.div`
     color: #A192A4;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 1.25rem;
+    font-size: ${GV('font-size-3')};
 `

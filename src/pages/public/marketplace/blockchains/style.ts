@@ -15,12 +15,12 @@ export const StatusCard = styled.div`
 
 export const CustomFont = styled.div`
     color: #8D8E8D;
-    font-size: 1.25rem;
+    font-size: ${GV('font-size-3')};
 `;
 
 export const CustomSpan = styled.div`
     color: #8F9090;
-    font-size: 0.875rem;
+    font-size: ${GV('font-size-5')};
 `
 
 export const CustomButton = styled.button`
@@ -28,7 +28,7 @@ export const CustomButton = styled.button`
     border-radius: 2rem;
     border: 1px solid #2B2928;
     background: #191919;
-    font-size: 0.875rem;
+    font-size: ${GV('font-size-5')};
     color: #BEBCBE;
 `
 

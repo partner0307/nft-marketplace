@@ -1,3 +1,4 @@
+import { GV } from '@/utils/style.util';
 import styled from 'styled-components';
 
 export const SubMenuContainer = styled.div`
@@ -11,9 +12,9 @@ export const SubMenuContainer = styled.div`
 `;
 
 export const TabButton = styled.button<{ isActive?: boolean }>`
-    font-size: 14px;
-    ${({ isActive }) => isActive ? `font-weight: 600; color: #000;` : `font-weight: 400;`}
-    font-family: Aeonik;
+    font-size: ${GV('font-size-5')};
+    ${({ isActive }) => isActive ? `font-weight: ${GV('weight-lg')}; color: #000;` : `font-weight: ${GV('weight-sm')};`}
+    font-family: ${GV('font3')};
     height: 40px;
     padding: 0 16px;
     border-radius: 8px;

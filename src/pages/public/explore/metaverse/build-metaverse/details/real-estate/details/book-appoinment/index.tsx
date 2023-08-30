@@ -9,6 +9,7 @@ import LocationActive from '@/assets/img/location-active.png';
 import LocationInActive from '@/assets/img/location-inactive.png';
 import Contact from './contact';
 import Tour from './tour';
+import { GV } from '@/utils/style.util';
 
 const Appoinment = () => {
     const [tabIndex, setTabIndex] = React.useState(1);
@@ -17,11 +18,11 @@ const Appoinment = () => {
         <Flex $style={{ gap: '32px', w: '100%' }}>
             <CustomTab onClick={() => setTabIndex(1)}>
                 <img src={tabIndex === 1 ? ContractActive : ContractInActive} alt="" />
-                <P $style={{ size: '20px', weight: '600' }}><CustomColor color={tabIndex === 2}>Contact Agent</CustomColor></P>
+                <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}><CustomColor color={tabIndex === 2}>Contact Agent</CustomColor></P>
             </CustomTab>
             <CustomTab onClick={() => setTabIndex(2)}>
                 <img src={tabIndex === 2 ? LocationActive : LocationInActive} alt="" />
-                <P $style={{ size: '20px', weight: '600' }}><CustomColor color={tabIndex === 1}>Take A Tour With Agent</CustomColor></P>
+                <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}><CustomColor color={tabIndex === 1}>Take A Tour With Agent</CustomColor></P>
             </CustomTab>
         </Flex>
         {tabIndex === 1 && <Contact />}

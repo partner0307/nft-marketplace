@@ -5,6 +5,7 @@ import { Icon, Input } from '@/components/custom';
 import Table, { TableFieldInterface } from '@/components/custom/table';
 import { transactions } from '@/constants/mockup/transactions';
 import { tokillo } from '@/utils/util';
+import { GV } from '@/utils/style.util';
 
 const fields: TableFieldInterface[] = [
     {
@@ -15,7 +16,7 @@ const fields: TableFieldInterface[] = [
                 vAlign: "center",
                 gap: "0.5rem"
             }}>
-                <P $style={{ size: '16px', weight: '700', color: 'info' }}>{v}</P>
+                <P $style={{ size: GV('font-size'), weight: GV('weight-xl'), color: 'info' }}>{v}</P>
                 <Icon icon='Copy' />
             </Flex>
         ),
@@ -25,7 +26,7 @@ const fields: TableFieldInterface[] = [
     {
         key: "blockchain",
         label: "BLOCKCHAIN",
-        render: (i, v) => <P $style={{ size: '16px', weight: '700' }}>{v}</P>,
+        render: (i, v) => <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>{v}</P>,
         sort: (i: any, v: any) => v,
         description: "This field is ...",
         width: "180px"
@@ -33,7 +34,7 @@ const fields: TableFieldInterface[] = [
     {
         key: "uaw",
         label: "UAW",
-        render: (i, v) => <P $style={{ size: '16px', weight: '700' }}>{tokillo(v)}</P>,
+        render: (i, v) => <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>{tokillo(v)}</P>,
         sort: (i: any, v: any) => v,
         description: "This field is ...",
         width: "150px"
@@ -46,7 +47,7 @@ const About = () => {
         <AboutContainer>
             <AboutWrapper>
                 <Flex $style={{ w: '100%' }}>
-                    <P $style={{ size: '32px', weight: '600' }}>Smart Contracts (5432)</P>
+                    <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Smart Contracts (5432)</P>
                 </Flex>
                 <Flex $style={{ w: '100%' }}>
                     <Input value='' placeholder='Search contracts' helpSide={<Icon icon='Search' />} padding='6px 12px' />
@@ -54,11 +55,11 @@ const About = () => {
                 <Table fields={fields} data={transactions} />
             </AboutWrapper>
             <Options>
-                <P $style={{ size: '32px', weight: '600' }}>Decentraland Details</P>
+                <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Decentraland Details</P>
                 <Flex $style={{ gap: '16px' }}>
                     <StatusBar>
-                        <P $style={{ size: '20px' }}>Date Listed</P>
-                        <P $style={{ size: '20px', weight: '600' }}>July 23, 2023</P>
+                        <P $style={{ size: GV('font-size-3') }}>Date Listed</P>
+                        <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>July 23, 2023</P>
                     </StatusBar>
                     <StatusBar>
                         <P>Last Updated</P>

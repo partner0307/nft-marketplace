@@ -16,6 +16,7 @@ import { usePublicLayoutContext } from '@/layouts/PublicLayout/context';
 import { Link } from 'react-router-dom';
 import _ROUTERS from '@/constants/route.constant';
 import { routerer } from '@/utils/util';
+import { GV } from '@/utils/style.util';
 
 const Sidebar = () => {
     const { hash, pathname, search } = useLocation();
@@ -82,7 +83,7 @@ const Sidebar = () => {
                             <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
                                 <ItemIcon src={PostIcon} alt="" />
                                 <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                                    <P $style={{ size: '20px' }}>Post Project</P>
+                                    <P $style={{ size: GV('font-size-3') }}>Post Project</P>
                                     <P>Post a job with description</P>
                                 </Flex>
                             </Flex>
@@ -93,7 +94,7 @@ const Sidebar = () => {
                                     <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
                                         <ItemIcon src={HireIcon} alt="" />
                                         <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                                            <P $style={{ size: '20px' }}>Hire Talents</P>
+                                            <P $style={{ size: GV('font-size-3') }}>Hire Talents</P>
                                             <P>For your web3 projects</P>
                                         </Flex>
                                     </Flex>
@@ -104,7 +105,7 @@ const Sidebar = () => {
                             <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
                                 <ItemIcon src={WorkIcon} alt="" />
                                 <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                                    <P $style={{ size: '20px' }}>Work As Talent</P>
+                                    <P $style={{ size: GV('font-size-3') }}>Work As Talent</P>
                                     <P>Lorem ipsum</P>
                                 </Flex>
                             </Flex>
@@ -114,7 +115,7 @@ const Sidebar = () => {
                                 <SlideHand>
                                     <ItemIcon src={MetaverseIcon} alt="" />
                                     <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                                        <P $style={{ size: '20px' }}>Metaverse</P>
+                                        <P $style={{ size: GV('font-size-3') }}>Metaverse</P>
                                         <P>Buy, sell and build land</P>
                                     </Flex>
                                 </SlideHand>
@@ -123,19 +124,19 @@ const Sidebar = () => {
                                         <Link to={routerer('metaverse')}>
                                             <NestedItem isSelected={pathname === _ROUTERS.metaverse}>
                                                 <Dot />
-                                                <P $style={{ size: '20px' }}>Metaverses</P>
+                                                <P $style={{ size: GV('font-size-3') }}>Metaverses</P>
                                             </NestedItem>
                                         </Link>
                                         <Link to={routerer('marketplace')}>
                                             <NestedItem isSelected={pathname === _ROUTERS.marketplace}>
                                                 <Dot />
-                                                <P $style={{ size: '20px' }}>Marketplace</P>
+                                                <P $style={{ size: GV('font-size-3') }}>Marketplace</P>
                                             </NestedItem>
                                         </Link>
                                         <Link to={routerer('build_metaverse')}>
                                             <NestedItem isSelected={pathname === _ROUTERS.build_metaverse}>
                                                 <Dot />
-                                                <P $style={{ size: '20px' }}>Build Metaverse</P>
+                                                <P $style={{ size: GV('font-size-3') }}>Build Metaverse</P>
                                             </NestedItem>
                                         </Link>
                                     </NestedItemList>
@@ -147,7 +148,7 @@ const Sidebar = () => {
                                 <SlideHand>
                                     <ItemIcon src={NFTIcon} alt="" />
                                     <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                                        <P $style={{ size: '20px' }}>NFTs</P>
+                                        <P $style={{ size: GV('font-size-3') }}>NFTs</P>
                                         <P>Buy, sell and build land</P>
                                     </Flex>
                                 </SlideHand>
@@ -156,19 +157,19 @@ const Sidebar = () => {
                                         <Link to='/buy-nft'>
                                             <NestedItem isSelected={pathname === '/buy-nft'}>
                                                 <Dot />
-                                                <P $style={{ size: '20px' }}>Buy NFT</P>
+                                                <P $style={{ size: GV('font-size-3') }}>Buy NFT</P>
                                             </NestedItem>
                                         </Link>
                                         <Link to='/sell-nft'>
                                             <NestedItem isSelected={pathname === '/sell-nft'}>
                                                 <Dot />
-                                                <P $style={{ size: '20px' }}>Sell NFT</P>
+                                                <P $style={{ size: GV('font-size-3') }}>Sell NFT</P>
                                             </NestedItem>
                                         </Link>
                                         <Link to='/nft-marketplace'>
                                             <NestedItem isSelected={pathname === '/nft-marketplace'}>
                                                 <Dot />
-                                                <P $style={{ size: '20px' }}>NFT Marketplace</P>
+                                                <P $style={{ size: GV('font-size-3') }}>NFT Marketplace</P>
                                             </NestedItem>
                                         </Link>
                                     </NestedItemList>
@@ -179,7 +180,7 @@ const Sidebar = () => {
                             <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
                                 <ItemIcon src={AvatarIcon} alt="" />
                                 <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                                    <P $style={{ size: '20px' }}>Avatars</P>
+                                    <P $style={{ size: GV('font-size-3') }}>Avatars</P>
                                     <P>Create, avatar builders for you</P>
                                 </Flex>
                             </Flex>
@@ -188,7 +189,7 @@ const Sidebar = () => {
                             <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '12px', p: '12px 24px' }}>
                                 <ItemIcon src={StakingIcon} alt="" />
                                 <Flex $style={{ fDirection: 'column', vAlign: 'flex-start', gap: '4px' }}>
-                                    <P $style={{ size: '20px' }}>Staking</P>
+                                    <P $style={{ size: GV('font-size-3') }}>Staking</P>
                                     <P>View blockchain data</P>
                                 </Flex>
                             </Flex>

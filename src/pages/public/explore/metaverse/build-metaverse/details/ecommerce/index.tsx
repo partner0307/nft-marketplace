@@ -6,11 +6,12 @@ import EcommerceMenu from '@/components/page/public/explore/ecommerce-menu';
 
 import Image from '@/assets/img/home.png';
 import EcommerceCard from '@/components/page/public/explore/ecommerce-card';
+import { GV } from '@/utils/style.util';
 
 const Ecommerce = () => {
     return <EcommerceContainer>
     <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-        <P $style={{ size: '32px', weight: '700' }}>Ecommerce</P>
+        <P $style={{ size: GV('font-size-2'), weight: GV('weight-xl') }}>Ecommerce</P>
         <Flex $style={{ gap: '12px', vAlign: 'center' }}>
             <Input value='' placeholder='Search...' padding='6px 12px' helpSide={<Icon icon='Search' />} />
             <CustomDropdown>
@@ -31,14 +32,14 @@ const Ecommerce = () => {
                     </IconBar>
                 </Banner>
                 <BannerContent>
-                    <P $style={{ size: '1.25rem', weight: '700' }}>Single Family Residential</P>
-                    <P $style={{ size: '1rem' }}>
+                    <P $style={{ size: GV('font-size-3'), weight: GV('weight-xl') }}>Single Family Residential</P>
+                    <P $style={{ size: GV('font-size') }}>
                         Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero.
                     </P>
                     <Flex $style={{ hAlign: 'space-between' }}>
                         <Flex $style={{ vAlign: 'center' }}>
                             <CustomFont>$197</CustomFont>
-                            <P $style={{ size: '2rem', weight: '600' }}>$197</P>
+                            <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg')}}>$197</P>
                         </Flex>
                         <Flex $style={{ vAlign: 'center', gap: '0.5rem' }}>
                             <Flex $style={{ vAlign: 'center', gap: '0.25rem' }}>

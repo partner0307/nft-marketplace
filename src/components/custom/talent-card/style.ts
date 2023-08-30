@@ -41,7 +41,7 @@ export const Category = styled.div`
   padding: 4px 8px;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: ${GV('font-size-6')};
   border-radius: 30px;
   background-color: #c1ebed;
 `;
@@ -49,7 +49,7 @@ export const Category = styled.div`
 export const ProfileButton = styled.button`
   background: #000;
   color: ${GV("white")};
-  font-weight: 600;
+  font-weight: ${GV("weight-lg")};
   padding: 0.7rem 1rem;
   border-radius: 0.5rem;
 `;

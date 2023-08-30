@@ -8,8 +8,8 @@ export const InputContainer = styled.div`
 `;
 
 export const InputLabel = styled.span`
-  font-size: 0.8rem;
-  font-weight: 900;
+  font-size: ${GV('font-size-6')};
+  font-weight: ${GV('weight-xxl')};
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 `;
@@ -56,7 +56,7 @@ export const StyledInput = styled.input`
   background: none;
   border: none;
   outline: none;
-  font-size: 1rem;
+  font-size: ${GV('font-size-4')};
 `;
 
 export const StyledTextarea = styled(StyledInput)``;

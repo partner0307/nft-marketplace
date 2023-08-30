@@ -63,7 +63,7 @@ const Collection = () => {
                                     >
                                         <P
                                             $style={{
-                                                size: '20px'
+                                                size: GV('font-size-3')
                                             }}
                                         >Dorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan,..</P>
                                     </Flex>
@@ -118,7 +118,7 @@ const Collection = () => {
                                             gap: '6px'
                                         }}>
                                             <P $style={{
-                                                size: '32px',
+                                                size: GV('font-size-2'),
                                                 weight: '700'
                                             }}><ContentColor>560+</ContentColor></P>
                                             <P>Active NFTs</P>
@@ -129,7 +129,7 @@ const Collection = () => {
                                             gap: '6px'
                                         }}>
                                             <P $style={{
-                                                size: '32px',
+                                                size: GV('font-size-2'),
                                                 weight: '600'
                                             }}>348</P>
                                             <P>Active NFTs</P>
@@ -140,7 +140,7 @@ const Collection = () => {
                                             gap: '6px'
                                         }}>
                                             <P $style={{
-                                                size: '32px',
+                                                size: GV('font-size-2'),
                                                 weight: '600'
                                             }}>277</P>
                                             <P>Active NFTs</P>
@@ -230,7 +230,7 @@ const Collection = () => {
                                                 hAlign: 'space-between'
                                             }}>
                                                 <P $style={{
-                                                    size: '20px',
+                                                    size: GV('font-size-3'),
                                                     color: 'black',
                                                     weight: '600'
                                                 }}>TAOFEEK #2545</P>
@@ -251,14 +251,14 @@ const Collection = () => {
                                                 gap: '14px'
                                             }}>
                                                 <P $style={{
-                                                    size: '32px',
+                                                    size: GV('font-size-2'),
                                                     weight: '700'
                                                 }}>TAOFEEK</P>
                                                 <Flex $style={{
                                                     maxW: '470px'
                                                 }}>
                                                     <P $style={{
-                                                        size: '20px',
+                                                        size: GV('font-size-3'),
                                                     }}>Dorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.</P>
                                                 </Flex>
                                                 <ProgressContainer>

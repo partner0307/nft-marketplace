@@ -12,6 +12,7 @@ import Image3 from '@/assets/img/metaverse/3.png';
 import { CustomTab } from '../style';
 import Pagination from '@/components/custom/pagination';
 import SlideTab from '@/components/page/public/explore/slidetab';
+import { GV } from '@/utils/style.util';
 
 const Collectible = () => {
     const [isLive, setLive] = React.useState(false);
@@ -101,24 +102,24 @@ const Collectible = () => {
                 >
                     <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>
                 </SlideTab>
@@ -127,12 +128,12 @@ const Collectible = () => {
                 >
                     <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>
                 </SlideTab>
@@ -141,12 +142,12 @@ const Collectible = () => {
                 >
                     <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>
                 </SlideTab>
@@ -155,12 +156,12 @@ const Collectible = () => {
                 >
                     <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>
                 </SlideTab>
@@ -169,12 +170,12 @@ const Collectible = () => {
                 >
                     <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>
                 </SlideTab>
@@ -183,12 +184,12 @@ const Collectible = () => {
                 >
                     <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>
                 </SlideTab>
@@ -197,12 +198,12 @@ const Collectible = () => {
                 >
                     <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>
                 </SlideTab>
@@ -211,12 +212,12 @@ const Collectible = () => {
                 >
                     <Flex $style={{ fDirection: 'column', gap: '12px' }}>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
-                            <Checkbox width='20px' height='20px' label={<P $style={{ size: '16px' }}>BlueDress</P>} />
-                            <P $style={{ size: '16px' }}>42</P>
+                            <Checkbox width='20px' height='20px' label={<P $style={{ size: GV('font-size') }}>BlueDress</P>} />
+                            <P $style={{ size: GV('font-size') }}>42</P>
                         </Flex>
                     </Flex>
                 </SlideTab>

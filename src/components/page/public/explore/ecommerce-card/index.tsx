@@ -5,6 +5,7 @@ import Image from '@/components/basic/img';
 import Shoes from '@/assets/img/shoes.png';
 import { Icon } from '@/components/custom';
 import { Flex, P, Span } from '@/components/basic';
+import { GV } from '@/utils/style.util';
 
 type EcommerceCardType = {
     title?: string
@@ -25,12 +26,12 @@ const EcommerceCard: React.FC<EcommerceCardType> = ({ title, description, reduce
                 <Icon icon='ShopCart' />
             </IconBar>
             <Flex $style={{ fDirection: 'column', gap: '0.5rem', maxW: '16rem' }}>
-                <P $style={{ size: '1.25rem', weight: '700' }}>{title}</P>
-                <P $style={{ size: '1rem' }}>{description}</P>
+                <P $style={{ size: GV('font-size-3'), weight: GV('weight-xl') }}>{title}</P>
+                <P $style={{ size: GV('font-size') }}>{description}</P>
                 <Flex $style={{ hAlign: 'space-between' }}>
                     <Flex $style={{ vAlign: 'center' }}>
-                        <P $style={{ decorator: 'line-through', weight: '600', size: '1.25rem' }}>{reduce_price}</P>
-                        <P $style={{ size: '2rem', weight: '600', color: 'blue' }}>{current_price}</P>
+                        <P $style={{ decorator: 'line-through', weight: GV('weight-lg'), size: GV('font-size-3') }}>{reduce_price}</P>
+                        <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg'), color: 'blue' }}>{current_price}</P>
                     </Flex>
                     <Flex $style={{ vAlign: 'center', gap: '0.5rem' }}>
                         <Flex $style={{ vAlign: 'center', gap: '0.25rem' }}>

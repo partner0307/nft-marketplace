@@ -3,6 +3,7 @@ import { BuilderContainer, BuilderIcon, BuilderImage, Content, DescriptionWrappe
 import { Flex, P } from '../../../../basic';
 import { Icon } from '../../../../custom';
 import Image from '@/components/basic/img';
+import { GV } from '@/utils/style.util';
 
 type BuilderType = {
     to?: string
@@ -38,7 +39,7 @@ const Builder: React.FC<BuilderType> = ({ to, image, icon, title }) => {
                 <DescriptionWrapper>
                     <Flex $style={{ fDirection: 'row', vAlign: 'center', gap: '18px' }}>
                         <BuilderIcon src={icon} />
-                        <P $style={{ size: '32px', weight: '600' }}>{title}</P>
+                        <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>{title}</P>
                     </Flex>
                     <Content ref={ContentRef}>
                         With Metaverse Estates, you have the power to design, customize, and inhabit your dream home in the metaverse. Want a castle in the clouds or a beachfront villa surrounded by digital waves....

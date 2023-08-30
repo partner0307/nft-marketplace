@@ -63,7 +63,7 @@ export const SubmitButton = styled.button`
     padding: 0rem 1.5rem;
     gap: 0.5rem;
     align-self: stretch;
-    font-size: 1.25rem;
+    font-size: ${GV('font-size-3')};
     font-weight: 600;
 `;
 
@@ -74,7 +74,7 @@ export const CustomFont = styled.div`
 export const CustomFont1 = styled.div`
     color: var(--foundation-violet-violet-200, #A192A4);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 1.25rem;
+    font-size: ${GV('font-size-3')};
 `
 
 export const CustomLine = styled.div`

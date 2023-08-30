@@ -29,7 +29,7 @@ export const StatusItem = styled.div`
     gap: 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid #1E1E20;
-    font-size: 14px;
+    font-size: ${GV('font-size-5')};
 `;
 
 export const CustomTab = styled.button<{ isActive?: boolean }>`

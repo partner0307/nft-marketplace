@@ -5,13 +5,14 @@ import { Dropdown, Icon, Input } from '@/components/custom';
 
 import Image from '@/assets/img/avatar1.png';
 import CommentComponent from '@/components/page/public/explore/comment';
+import { GV } from '@/utils/style.util';
 
 const Comment = () => {
     return <CommentContainer>
         <Rect />
         <Flex $style={{ fDirection: 'column', flex: '1', gap: '20px', w: '100%' }}>
             <Flex $style={{ hAlign: 'space-between', w: '100%' }}>
-                <P $style={{ size: '20px' }}>3,6760 Comments</P>
+                <P $style={{ size: GV('font-size-3') }}>3,6760 Comments</P>
                 <ItemContainer max='200px'>
                     <Dropdown initialLabel='Filter' hideIcon customIcon={<Icon icon='Filter' />} />
                 </ItemContainer>
@@ -19,7 +20,7 @@ const Comment = () => {
             <Line />
             <Flex $style={{ vAlign: 'center', gap: '16px' }}>
                 <Avatar src={Image} />
-                <P $style={{ size: '20px' }}>Tunde_K678</P>
+                <P $style={{ size: GV('font-size-3') }}>Tunde_K678</P>
                 <Input value='' placeholder='Type something...' radius='12px' helpSide={<Icon icon='BigSmile' />} />
                 <CustomButton>Post<Icon icon='Send' /></CustomButton>
             </Flex>

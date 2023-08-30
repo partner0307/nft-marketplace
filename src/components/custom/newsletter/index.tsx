@@ -39,7 +39,7 @@ const NewsLetter = () => {
             </Heading>
             <P
               $style={{
-                size: "20px",
+                size:  GV('font-size-3'),
                 color: "black",
               }}
             >
@@ -65,7 +65,7 @@ const NewsLetter = () => {
                 >
                   <P
                     $style={{
-                      size: "20px",
+                      size: GV('font-size-3'),
                     }}
                   >
                     Subscribe

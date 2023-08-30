@@ -13,6 +13,7 @@ import Ether from '@/assets/img/metaverse/ether.png';
 import { Icon } from '@/components/custom';
 import { Line } from 'recharts';
 import NFTCollections from './content/content';
+import { GV } from '@/utils/style.util';
 
 const NFTDetails = () => {
     const [tabIndex, setTabIndex] = React.useState(1);
@@ -24,10 +25,10 @@ const NFTDetails = () => {
                 <Flex $style={{ gap: '4px', vAlign: 'center', }}>
                     <Link to='/metaverses'>
                         <Flex $style={{ hAlign: 'center', vAlign: 'center', gap: '4px', p: '4px' }}>
-                            <P $style={{ size: '14px', weight: '400' }}><CustomFont family='Aeonik'>NFTs /</CustomFont></P>
+                            <P $style={{ size: GV('font-size-5'), weight: GV('weight-sm') }}><CustomFont family={GV('font3')}>NFTs /</CustomFont></P>
                         </Flex>
                     </Link>
-                    <P $style={{ size: '14px', weight: '400' }}><CustomFont family='Aeonik'>Thenftmakers</CustomFont></P>
+                    <P $style={{ size: GV('font-size-5'), weight: GV('weight-sm') }}><CustomFont family={GV('font3')}>Thenftmakers</CustomFont></P>
                 </Flex>
                 <HeroContainer>
                     <MarkContainer>
@@ -53,13 +54,13 @@ const NFTDetails = () => {
                                 </Flex>
                                 <Flex>
                                     <Flex $style={{ vAlign: 'center', gap: '43px' }}>
-                                        <Flex $style={{ gap: '4px' }}><P $style={{ size: '20px' }}><CustomFont>Created By:</CustomFont></P><P $style={{ size: '20px', weight: '700' }}>0x000000..0000</P></Flex>
-                                        <Flex $style={{ gap: '4px' }}><P $style={{ size: '20px' }}><CustomFont>Address:</CustomFont></P><P $style={{ size: '20px', weight: '700' }}>0xbc4...f13d</P></Flex>
+                                        <Flex $style={{ gap: '4px' }}><P $style={{ size: GV('font-size-3') }}><CustomFont>Created By:</CustomFont></P><P $style={{ size: GV('font-size-3'), weight: GV('weight-xl') }}>0x000000..0000</P></Flex>
+                                        <Flex $style={{ gap: '4px' }}><P $style={{ size: GV('font-size-3') }}><CustomFont>Address:</CustomFont></P><P $style={{ size: GV('font-size-3'), weight: GV('weight-xl') }}>0xbc4...f13d</P></Flex>
                                     </Flex>
                                 </Flex>
                                 <Flex $style={{ vAlign: 'center', hAlign: 'space-between', maxW: '780px' }}>
                                     <Flex $style={{ maxW: '580px' }}>
-                                        <P $style={{ size: '20px' }}>The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits.</P>
+                                        <P $style={{ size: GV('font-size-3') }}>The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits.</P>
                                     </Flex>
                                     <CustomeButton2>Place Floor Bid</CustomeButton2>
                                 </Flex>

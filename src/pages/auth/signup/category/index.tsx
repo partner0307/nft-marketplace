@@ -6,6 +6,7 @@ import _ROUTERS from '@/constants/route.constant';
 import { talent_type, software_list } from '@/constants/mockup/tablents';
 import { Checkbox, Icon, RadioButton } from '@/components/custom';
 import { routerer } from '@/utils/util';
+import { GV } from '@/utils/style.util';
 
 const Category = () => {
     const [checkedList, setCheckedList] = useState<boolean[]>(new Array(talent_type.length).fill(false));
@@ -30,12 +31,12 @@ const Category = () => {
     return (
         <AuthForm>
             <Flex $style={{ fDirection: 'column', gap: '0.75rem', w: '100%' }}>
-                <P $style={{ size: '2rem', weight: '700', align: 'center' }}>YOU ARE ALMOST THERE</P>
-                <P $style={{ size: '1.25rem', align: 'center' }}>Please fill out the rest information.</P>
+                <P $style={{ size: GV('font-size-2'), weight: GV('weight-xl'), align: 'center' }}>YOU ARE ALMOST THERE</P>
+                <P $style={{ size: GV('font-size-3'), align: 'center' }}>Please fill out the rest information.</P>
             </Flex>
             <Divider />
             <Flex $style={{ fDirection: 'column', gap: '0.75rem' }}>
-                <P $style={{ size: '2rem' }}>Please select talent type</P>
+                <P $style={{ size: GV('font-size-2') }}>Please select talent type</P>
                 <ItemList>
                     {talent_type.map((category, index) => (
                         <Item key={index} onClick={() => {set(index)}}>
@@ -46,7 +47,7 @@ const Category = () => {
             </Flex>
             <Divider />
             <Flex $style={{ fDirection: 'column', gap: '0.75rem', vAlign: 'flex-start' }}>
-                <P $style={{ size: '2rem' }}>Have you built virtual worlds before?</P>
+                <P $style={{ size: GV('font-size-2') }}>Have you built virtual worlds before?</P>
                 <RadioContainer border='#315866' background='#1A272C'>
                     <RadioButton label={<P>Yes, I’ve built worlds before.</P>} isSelected={virtualWorld === 1} onClick={() => setVirtualWorld(1)} color='#08A0D8' />
                 </RadioContainer>
@@ -59,11 +60,11 @@ const Category = () => {
             </Flex>
             {virtualWorld === 1 && (
                 <Flex $style={{ fDirection: 'column', gap: '0.75rem' }}>
-                    <P $style={{ size: '2rem' }}>How would you describe your experience with building in the metaverse?</P>
+                    <P $style={{ size: GV('font-size-2') }}>How would you describe your experience with building in the metaverse?</P>
                     <Flex $style={{ hAlign: 'space-between' }}>
                         <Flex $style={{ fDirection: 'column' }}>
-                            <P $style={{ size: '1.25rem' }}>1 = I'm new to this.</P>
-                            <P $style={{ size: '1.25rem' }}>5 = I've built worlds in Metaverse before'.</P>
+                            <P $style={{ size: GV('font-size-3') }}>1 = I'm new to this.</P>
+                            <P $style={{ size: GV('font-size-3') }}>5 = I've built worlds in Metaverse before'.</P>
                         </Flex>
                         <ItemContainer>
                             <Icon icon='Star' />
@@ -77,7 +78,7 @@ const Category = () => {
             )}
             {virtualWorld === 2 && (
                 <Flex $style={{ fDirection: 'column', gap: '0.75rem' }}>
-                    <P $style={{ size: '2rem' }}>What type of 3D creation software are you familiar with?</P>
+                    <P $style={{ size: GV('font-size-2') }}>What type of 3D creation software are you familiar with?</P>
                     <ItemList>
                         {software_list.map((item, index) => (
                             <Item key={index} onClick={() => {set(index)}}>
@@ -94,7 +95,7 @@ const Category = () => {
             </Flex>
             <Flex $style={{ vAlign: 'center', gap: '0.25rem', w: '100%', hAlign: 'center' }}>
                 <CustomFont1>Already have an account? </CustomFont1>
-                <Link to={routerer('_SIGNIN')}><P $style={{ size: '1.25rem', color: 'info' }}>Sign In</P></Link>
+                <Link to={routerer('_SIGNIN')}><P $style={{ size: GV('font-size-3'), color: 'info' }}>Sign In</P></Link>
             </Flex>
         </AuthForm>
     )

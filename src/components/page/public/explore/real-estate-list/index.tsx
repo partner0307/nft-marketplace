@@ -1,11 +1,12 @@
 import React from 'react';
 import { TitleBar } from './style';
 import { Flex, List, ListItem, P } from '@/components/basic';
+import { GV } from '@/utils/style.util';
 
 const EstateList = () => {
     return <Flex $style={{ fDirection: 'column', gap: '12px' }}>
         <TitleBar>
-            <P $style={{ size: '32px', weight: '600' }}>Bedrooms & Bathrooms</P>
+            <P $style={{ size: GV('font-size-2'), weight: GV('weight-lg') }}>Bedrooms & Bathrooms</P>
         </TitleBar>
         <List dir='column'>
             <ListItem color='#fff'><P>Bedrooms: 3</P></ListItem>

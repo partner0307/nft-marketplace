@@ -34,7 +34,7 @@ const Footer = () => {
                                 <Logo src={LogoImage} />
                                 <Icon icon="Logo2" width="180px" height="40px" />
                             </Flex>
-                            <P $style={{ size: '16px' }}>Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget  lacus, ut interdum tellus elit sed risus. Maecenas eget lacus, ut interdum tellus elit sed risus. Maecenas eget </P>
+                            <P $style={{ size: GV('font-size') }}>Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget  lacus, ut interdum tellus elit sed risus. Maecenas eget lacus, ut interdum tellus elit sed risus. Maecenas eget </P>
                         </Flex>
                         <Flex $style={{
                             fDirection: 'row',
@@ -42,99 +42,99 @@ const Footer = () => {
                             w: '700px'
                         }}>
                             <Flex $style={{ fDirection: "column", gap: "0.7rem" }}>
-                                <P $style={{ size: '20px' }}><ContentColor>EXPLORE</ContentColor></P>
+                                <P $style={{ size: GV('font-size-3') }}><ContentColor>EXPLORE</ContentColor></P>
                                 <List dir="column" gap="0.5rem">
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Buy Metaverse</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>3D Spaces</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Avatars</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Spaces</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>NFTs</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Start Building</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Marketplace</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Academy</Link>
                                     </ListItem>
                                 </List>
                             </Flex>
                             <Flex $style={{ fDirection: "column", gap: "0.7rem" }}>
-                                <P $style={{ size: '20px' }}><ContentColor>ABOUT</ContentColor></P>
+                                <P $style={{ size: GV('font-size-3') }}><ContentColor>ABOUT</ContentColor></P>
                                 <List dir="column" gap="0.5rem">
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>What we do</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Metaverse News</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Web3 News</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>AI Blogs</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Web3 Community</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Careers</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Contact us</Link>
                                     </ListItem>
                                 </List>
                             </Flex>
                             <Flex $style={{ fDirection: "column", gap: "0.7rem" }}>
-                                <P $style={{ size: '20px' }}><ContentColor>HIRE TALENT</ContentColor></P>
+                                <P $style={{ size: GV('font-size-3') }}><ContentColor>HIRE TALENT</ContentColor></P>
                                 <List dir="column" gap="0.5rem">
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Designers</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Developers</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>NFT Creators</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Modelers</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Content Writers</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Managers</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>AI Experts</Link>
                                     </ListItem>
                                 </List>
                             </Flex>
                             <Flex $style={{ fDirection: "column", gap: "0.7rem" }}>
-                                <P $style={{ size: '20px' }}><ContentColor>NAVIGATE TO</ContentColor></P>
+                                <P $style={{ size: GV('font-size-3') }}><ContentColor>NAVIGATE TO</ContentColor></P>
                                 <List dir="column" gap="0.5rem">
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Sign in</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Privacy Policy</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Terms of Use</Link>
                                     </ListItem>
-                                    <ListItem hideDot $style={{ size: "0.8rem", color: GV('input-color') }}>
+                                    <ListItem hideDot $style={{ size: GV('font-size-6'), color: GV('input-color') }}>
                                         <Link to={""}>Site Map:</Link>
                                     </ListItem>
                                     <ListItem hideDot>
@@ -168,7 +168,7 @@ const Footer = () => {
                                 gap: '12px',
                                 vAlign: 'flex-start'
                             }}>
-                                <P $style={{ size: '20px', weight: '600' }}>Join the Community</P>
+                                <P $style={{ size: GV('font-size-3'), weight: '600' }}>Join the Community</P>
                                 <Flex $style={{
                                     fDirection: 'row',
                                     gap: '24px'
@@ -199,13 +199,13 @@ const Footer = () => {
                             fDirection: 'row',
                             hAlign: 'space-between'
                         }}>
-                            <Span $style={{ size: '12px', weight: '700' }}>© 2023 MetaverseDeployment. All rights reserved.</Span>
+                            <Span $style={{ size: GV('font-size-6'), weight: '700' }}>© 2023 MetaverseDeployment. All rights reserved.</Span>
                             <Flex $style={{
                                 fDirection: 'row',
                                 gap: '64px'
                             }}>
-                                <Link to="/"><Span $style={{ size: '12px', weight: '700' }}>Privacy Policy</Span></Link>
-                                <Link to="/"><Span $style={{ size: '12px', weight: '700' }}>Term of Service</Span></Link>
+                                <Link to="/"><Span $style={{ size: GV('font-size-6'), weight: '700' }}>Privacy Policy</Span></Link>
+                                <Link to="/"><Span $style={{ size: GV('font-size-6'), weight: '700' }}>Term of Service</Span></Link>
                             </Flex>
                         </Flex>
                     </Flex>

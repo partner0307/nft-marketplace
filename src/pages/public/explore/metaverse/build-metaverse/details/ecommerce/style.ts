@@ -1,3 +1,4 @@
+import { GV } from '@/utils/style.util';
 import styled from 'styled-components';
 
 export const EcommerceContainer = styled.div`
@@ -58,7 +59,7 @@ export const CustomDropdown = styled.div`
 
 export const CustomFont = styled.div`
     color: #8DD3ED;
-    font-size: 1.25rem;
+    font-size: ${GV('font-size-3')};
     font-weight: 600;
     text-decoration-line: strikethrough;
 `;

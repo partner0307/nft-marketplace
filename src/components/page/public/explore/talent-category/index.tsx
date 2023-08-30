@@ -4,6 +4,7 @@ import { Flex, P } from '@/components/basic';
 import { Icon } from '@/components/custom';
 
 import Image from '@/assets/img/avatar1.png';
+import { GV } from '@/utils/style.util';
 
 type TalentCategoryType = {
     name?: string,
@@ -15,7 +16,7 @@ type TalentCategoryType = {
 const TalentCategory: React.FC<TalentCategoryType> = ({ name, rate, like, counts }) => {
     return (
         <TalentCategoryContainer>
-            <P $style={{ size: '1.25rem' }}>{name}</P>
+            <P $style={{ size: GV('font-size-3') }}>{name}</P>
             <RateContainer>
                 <Icon icon='Star' />
                 <P $style={{ color: 'gray-100' }}>{rate}</P>

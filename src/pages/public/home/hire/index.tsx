@@ -82,7 +82,7 @@ const HireSection = () => {
                                     opacity={[0, 1]}
                                 >
                                     <Span $style={{
-                                        size: '20px',
+                                        size: GV('font-size-3'),
                                         color: GV('caption-color1')
                                     }}>It's Time To</Span>
                                 </Anime>}

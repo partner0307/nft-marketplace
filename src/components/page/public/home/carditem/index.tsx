@@ -5,6 +5,7 @@ import { Flex, P, Span } from '@/components/basic';
 import { Icon } from '@/components/custom';
 
 import Ether from '@/assets/img/ether-icon.png';
+import { GV } from '@/utils/style.util';
 
 type CardItemType = {
     nft?: string
@@ -47,7 +48,7 @@ const CardItem: React.FC<CardItemType> = ({ nft, avatar, name, username, current
                         gap: '2px'
                     }}>
                         <Span $style={{
-                            size: '10px'
+                            size: GV('font-size-7')
                         }}>{name}</Span>
                         <Icon icon='CircleCheck' />
                     </Flex>
@@ -67,7 +68,7 @@ const CardItem: React.FC<CardItemType> = ({ nft, avatar, name, username, current
                 gap: '4px'
             }}>
                 <P $style={{ weight: '600' }}>{current_price}</P>
-                <Span $style={{ size: '10px' }}>Latest Bid</Span>
+                <Span $style={{ size: GV('font-size-7') }}>Latest Bid</Span>
             </Flex>
             <Flex $style={{
                 fDirection: 'column',
@@ -75,7 +76,7 @@ const CardItem: React.FC<CardItemType> = ({ nft, avatar, name, username, current
                 gap: '4px'
             }}>
                 <P $style={{ weight: '600' }}>{start_price}</P>
-                <Span $style={{ size: '10px' }}>From</Span>
+                <Span $style={{ size: GV('font-size-7') }}>From</Span>
             </Flex>
             <Flex $style={{
                 fDirection: 'column',
@@ -83,7 +84,7 @@ const CardItem: React.FC<CardItemType> = ({ nft, avatar, name, username, current
                 gap: '4px'
             }}>
                 <P $style={{ weight: '600' }}>{reduce_price}</P>
-                <Span $style={{ size: '10px', color: 'purple' }}>{reduce_percent}</Span>
+                <Span $style={{ size: GV('font-size-7'), color: 'purple' }}>{reduce_percent}</Span>
             </Flex>
         </StatusContainer>
     </CardContainer>

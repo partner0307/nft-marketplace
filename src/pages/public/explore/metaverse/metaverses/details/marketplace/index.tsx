@@ -11,6 +11,7 @@ import { tokillo } from '@/utils/util';
 import Pagination from '@/components/custom/pagination';
 import SlideTab from '@/components/page/public/explore/slidetab';
 import { metaverse_nfts } from '@/constants/mockup/metaverse_nfts';
+import { GV } from '@/utils/style.util';
 
 const fields: TableFieldInterface[] = [
     {
@@ -28,7 +29,7 @@ const fields: TableFieldInterface[] = [
                 }}>
                     <CustomImage src={i.image} w='80px' h='80px' r='12px' />
                     <Flex $style={{ p: '16px 0' }}>
-                        <P $style={{ size: '16px', weight: '700' }}>{v}</P>
+                        <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>{v}</P>
                     </Flex>
                 </Flex>
             </Flex>
@@ -41,7 +42,7 @@ const fields: TableFieldInterface[] = [
         label: "TIME",
         render: (i, v) => (
             <Flex $style={{ p: '16px 0' }}>
-                <P $style={{ size: '16px', weight: '700' }}>{v}</P>
+                <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>{v}</P>
             </Flex>
         ),
         sort: (i: any, v: any) => v,
@@ -55,10 +56,10 @@ const fields: TableFieldInterface[] = [
             <Flex $style={{ vAlign: 'flex-start', p: '16px 0 0', gap: '0.5rem' }}>
                 <CustomImage src={i.icon1} w='1.5rem' h='1.5rem' r='100px' />
                 <Flex $style={{ fDirection: 'column', gap: '0.25rem' }}>
-                    <P $style={{ size: '16px', weight: '700' }}>${tokillo(v)}</P>
+                    <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>${tokillo(v)}</P>
                     <Flex $style={{ gap: '0.25rem', vAlign: 'center' }}>
                         <CustomImage src={i.icon2} w='12px' h='12px' />
-                        <P $style={{ size: '12px', color: 'success' }}>{i.mana}MANA</P>
+                        <P $style={{ size: GV('font-size-6'), color: 'success' }}>{i.mana}MANA</P>
                     </Flex>
                 </Flex>
             </Flex>
@@ -72,7 +73,7 @@ const fields: TableFieldInterface[] = [
         label: "%TRANSFOR FROM",
         render: (i, v) => (
             <CustomText>
-                <P $style={{ size: '16px', weight: '700' }}>{v}</P>
+                <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>{v}</P>
             </CustomText>
         ),
         sort: (i: any, v: any) => v,
@@ -84,7 +85,7 @@ const fields: TableFieldInterface[] = [
         label: "TRANSOFR HUTON",
         render: (i, v) => (
             <CustomText>
-                <P $style={{ size: '16px', weight: '700' }}>{v}</P>
+                <P $style={{ size: GV('font-size'), weight: GV('weight-xl') }}>{v}</P>
             </CustomText>
         ),
         sort: (i: any, v: any) => v,

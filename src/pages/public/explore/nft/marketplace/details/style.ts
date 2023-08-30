@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Background from '@/assets/img/metaverse/overview.png'
+import { GV } from '@/utils/style.util';
 
 export const DetailsContainer = styled.div`
     background: #0C0D0E;
@@ -49,9 +50,9 @@ export const MarkContainer = styled.div`
 `;
 
 export const CustomButton = styled.button`
-    font-size: 14px;
+    font-size: ${GV('font-size-5')};
     color: #000;
-    font-weight: 600;
+    font-weight: ${GV('weight-lg')};
     padding: 18px 54px;
     border-radius: 8px;
     background: #F75BB1;
@@ -78,8 +79,8 @@ export const CustomeButton2 = styled.button`
     border-radius: 12px;
     background: #0C0C0C;
     color: #D96BFF;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: ${GV('font-size-3')};
+    font-weight: ${GV('weight-lg')};
 `;
 
 export const CustomTab = styled.button<{ isActive?: boolean }>`
@@ -88,7 +89,7 @@ export const CustomTab = styled.button<{ isActive?: boolean }>`
     border-radius: 32px;
     ${({ isActive }) => isActive ? `background: #D96BFF;` : `background: #191919;`}
     ${({ isActive }) => !isActive ? `border: 1px solid #2B2928;` : ``}
-    ${({ isActive }) => isActive ? `font-weight: 600; color: #0C0D0E;` : ``}
+    ${({ isActive }) => isActive ? `font-weight: ${GV('weight-lg')}; color: #0C0D0E;` : ``}
 `;
 
 export const StatusBar = styled.div`

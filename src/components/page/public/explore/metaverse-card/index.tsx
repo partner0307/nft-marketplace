@@ -2,6 +2,7 @@ import React from 'react';
 import { Avatar, CardContainer, IconLoader, ImageLoader } from './style';
 import { Flex, P } from '@/components/basic';
 import Image from '@/components/basic/img';
+import { GV } from '@/utils/style.util';
 
 type CardType = {
     title?: string,
@@ -19,7 +20,7 @@ const Card: React.FC<CardType> = ({ title, image, avatar, icon1, icon2 }) => {
                 <Avatar>
                     <img src={avatar} alt="" />
                 </Avatar>
-                <P $style={{ size: '20px', weight: '600' }}>{title}</P>
+                <P $style={{ size: GV('font-size-3'), weight: GV('weight-lg') }}>{title}</P>
             </Flex>
             <Flex>
                 {icon1 && <IconLoader src={icon1} />}
