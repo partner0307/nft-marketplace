@@ -21,15 +21,16 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const CardImage = styled.div<{ image?: string }>`
-  width: 242px;
-  height: 243px;
-  ${({ image }) => image ? `background: no-repeat url(${image});` : ``}
-  background-position: top center;
-  background-size: cover;
+
+export const CardHero = styled.div`
   position: relative;
   border-radius: 12px 12px 0 0;
 `;
+
+export const CardImage = styled.img`
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+`
 
 export const MarkWrapper = styled.div`
   position: absolute;

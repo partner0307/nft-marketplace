@@ -29,14 +29,6 @@ export const HireWrapper = styled.div`
   }
 `;
 
-export const ContextContainer = styled.div`
-  display: flex;
-  align-items: center;
-  max-width: 1440px;
-  margin: auto;
-  padding: 0 10rem 5rem;
-`
-
 export const Item = styled.div<{ isChecked: boolean }>`
   display: flex;
   padding: 8px 16px;

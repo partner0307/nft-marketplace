@@ -67,7 +67,7 @@ const nft_fields: TableFieldInterface[] = [
         ),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: 'avgprice',
@@ -80,7 +80,7 @@ const nft_fields: TableFieldInterface[] = [
         ),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: 'mktcap',
@@ -93,7 +93,7 @@ const nft_fields: TableFieldInterface[] = [
         ),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: 'volume',
@@ -106,7 +106,7 @@ const nft_fields: TableFieldInterface[] = [
         ),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: 'supply',

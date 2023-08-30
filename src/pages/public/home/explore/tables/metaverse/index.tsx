@@ -86,7 +86,7 @@ const metaverse_fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: "provolume",

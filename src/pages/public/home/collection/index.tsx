@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowButton, ArrowContainer, CardContainer, CardContainer1, CardWrapper, CollectionContainer, CollectionWrapper, ContentColor, Cursor, Mark1, Mark2, Progress, ProgressContainer, Rect1, Rect2, Rect3, SlideCard } from './style';
-import { Flex, Heading, P } from '@/components/basic';
+import { Flex, Grid, Heading, P } from '@/components/basic';
 import { Button, Icon } from '@/components/custom';
 import { GV } from '@/utils/style.util';
 import Anime, {anime} from 'react-anime';
@@ -206,7 +206,13 @@ const Collection = () => {
                                                 <Flex $style={{
                                                     fDirection: 'row',
                                                     hAlign: 'center',
-                                                    gap: '8px'
+                                                    vAlign: 'center',
+                                                    gap: '8px',
+                                                    queries: {
+                                                        1024: {
+                                                            gap: '4px'
+                                                        }
+                                                    }
                                                 }}>
                                                     <Icon icon='Clock' />
                                                     <P $style={{
@@ -216,7 +222,13 @@ const Collection = () => {
                                                 </Flex>
                                                 <Flex $style={{
                                                     fDirection: 'row',
-                                                    gap: '4px'
+                                                    vAlign: 'center',
+                                                    gap: '4px',
+                                                    queries: {
+                                                        1024: {
+                                                            gap: '2px'
+                                                        }
+                                                    }
                                                 }}>
                                                     <img src={Ether} alt="" />
                                                     <P $style={{
@@ -227,12 +239,13 @@ const Collection = () => {
                                             </Flex>
                                             <Flex $style={{
                                                 fDirection: 'row',
+                                                vAlign: 'center',
                                                 hAlign: 'space-between'
                                             }}>
                                                 <P $style={{
                                                     size: GV('font-size-3'),
                                                     color: 'black',
-                                                    weight: '600'
+                                                    weight: GV('weight-lg')
                                                 }}>TAOFEEK #2545</P>
                                                 <Button $style={{
                                                     bg: 'black',
@@ -308,50 +321,39 @@ const Collection = () => {
             </div>
             <Flex $style={{
                 fDirection: "column",
-                gap: "2rem"
+                gap: "2rem",
+                w: '100%'
             }}>
                 <div ref={secondRef}>
                     {secondInView && (
-                        <Anime
-                            easing="easeInQuart"
-                            duration={1000}
-                            delay={1500}
-                            translateX={['20rem', '0']}
-                            opacity={[0, 1]}
+                        <Grid
+                            $style={{
+                                columns: '4',
+                                gap: "2rem",
+                                queries: {
+                                    1024: {
+                                        columns: '3'
+                                    }
+                                }
+                            }}
                         >
-                            <Flex
-                                $style={{
-                                    gap: "2rem"
-                                }}
+                            <Anime
+                                easing="easeInQuart"
+                                duration={1000}
+                                delay={anime.stagger('200', { start: 1500 })}
+                                translateX={['50rem', '0']}
+                                opacity={[0, 1]}
                             >
                                 <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                                 <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                                 <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                                 <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
-                            </Flex>
-                        </Anime>
-                    )}
-                </div>
-                <div ref={thirdRef}>
-                    {thirdInView && (
-                        <Anime
-                            easing="easeInQuart"
-                            duration={1000}
-                            delay={2000}
-                            translateX={['-20rem', '0']}
-                            opacity={[0, 1]}
-                        >
-                            <Flex
-                                $style={{
-                                    gap: "2rem"
-                                }}
-                            >
                                 <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                                 <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                                 <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
                                 <CardItem nft={Image} avatar={Avatar} name='Thenftmakers' username='Wasdoke1#61' current_price='4.45ETH' start_price='2.25ETH' reduce_price='2.00ETH' reduce_percent='+2.00%' />
-                            </Flex>
-                        </Anime>
+                            </Anime>
+                        </Grid>
                     )}
                 </div>
             </Flex>

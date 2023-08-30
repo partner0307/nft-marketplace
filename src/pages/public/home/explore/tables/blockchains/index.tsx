@@ -1,11 +1,9 @@
-import { metaverses } from "@/constants/mockup/metaverses"
+import React from "react";
 import { AnimatedTableContainer } from "../../style"
 import Table, { TableFieldInterface } from "@/components/custom/table"
 import { Flex, Span } from "@/components/basic";
-import React from "react";
 import { tokillo } from "@/utils/util";
 import { blockchains } from "@/constants/mockup/blockchains";
-import EtherImg from "@/assets/img/chains/ethereum.png";
 
 const blockchain_fields: TableFieldInterface[] = [
     {
@@ -43,7 +41,7 @@ const blockchain_fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: "volume1",
@@ -51,7 +49,7 @@ const blockchain_fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: "volume2",
@@ -59,7 +57,7 @@ const blockchain_fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold", color: v > 0 ? v === 0 ? "white" : "success" : "danger" }}>{v}%</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: "volume3",
@@ -67,7 +65,7 @@ const blockchain_fields: TableFieldInterface[] = [
         render: (i, v) => (<Span $style={{ weight: "bold" }}>${tokillo(v)}</Span>),
         sort: (i: any, v: any) => v,
         description: "This field is ...",
-        width: "150px"
+        width: "120px"
     },
     {
         key: "graph",

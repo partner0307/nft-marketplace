@@ -38,7 +38,12 @@ const Blog = () => {
           <BlogWrapper>
             <Flex
               $style={{
-                w: "548px"
+                w: "548px",
+                queries: {
+                  1024: {
+                    w: '100%'
+                  }
+                }
               }}
             >
               <Anime
@@ -69,12 +74,12 @@ const Blog = () => {
                     <Flex
                       $style={{ fDirection: "row", hAlign: "center", gap: "30px" }}
                     >
-                      <Span $style={{ size: GV('font-size-7') }}>2mins Read</Span>
+                      <Span $style={{ size: GV('font-size-5') }}>2mins Read</Span>
                       <Flex
                         $style={{ fDirection: "row", hAlign: "center", gap: "8px" }}
                       >
                         <Icon icon="HeartBrown" />
-                        <Span $style={{ size: GV('font-size-7') }}>28</Span>
+                        <Span $style={{ size: GV('font-size-5') }}>28</Span>
                       </Flex>
                       <Flex
                         $style={{
@@ -84,7 +89,7 @@ const Blog = () => {
                         }}
                       >
                         <Icon icon="Share" />
-                        <Span $style={{ size: GV('font-size-7') }}>72</Span>
+                        <Span $style={{ size: GV('font-size-5') }}>72</Span>
                       </Flex>
                       <Icon icon="Bookmark" />
                     </Flex>
@@ -98,6 +103,11 @@ const Blog = () => {
                 fDirection: "column",
                 vAlign: "flex-start",
                 gap: "64px",
+                queries: {
+                  1024: {
+                    w: '100%'
+                  }
+                }
               }}
             >
               <Flex
@@ -189,7 +199,7 @@ const Blog = () => {
                           gap: "30px",
                         }}
                       >
-                        <Span $style={{ size: GV('font-size-7') }}>2mins Read</Span>
+                        <Span $style={{ size: GV('font-size-5') }}>2mins Read</Span>
                         <Flex
                           $style={{
                             fDirection: "row",
@@ -198,7 +208,7 @@ const Blog = () => {
                           }}
                         >
                           <Icon icon="HeartBrown" />
-                          <Span $style={{ size: GV('font-size-7') }}>28</Span>
+                          <Span $style={{ size: GV('font-size-5') }}>28</Span>
                         </Flex>
                         <Flex
                           $style={{
@@ -208,7 +218,7 @@ const Blog = () => {
                           }}
                         >
                           <Icon icon="Share" />
-                          <Span $style={{ size: GV('font-size-7') }}>72</Span>
+                          <Span $style={{ size: GV('font-size-5') }}>72</Span>
                         </Flex>
                         <Icon icon="Bookmark" />
                       </Flex>
@@ -247,7 +257,7 @@ const Blog = () => {
                           gap: "30px",
                         }}
                       >
-                        <Span $style={{ size: GV('font-size-7') }}>2mins Read</Span>
+                        <Span $style={{ size: GV('font-size-5') }}>2mins Read</Span>
                         <Flex
                           $style={{
                             fDirection: "row",
@@ -256,7 +266,7 @@ const Blog = () => {
                           }}
                         >
                           <Icon icon="HeartBrown" />
-                          <Span $style={{ size: GV('font-size-7') }}>28</Span>
+                          <Span $style={{ size: GV('font-size-5') }}>28</Span>
                         </Flex>
                         <Flex
                           $style={{
@@ -266,7 +276,7 @@ const Blog = () => {
                           }}
                         >
                           <Icon icon="Share" />
-                          <Span $style={{ size: GV('font-size-7') }}>72</Span>
+                          <Span $style={{ size: GV('font-size-5') }}>72</Span>
                         </Flex>
                         <Icon icon="Bookmark" />
                       </Flex>
