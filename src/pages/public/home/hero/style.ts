@@ -54,10 +54,10 @@ export const HeroContainer = styled.div`
       top: 5rem;
     }
     @media (min-height: 1000px) {
-      top: 3rem;
+      top: 5rem;
     }
     @media (min-height: 1050px) {
-      top: 4%.5;
+      top: 4.5rem;
     }
     @media (min-height: 1100px) {
       top: 6rem;
