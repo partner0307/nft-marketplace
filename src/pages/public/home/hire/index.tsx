@@ -1,13 +1,9 @@
 import { useRef } from 'react';
-import { Link } from 'react-router-dom';
 
-import Anime from 'react-anime';
 import _ROUTERS from '@/constants/route.constant';
 
-import { ArrowButton, HireContainer, HireWrapper, ImageWrapper } from './style';
+import { HireContainer, HireWrapper, ImageWrapper } from './style';
 import { Flex } from '@/components/basic';
-import { GV } from '@/utils/style.util';
-import { Button, Icon } from '@/components/custom';
 
 import HireSectionBanner from './components/Banner';
 import HireSectionHeading from './components/Heading';
