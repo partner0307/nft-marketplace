@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowButton, ArrowContainer, CardContainer, CardContainer1, CardWrapper, CollectionContainer, CollectionWrapper, ContentColor, Cursor, Mark1, Mark2, Progress, ProgressContainer, Rect1, Rect2, Rect3, SlideCard } from './style';
+import { ArrowButton, ArrowContainer, CardContainer, CardContainer1, CardWrapper, CollectionContainer, CollectionWrapper, ContentColor, Cursor, EffectIcon, EffectSVG, EffectText, Mark1, Mark2, Progress, ProgressContainer, Rect1, Rect2, Rect3, SlideCard } from './style';
 import { Flex, Heading, P } from '@/components/basic';
 import { Button, Icon } from '@/components/custom';
 import { GV } from '@/utils/style.util';
@@ -41,7 +41,7 @@ const Collection = () => {
                             >
                                 <Heading level={1} $style={{
                                     maxW: '500px'
-                                }}>Buy, Collect, Sell NFTs, DApps, Spaces etc.</Heading>
+                                }}>Buy, C<EffectText>o</EffectText>llect, Sell NFTs, DApps, Spaces etc.</Heading>
                             </Anime>
                             <Flex $style={{
                                 maxW: '400px',
@@ -155,11 +155,15 @@ const Collection = () => {
                                     opacity={[0, 1]}
                                 >
                                     <ArrowButton>
-                                        <Flex>
-                                            <Letters />
-                                        </Flex>
+                                        <EffectSVG>
+                                            <Flex>
+                                                <Letters />
+                                            </Flex>
+                                        </EffectSVG>
                                         <ArrowContainer>
-                                            <Icon icon='ArrowLowerRight' />
+                                            <EffectIcon>
+                                                <Icon icon='ArrowLowerRight' />
+                                            </EffectIcon>
                                         </ArrowContainer>
                                     </ArrowButton>
                                 </Anime>

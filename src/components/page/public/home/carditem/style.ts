@@ -14,6 +14,7 @@ export const CardContainer = styled.div<{ isLast?: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 14px;
+  transition: all 0.5s ease-in-out;
 
   &:hover {
     filter: drop-shadow(0px 0px 24px rgba(61, 255, 243, 0.5));

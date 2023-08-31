@@ -1,5 +1,47 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { GV } from "@/utils/style.util";
+
+const textAnimate = keyframes`
+  0% {
+    font-size: 3rem;
+    background-image: ${GV("gradient")};
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  50% {
+    font-size: ${GV('font-size-2')};
+  }
+  100% {
+    font-size: 3rem;
+    background-image: ${GV("gradient")};
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+`;
+
+const iconAnimate = keyframes`
+  0% {
+    transform: translate(-0.3rem, -0.3rem);
+  }
+  50% {
+    transform: translate(0.3rem, 0.3rem);
+  }
+  100% {
+    transform: translate(-0.3rem, -0.3rem);
+  }
+`;
+
+const SvgAnimate = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`
 
 export const CollectionContainer = styled.div`
   background: linear-gradient(
@@ -39,8 +81,8 @@ export const ArrowButton = styled.div`
 
 export const ArrowContainer = styled.div`
   position: absolute;
-  top: 35%;
-  left: 35%;
+  top: 37%;
+  left: 40%;
 `;
 
 export const CardContainer = styled.div`
@@ -53,6 +95,21 @@ export const CardContainer = styled.div`
     padding: 16px 12px 18px;
   }
 `;
+
+export const EffectText = styled.span`
+  animation: ${textAnimate} 3s infinite linear;
+  transition: all .3s ease-in;
+`;
+
+export const EffectIcon = styled.div`
+  animation: ${iconAnimate} 3s infinite linear;
+  transition: all 0.5s ease-in-out;
+`;
+
+export const EffectSVG = styled.div`
+  animation: ${SvgAnimate} 10s infinite linear;
+  transition: all 0.5s ease-in-out;
+`
 
 export const CardWrapper = styled.div`
   position: relative;

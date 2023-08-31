@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import _ROUTERS from '@/constants/route.constant';
 import { categories, talents } from '@/constants/mockup/tablents';
 
-import { ArrowButton, Avatar, HireContainer, HireWrapper, ImageWrapper, Item, ItemList } from './style';
+import { AnimationImage, ArrowButton, Avatar, HireContainer, HireWrapper, ImageWrapper, Item, ItemList } from './style';
 import { Flex, Heading, Span } from '@/components/basic';
 import { GV } from '@/utils/style.util';
 import { Button, Checkbox, Icon } from '@/components/custom';
@@ -51,7 +51,7 @@ const HireSection = () => {
     }
 
     return (
-        <React.Fragment>
+        <div id='hire'>
             <HireContainer ref={ref}>
                 <HireWrapper>
                     <Flex
@@ -122,9 +122,9 @@ const HireSection = () => {
                                 delay={2000}
                                 translateX={['200%', '0']}
                             >
-                                <Flex>
+                                <AnimationImage>
                                     <img src={Image1} alt="" />
-                                </Flex>
+                                </AnimationImage>
                             </Anime>
                             <Anime
                                 easing="easeOutBounce"
@@ -200,7 +200,7 @@ const HireSection = () => {
                     </Anime>}
                 </HireWrapper>
             </HireContainer>
-        </React.Fragment>
+        </div>
     )
 }
 
