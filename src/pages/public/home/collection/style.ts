@@ -102,13 +102,18 @@ export const EffectText = styled.span`
 `;
 
 export const EffectIcon = styled.div`
-  animation: ${iconAnimate} 3s infinite linear;
+  /* animation: ${iconAnimate} 3s infinite linear; */
   transition: all 0.5s ease-in-out;
 `;
 
 export const EffectSVG = styled.div`
-  animation: ${SvgAnimate} 10s infinite linear;
+  animation: ${SvgAnimate} 20s infinite linear;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    animation-play-state: paused;
+  }
 `
 
 export const CardWrapper = styled.div`

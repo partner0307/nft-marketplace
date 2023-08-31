@@ -29,49 +29,9 @@ export const HoveredHeading = styled(Heading)`
   }
 `;
 
-export const CustomButton = styled.button`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--gradient,linear-gradient(216deg, #f75bb1 1.04%, #c392dc 45.73%, #008782 100%));
-  border: 1px solid transparent;
-  font-family: ${GV('font3')};
-  font-size: ${GV('font-size-3')};
-  border-radius: 0.5rem;
-  overflow: hidden;
-  letter-spacing: 1px;
-  min-height: 4.5rem;
-  padding: 0 6.65rem;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
-  transition: .2s transform ease-in-out;
-  will-change: transform;
-  z-index: 0;
-
-  &:after {
-    background-color: #950554;
-    content: '';
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(-100%, 0) rotate(10deg);
-    transform-origin: top left;
-    transition: .4s transform ease-out;
-    will-change: transform;
-    z-index: -1;
-  }
-
-  &:hover::after {
-    transform: translate(0, 0);
-  }
-
-  &:hover {
-    border: 2px solid #950554;
-    transform: scale(1.05);
-    will-change: transform;
+export const CustomButton = styled(Button)`
+  &:before {
+    /* background: linear-gradient(180deg, #C392DC 0%, #008782 100%) !important; */
   }
 `
 

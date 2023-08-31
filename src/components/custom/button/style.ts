@@ -36,13 +36,13 @@ export const StyledButton = styled.button<StyledButtonType>`
   overflow: hidden;
   z-index: 0;
 
-  &:after {
+  &:before {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    ${({ border, bg }) => `border:  1px solid ${border ?? bg ?? 'transparent'};`}
+    /* ${({ border, bg }) => `border:  1px solid ${border ?? bg ?? 'transparent'};`} */
     ${({ radius }) => `border-radius: ${radius ?? '0.5rem'};`}
     ${({ bg }) =>
       `background: ${
@@ -55,35 +55,32 @@ export const StyledButton = styled.button<StyledButtonType>`
     content: '';
   }
 
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    ${({ hoveredBg, hoveredBorder }) =>
-      `border:  1px solid ${hoveredBorder ?? hoveredBg ?? 'transparent'};`}
-    ${({ radius }) => `border-radius: ${radius ?? '0.5rem'};`}
-    ${({ hoveredBg }) =>
-      `background: ${
-        hoveredBg ??
-        `var(--gradient,linear-gradient(216deg, #f75bb1 1.04%, #c392dc 45.73%, #008782 100%))`
-      } !important;`}
-    opacity: 1;
-    transition: all ease-in-out 0.4s;
-    z-index: -1;
-    content: '';
-  }
-
-  ${({ hoveredBg }) =>
+  ${({ hoveredBg, hoveredBorder, radius }) =>
     hoveredBg
       ? `
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      border:  1px solid ${hoveredBorder ?? hoveredBg ?? 'transparent'};
+      border-radius: ${radius ?? '0.5rem'};
+      background: ${
+        hoveredBg ??
+        `var(--gradient,linear-gradient(216deg, #f75bb1 1.04%, #c392dc 45.73%, #008782 100%))`
+      } !important;
+      opacity: 1;
+      transition: all ease-in-out 0.4s;
+      z-index: -1;
+      content: '';
+    }
     &:hover { 
-      &:after {
+      &:before {
         opacity: 0;
       }
-      &:before {
+      &:after {
         opacity: 1;
       }
     }
