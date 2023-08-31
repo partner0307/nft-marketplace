@@ -1,7 +1,19 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import Backgound from '@/assets/img/hire_bg.png';
 import { GV } from '@/utils/style.util';
+
+const animateImage = keyframes`
+  0% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+`
 
 export const HireContainer = styled.div`
   display: flex;
@@ -13,14 +25,12 @@ export const HireContainer = styled.div`
 `;
 
 export const HireWrapper = styled.div`
-  /* max-width: 1440px; */
   overflow: hidden;
   padding: 7rem 2rem;
   .swiper-backface-hidden .swiper-slide {
     width: fit-content;
   }
   .swiper {
-    /* overflow: auto; */
     padding-bottom: 2rem;
   }
   .swiper-button-prev {
@@ -28,6 +38,11 @@ export const HireWrapper = styled.div`
   .swiper-button-next {
   }
 `;
+
+export const AnimationImage = styled.div`
+  animation: ${animateImage} 10s linear infinite;
+  transition: all .5s ease-in-out;
+`
 
 export const Item = styled.div<{ isChecked: boolean }>`
   display: flex;

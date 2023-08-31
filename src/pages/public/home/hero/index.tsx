@@ -1,14 +1,13 @@
 import React from 'react';
 import { Flex } from '@/components/basic';
-import { Button, Icon } from '@/components/custom';
+import { Icon } from '@/components/custom';
 import { SmallCard, BigCard } from '@/components/page/public/home/screen';
 
 import Screen from '@/assets/img/screen.png';
 import Screen1 from '@/assets/img/screen1.png';
 import Screen2 from '@/assets/img/screen1.png';
 import Screen3 from '@/assets/img/screen1.png';
-import { CenterRect, DownButton, HeroContainer, HoveredHeading } from './style';
-import { motion } from "framer-motion";
+import { CenterRect, CustomButton, DownButton, HeroContainer, HoveredHeading } from './style';
 import { FirstRect, SideRect, UpRect } from '@/components/page/public/home/screen/style';
 import { Link } from 'react-router-dom';
 import Anime from 'react-anime';
@@ -137,10 +136,7 @@ const Hero = () => {
                             opacity={[0, 1]}
                         >
                             <Link to={_ROUTERS.metaverse}>
-                                <Button $style={{
-                                    hoveredBg: "#950554",
-                                    hoveredBorder: "#ffffff"
-                                }}>See Full Metaverse</Button>
+                                <CustomButton>See Full Metaverse</CustomButton>
                             </Link>
                         </Anime>
                     </Flex>
@@ -240,7 +236,18 @@ const Hero = () => {
                 fDirection: "column",
                 vAlign: "center"
             }}>
-                <DownButton href='#hire_section'><Icon icon='ArrowDown' /></DownButton>
+                <DownButton href='#hire'>
+                    <Anime
+                        easing="easeInOutSine"
+                        duration={1500}
+                        delay={0}
+                        loop={true}
+                        translateY={['-1rem', '2rem']}
+                        opacity={[0, 1]}
+                    >
+                        <Icon icon='ArrowDown' />
+                    </Anime>
+                </DownButton>
             </Flex>
         </HeroContainer>
     )
