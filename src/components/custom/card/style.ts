@@ -21,7 +21,7 @@ export const CardContainer = styled.div<CardContainerPropsInterface>`
   ${({ w }) => (w ? `width: ${w};` : ``)}
   ${({ h }) => (h ? `height: ${h};` : ``)}
   padding: ${({ p }) => p ?? `0.5rem`};
-  border: 1px solid ${({ bcolor }) => bcolor ?? `rgba(198, 224, 255, 0.5)`};
+  border: 2px solid ${({ bcolor }) => bcolor ?? `rgba(198, 224, 255, 0.5)`};
   border-radius: ${({ bradius }) => bradius ?? GV('radius-md')};
   overflow: hidden;
 

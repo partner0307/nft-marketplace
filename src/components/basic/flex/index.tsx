@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, forwardRef } from "react";
 import { FlexChildContainer, FlexContainer, StyledFlexChildPropsType, StyledFlexPropsType } from "./style";
 
 interface FlexPropsType {
@@ -7,13 +7,13 @@ interface FlexPropsType {
     [key: string]: any
 }
 
-const Flex: FC<FlexPropsType> = ({ children, $style, ...rest }) => {
+const Flex: FC<FlexPropsType> = forwardRef<HTMLDivElement, FlexPropsType>(({ children, $style, ...rest }, ref) => {
     return (
-        <FlexContainer {...$style} {...rest}>
+        <FlexContainer ref={ref} {...$style} {...rest}>
             {children}
         </FlexContainer>
     )
-}
+});
 
 interface FlexChildPropsType extends StyledFlexChildPropsType {
     children?: any

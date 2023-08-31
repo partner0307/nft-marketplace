@@ -70,17 +70,21 @@ export const desVariables = {
 };
 
 export const tabVariables = {
-  'font-size': '13px',
-  'font-size-1': '3.7rem',
-  'font-size-3': '1.3rem',
-  'font-size-4': '1.15rem',
+  'font-size': '14px',
+  'font-size-1': '2.5rem',
+  'font-size-2': '1.5rem',
+  'font-size-3': '1rem',
+  'font-size-4': '0.875rem',
+  'font-size-5': '0.75rem'
 };
 
 export const smVariables = {
-  'font-size': '12px',
-  'font-size-1': '2.28rem',
-  'font-size-3': '0.75rem',
-  'font-size-4': '1rem',
+  'font-size': '14px',
+  'font-size-1': '2.5rem',
+  'font-size-2': '1.5rem',
+  'font-size-3': '1rem',
+  'font-size-4': '0.875rem',
+  'font-size-5': '0.75rem'
 };
 
 export default variables;

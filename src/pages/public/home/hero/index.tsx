@@ -122,7 +122,7 @@ const Hero = () => {
                         flex: '1',
                         fDirection: 'column',
                         hAlign: 'flex-end',
-                        p: "0 0 0.3rem",
+                        p: "0 0 0.2rem",
                         overflow: "hidden"
                     }}
                 >

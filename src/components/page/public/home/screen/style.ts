@@ -40,6 +40,15 @@ export const BigCardContainer = styled(Card)<{
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    /* width: 12rem; */
+    > div:first-child {
+      > div {
+        height: 17.6rem;
+      }
+    }
+  }
 `;
 
 export const SideRect = styled.div`

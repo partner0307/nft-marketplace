@@ -32,7 +32,6 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
     const containerRef = useRef<any>(null);
 
     useEffect(() => {
-        console.log(containerRef.current);
         if (containerRef.current === null) return;
     
         const dropdownElement = find(containerRef.current, DropdownMenuContainer);

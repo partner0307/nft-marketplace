@@ -67,7 +67,7 @@ export const BigCard: React.FC<BigCardType> = ({ image, title }) => {
         <BigCardContainer>
             {/* <img src={image} style={{height: "21.25rem"}} alt="" /> */}
             {/* <Image src={image || ""} alt="hero" h={"21.25rem"} /> */}
-            {/* <HoverableMedia
+            <HoverableMedia
                 imageOption={{
                     alt: "Hero",
                     src: image || "",
@@ -80,11 +80,11 @@ export const BigCard: React.FC<BigCardType> = ({ image, title }) => {
                     src: GifImg,
                     type: "gif"
                 }}
-            /> */}
-            <Image src={GifImg} alt='' $style={{
+            />
+            {/* <Image src={GifImg} alt='' $style={{
                 h: "21.25rem",
                 bradius: GV("radius-md")
-            }} />
+            }} /> */}
             <Flex $style={{
                 fDirection: 'row',
                 vAlign: 'center',
