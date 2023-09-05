@@ -11,7 +11,6 @@ import Ecommerce from '@/assets/img/build-metaverse/ecommerce.png';
 import EcommerceIcon from '@/assets/img/build-metaverse/ecommerce-icon.png';
 import Entertainment from '@/assets/img/build-metaverse/entertainment.png';
 import EntertainmentIcon from '@/assets/img/build-metaverse/entertainment-icon.png';
-import { Link } from 'react-router-dom';
 import _ROUTERS from '@/constants/route.constant';
 import { routerer } from '@/utils/util';
 import { GV } from '@/utils/style.util';

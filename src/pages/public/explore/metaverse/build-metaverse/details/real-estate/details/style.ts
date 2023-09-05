@@ -9,7 +9,7 @@ export const DetailsWrapper = styled.div`
     flex-direction: column;
 `;
 
-export const CustomFont = styled.div<{ family?: string }>`
+export const CustomFont = styled.span<{ family?: string }>`
     ${({ family }) => family ? `font-family: 'Aeonik';` : ``}
     color: #8D8E8D;
 `;

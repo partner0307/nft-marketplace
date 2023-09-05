@@ -7,7 +7,7 @@ interface FlexPropsType {
     [key: string]: any
 }
 
-const Flex: FC<FlexPropsType> = forwardRef<HTMLDivElement, FlexPropsType>(({ children, $style, ...rest }, ref) => {
+const Flex = forwardRef<HTMLDivElement, FlexPropsType>(({ children, $style, ...rest }, ref) => {
     return (
         <FlexContainer ref={ref} {...$style} {...rest}>
             {children}

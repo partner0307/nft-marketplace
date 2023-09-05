@@ -1,9 +1,9 @@
-import React from 'react';
+import { FC, forwardRef } from 'react';
 import { Flex, P, Span } from '@/components/basic';
 
 import { GV } from '@/utils/style.util';
 import Card from '@/components/custom/card';
-import Image from '@/components/basic/img';
+
 import { BigCardContainer, SmallCardContainer } from './style';
 import HoverableMedia from '@/components/custom/hoverable-media';
 
@@ -24,7 +24,7 @@ type BigCardType = {
     title?: string
 }
 
-export const SmallCard: React.FC<SmallCardType> = ({ image, title, price, position, isFirst }) => {
+export const SmallCard: FC<SmallCardType> = ({ image, title, price, position, isFirst }) => {
     return (
         <SmallCardContainer
             w='16rem'
@@ -62,9 +62,9 @@ export const SmallCard: React.FC<SmallCardType> = ({ image, title, price, positi
     )
 }
 
-export const BigCard: React.FC<BigCardType> = ({ image, title }) => {
+export const BigCard = forwardRef<HTMLDivElement, BigCardType>(({ image, title }, ref) => {
     return (
-        <BigCardContainer>
+        <BigCardContainer ref={ref}>
             {/* <img src={image} style={{height: "21.25rem"}} alt="" /> */}
             {/* <Image src={image || ""} alt="hero" h={"21.25rem"} /> */}
             <HoverableMedia
@@ -106,4 +106,4 @@ export const BigCard: React.FC<BigCardType> = ({ image, title }) => {
             </Flex>
         </BigCardContainer>
     )
-}
+})

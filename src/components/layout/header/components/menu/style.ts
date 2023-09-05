@@ -38,7 +38,7 @@ export const DropdownMenuItem = styled(Link)`
   }
 `;
 
-export const MenuItemContainer = styled.div<{ isBg?: boolean, isActived?: boolean, isDropdown?: boolean }>`
+export const MenuItemContainer = styled.div<{ $isBg?: boolean, $isActived?: boolean, $isDropdown?: boolean }>`
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -52,7 +52,7 @@ export const MenuItemContainer = styled.div<{ isBg?: boolean, isActived?: boolea
   border: 1px solid transparent;
   border-radius: ${GV("radius-xs")};
   transition: all ease-in-out .5s;
-  ${({ isBg }) => isBg ? `
+  ${({ $isBg }) => $isBg ? `
     border: 1px solid #1C1C1C;
     background: #111;
   ` : `
@@ -61,7 +61,7 @@ export const MenuItemContainer = styled.div<{ isBg?: boolean, isActived?: boolea
       background: #111;
     }
   `}
-  ${({ isActived }) => isActived ? `
+  ${({ $isActived }) => $isActived ? `
     border: 1px solid #1C1C1C;
     background: #950554;
   ` : `

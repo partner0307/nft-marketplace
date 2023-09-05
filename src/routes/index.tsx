@@ -46,6 +46,7 @@ import Category from "@/pages/auth/signup/category";
 import EmailVerify from "@/pages/auth/signup/email-verification";
 import Comment from "@/pages/public/explore/metaverse/metaverses/details/comment";
 import HireTalent from "@/pages/public/explore/hire-talent";
+import LandingPage from "@/pages/public/landing";
 
 const routers = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ const routers = createBrowserRouter([
             {
                 path: _ROUTERS.home,
                 element: <HomePage />
+            },
+            {
+                path: "landing/",
+                element: <LandingPage />
             },
             {
                 path: _ROUTERS.metaverse,

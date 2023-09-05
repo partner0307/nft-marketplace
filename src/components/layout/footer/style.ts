@@ -11,7 +11,7 @@ export const FooterWrapper = styled.div`
   padding: 0 0 4rem;
 `;
 
-export const ContentColor = styled.div`
+export const ContentColor = styled.span`
   color: #6ed8d2;
   font-weight: 600;
   text-transform: uppercase;

@@ -44,12 +44,12 @@ const Actions = () => {
           <Content>Work in Metaverse</Content>
         </Link>
       </Flex>
-      <ItemContainer>
-        <Link to={_ROUTERS._SIGNIN} $style={{ color: GV("atomicpink") }}>
+      <Link to={_ROUTERS._SIGNIN} $style={{ color: GV("atomicpink") }}>
+        <ItemContainer>
           <Content>Sign in</Content>
-        </Link>
-        <Icon icon="Login" />
-      </ItemContainer>
+          <Icon icon="Login" />
+        </ItemContainer>
+      </Link>
       <Link to={_ROUTERS._SIGNUP}>
         <Button
           $style={{
@@ -61,7 +61,8 @@ const Actions = () => {
           }}
         >
           <Content>Register</Content>
-        </Button></Link>
+        </Button>
+      </Link>
     </ActionContainer>
   );
 };

@@ -31,40 +31,40 @@ const BuildDetails = () => {
                     <P><CustomFont><Link to='/metaverses'>Metaverse / </Link><Link to='/build-metaverse'>Build Metaverse / </Link>Real Estate</CustomFont></P>
                     <BuildDetailsWrapper>
                         <Flex $style={{ fDirection: 'column', gap: '32px' }}>
-                            <MenuItem to={routerer("build_metaverse", "real_estate")} isActive={location.pathname.split("/")[2] === "real-estate"} >
+                            <MenuItem to={routerer("build_metaverse", "real_estate")} $isActive={location.pathname.split("/")[2] === "real-estate"} >
                                 <img src={HomeIcon} />
                             </MenuItem>
-                            <MenuItem to={routerer("build_metaverse", "real_estate")} isActive={location.pathname.split("/")[2] === ""} >
+                            <MenuItem to={routerer("build_metaverse", "real_estate")} $isActive={location.pathname.split("/")[2] === ""} >
                                 <img src={CameraIcon} />
                             </MenuItem>
-                            <MenuItem to={routerer("build_metaverse", "ecommerce")} isActive={location.pathname.split("/")[2] === "ecommerce"} >
+                            <MenuItem to={routerer("build_metaverse", "ecommerce")} $isActive={location.pathname.split("/")[2] === "ecommerce"} >
                                 <img src={TradingIcon} />
                             </MenuItem>
-                            <MenuItem to={routerer("build_metaverse", "real_estate")} isActive={location.pathname.split("/")[2] === ""} >
+                            <MenuItem to={routerer("build_metaverse", "real_estate")} $isActive={location.pathname.split("/")[2] === ""} >
                                 <img src={CarIcon} />
                             </MenuItem>
-                            <MenuItem to={routerer("build_metaverse", "real_estate")} isActive={location.pathname.split("/")[2] === ""} >
+                            <MenuItem to={routerer("build_metaverse", "real_estate")} $isActive={location.pathname.split("/")[2] === ""} >
                                 <img src={ClockIcon} />
                             </MenuItem>
-                            <MenuItem to={routerer("build_metaverse", "real_estate")} isActive={location.pathname.split("/")[2] === ""} >
+                            <MenuItem to={routerer("build_metaverse", "real_estate")} $isActive={location.pathname.split("/")[2] === ""} >
                                 <img src={StudyIcon} />
                             </MenuItem>
-                            <MenuItem to={routerer("build_metaverse", "real_estate")} isActive={location.pathname.split("/")[2] === ""} >
+                            <MenuItem to={routerer("build_metaverse", "real_estate")} $isActive={location.pathname.split("/")[2] === ""} >
                                 <img src={GameIcon} />
                             </MenuItem>
-                            <MenuItem to={routerer("build_metaverse", "real_estate")} isActive={location.pathname.split("/")[2] === ""} >
+                            <MenuItem to={routerer("build_metaverse", "real_estate")} $isActive={location.pathname.split("/")[2] === ""} >
                                 <img src={PlantIcon} />
                             </MenuItem>
-                            <MenuItem to={routerer("build_metaverse", "real_estate")} isActive={location.pathname.split("/")[2] === ""} >
+                            <MenuItem to={routerer("build_metaverse", "real_estate")} $isActive={location.pathname.split("/")[2] === ""} >
                                 <img src={CoinIcon} />
                             </MenuItem>
-                            <MenuItem to={routerer("build_metaverse", "real_estate")} isActive={location.pathname.split("/")[2] === ""} >
+                            <MenuItem to={routerer("build_metaverse", "real_estate")} $isActive={location.pathname.split("/")[2] === ""} >
                                 <img src={BuildingIcon} />
                             </MenuItem>
-                            <MenuItem to={routerer("build_metaverse", "real_estate")} isActive={location.pathname.split("/")[2] === ""} >
+                            <MenuItem to={routerer("build_metaverse", "real_estate")} $isActive={location.pathname.split("/")[2] === ""} >
                                 <img src={RestaurantIcon} />
                             </MenuItem>
-                            <MenuItem to={routerer("build_metaverse", "real_estate")} isActive={location.pathname.split("/")[2] === ""} >
+                            <MenuItem to={routerer("build_metaverse", "real_estate")} $isActive={location.pathname.split("/")[2] === ""} >
                                 <img src={MarketIcon} />
                             </MenuItem>
                         </Flex>

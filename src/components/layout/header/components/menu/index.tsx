@@ -66,7 +66,7 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
     }, [])
 
     return (
-        <MenuItemContainer ref={containerRef} isBg={isBg} isActived={isActived} as={to ? Link : "a"} to={to} {...rest}>
+        <MenuItemContainer ref={containerRef} $isBg={isBg} $isActived={isActived} as={to ? Link : "button"} to={to} {...rest}>
             {children}
             {dropdownItems && (
                 <Icon icon='ChevronArrowDown' />
@@ -74,7 +74,7 @@ const MenuItem: React.FC<MenuItemPropsType> = ({
             {dropdownItems && (
                 <DropdownMenuContainer>
                     {dropdownItems.map((item, key) => (
-                        <Link to=''><DropdownMenuItem to={item.to} key={key}>{item.render}</DropdownMenuItem></Link>
+                        <DropdownMenuItem key={key} to={item.to}>{item.render}</DropdownMenuItem>
                     ))}
                 </DropdownMenuContainer>
             )}

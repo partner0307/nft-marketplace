@@ -15,7 +15,7 @@ export const Content = styled.span`
   white-space: nowrap;
 `;
 
-export const ItemContainer = styled.a`
+export const ItemContainer = styled.div`
   height: 2.5rem;
   padding: 0 .75rem;
   display: flex;
