@@ -17,7 +17,7 @@ export const DetailsContent = styled.div`
     width: 100%;
 `
 
-export const CustomFont = styled.div<{ family?: string }>`
+export const CustomFont = styled.span<{ family?: string }>`
     ${({ family }) => family ? `font-family: 'Aeonik';` : ``}
     color: #8D8E8D;
 `;

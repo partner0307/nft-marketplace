@@ -16,7 +16,7 @@ const RealEstate = () => {
         <Flex $style={{ hAlign: 'space-between', vAlign: 'center', w: '100%' }}>
             <P $style={{ size: GV('font-size-2'), weight: GV('weight-xl') }}>Real Estate</P>
             <Flex $style={{ gap: '12px', vAlign: 'center' }}>
-                <Input value='' placeholder='Search...' padding='6px 12px' helpSide={<Icon icon='Search' />} />
+                <Input value='' placeholder='Search...' padding='6px 12px' helpSide={<Icon icon='Search' />} onChange={() => {}} />
                 <CustomDropdown>
                     <Dropdown initialLabel='Newly Listed' />
                 </CustomDropdown>

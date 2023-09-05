@@ -1,16 +1,16 @@
-import React from "react";
+import { ReactNode, FC, forwardRef } from "react";
 import { CardContainer, CardContainerPropsInterface } from "./style";
 
 export interface CardPropsInterface extends CardContainerPropsInterface {
-    children: React.ReactNode
+    children: ReactNode
 }
 
-const Card: React.FC<CardPropsInterface> = ({ children, ...rest }) => {
+const Card = forwardRef<HTMLDivElement, CardPropsInterface>(function Card({ children, ...rest }, ref) {
     return (
-        <CardContainer {...rest}>
+        <CardContainer ref={ref} {...rest}>
             {children}
         </CardContainer>
     )
-}
+})
 
 export default Card;

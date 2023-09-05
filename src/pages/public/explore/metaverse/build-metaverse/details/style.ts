@@ -26,7 +26,7 @@ export const Rect = styled.div`
     background: rgba(235, 104, 198, 0.20);
 `;
 
-export const MenuItem = styled(Link)<{ isActive?: boolean }>`
+export const MenuItem = styled(Link)<{ $isActive?: boolean }>`
     display: flex;
     width: 96px;
     height: 96px;
@@ -38,7 +38,7 @@ export const MenuItem = styled(Link)<{ isActive?: boolean }>`
     background: rgba(25, 25, 25, 0.80);
     backdrop-filter: blur(7.5px);
     transition: all ease-in-out .3s;
-    ${({ isActive }) => isActive ? `
+    ${({ $isActive }) => $isActive ? `
         background: #780640;
     ` : `
         &:hover {
@@ -47,7 +47,7 @@ export const MenuItem = styled(Link)<{ isActive?: boolean }>`
     `}
 `;
 
-export const CustomFont = styled.div`
+export const CustomFont = styled.span`
     color: '#8D8E8D'
 `
 

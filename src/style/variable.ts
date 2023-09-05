@@ -25,6 +25,8 @@ const variables = {
   'bg-sub': '#1A2D474D',
   color: '#FFFFFF',
   'color-secondary': '#9F96A7',
+  border1: '#C6E0FF80',
+  border2: '#2B2928',
 
   'input-bg': '#191919',
   'input-color': '#9BA2B2',

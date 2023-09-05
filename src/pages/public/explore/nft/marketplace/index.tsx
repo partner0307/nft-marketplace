@@ -2,6 +2,17 @@ import React from 'react';
 import { Flex, Span } from '@/components/basic';
 import SubHeader from '@/components/page/public/explore/subheader';
 
+import Pagination from '@/components/custom/pagination';
+import { ItemContainer } from './style';
+import { Dropdown } from '@/components/custom';
+import Table, { TableFieldInterface } from '@/components/custom/table';
+import { routerer, tokillo } from '@/utils/util';
+import TimeBar from '@/components/page/public/explore/timebar';
+import { nfts } from '@/constants/mockup/nfts';
+import { Link } from 'react-router-dom';
+import _ROUTERS from '@/constants/route.constant';
+import { GV } from '@/utils/style.util';
+
 const tabList = [
     { name: 'Popular', active: true },
     { name: 'Art', active: false },
@@ -127,17 +138,6 @@ const nft_fields: TableFieldInterface[] = [
         width: "150px"
     }
 ]
-
-import Pagination from '@/components/custom/pagination';
-import { ItemContainer } from './style';
-import { Dropdown } from '@/components/custom';
-import Table, { TableFieldInterface } from '@/components/custom/table';
-import { routerer, tokillo } from '@/utils/util';
-import TimeBar from '@/components/page/public/explore/timebar';
-import { nfts } from '@/constants/mockup/nfts';
-import { Link } from 'react-router-dom';
-import _ROUTERS from '@/constants/route.constant';
-import { GV } from '@/utils/style.util';
 
 const NFTMarketplace = () => {
     return <Flex $style={{ fDirection: 'column', gap: '24px' }}>

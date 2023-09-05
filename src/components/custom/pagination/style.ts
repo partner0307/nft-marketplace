@@ -1,7 +1,7 @@
 import { GV } from "@/utils/style.util";
 import styled from "styled-components";
 
-export const CustomFont = styled.div`
+export const CustomFont = styled.span`
   font-family: ${GV('font3')};
   color: #8d8e8d;
 `;

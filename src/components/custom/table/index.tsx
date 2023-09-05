@@ -33,8 +33,10 @@ const Table = ({ fields, data }: TablePropsInterface) => {
 				</React.Fragment>
 				{data.map((item: { [key: string]: any }, di: number) => (
 					<React.Fragment key={di}>
-						{fields.map((field, fi) => (
-							<StyledTd key={fi} $width={field.width}>{field.render(item, item[field.key], di)}</StyledTd>
+						{fields.map((field, fi: number) => (
+							<StyledTd key={"td" + fi} $width={field.width}>
+								{field.render(item, item[field.key], di)}
+							</StyledTd>
 						))}
 					</React.Fragment>
 				))}

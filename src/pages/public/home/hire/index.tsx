@@ -1,4 +1,5 @@
-import { useRef } from 'react';
+import { useRef, useLayoutEffect } from 'react';
+import { gsap } from "gsap"
 
 import _ROUTERS from '@/constants/route.constant';
 
@@ -15,6 +16,14 @@ import HireSectionSliderController from './components/SliderController';
 
 const HireSection = () => {
     const firstTriggerRef = useRef<HTMLDivElement>(null);
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            // let panels
+        });
+
+        return () => ctx.revert();
+    })
 
     return (
         <div id='hire'>
