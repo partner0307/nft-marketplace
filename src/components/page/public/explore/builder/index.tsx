@@ -28,7 +28,6 @@ const Builder: React.FC<BuilderType> = ({ to, image, icon, title }) => {
     }
 
     React.useEffect(() => {
-        // console.log(ContentRef.current);
         mouseLeaveHandler();
     }, [])
 

@@ -1,0 +1,12 @@
+.talent-slider {
+    position: relative;
+    overflow: hidden;
+    padding-left: 100vw;
+}
+
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 400%;
+    gap: 2rem;
+}
