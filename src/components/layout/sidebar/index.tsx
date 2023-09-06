@@ -42,7 +42,6 @@ const Sidebar = () => {
             const clickHandler = (e: any) => {
                 const targetHand = e.currentTarget as HTMLElement;
                 const child = targetHand.nextElementSibling as HTMLElement;
-                console.log(child.style.height);
                 if (child.style.height === "0px") {
                     child.style.height = child.scrollHeight + "px";
                     child.style.background = "#600031";
