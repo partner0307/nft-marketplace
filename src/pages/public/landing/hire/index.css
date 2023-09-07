@@ -1,12 +1,22 @@
 .talent-slider {
     position: relative;
-    overflow: hidden;
-    padding-left: 100vw;
+    /* overflow: auto; */
 }
 
 .slider {
     display: flex;
     flex-wrap: nowrap;
-    width: 400%;
+    align-items: center;
     gap: 2rem;
+    min-width: fit-content;
+    width: 400%;
+    height: 100vh;
+}
+
+.talent-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw; */
 }

@@ -8,12 +8,22 @@ import { CardContainer } from "@/components/custom/talent-card/style";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const TalentCardDiv = ({talent}: {talent: TablentObject}) => {
+    return (
+        <div className='talent-card'>
+            <TalentCard
+                talent={talent}
+            />
+        </div>
+    )
+}
+
 const TalentSlider = () => {
 
     const ref = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        setTimeout(() => {
+    
+    useEffect(()=>{
+        setTimeout(()=>{
             const elements = gsap.utils.toArray(".talent-card");
             if (ref.current === null || elements === null) return;
 
@@ -22,25 +32,26 @@ const TalentSlider = () => {
                 ease: 'none',
                 scrollTrigger: {
                     trigger: ref.current,
-                    start: 'center center',
-                    end: () => "center " + (- (window.outerHeight / 2) + (ref.current?.offsetWidth || 0)) + "px",
+                    scroller: "#app",
+                    start: 'top top',
+                    toggleActions: "restart pause reverse pause",
+                    end: ()=>`+=${(ref.current?.offsetWidth || 0) + window.innerWidth}`,
                     pin: true,
-                    
                     scrub: 1,
                     markers: true,
                 }
             })
-
+    
             ScrollTrigger.refresh()
         })
-        console.log(window.innerHeight);
+       
     }, [])
 
     return (
         <div data-scroll-section className="talent-slider">
             <div ref={ref} className="slider">
                 {talents.map((talent, i) => (
-                    <TalentCard
+                    <TalentCardDiv
                         key={i}
                         talent={talent}
                     />

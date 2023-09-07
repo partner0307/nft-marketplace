@@ -17,7 +17,7 @@ const TalentCard: React.FC<{ talent: TablentObject }> = ({ talent }) => {
     } = talent;
 
     return (
-        <CardContainer className='talent-card'>
+        <CardContainer>
             <CardMark>${price}/hr</CardMark>
             <Flex $style={{
                 fDirection: 'column',
