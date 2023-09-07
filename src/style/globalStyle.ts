@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
 	html {
 		-ms-text-size-adjust: 100%;
 		-webkit-text-size-adjust: 100%;
-		overflow-x: hidden;
 		scroll-behavior: smooth;
 
 		@media (max-width: 1200px) {
@@ -39,7 +38,11 @@ const GlobalStyle = createGlobalStyle`
 		line-height: 150%;
 		font-size: ${GV("font-size")};
 		color: ${GV("color")};
+	}
+	#app {
 		overflow-x: hidden;
+		overflow-y: auto;
+		height: 100vh;
 	}
 	*, *::before, *::after {
 		box-sizing: inherit;
